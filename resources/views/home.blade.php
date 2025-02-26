@@ -11,10 +11,10 @@
 
 
     <div class="flex-grow flex items-center justify-center">
-        <div class="bg-white shadow-md rounded-lg p-8 w-full max-w-sm">
+        <div class="h-100 bg-white shadow-xl rounded-lg p-8 w-full max-w-sm">
 
         <div class="flex justify-center mb-4">
-            <img src="images/bcdqlogo.png" alt="bcdq logo" class="w-30 h-40 rounded-lg">
+            <img src="images/bcdqlogo.png" alt="bcdq logo" class="w-20 h-30 rounded-lg">
         </div>
 
             <h2 class="text-2xl font-bold text-center mb-6">BLUE CHALCEDONY QUARTZ AGENTS PORTAL</h2>
@@ -43,14 +43,14 @@
 
     <footer class="bg-gray-800 text-white py-4">
         <div class="container mx-auto flex justify-between items-center px-5">
-            <div class="text-left">
+            <div class="text-left text-sm">
                 <p>©JYNStudent</p>
             </div>
-            <div class="text-center" class="text-x0" class="font-mono">
+            <div class="text-center text-sm">
                 <p></p>
             </div>
-            <div class="text-right">
-                <p>BCMS - Blue Chalcedony Management System</p>
+            <div class="text-right text-sm">
+                <p>Terms & Conditions</p>
             </div>
         </div>
     </footer>
