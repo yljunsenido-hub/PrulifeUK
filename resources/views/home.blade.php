@@ -1,16 +1,35 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blue Chalcedony Quartz Branch</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
-   <style>
+    <style>
         .slide {
             min-width: 100%; /* Ensure each slide takes full width */
             transition: transform 1s ease-in-out; /* Smooth transition for sliding effect */
         }
         .slideshow-container {
             display: flex; /* Use flexbox to arrange slides in a row */
-            transition: transform 1s ease-in-out; /* Smooth transition for sliding effect */
+            position: relative; /* Position relative for absolute positioning of slides */
+        }
+    </style>
+</head>
+<body class="bg-gray-100">
+    <style>
+        .slide {
+            min-width: 100%; /* Ensure each slide takes full width */
+            transition: transform 1s ease-in-out, opacity 1s ease-in-out; /* Smooth transition for sliding and fading effect */
+            opacity: 0; /* Start with all slides hidden */
+        }
+        .slideshow-container {
+            display: flex; /* Use flexbox to arrange slides in a row */
+            position: relative; /* Position relative for absolute positioning of slides */
+        }
+        .active {
+            opacity: 1; /* Show the active slide */
         }
     </style>
 </head>
@@ -43,6 +62,7 @@
                 img.className = "slide w-full";
                 slideshowContainer.appendChild(img);
             });
+            showSlides(); // Start the slideshow after loading images
         }
 
         // Function to show slides
@@ -50,9 +70,8 @@
             const slides = document.getElementsByClassName("slide");
             const totalSlides = slides.length;
 
-            // Update the transform property to slide the images
-            const slideshowContainer = document.querySelector('.slideshow-container');
-            slideshowContainer.style.transform = `translateX(-${slideIndex * 100}%)`;
+            // Fade out the current slide
+            slides[slideIndex].classList.remove("active"); // Fade out current slide
 
             // Move to the next slide
             slideIndex++;
@@ -60,6 +79,20 @@
                 slideIndex = 0; // Loop back to the first image
             }
 
+            // Apply unique transitions
+            if (slideIndex === 0) {
+                // If transitioning to the first image, fade in
+                slides[slideIndex].classList.add("active"); // Fade in next slide
+            } else if (slideIndex === 1 || slideIndex === 2) {
+                // For the second and third images, slide in
+                slides[slideIndex].classList.add("active"); // Fade in next slide
+            }
+
+            // Update the transform property to slide the images
+            const slideshowContainer = document.querySelector('.slideshow-container');
+            slideshowContainer.style.transform = `translateX(-${slideIndex * 100}%)`;
+
+            // Set the interval for the next slide
             setTimeout(showSlides, 3000); // Change image every 3 seconds
         }
 
@@ -67,55 +100,58 @@
             const slides = document.getElementsByClassName("slide");
             const totalSlides = slides.length;
 
-            // Only allow forward navigation
-            if (n === 1) {
-                slideIndex++;
-                if (slideIndex >= totalSlides) {
-                    slideIndex = 0; // Loop back to the first image
-                }
+            // Update the slide index based on the button clicked
+            slideIndex += n;
+            if (slideIndex < 0) {
+                slideIndex = totalSlides - 1; // Go to the last image if at the beginning
+            } else if (slideIndex >= totalSlides) {
+                slideIndex = 0; // Loop back to the first image
             }
 
             // Update the transform property to slide the images
             const slideshowContainer = document.querySelector('.slideshow-container');
             slideshowContainer.style.transform = `translateX(-${slideIndex * 100}%)`;
+
+            // Update the active class for smooth transition
+            for (let i = 0; i < totalSlides; i++) {
+                slides[i].classList.remove("active"); // Remove active class from all slides
+            }
+            slides[slideIndex].classList.add("active"); // Add active class to the current slide
         }
 
-        // Load images and start the slideshow
-        loadImages();
-        showSlides();
+        loadImages(); // Load images when the page is ready
     </script>
 
-
-        <div class="bg-gray-200 text-center py-2 mt-4">
-            Production Month-to-Date as of February 24, 2025
+    <div class="bg-gray-200 text-center py-2 mt-4">
+        Production Month-to-Date as of February 24, 2025
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mt-4">
+        <div class="bg-green-500 text-white p-4 rounded-lg shadow-md">
+            <h2 class="text-lg font-semibold">Personal</h2>
+            <p>Issued: P 0.00</p>
+            <p >NAP: P 0.00</p>
+            <p>TOTAL MTD: P 0.00</p>
+            <p>YTD: P 0.00</p>
+            <p>YTD NON-PULSE CC: 0.00</p>
         </div>
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mt-4">
-            <div class="bg-green-500 text-white p-4 rounded-lg shadow-md">
-                <h2 class="text-lg font-semibold">Personal</h2>
-                <p>Issued: P 0.00</p>
-                <p>NAP: P 0.00</p>
-                <p>TOTAL MTD: P 0.00</p>
-                <p>YTD: P 0.00</p>
-                <p>YTD NON-PULSE CC: 0.00</p>
-            </div>
-            <div class="bg-teal-500 text-white p-4 rounded-lg shadow-md">
-                <h2 class="text-lg font-semibold">Sub-Unit</h2>
-                <p>Issued: P 352,499.15</p>
-                <p>Pending Issuance: P 0.00</p>
-                <p>TOTAL MTD: P 352,499.15</p>
-            </div>
-            <div class="bg-teal-500 text-white p-4 rounded-lg shadow-md">
-                <h2 class="text-lg font-semibold">Unit</h2>
-                <p>Issued: P 352,499.15</p>
-                <p>Pending Issuance: P 0.00</p>
-                <p>TOTAL MTD: P 352,499.15</p>
-            </div>
-            <div class="bg-blue-500 text-white p-4 rounded-lg shadow-md">
-                <h2 class="text-lg font-semibold">Branch</h2>
-                <p>Issued: P 2,345,319.39</p>
-                <p>Pending Issuance: P 0.00</p>
-                <p>TOTAL MTD: P 2,345,319.39</p>
-            </div>
+        <div class="bg-teal-500 text-white p-4 rounded-lg shadow-md">
+            <h2 class="text-lg font-semibold">Sub-Unit</h2>
+            <p>Issued: P 352,499.15</p>
+            <p>Pending Issuance: P 0.00</p>
+            <p>TOTAL MTD: P 352,499.15</p>
+        </div>
+        <div class="bg-teal-500 text-white p-4 rounded-lg shadow-md">
+            <h2 class="text-lg font-semibold">Unit</h2>
+            <p>Issued: P 352,499.15</p>
+            <p>Pending Issuance: P 0.00</p>
+            <p>TOTAL MTD: P 352,499.15</p>
+        </div>
+        <div class="bg-blue-500 text-white p-4 rounded-lg shadow-md">
+            <h2 class="text-lg font-semibold">Branch</h2>
+            <p>Issued: P 2,345,319.39</p>
+            <p>Pending Issuance: P 0.00</p>
+            <p>TOTAL MTD: P 2,345,319.39</p>
         </div>
     </div>
-
+</body>
+</html>
