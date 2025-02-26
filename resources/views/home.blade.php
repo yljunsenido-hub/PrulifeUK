@@ -16,6 +16,26 @@
             position: relative; /* Position relative for absolute positioning of slides */
         }
     </style>
+
+<nav class="bg-gray-800 p-4 flex justify-between items-center">
+        <div class="flex items-center">
+            <img src="https://placehold.co/50x50" alt="Blue Chalcedony Quartz logo" class="h-10 w-10 mr-2">
+            <span class="text-white text-lg font-semibold">BLUE CHALCEDONY QUARTZ BRANCH</span>
+        </div>
+        <div class="relative">
+            <input type="text" placeholder="Search for..." class="p-2 rounded-md">
+            <button class="absolute right-0 top-0 mt-2 mr-2">
+                <i class="fas fa-search text-blue-500"></i>
+            </button>
+        </div>
+        <div class="flex items-center space-x-4">
+            <i class="fas fa-bell text-white"></i>
+            <i class="fas fa-user text-white"></i>
+        </div>
+    </nav>
+
+
+
 </head>
 <body class="bg-gray-100">
     <style>
