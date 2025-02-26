@@ -50,7 +50,7 @@
                 <p></p>
             </div>
             <div class="text-right text-sm">
-                <p>Terms & Conditions</p>
+                <p></p>
             </div>
         </div>
     </footer>
