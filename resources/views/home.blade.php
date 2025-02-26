@@ -34,7 +34,17 @@
     </div>
 
     <footer class="bg-gray-800 text-white text-center py-4">
-        <p>&copy; 2025 Your Company. All rights reserved.</p>
+    <div class="container mx-auto flex justify-between items-center">
+            <div class="text-left">
+                <p>Left Text</p>
+            </div>
+            <div class="text-center">
+                <p>Middle Text</p>
+            </div>
+            <div class="text-right">
+                <p>Right Text</p>
+            </div>
+        </div>
     </footer>
 
 </body>
