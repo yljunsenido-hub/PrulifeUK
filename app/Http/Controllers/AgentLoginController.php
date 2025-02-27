@@ -13,4 +13,6 @@ class AgentLoginController extends Controller
 
         return view('sampleDB', compact('agents'));
     }
+
+    
 }
