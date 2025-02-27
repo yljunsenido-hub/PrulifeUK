@@ -11,7 +11,7 @@
 
 
     <div class="flex-grow flex items-center justify-center">
-        <div class="h-100 bg-white shadow-xl rounded-lg p-8 w-full max-w-sm">
+        <div class="h-100 bg-white shadow-xl rounded-lg p-8 w-full max-w-sm border-2">
 
         <div class="flex justify-center mb-4">
             <img src="images/bcdqlogo.png" alt="bcdq logo" class="w-20 h-30 rounded-lg">
@@ -19,11 +19,11 @@
 
             <h2 class="text-blue-900 text-2xl font-bold text-center mb-6">BLUE CHALCEDONY QUARTZ AGENTS PORTAL</h2>
                 <div class="mb-4">
-                    <label class="block text-gray-700 text-sm font-bold mb-2" for="email">Agent Code</label>
+                    <label class="block text-gray-700 text-sm font-semibold mb-2" for="email">Agent Code</label>
                     <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="email" type="text" placeholder="Agent Code" required>
                 </div>
                 <div class="mb-6">
-                    <label class="block text-gray-700 text-sm font-bold mb-2" for="password">Password</label>
+                    <label class="block text-gray-700 text-sm font-semibold mb-2" for="password">Password</label>
                     <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="password" type="password" placeholder="Password" required>
                 </div>
                 <div class="flex justify-center">
@@ -43,7 +43,7 @@
     <footer class="bg-blue-900 text-white py-4">
         <div class="container mx-auto flex justify-between items-center px-5">
             <div class="text-left text-sm">
-                <p>©JYNStudent</p>
+                <p>Copyright</p>
             </div>
             <div class="text-center text-sm">
                 <p></p>
