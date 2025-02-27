@@ -27,4 +27,12 @@ Route::get('/unitHonorRolls'  , function () {
     return view('unitHonorRolls');
 });
 
+Route::get('/upreport'  , function () {
+    return view('upreport');
+});
+
+Route::get('/supreport'  , function () {
+    return view('supreport');
+});
+
 Route::get('/sampleDB', [AgentLoginController::class, 'index']);
