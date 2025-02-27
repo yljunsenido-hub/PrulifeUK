@@ -1,15 +1,12 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\AgentLoginController;
 
 Route::get('/', function () {
+    return view('login');
+});
+
+Route::get('/home', function () {
     return view('home');
-});
-
-Route::get('/supreport', function () {
-    return view('supreport');
-});
-
-Route::get('/upreport', function () {
-    return view('upreport');
 });
