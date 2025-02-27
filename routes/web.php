@@ -23,4 +23,8 @@ Route::get('/branchHonorRollsMTD'  , function () {
     return view('branchHonorRollsMTD');
 });
 
+Route::get('/unitHonorRolls'  , function () {
+    return view('unitHonorRolls');
+});
+
 Route::get('/sampleDB', [AgentLoginController::class, 'index']);
