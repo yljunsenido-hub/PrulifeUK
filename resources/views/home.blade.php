@@ -52,7 +52,7 @@
         .content {
             transition: margin-left 0.4s ease, margin-right 0.4s ease; /* Smooth transition for content */
             margin: 0 auto; /* Center horizontally */
-            max-width: 1200px; /* Set a max-width for the content */
+            max-width: 1500px; /* Set a max-width for the content */
             padding: 20px; /* Padding inside the content */
             margin-top: 32px; /* Push content below the navbar */
         }
@@ -97,9 +97,11 @@
             <div class="slideshow-container">
                 <!-- Images will be injected here by JavaScript -->
             </div>
-            <button class="prev absolute left-0 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white p-2 rounded-full" onclick="changeSlide(-1)">&#10094;</button>
-            <button class="next absolute right-0 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white p-2 rounded-full" onclick="changeSlide(1)">&#10095;</button>
+            <button class="prev absolute left-5 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white p-2 rounded-full" onclick="changeSlide(-1)">&#10094;</button>
+            <button class="next absolute right-5 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white p-2 rounded-full" onclick="changeSlide(1)">&#10095;</button>
         </div>
+
+        
 
          <script>
         let slideIndex = 0; // Start at the first image
@@ -179,7 +181,7 @@
         <div class="bg-gray-200 text-center py-2 mt-4">
     Production Month-to-Date as of February 24, 2025
 </div>
-<div class="flex flex-wrap justify-center gap-4 mt-4">
+<div class="flex flex-compress justify-center gap-4 mt-4">
     <div class="flex-1 min-w-[250px] max-w-[300px] bg-green-500 text-white p-4 rounded-lg shadow-md">
         <h2 class="text-lg font-semibold">Personal</h2>
         <p>Issued: P 0.00</p>
