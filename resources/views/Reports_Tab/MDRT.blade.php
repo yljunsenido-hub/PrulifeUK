@@ -8,7 +8,7 @@
 </head>
 <body class="bg-gray-100 p-6 border border-gray-300">
     <div class="container mx-auto max-w-8xl bg-white p-6 rounded-lg shadow-md mb-3">
-        <p class="text-4xl font-semibold mb-4">MDRT Tracker</p>
+        <p class="text-4xl font-semibold mb-4">MDTR Tracker</p>
     </div>
     <div class="container mx-auto max-w-8xl bg-white p-6 rounded-lg shadow-md">
         <div class="container mx-auto max-w-8xl bg-gray-300 p-2 rounded-l shadow-md mb-3">

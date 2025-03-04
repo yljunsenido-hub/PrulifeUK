@@ -16,6 +16,44 @@ Route::get('/sampleDB', [AgentLoginController::class, 'index']);
 
 
 
+// Leads Cases Tab
+
+Route::get('/submittedCases', function (){
+    return view('Leads_Cases_Tab/submitted_cases');
+});
+
+Route::get('/issuedCases', function (){
+    return view('Leads_Cases_Tab/issued_cases');
+});
+
+Route::get('/outreqCases', function (){
+    return view('Leads_Cases_Tab/outreq_cases');
+});
+
+Route::get('/declinedCases', function (){
+    return view('Leads_Cases_Tab/declined_cases');
+});
+
+
+
+
+// New Business Tab
+
+Route::get('/submissionApproval', function (){
+    return view('New_Business_Tab/submission_Approval');
+});
+
+Route::get('/newBusinessMaintenance', function (){
+    return view('New_Business_Tab/new_Business_Maintenance');
+});
+
+Route::get('/issuedCases', function (){
+    return view('New_Business_Tab/issued_Cases');
+});
+
+
+
+
 // Reports Tab
 
 Route::get('/agentMTD', function () {
@@ -66,4 +104,11 @@ Route::get('/ciq'  , function () {
     return view('Reports_Tab/ciq');
 });
 
-//dd
+Route::get('/qualifiers'  , function () {
+    return view('Reports_Tab/qualifiers');
+});
+
+Route::get('/agm'  , function () {
+    return view('Reports_Tab/agm');
+});
+
