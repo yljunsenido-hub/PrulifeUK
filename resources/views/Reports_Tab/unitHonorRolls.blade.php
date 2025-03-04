@@ -4,17 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <title>Month-to-date Table</title>
+    <title>BLUE CHALCEDONY MANAGEMENT SYSTEM</title>
 </head>
 <body class="bg-gray-100 p-6 border border-gray-300">
     <div class="container mx-auto max-w-8xl bg-white p-6 rounded-lg shadow-md mb-3">
         <p class="text-4xl font-semibold mb-4">UNIT TOP AGENTS MONTH TO DATE REPORT</p>
     </div>
     
-        
-    <div class="container mx-auto max-w-8xl bg-gray-300 p-2 rounded-l shadow-md mb-3">
-        <p class="ml-2 text-blue-600 ">Switch to YTD</p>
-    </div>
+    <div class="container mx-auto max-w-8xl bg-white p-6 rounded-lg shadow-md">
+        <div class="container mx-auto max-w-8xl bg-gray-300 p-2 rounded-l shadow-md mb-3">
+            <p class="ml-2 text-blue-600 ">Switch to YTD</p>
+        </div>
             <div class="overflow-x-auto">
                 <table class="min-w-full bg-white border border-gray-300">
                     <thead>
@@ -51,7 +51,8 @@
                     </tbody>
                 </table>
             </div>
-        
+    
+    </div>
     </div>
     
 </body>
