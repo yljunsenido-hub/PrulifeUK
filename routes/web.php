@@ -54,3 +54,4 @@ Route::get('/easyReports'  , function () {
     return view('Reports_Tab/easyReports');
 });
 
+//dd
