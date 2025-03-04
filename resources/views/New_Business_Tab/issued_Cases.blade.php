@@ -8,9 +8,8 @@
 </head>
 <body class="bg-gray-100 p-6 border border-gray-300">
     <div class="container mx-auto max-w-8xl bg-white p-6 rounded-lg shadow-md mb-3">
-        <p class="text-4xl font-semibold mb-4">EASY REPORTS</p>
+        <p class="text-4xl font-semibold mb-4">Team Issued Cases</p>
     </div>
-    
     <div class="container mx-auto max-w-8xl bg-white p-6 rounded-lg shadow-md">
 
         <div class="mb-4 flex justify-between items-center">
@@ -26,52 +25,50 @@
             <input type="text" placeholder="Search..." class="border border-gray-300 rounded-md p-2" />
         </div>
         
-        <div class="container mx-auto max-w-8xl bg-gray-300 p-2 rounded-l shadow-md mb-3">
-            <p class="ml-2 text-blue-600 ">Switch to YTD</p>
-        </div>
-        
         <div class="overflow-x-auto">
             <table class="min-w-full bg-white border border-gray-300">
                 <thead>
                     <tr class="bg-gray-200 text-gray-600 uppercase text-sm leading-normal">
-                        <th class="py-3 px-6 text-left">#</th>
-                        <th class="py-3 px-6 text-left">Title</th>
+                        <th class="py-3 px-6 text-left">ID</th>
+                        <th class="py-3 px-6 text-left">Agent</th>
+                        <th class="py-3 px-6 text-left">Unit</th>
+                        <th class="py-3 px-6 text-left">Sub Unit</th>
+                        <th class="py-3 px-6 text-left">Client Name</th>
+                        <th class="py-3 px-6 text-left">Policy No.</th>
+                        <th class="py-3 px-6 text-left">APE</th>
+                        <th class="py-3 px-6 text-left">Issued Date</th>
                         <th class="py-3 px-6 text-left">Action</th>
                     </tr>
                 </thead>
-                <tbody class="text-gray-600 text-sm font-light">
+                <tbody class="text-gray-600 text-sm font-semibold">
                     <tr class="border-b border-gray-300 hover:bg-gray-100">
-                        <td class="py-3 px-6">1</td>
-                        <td class="py-3 px-6">TOP 50 AGENTS (IN TERMS OF RECRUIT)</td>
-                        <td class="py-3 px-6">
-                            <a href="#" class="text-blue-500 hover:underline">VIEW</a> | 
-                            <a href="#" class="text-blue-500 hover:underline">PLAIN VIEW</a> | 
-                            <a href="#" class="text-blue-500 hover:underline">DOWNLOAD</a>
-                        </td>
+                        <td class="py-3 px-6">MONTHLY TOTAL</td>
+                        <td class="py-3 px-6">f</td>
+                        <td class="py-3 px-6">f</td>
+                        <td class="py-3 px-6">f</td>
+                        <td class="py-3 px-6">f</td>
+                        <td class="py-3 px-6">f</td>
+                        <td class="py-3 px-6">f</td>
+                        <td class="py-3 px-6">f</td>
+                        <td class="py-3 px-6">f</td>
                     </tr>
-                    <tr class="border-b border-gray-300 hover:bg-gray-100">
-                        <td class="py-3 px-6">2</td>
-                        <td class="py-3 px-6">BRANCH TOP 50 LIFE SAVERS (CASE COUNT)</td>
-                        <td class="py-3 px-6">
-                            <a href="#" class="text-blue-500 hover:underline">VIEW</a> | 
-                            <a href="#" class="text-blue-500 hover:underline">PLAIN VIEW</a> | 
-                            <a href="#" class="text-blue-500 hover:underline">DOWNLOAD</a>
-                        </td>
-                    </tr>
+                </tbody>
                 <thead>
                     <tr class="bg-gray-200 text-gray-600 uppercase text-sm leading-normal">
-                        <th class="py-3 px-6 text-left">#</th>
-                        <th class="py-3 px-6 text-left">Title</th>
+                        <th class="py-3 px-6 text-left">ID</th>
+                        <th class="py-3 px-6 text-left">Agent</th>
+                        <th class="py-3 px-6 text-left">Unit</th>
+                        <th class="py-3 px-6 text-left">Sub Unit</th>
+                        <th class="py-3 px-6 text-left">Client Name</th>
+                        <th class="py-3 px-6 text-left">Policy No.</th>
+                        <th class="py-3 px-6 text-left">APE</th>
+                        <th class="py-3 px-6 text-left">Issued Date</th>
                         <th class="py-3 px-6 text-left">Action</th>
                     </tr>
                 </thead>
-                    <!-- Add more rows as needed -->
-                </tbody>
             </table>
         </div>
-    
+        
     </div>
-    </div>
-    
 </body>
 </html>
