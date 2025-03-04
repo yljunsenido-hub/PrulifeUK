@@ -98,10 +98,8 @@
                 <!-- Images will be injected here by JavaScript -->
             </div>
             <button class="prev absolute left-5 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white p-2 rounded-full" onclick="changeSlide(-1)">&#10094;</button>
-            <button class="next absolute right-5 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white hover:on-mouse p-2 rounded-full" onclick="changeSlide(1)">&#10095;</button>
+            <button class="next absolute right-5 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white p-2 rounded-full" onclick="changeSlide(1)">&#10095;</button>
         </div>
-
-        
 
          <script>
         let slideIndex = 0; // Start at the first image

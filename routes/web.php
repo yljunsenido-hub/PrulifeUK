@@ -54,4 +54,16 @@ Route::get('/easyReports'  , function () {
     return view('Reports_Tab/easyReports');
 });
 
+Route::get('/agm'  , function () {
+    return view('Reports_Tab/agm');
+});
+
+Route::get('/personaltogo'  , function () {
+    return view('Reports_Tab/personaltogo');
+});
+
+Route::get('/ciq'  , function () {
+    return view('Reports_Tab/ciq');
+});
+
 //dd
