@@ -96,3 +96,7 @@ Route::get('/qualifiers'  , function () {
     return view('Reports_Tab/qualifiers');
 });
 
+Route::get('/agm'  , function () {
+    return view('Reports_Tab/agm');
+});
+
