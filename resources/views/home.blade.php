@@ -4,91 +4,100 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blue Chalcedony Quartz Branch</title>
+    
+    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Font Awesome -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
     
     <!-- CSS Styles -->
     <style>
         /* Sticky Navbar */
         nav {
-            position: sticky; /* Stick the navbar to the top of the page */
-            top: 0; /* Position it at the top */
-            z-index: 1000; /* Ensure it's on top of other content */
+            position: sticky;
+            top: 0;
+            z-index: 1000;
         }
 
         /* Sidebar Style */
         .sidebar {
             position: fixed;
-            top: 72px; /* Position below the navigation bar */
-            left: 0; /* Position from the left */
+            top: 72px;
+            left: 0;
             width: 260px;
-            height: calc(100% - 72px); /* Full height minus navbar height */
-            background-color: #1f2937; /* Dark grayish-blue color */
-            color: white; /* Text color for better contrast */
+            height: calc(100% - 72px);
+            background-color: #1f2937;
+            color: white;
             box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
             z-index: 1000;
             padding: 20px;
-            transform: translateX(-100%); /* Start hidden off-screen */
-            opacity: 0; /* Start hidden */
-            visibility: hidden; /* Start hidden */
-            transition: transform 0.4s ease, opacity 0.1s ease; /* Smooth transition */
-            overflow-y: auto; /* Enable vertical scrolling */
+            transform: translateX(-100%);
+            opacity: 0;
+            visibility: hidden;
+            transition: transform 0.4s ease, opacity 0.1s ease;
+            overflow-y: auto;
         }
 
         .sidebar.show {
-            transform: translateX(0); /* Slide in */
-            opacity: 1; /* Fade in */
-            visibility: visible; /* Make it visible */
+            transform: translateX(0);
+            opacity: 1;
+            visibility: visible;
         }
 
         /* Highlight menu items on hover */
         .menu-item:hover .menu-text {
-            color: #60a5fa; /* Change text color on hover */
+            color: #60a5fa;
         }
 
         /* Custom scrollbar */
         .sidebar::-webkit-scrollbar {
-            width: 8px; /* Width of the scrollbar */
+            width: 8px;
         }
 
         .sidebar::-webkit-scrollbar-thumb {
-            background: #dbd8d8; /* Color of the scrollbar thumb */
-            border-radius: 10px; /* Rounded corners for the scrollbar thumb */
+            background: #dbd8d8;
+            border-radius: 10px;
         }
 
         .sidebar::-webkit-scrollbar-thumb:hover {
-            background: #6b7280; /* Color of the scrollbar thumb on hover */
+            background: #6b7280;
         }
 
         /* Dropdown Styles */
         .dropdown {
-            display: none; /* Hide dropdowns by default */
+            transition: max-height 0.3s ease-out, opacity 0.3s ease-out;
+            max-height: 0;
+            opacity: 0;
+            overflow: hidden;
+            display: block;
         }
 
         .dropdown.show {
-            display: block; /* Show dropdown when active */
+            max-height: 500px;
+            opacity: 1;
         }
 
         /* Highlight dropdown items on hover */
         .dropdown a:hover {
-            background-color: #4b5563; /* Darker gray for dropdown items on hover */
-            color: #ffffff; /* Change text color to white for better contrast */
+            background-color: #4b5563;
+            color: #ffffff;
         }
 
         /* Main content styles */
         .content {
-            transition: margin-left 0.4s ease, margin-right 0.4s ease; /* Smooth transition for content */
-            margin: 0 auto; /* Center horizontally */
-            max-width: 1500px; /* Set a max-width for the content */
-            padding: 0px; /* Padding inside the content */
-            margin-top: 15px; /* Push content below the navbar */
-            margin-left: 20px; /* Add left margin */
+            transition: margin-left 0.4s ease, margin-right 0.4s ease;
+            margin: 0 auto;
+            max-width: 1500px;
+            padding: 0px;
+            margin-top: 15px;
+            margin-left: 20px;
             margin-right: 20px;
         }
 
         .content.shift {
-            margin-left: 290px; /* Shift content to the right when sidebar is open */
-            margin-right: 20px; /* Adjust right margin */
+            margin-left: 290px;
+            margin-right: 20px;
         }
 
         /* Carousel Styles */
@@ -96,24 +105,24 @@
             border-radius: 10px;
             position: relative;
             overflow: hidden;
-            height: 200px; /* Adjust height as needed */
-            margin-top: 20px; /* Space above the carousel */
+            height: 200px;
+            margin-top: 20px;
         }
 
         .carousel-inner {
             display: flex;
             transition: transform 0.5s ease;
-            width: 300%; /* 100% for each image */
+            width: 300%;
         }
 
         .carousel-item {
-            width: 100%; /* Each item takes full width */
-            flex: 0 0 100%; /* Prevent flex items from shrinking */
+            width: 100%;
+            flex: 0 0 100%;
         }
 
         .carousel img {
-            width: 100%; /* Make images responsive */
-            height: auto; /* Maintain aspect ratio */
+            width: 100%;
+            height: auto;
         }
 
         /* Navigation buttons */
@@ -142,7 +151,7 @@
     <nav class="bg-gray-800 p-4 flex justify-between items-center">
         <div class="flex items-center">
             <button class="mr-2 bg-transparent text-white p-2 rounded-md hover:bg-gray-700" onclick="toggleSidebar()">
-                <i class="fas fa-bars"></i> <!-- Sidebar icon -->
+                <i class="fas fa-bars"></i>
             </button>
             <img src="https://placehold.co/50x50" alt="Blue Chalcedony Quartz logo" class="h-10 w-10 mr-2">
             <span class="text-white text-lg font-semibold">BLUE CHALCEDONY QUARTZ BRANCH</span>
@@ -160,7 +169,7 @@
     </nav>
 
     <!-- Sidebar -->
-    <div class="sidebar" id="sidebar">
+    <div class="sidebar w-64 bg-gray-900 text-white" id="sidebar">
         <ul>
             <li class="menu-item text-white w-full text-left py-1 pb-2">
                 <span class="text-yellow-200">Activities</span>
@@ -336,16 +345,40 @@
                 content.classList.toggle("shift"); // Shift content when sidebar is visible
             }
 
-            // Function to toggle dropdown menus
+            let currentOpenDropdown = null;
+
             function toggleDropdown(dropdownId) {
                 const dropdown = document.getElementById(dropdownId);
-                dropdown.classList.toggle("show"); // Show or hide the dropdown
+
+                // Close the currently open dropdown if it's not the one being clicked
+                if (currentOpenDropdown && currentOpenDropdown !== dropdown) {
+                    currentOpenDropdown.classList.remove('show');
+                    currentOpenDropdown.style.maxHeight = '0'; // Reset max-height
+                    currentOpenDropdown.style.opacity = '0'; // Reset opacity
+                }
+
+                // Toggle the clicked dropdown
+                if (dropdown.classList.contains('show')) {
+                    dropdown.classList.remove('show');
+                    dropdown.style.maxHeight = '0'; // Reset max-height
+                    dropdown.style.opacity = '0'; // Reset opacity
+                } else {
+                    dropdown.classList.add('show');
+                    dropdown.style.maxHeight = '500px'; // Set max-height to allow transition
+                    dropdown.style.opacity = '1'; // Set opacity to allow transition
+                }
+
+                // Update the current open dropdown reference
+                currentOpenDropdown = dropdown.classList.contains('show') ? dropdown : null;
             }
         </script>
 
+        <!-- Production Month-to-Date -->
         <div class="bg-gray-200 text-center py-2 mt-4">
             Production Month-to-Date as of February 24, 2025
         </div>
+        
+        <!-- Statistics Cards -->
         <div class="flex flex-wrap justify-center gap-4 mt-4">
             <div class="flex-1 min-w-[250px] max-w-[300px] bg-green-500 text-white p-4 rounded-lg shadow-md">
                 <h2 class="text-lg font-semibold">Personal</h2>
@@ -375,6 +408,7 @@
             </div>
         </div>
 
+        <!-- Incentive and Recognition Section -->
         <div class="container mx-auto p-4 mt-8 mb-4">
             <ol class="w-full h-16 bg-gray-200 text-black text-center flex items-center justify-center border border-gray-300 rounded-md mb-4">
                 Incentive and Recognition
@@ -443,7 +477,6 @@
                                 <td class="py-2 px-4">John Doe &nbsp;&nbsp; == $0</td>
                                 <td class="py-2 px-4">20,000.00</td>
                             </tr>
-                            <!-- Add more rows as needed -->
                         </tbody>                
                     </table>
                 </div>
@@ -498,128 +531,120 @@
                                 <td class="py-2 px-4">SAMPLE</td>
                                 <td class="py-2 px-4">20,000.00</td>
                             </tr>
-                            <!-- Add more rows as needed -->
                         </tbody>                
                     </table>
                 </div>
             </div>
         </div>
 
-
-                              <div class="flex space-x-4 mt-8">
-                <div class="w-1/2">
-                    <div class="max-w-xl w-full bg-white rounded-lg shadow-sm dark:bg-gray-800">
-  <div class="flex justify-between p-4 md:p-6 pb-0 md:pb-0">
-    <div>
-      <h5 class="leading-none text-3xl font-bold text-gray-900 dark:text-white pb-2">$12,423</h5>
-      <p class="text-base font-normal text-gray-500 dark:text-gray-400">Sales this year</p>
-    </div>
-    <div class="flex items-center px-2.5 py-0.5 text-base font-semibold text-green-500 dark:text-green-500 text-center">
-      23%
-      <svg class="w-3 h-3 ms-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 14">
-        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13V1m0 0L1 5m4-4 4 4"/>
-      </svg>
-    </div>
-  </div>
-  
-  <div id="labels-chart" class="px-2.5">
-    <canvas id="salesChart" height="100"></canvas>
-  </div>
-  
-  <div class="grid grid-cols-1 items-center border-gray-200 border-t dark:border-gray-700 justify-between mt-5 p-4 md:p-6 pt-0 md:pt-0">
-    <div class="flex justify-between items-center pt-5">
-      <!-- Button -->
-      <button
-        id="dropdownDefaultButton"
-        data-dropdown-toggle="lastDaysdropdown"
-        data-dropdown-placement="bottom"
-        class="text-sm font-medium text-gray-500 dark:text-gray-400 hover:text-gray-900 text-center inline-flex items-center dark:hover:text-white"
-        type="button">
-        Last 12 months
-        <svg class="w-2.5 m-2.5 ms-1.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
-          <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/>
-        </svg>
-      </button>
-      <!-- Dropdown menu -->
-      <div id="lastDaysdropdown" class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow-sm w-44 dark:bg-gray-700">
-          <ul class="py-2 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownDefaultButton">
-            <li>
-              <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Last Month</a>
-            </li>
-            <li>
-              <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">This Month</a>
-            </li>
-            <li>
-              <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Last 12 Months</a>
-            </li>
-            <li>
-              <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Last 30 Days</a>
-            </li>
-            <li>
-              <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Last 90 Days</a>
-            </li>
-          </ul>
-      </div>
-      <a
-        href="#"
-        class="uppercase text-sm font-semibold inline-flex items-center rounded-lg text-blue-600 hover:text-blue-700 dark:hover:text-blue-500  hover:bg-gray-100 dark:hover:bg-gray-700 dark:focus:ring-gray-700 dark:border-gray-700 px-3 py-2">
-        Sales Report
-        <svg class="w-2.5 h-2.5 ms-1.5 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
-          <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 9 4-4-4-4"/>
-        </svg>
-      </a>
-    </div>
-  </div>
-</div>
-
-
-
-        
+        <!-- Sales Card -->
+        <div class="flex space-x-4 mt-8">
+            <div class="w-1/2">
+                <div class="max-w-xl w-full bg-white rounded-lg shadow-sm dark:bg-gray-800">
+                    <div class="flex justify-between p-4 md:p-6 pb-0 md:pb-0">
+                        <div>
+                            <h5 class="leading-none text-3xl font-bold text-gray-900 dark:text-white pb-2">$12,423</h5>
+                            <p class="text-base font-normal text-gray-500 dark:text-gray-400">Sales this year</p>
+                        </div>
+                        <div class="flex items-center px-2.5 py-0.5 text-base font-semibold text-green-500 dark:text-green-500 text-center">
+                            23%
+                            <svg class="w-3 h-3 ms-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 14">
+                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13V1m0 0L1 5m4-4 4 4"/>
+                            </svg>
+                        </div>
+                    </div>
+                    
+                    <div id="labels-chart" class="px-2.5">
+                        <canvas id="salesChart" height="100"></canvas>
+                    </div>
+                    
+                    <div class="grid grid-cols-1 items-center border-gray-200 border-t dark:border-gray-700 justify-between mt-5 p-4 md:p-6 pt-0 md:pt-0">
+                        <div class="flex justify-between items-center pt-5">
+                            <!-- Button -->
+                            <button
+                                id="dropdownDefaultButton"
+                                data-dropdown-toggle="lastDaysdropdown"
+                                data-dropdown-placement="bottom"
+                                class="text-sm font-medium text-gray-500 dark:text-gray-400 hover:text-gray-900 text-center inline-flex items-center dark:hover:text-white"
+                                type="button">
+                                Last 12 months
+                                <svg class="w-2.5 m-2.5 ms-1.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/>
+                                </svg>
+                            </button>
+                            <!-- Dropdown menu -->
+                            <div id="lastDaysdropdown" class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow-sm w-44 dark:bg-gray-700">
+                                <ul class="py-2 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownDefaultButton">
+                                    <li>
+                                        <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Last Month</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">This Month</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Last 12 Months</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Last 30 Days</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Last 90 Days</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <a
+                                href="#"
+                                class="uppercase text-sm font-semibold inline-flex items-center rounded-lg text-blue-600 hover:text-blue-700 dark:hover:text-blue-500 hover:bg-gray-100 dark:hover:bg-gray-700 dark:focus:ring-gray-700 dark:border-gray-700 px-3 py-2">
+                                Sales Report
+                                <svg class="w-2.5 h-2.5 ms-1.5 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 9 4-4-4-4"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-      
-<!-- Chart.js Library -->
-<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-<script>
-    const ctx = document.getElementById('salesChart').getContext('2d');
-    const salesData = {
-        labels: ['Jan', 'Feb', 'Mar', ' Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
-        datasets: [{
-            label: 'Sales This Year',
-            data: [15000, 20000, 18000, 22000, 25000, 30000, 28000, 32000, 31000, 35000, 40000, 45000],
-            backgroundColor: 'rgba(75, 192, 192, 0.6)',
-            borderColor: 'rgba(75, 192, 192, 1)',
-            borderWidth: 1,
-            fill: true,
-        }]
-    };
+    </div>
 
-    const salesChart = new Chart(ctx, {
-        type: 'line',
-        data: salesData,
-        options: {
-            responsive: true,
-            scales: {
-                y: {
-                    beginAtZero: true,
-                    title: {
-                        display: true,
-                        text: 'Sales Amount ($)'
-                    }
-                },
-                x: {
-                    title: {
-                        display: true,
-                        text: 'Months'
+    <!-- Chart.js Library -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+        const ctx = document.getElementById('salesChart').getContext('2d');
+        const salesData = {
+            labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
+            datasets: [{
+                label: 'Sales This Year',
+                data: [15000, 20000, 18000, 22000, 25000, 30000, 28000, 32000, 31000, 35000, 40000, 45000],
+                backgroundColor: 'rgba(75, 192, 192, 0.6)',
+                borderColor: 'rgba(75, 192, 192, 1)',
+                borderWidth: 1,
+                fill: true,
+            }]
+        };
+
+        const salesChart = new Chart(ctx, {
+            type: 'line',
+            data: salesData,
+            options: {
+                responsive : true,
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        title: {
+                            display: true,
+                            text: 'Sales Amount ($)'
+                        }
+                    },
+                    x: {
+                        title: {
+                            display: true,
+                            text: 'Months'
+                        }
                     }
                 }
             }
-        }
-    });
-</script>
-     
-
-</div>
-    
-    
+        });
+    </script>
 </body>
 </html>
