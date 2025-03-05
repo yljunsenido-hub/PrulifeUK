@@ -100,3 +100,15 @@ Route::get('/agm'  , function () {
     return view('Reports_Tab/agm');
 });
 
+
+
+
+// Proposal Bank Tab
+
+Route::get('/proposalSearch'  , function () {
+    return view('Proposal_Bank_Tab/proposal_search');
+});
+
+Route::get('/proposalList'  , function () {
+    return view('Proposal_Bank_Tab/proposal_list');
+});
