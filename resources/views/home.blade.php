@@ -297,6 +297,19 @@
                     <img src="https://picsum.photos/800/300?image=3" alt="Image 3">
                 </div>
             </div>
+<<<<<<< HEAD
+            <button class="prev absolute left-5 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white p-2 rounded-full" onclick="changeSlide(-1)">&#10094;</button>
+            <button class="next absolute right-5 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white p-2 rounded-full" onclick="changeSlide(1)">&#10095;</button>
+        </div>
+
+         <script>
+        let slideIndex = 0; // Start at the first image
+        const images = [
+            "https://placehold.co/1200x400/ff7f7f/333333?text=Image+1",
+            "https://placehold.co/1200x400/7f7fff/333333?text=Image+2",
+            "https://placehold.co/1200x400/7fff7f/333333?text=Image+3"
+        ];
+=======
             <button class="carousel-button left" onclick="prevSlide()">&#10094;</button>
             <button class="carousel-button right" onclick="nextSlide()">&#10095;</button>
         </div>
@@ -307,6 +320,7 @@
             function showSlide(index) {
                 const slides = document.querySelectorAll('.carousel-item');
                 const totalSlides = slides.length;
+>>>>>>> 79ce315e97cab39368dc94f20505f7abe43662cd
 
                 // Wrap around if index is out of bounds
                 if (index >= totalSlides) {

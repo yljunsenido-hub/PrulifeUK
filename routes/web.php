@@ -92,6 +92,18 @@ Route::get('/easyReports'  , function () {
     return view('Reports_Tab/easyReports');
 });
 
+Route::get('/agm'  , function () {
+    return view('Reports_Tab/agm');
+});
+
+Route::get('/personaltogo'  , function () {
+    return view('Reports_Tab/personaltogo');
+});
+
+Route::get('/ciq'  , function () {
+    return view('Reports_Tab/ciq');
+});
+
 Route::get('/qualifiers'  , function () {
     return view('Reports_Tab/qualifiers');
 });
@@ -99,6 +111,32 @@ Route::get('/qualifiers'  , function () {
 Route::get('/agm'  , function () {
     return view('Reports_Tab/agm');
 });
+
+
+
+
+// Recruitment Tab
+
+Route::get('/recmaintenance'  , function () {
+    return view('Recruitment_Tab/recmaintenance');
+});
+
+Route::get('/recprocess'  , function () {
+    return view('Recruitment_Tab/recprocess');
+});
+
+
+
+
+// Markting Tab
+
+Route::get('/posterTemplates'  , function () {
+    return view('Marketing_Tab/poster_templates');
+});
+
+
+
+
 
 
 

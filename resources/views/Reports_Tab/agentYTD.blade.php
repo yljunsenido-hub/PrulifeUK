@@ -9,9 +9,10 @@
 <body class="bg-gray-100 p-6 border border-gray-300">
     <div class="container mx-auto max-w-8xl bg-white p-6 rounded-lg shadow-md mb-3">
         <p class="text-4xl font-semibold mb-4">Agents Production Reports</p>
-    </div>
-    <div class="container mx-auto max-w-8xl bg-white p-6 rounded-lg shadow-md">
-        <h2 class="text-2xl font-semibold mb-4">Year-to-date</h2>
+    
+    <div class="container shadow-md mb-3 mb-4 p-4 bg-white rounded-md flex justify-between items-center">
+        <h1 class="text-l font-semibold ">Year-to-date</h1>
+</div>
         
         <!-- Show entries dropdown -->
         <div class="mb-4 flex items-center">
@@ -44,35 +45,35 @@
                     </tr>
                 </thead>
                 <tbody class="text-gray-600 text-sm font-light">
-                    <tr class="border-b border-gray-300 hover:bg-gray-100">
-                        <td class="py-3 px-6">1</td>
-                        <td class="py-3 px-6">A001</td>
-                        <td class="py-3 px-6">Finance</td>
-                        <td class="py-3 px-6">Accounting</td>
-                        <td class="py-3 px-6">Payroll</td>
-                        <td class="py-3 px-6">John Doe</td>
-                        <td class="py-3 px-6">100</td>
-                        <td class="py-3 px-6">20</td>
-                        <td class="py-3 px-6">120</td>
-                        <td class="py-3 px-6">CC1</td>
-                        <td class="py-3 px-6">75%</td>
-                        <td class="py-3 px-6">75%</td>
-                        <td class="py-3 px-6">75%</td>
+                    <tr class="border-b border-gray-300 hover:bg-gray-100 ">
+                        <td class="py-3 px-6 border-r">1</td>
+                        <td class="py-3 px-6 border-r">A001</td>
+                        <td class="py-3 px-6 border-r">Finance</td>
+                        <td class="py-3 px-6 border-r">Accounting</td>
+                        <td class="py-3 px-6 border-r">Payroll</td>
+                        <td class="py-3 px-6 border-r">John Doe</td>
+                        <td class="py-3 px-6 border-r">100</td>
+                        <td class="py-3 px-6 border-r">20</td>
+                        <td class="py-3 px-6 border-r">120</td>
+                        <td class="py-3 px-6 border-r">CC1</td>
+                        <td class="py-3 px-6 border-r">75%</td>
+                        <td class="py-3 px-6 border-r">75%</td>
+                        <td class="py-3 px-6 border-r">75%</td>
                     </tr>
                     <tr class="border-b border-gray-300 hover:bg-gray-100">
-                        <td class="py-3 px-6">2</td>
-                        <td class="py-3 px-6">A002</td>
-                        <td class="py-3 px-6">HR</td>
-                        <td class="py-3 px-6">Recruitment</td>
-                        <td class="py-3 px-6">Talent Acquisition</td>
-                        <td class="py-3 px-6">Jane Smith</td>
-                        <td class="py-3 px-6">80</td>
-                        <td class="py-3 px-6">10</td>
-                        <td class="py-3 px-6">90</td>
-                        <td class="py-3 px-6">CC2</td>
-                        <td class="py-3 px-6">88%</td>
-                        <td class="py-3 px-6">75%</td>
-                        <td class="py-3 px-6">75%</td>
+                        <td class="py-3 px-6 border-r">2</td>
+                        <td class="py-3 px-6 border-r">A002</td>
+                        <td class="py-3 px-6 border-r">HR</td>
+                        <td class="py-3 px-6 border-r">Recruitment</td>
+                        <td class="py-3 px-6 border-r">Talent Acquisition</td>
+                        <td class="py-3 px-6 border-r">Jane Smith</td>
+                        <td class="py-3 px-6 border-r">80</td>
+                        <td class="py-3 px-6 border-r">10</td>
+                        <td class="py-3 px-6 border-r">90</td>
+                        <td class="py-3 px-6 border-r">CC2</td>
+                        <td class="py-3 px-6 border-r">88%</td>
+                        <td class="py-3 px-6 border-r">75%</td>
+                        <td class="py-3 px-6 border-r">75%</td>
                     </tr>
                     <!-- Overall summary row -->
                     <tr class="bg-gray-200 font-semibold">
