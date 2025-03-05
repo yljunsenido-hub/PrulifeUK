@@ -136,11 +136,6 @@ Route::get('/posterTemplates'  , function () {
 
 
 
-
-
-
-
-
 // Proposal Bank Tab
 
 Route::get('/proposalSearch'  , function () {
