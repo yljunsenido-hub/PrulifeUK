@@ -6,6 +6,8 @@
     <title>Blue Chalcedony Quartz Branch</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+    
+    <!-- CSS Styles -->
     <style>
         /* Sticky Navbar */
         nav {
@@ -17,10 +19,10 @@
         /* Sidebar Style */
         .sidebar {
             position: fixed;
-            top: 72px; /* Position below the navigation bar (adjust based on your navbar height) */
+            top: 72px; /* Position below the navigation bar */
             left: 0; /* Position from the left */
             width: 260px;
-            height: calc(100% - 72px); /* Full height minus navbar height (adjusted for the 72px navbar) */
+            height: calc(100% - 72px); /* Full height minus navbar height */
             background-color: #1f2937; /* Dark grayish-blue color */
             color: white; /* Text color for better contrast */
             box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
@@ -82,13 +84,11 @@
             margin-top: 15px; /* Push content below the navbar */
             margin-left: 20px; /* Add left margin */
             margin-right: 20px;
-            
         }
 
         .content.shift {
             margin-left: 290px; /* Shift content to the right when sidebar is open */
             margin-right: 20px; /* Adjust right margin */
-            
         }
 
         /* Carousel Styles */
@@ -96,7 +96,6 @@
             border-radius: 10px;
             position: relative;
             overflow: hidden;
-            width: %;
             height: 200px; /* Adjust height as needed */
             margin-top: 20px; /* Space above the carousel */
         }
@@ -163,12 +162,10 @@
     <!-- Sidebar -->
     <div class="sidebar" id="sidebar">
         <ul>
-            <li class="menu-item"
-                class="text-white w-full text-left py-1 pb-2" >
-                    <span class="text-yellow-200">Activities
+            <li class="menu-item text-white w-full text-left py-1 pb-2">
+                <span class="text-yellow-200">Activities</span>
             </li>
-
-            <li class="menu-item ">
+            <li class="menu-item">
                 <button class="text-white w-full text-left py-1 pb-4" onclick="toggleDropdown('eventsDropdown')">
                     <span class="menu-text">Events</span> <i class="fas fa-chevron-down px-2"></i>
                 </button>
@@ -178,10 +175,8 @@
                     <li><a href="#" class="block pl-4 py-1">Event Maintenance</a></li>
                 </ul>
             </li>
-
-             <li class="menu-item"
-                class="text-white w-full text-left py-1 pb-2" >
-                    <span class="text-yellow-200">Operations
+            <li class="menu-item text-white w-full text-left py-1 pb-2">
+                <span class="text-yellow-200">Operations</span>
             </li>
             <li class="menu-item">
                 <button class="text-white w-full text-left py-1" onclick="toggleDropdown('leadsDropdown')">
@@ -252,6 +247,7 @@
             <li class="menu-item">
                 <button class="text-white w-full text-left py-1" onclick="toggleDropdown('appointmentsDropdown')">
                     <span class="menu-text">Appointments</span>
+                </button>
             </li>
             <li class="menu-item">
                 <button class="text-white w-full text-left py-1" onclick="toggleDropdown('bcmsDropdown')">
@@ -271,8 +267,7 @@
                     <span class="menu-text">Branch Operations Utility</span> <i class="fas fa-chevron-down px-2"></i>
                 </button>
                 <ul class="dropdown" id="branchOperationsDropdown">
-                    <li><a href="#" class="block pl-4 py-1">Upload Issued
-</a></li>
+                    <li><a href="#" class="block pl-4 py-1">Upload Issued</a></li>
                     <li><a href="#" class="block pl-4 py-1">Upload NAP</a></li>
                     <li><a href="#" class="block pl-4 py-1">Upload Due List</a></li>
                     <li><a href="#" class="block pl-4 py-1">Upload Batch Photos</a></li>
@@ -297,30 +292,17 @@
                     <img src="https://picsum.photos/800/300?image=3" alt="Image 3">
                 </div>
             </div>
-<<<<<<< HEAD
-            <button class="prev absolute left-5 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white p-2 rounded-full" onclick="changeSlide(-1)">&#10094;</button>
-            <button class="next absolute right-5 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white p-2 rounded-full" onclick="changeSlide(1)">&#10095;</button>
-        </div>
-
-         <script>
-        let slideIndex = 0; // Start at the first image
-        const images = [
-            "https://placehold.co/1200x400/ff7f7f/333333?text=Image+1",
-            "https://placehold.co/1200x400/7f7fff/333333?text=Image+2",
-            "https://placehold.co/1200x400/7fff7f/333333?text=Image+3"
-        ];
-=======
             <button class="carousel-button left" onclick="prevSlide()">&#10094;</button>
             <button class="carousel-button right" onclick="nextSlide()">&#10095;</button>
         </div>
 
+        <!-- JavaScript Functions -->
         <script>
             let currentIndex = 0;
 
             function showSlide(index) {
                 const slides = document.querySelectorAll('.carousel-item');
                 const totalSlides = slides.length;
->>>>>>> 79ce315e97cab39368dc94f20505f7abe43662cd
 
                 // Wrap around if index is out of bounds
                 if (index >= totalSlides) {
@@ -392,6 +374,252 @@
                 <p>TOTAL MTD: P 2,345,319.39</p>
             </div>
         </div>
+
+        <div class="container mx-auto p-4 mt-8 mb-4">
+            <ol class="w-full h-16 bg-gray-200 text-black text-center flex items-center justify-center border border-gray-300 rounded-md mb-4">
+                Incentive and Recognition
+            </ol>
+
+            <div class="flex space-x-4">
+                <div class="w-1/2">
+                    <table class="table-auto w-full border border-gray-300 rounded-md shadow-md">
+                        <thead>
+                            <tr class="bg-gray-300">
+                                <th scope="col" colspan="2" class="py-2 text-left px-4">TO-GO's</th>
+                            </tr>
+                            <tr>
+                                <th scope="col" class="py-2 text-left px-4">Incentive</th>
+                                <th scope="col" class="py-2 text-left px-4">To-go</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="bg-white border-b">
+                                <td class="py-2 px-4">BRANCH ACHIEVER</td>
+                                <td class="py-2 px-4">250,000 APE; 8 CC;</td>
+                            </tr>
+                            <tr class="bg-gray-100 border-b">
+                                <td class="py-2 px-4">SECTORAL ACHIEVER</td>
+                                <td class="py-2 px-4">500,000 APE; 10 CC;</td>
+                            </tr>
+                            <tr class="bg-white border-b">
+                                <td class="py-2 px-4">NATIONAL ACHIEVER</td>
+                                <td class="py-2 px-4">750,000 APE; 12 CC;</td>
+                            </tr>
+                            <tr class="bg-gray-100 border-b">
+                                <td class="py-2 px-4">SENIOR ACHIEVER</td>
+                                <td class="py-2 px-4">1,500,000 APE; 18 CC;</td>
+                            </tr>
+                            <tr class="bg-white border-b">
+                                <td class="py-2 px-4">ELITE ACHIEVER</td>
+                                <td class="py-2 px-4">2,500,000 APE; 21 CC;</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="w-1/2">
+                    <table class="table-auto w-full border border-gray-300 rounded-md shadow-md">
+                        <thead>
+                            <tr class="bg-gray-300">
+                                <th scope="col" colspan="4" class="py-2 text-left px-4">TOP AGENTS MTD as of MAR. 02 BRANCH WIDE</th>
+                            </tr>
+                            <tr>
+                                <th scope="col" class="py-2 text-left px-4">Rank</th>
+                                <th scope="col" class="py-2 text-left px-4">Unit</th>
+                                <th scope="col" class="py-2 text-left px-4">Name</th>
+                                <th scope="col" class="py-2 text-left px-4">APE</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="bg-white border-b">
+                                <th scope="row" class="py-2 px-4">1</th>
+                                <td class="py-2 px-4">BLUE CHALCEDONY DIRECT</td>
+                                <td class="py-2 px-4">Christine Mercado &nbsp;&nbsp; == $0</td>
+                                <td class="py-2 px-4">26,613.00</td>
+                            </tr>
+                            <tr class="bg-gray-100 border-b">
+                                <th scope="row" class="py-2 px-4">2</th>
+                                <td class="py-2 px-4">ANOTHER UNIT</td>
+                                <td class="py-2 px-4">John Doe &nbsp;&nbsp; == $0</td>
+                                <td class="py-2 px-4">20,000.00</td>
+                            </tr>
+                            <!-- Add more rows as needed -->
+                        </tbody>                
+                    </table>
+                </div>
+            </div>
+
+            <div class="flex space-x-4 mt-8">
+                <div class="w-1/2">
+                    <table class="table-auto w-full border border-gray-300 rounded-md shadow-md">
+                        <thead>
+                            <tr class="bg-gray-300">
+                                <th scope="col" colspan="4" class="py-2 text-left px-4">TOP UNIT MTD as of MAR. 02 - BRANCH WIDE</th>
+                            </tr>
+                            <tr>
+                                <th scope="col" class="py-2 text-left px-4">Rank</th>
+                                <th scope="col" class="py-2 text-left px-4">Unit</th>
+                                <th scope="col" class="py-2 text-left px-4">APE</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="bg-white border-b">
+                                <th scope="row" class="py-2 px-4">1</th>
+                                <td class="py-2 px-4">BRANCH ACHIEVER</td>
+                                <td class="py-2 px-4">250,000 APE; 8 CC;</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="w-1/2">
+                    <table class="table-auto w-full border border-gray-300 rounded-md shadow-md">
+                        <thead>
+                            <tr class="bg-gray-300">
+                                <th scope="col" colspan="4" class="py-2 text-left px-4">TOP ROOKIES MTD as of MAR. 02 - BRANCH WIDE</th>
+                            </tr>
+                            <tr>
+                                <th scope="col" class="py-2 text-left px-4">Rank</th>
+                                <th scope="col" class="py-2 text-left px-4">Unit</th>
+                                <th scope="col" class="py-2 text-left px-4">Name</th>
+                                <th scope="col" class="py-2 text-left px-4">APE</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="bg-white border-b">
+                                <th scope="row" class="py-2 px-4">1</th>
+                                <td class="py-2 px-4">BLUE CHALCEDONY SAMPLE</td>
+                                <td class="py-2 px-4">NAME</td>
+                                <td class="py-2 px-4">0</td>
+                            </tr>
+                            <tr class="bg-gray-100 border-b">
+                                <th scope="row" class="py-2 px-4">2</th>
+                                <td class="py-2 px-4">ANOTHER UNIT</td>
+                                <td class="py-2 px-4">SAMPLE</td>
+                                <td class="py-2 px-4">20,000.00</td>
+                            </tr>
+                            <!-- Add more rows as needed -->
+                        </tbody>                
+                    </table>
+                </div>
+            </div>
+        </div>
+
+
+                              <div class="flex space-x-4 mt-8">
+                <div class="w-1/2">
+                    <div class="max-w-xl w-full bg-white rounded-lg shadow-sm dark:bg-gray-800">
+  <div class="flex justify-between p-4 md:p-6 pb-0 md:pb-0">
+    <div>
+      <h5 class="leading-none text-3xl font-bold text-gray-900 dark:text-white pb-2">$12,423</h5>
+      <p class="text-base font-normal text-gray-500 dark:text-gray-400">Sales this year</p>
     </div>
+    <div class="flex items-center px-2.5 py-0.5 text-base font-semibold text-green-500 dark:text-green-500 text-center">
+      23%
+      <svg class="w-3 h-3 ms-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 14">
+        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13V1m0 0L1 5m4-4 4 4"/>
+      </svg>
+    </div>
+  </div>
+  
+  <div id="labels-chart" class="px-2.5">
+    <canvas id="salesChart" height="100"></canvas>
+  </div>
+  
+  <div class="grid grid-cols-1 items-center border-gray-200 border-t dark:border-gray-700 justify-between mt-5 p-4 md:p-6 pt-0 md:pt-0">
+    <div class="flex justify-between items-center pt-5">
+      <!-- Button -->
+      <button
+        id="dropdownDefaultButton"
+        data-dropdown-toggle="lastDaysdropdown"
+        data-dropdown-placement="bottom"
+        class="text-sm font-medium text-gray-500 dark:text-gray-400 hover:text-gray-900 text-center inline-flex items-center dark:hover:text-white"
+        type="button">
+        Last 12 months
+        <svg class="w-2.5 m-2.5 ms-1.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+          <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/>
+        </svg>
+      </button>
+      <!-- Dropdown menu -->
+      <div id="lastDaysdropdown" class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow-sm w-44 dark:bg-gray-700">
+          <ul class="py-2 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownDefaultButton">
+            <li>
+              <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Last Month</a>
+            </li>
+            <li>
+              <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">This Month</a>
+            </li>
+            <li>
+              <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Last 12 Months</a>
+            </li>
+            <li>
+              <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Last 30 Days</a>
+            </li>
+            <li>
+              <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Last 90 Days</a>
+            </li>
+          </ul>
+      </div>
+      <a
+        href="#"
+        class="uppercase text-sm font-semibold inline-flex items-center rounded-lg text-blue-600 hover:text-blue-700 dark:hover:text-blue-500  hover:bg-gray-100 dark:hover:bg-gray-700 dark:focus:ring-gray-700 dark:border-gray-700 px-3 py-2">
+        Sales Report
+        <svg class="w-2.5 h-2.5 ms-1.5 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+          <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 9 4-4-4-4"/>
+        </svg>
+      </a>
+    </div>
+  </div>
+</div>
+
+
+
+        
+        </div>
+      
+<!-- Chart.js Library -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+    const ctx = document.getElementById('salesChart').getContext('2d');
+    const salesData = {
+        labels: ['Jan', 'Feb', 'Mar', ' Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
+        datasets: [{
+            label: 'Sales This Year',
+            data: [15000, 20000, 18000, 22000, 25000, 30000, 28000, 32000, 31000, 35000, 40000, 45000],
+            backgroundColor: 'rgba(75, 192, 192, 0.6)',
+            borderColor: 'rgba(75, 192, 192, 1)',
+            borderWidth: 1,
+            fill: true,
+        }]
+    };
+
+    const salesChart = new Chart(ctx, {
+        type: 'line',
+        data: salesData,
+        options: {
+            responsive: true,
+            scales: {
+                y: {
+                    beginAtZero: true,
+                    title: {
+                        display: true,
+                        text: 'Sales Amount ($)'
+                    }
+                },
+                x: {
+                    title: {
+                        display: true,
+                        text: 'Months'
+                    }
+                }
+            }
+        }
+    });
+</script>
+     
+
+</div>
+    
+    
 </body>
 </html>
