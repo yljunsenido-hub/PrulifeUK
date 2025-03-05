@@ -80,15 +80,6 @@
             { No: 3, Incentives: 'B001', Unit: 'Sales', Recruiter: 'Alice Brown', Progress: 85, ForApproval: 'Yes' },
             { No: 4, Incentives: 'B002', Unit: 'Marketing', Recruiter: 'Bob White', Progress: 90, ForApproval: 'No' },
             { No: 5, Incentives: 'C001', Unit: 'Legal', Recruiter: 'Charlie Green', Progress: 75, ForApproval: 'Yes' },
-            { No: 6, Incentives: 'C002', Unit: 'Support', Recruiter: 'David Black', Progress: 60, ForApproval: 'No' },
-            { No: 7, Incentives: 'D001', Unit: 'Operations', Recruiter: 'Eve Blue', Progress: 95, ForApproval: 'Yes' },
-            { No: 8, Incentives: 'D002', Unit: 'Finance', Recruiter: 'Frank Gold', Progress: 80, ForApproval: 'No' },
-            { No: 9, Incentives: 'E001', Unit: 'Sales', Recruiter: 'Grace Hill', Progress: 70, ForApproval: 'Yes' },
-            { No: 10, Incentives: 'E002', Unit: 'HR', Recruiter: 'Hannah Moore', Progress: 90, ForApproval: 'No' },
-            { No: 11, Incentives: 'F001', Unit: 'IT', Recruiter: 'Ivy Lee', Progress: 85, ForApproval: 'Yes' },
-            { No: 12, Incentives: 'F002', Unit: 'Operations', Recruiter: 'Jack Adams', Progress: 80, ForApproval: 'No' },
-            { No: 13, Incentives: 'G001', Unit: 'Marketing', Recruiter: 'Kaitlyn Rivers', Progress: 75, ForApproval: 'Yes' },
-            { No: 14, Incentives: 'G002', Unit: 'Support', Recruiter: 'Liam Carter', Progress: 60, ForApproval: 'No' }
         ];
 
         // Filter data (you can add your filtering logic here)
