@@ -112,3 +112,29 @@ Route::get('/agm'  , function () {
     return view('Reports_Tab/agm');
 });
 
+
+
+
+// Recruitment Tab
+
+Route::get('/recmaintenance'  , function () {
+    return view('Recruitment_Tab/recmaintenance');
+});
+
+Route::get('/recprocess'  , function () {
+    return view('Recruitment_Tab/recprocess');
+});
+
+
+
+
+// Markting Tab
+
+Route::get('/posterTemplates'  , function () {
+    return view('Marketing_Tab/poster_templates');
+});
+
+
+
+
+

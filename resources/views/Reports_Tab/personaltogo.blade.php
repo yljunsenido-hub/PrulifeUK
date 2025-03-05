@@ -13,7 +13,7 @@
         <div class="mb-4 p-4 bg-gray-500 rounded-md flex justify-between items-center">
             <h3 class="text-lg font-semibold text-white">Personal Monitoring</h3>
             <a class="text-black text-opacity-70 py-2.5 px-4 flex justify-between items-center text-shadow-lg bg-gray-400 bg-opacity-7 overflow-hidden text-sm font-semibold gap-2.5 rounded-md mx-1.5 transition-all border border-transparent hover:border-white hover:border-opacity-60 hover:bg-gradient-to-b hover:from-white hover:via-white hover:to-white hover:opacity-60 hover:shadow-lg hover:translate-y-[-6px] active:translate-y-2 active:shadow-none">
-                <img src="path_to_image.png" alt="Download Icon" class="h-4 w-4" />
+                <img src="path_to_image.png" alt="Download Icon" class="h-4 w-4"/>
             </a>
         </div>
 

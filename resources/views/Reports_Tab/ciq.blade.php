@@ -19,7 +19,7 @@
         </div>
 
         <!-- Tabs Section -->
-        <div class="flex border-b border-gray-300 mb-4">
+        <div class="flex border-b  border-gray-300 mb-4">
             <a href="#" class="tab border-r border-l py-2 px-4 text-gray-600 hover:text-blue-600 font-semibold border-b-2 border-transparent hover:border-blue-600 transition-all duration-300 active-tab" id="tab1">A-AC Agent</a>
             <a href="#" class="tab border-r border-l py-2 px-4 text-gray-600 hover:text-blue-600 font-semibold border-b-2 border-transparent hover:border-blue-600 transition-all duration-300" id="tab2">B-AC UM</a>
             <a href="#" class="tab border-r border-l py-2 px-4 text-gray-600 hover:text-blue-600 font-semibold border-b-2 border-transparent hover:border-blue-600 transition-all duration-300" id="tab3">C-100K Club</a>
