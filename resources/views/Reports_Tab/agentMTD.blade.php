@@ -12,8 +12,8 @@
     <div class="container mx-auto max-w-8xl bg-white p-6 rounded-lg shadow-md mb-3">
         <p class="text-4xl font-semibold mb-4">Agents Production Reports</p>
     
-    <div class="container shadow-md mb-3 mb-4 p-4 bg-blue-900 rounded-md flex justify-between items-center">
-        <h1 class="text-l text-yellow-300 font-semibold ">Month-to-date</h1>
+    <div class="container shadow-md mb-3 mb-4 p-2 bg-blue-900 rounded-md flex justify-between items-center">
+        <h1 class="pl-2 text-l text-yellow-300 font-semibold ">Month-to-date</h1>
 </div>
 
 <div class="mb-4 p-4 bg-white rounded-md shadow-md">
@@ -38,7 +38,7 @@
 
             <table class="min-w-full bg-white border border-gray-300">
                 <thead>
-                    <tr class="bg-gray-200 text-gray-600 uppercase text-sm leading-normal">
+                    <tr class="bg-gray-200 text-black uppercase text-sm leading-normal">
                         <th class="py-3 px-6 text-left">Rank</th>
                         <th class="py-3 px-6 text-left">Code</th>
                         <th class="py-3 px-6 text-left">Branch</th>

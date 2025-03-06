@@ -8,12 +8,13 @@
 </head>
 <body class="bg-gray-100 p-6 border border-gray-300">
     <div class="container mx-auto max-w-8xl bg-white p-6 rounded-lg shadow-md">
-        <h2 class="text-2xl font-semibold mb-4">Agent Group Maintenance</h2>
+        <h2 class="text-4xl font-semibold mb-4">Agent Group Maintenance</h2>
 
-        <div class="mb-4 p-4 bg-gray-500 rounded-md flex justify-between items-center">
-    <h3 class="text-lg font-semibold text-white">Groups</h3>
-    <button class="px-3 py-1 bg-white text-gray-700 rounded-md hover:bg-gray-200 text-sm font-bold" id="AddButton">✚</button>
-</div>
+        <div class="mb-4 p-4 bg-blue-900 rounded-md flex justify-between items-center">
+    <h3 class="text-lg font-semibold text-yellow-300">Groups</h3>
+    <button class="px-3 py-1 bg-white text-gray-700 rounded-md hover:bg-yellow-300 
+    hover:text-white text-sm font-bold" id="AddButton">✚</button>
+    </div>
 
         <div class="mb-4 flex items-center justify-between">
     <div class="flex items-center">
@@ -36,7 +37,7 @@
         <div class="overflow-x-auto">
     <table id="dataTable" class="min-w-full bg-white border border-gray-300">
         <thead>
-            <tr class="bg-gray-500 text-white text-sm leading-normal">
+            <tr class="bg-gray-200 text-black text-sm leading-normal">
                 <th class="py-3 px-6 text-left">Group Name</th>
                 <th class="py-3 px-6 text-left">Tracking Start</th>
                 <th class="py-3 px-6 text-left">Tracking End</th>
