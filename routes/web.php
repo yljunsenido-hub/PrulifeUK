@@ -7,8 +7,9 @@ Route::get('/', function () {
     return view('login');
 });
 
+
 Route::get('/home', function () {
-    return view('home');
+    return view('Home_Tab/home');
 });
 
 Route::get('/sampleDB', [AgentLoginController::class, 'index']);
