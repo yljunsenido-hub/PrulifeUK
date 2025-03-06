@@ -145,3 +145,11 @@ Route::get('/proposalSearch'  , function () {
 Route::get('/proposalList'  , function () {
     return view('Proposal_Bank_Tab/proposal_list');
 });
+
+
+
+//Branch Operation Utility Tab
+Route::get('/uploadNap'  , function () {
+    return view('Branch_Operations_Utility_Tab/upload_nap');
+});
+
