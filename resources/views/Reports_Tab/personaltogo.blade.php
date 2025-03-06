@@ -8,11 +8,11 @@
 </head>
 <body class="bg-gray-100 p-6 border border-gray-300">
     <div class="container mx-auto max-w-8xl bg-white p-6 rounded-lg shadow-md">
-        <h2 class="text-2xl font-semibold mb-4">Personal To Go</h2>
+        <h2 class="text-4xl font-semibold mb-4">Personal To Go</h2>
 
-        <div class="mb-4 p-4 bg-gray-500 rounded-md flex justify-between items-center">
+        <div class="mb-3 p-3 bg-gray-500 rounded-md flex justify-between items-center">
             <h3 class="text-lg font-semibold text-white">Personal Monitoring</h3>
-            <a class="text-black text-opacity-70 py-2.5 px-4 flex justify-between items-center text-shadow-lg bg-gray-400 bg-opacity-7 overflow-hidden text-sm font-semibold gap-2.5 rounded-md mx-1.5 transition-all border border-transparent hover:border-white hover:border-opacity-60 hover:bg-gradient-to-b hover:from-white hover:via-white hover:to-white hover:opacity-60 hover:shadow-lg hover:translate-y-[-6px] active:translate-y-2 active:shadow-none">
+            <a class="text-black text-opacity-70 py-2.5 px-3 flex justify-between items-center text-shadow-lg bg-gray-400 bg-opacity-7 overflow-hidden text-sm font-semibold gap-2.5 rounded-md mx-1.5 transition-all border border-transparent hover:border-white hover:border-opacity-60 hover:bg-gradient-to-b hover:from-white hover:via-white hover:to-white hover:opacity-60 hover:shadow-lg hover:translate-y-[-6px] active:translate-y-2 active:shadow-none">
                 <img src="path_to_image.png" alt="Download Icon" class="h-4 w-4"/>
             </a>
         </div>

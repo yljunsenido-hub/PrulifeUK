@@ -6,6 +6,7 @@
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <title>BLUE CHALCEDONY MANAGEMENT SYSTEM</title>
 </head>
+
 <body class="bg-gray-100 p-6 border border-gray-300">
     <div class="container mx-auto max-w-8xl bg-white p-6 rounded-lg shadow-md mb-3">
         <p class="text-4xl font-semibold mb-4">Trackers</p>
