@@ -101,8 +101,16 @@ Route::get('/personaltogo'  , function () {
     return view('Reports_Tab/personaltogo');
 });
 
-Route::get('/qualifier'  , function () {
-    return view('Reports_Tab/Qualifier');
+Route::get('/ciq'  , function () {
+    return view('Reports_Tab/ciq');
+});
+
+Route::get('/qualifiers'  , function () {
+    return view('Reports_Tab/qualifiers');
+});
+
+Route::get('/agm'  , function () {
+    return view('Reports_Tab/agm');
 });
 
 
@@ -137,77 +145,4 @@ Route::get('/proposalSearch'  , function () {
 
 Route::get('/proposalList'  , function () {
     return view('Proposal_Bank_Tab/proposal_list');
-});
-
-
-
-//Branch Operation Utility Tab
-Route::get('/updateSubmitPolicyRecord'  , function () {
-    return view('Branch_Operations_Utility_Tab/update_submission_policy_record');
-});
-
-
-Route::get('/uploadBatchPhoto'  , function () {
-    return view('Branch_Operations_Utility_Tab/upload_batch_photo');
-});
-
-
-Route::get('/uploadIssued'  , function () {
-    return view('Branch_Operations_Utility_Tab/upload_issued');
-});
-
-
-Route::get('/uploadNap'  , function () {
-    return view('Branch_Operations_Utility_Tab/upload_nap');
-});
-
-
-// BCMS Maintenance Tab
-Route::get('/agentMaintenance'  , function () {
-    return view('BCMS_Maintenance_Tab/Agent_Maintenance_Tab/agent_maintenance');
-});
-
-
-Route::get('/agentCreate'  , function () {
-    return view('BCMS_Maintenance_Tab/Agent_Maintenance_Tab/agent_maintenance_create');
-});
-
-
-Route::get('/digitalCardMaintenance'  , function () {
-    return view('BCMS_Maintenance_Tab/Digital_Card_Maintenance_Tab/digital_card_maintenance');
-});
-
-
-Route::get('/digitalCardAdd'  , function () {
-    return view('BCMS_Maintenance_Tab/Digital_Card_Maintenance_Tab/digital_card_maintenance_create');
-});
-
-
-Route::get('/posterTemplateMaintenance'  , function () {
-    return view('BCMS_Maintenance_Tab/Poster_Template_Maintenance_Tab/poster_template_maintenance');
-});
-
-
-Route::get('/posterTemplateCreate'  , function () {
-    return view('BCMS_Maintenance_Tab/Poster_Template_Maintenance_Tab/poster_template_create');
-});
-
-
-Route::get('/subunitMain'  , function () {
-    return view('BCMS_Maintenance_Tab/Sub_Unit_Maintenance_Tab/sub_unit_maintenance');
-});
-
-
-Route::get('/subunitCreate'  , function () {
-    return view('BCMS_Maintenance_Tab/Sub_Unit_Maintenance_Tab/sub_unit_maintenance_create');
-});
-
-
-Route::get('/unitMaintenance'  , function () {
-    return view('BCMS_Maintenance_Tab/Unit_Maintenance_Tab/unit_maintenance');
-});
-
-
-Route::get('/unitCreate'  , function () {
-    return view('BCMS_Maintenance_Tab/Unit_Maintenance_Tab/unit_maintenance_create');
 });
