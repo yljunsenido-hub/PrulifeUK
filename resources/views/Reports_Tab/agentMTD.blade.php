@@ -88,6 +88,7 @@
             <div class="text-sm text-gray-600">
                 Showing 1 to 10 of 489 entries
             </div>
+            
 
         </div>
     </div>

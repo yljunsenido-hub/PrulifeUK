@@ -34,6 +34,7 @@
     
 </div>
 
+<div class="mb-4 p-4 bg-white rounded-md shadow-md">
         <div class="overflow-x-auto">
     <table id="dataTable" class="min-w-full bg-white border border-gray-300">
         <thead>
@@ -144,13 +145,13 @@
     // Run the calculation when the page is loaded
     window.onload = calculateTotalsAndAverages;
 </script>
+</div>
 
 
                 </tbody>
             </table>
-        </div>
 
-<div class="flex justify-end items-center mt-4 space-x-2">
+            <div class="flex justify-end items-center mt-4 space-x-2">
 
     <div class="ml-4 flex space-x-2">
         <!-- Previous Button -->
@@ -228,7 +229,7 @@
     updatePageInfo();
 </script>
 
-
+        </div>
 
     </div>
 
