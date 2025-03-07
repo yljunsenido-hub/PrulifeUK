@@ -211,6 +211,3 @@ Route::get('/unitMaintenance'  , function () {
 Route::get('/unitCreate'  , function () {
     return view('BCMS_Maintenance_Tab/Unit_Maintenance_Tab/unit_maintenance_create');
 });
-
-
-
