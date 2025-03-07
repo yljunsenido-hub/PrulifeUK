@@ -58,7 +58,7 @@
                             <td class="py-2 px-4 border-r border-gray-300">BLUE CHALCEDONY DIRECT</td>
                             <td class="py-2 px-4 border-r border-gray-300">TEAM Name</td>
                             <td class="py-2 px-4 border-r border-gray-300">Name</td>
-                            <td class="py-2 px-4 border-r border-gray-300">KRIS SOLIVEN</td>
+                            <td class="py-2 px-4 border-r border-gray-300">name</td>
                             <td class="py-2 px-4 border-r border-gray-300">Financial Advisor</td>
                             <td class="py-2 px-4 border-r border-gray-300">2025-02-28</td>
                             <td class="py-2 px-4 border-r border-gray-300">Active</td>
