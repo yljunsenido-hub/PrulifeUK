@@ -104,10 +104,9 @@
 
         /* Carousel Styles */
         .carousel {
-            border-radius: 10px;
             position: relative;
             overflow: hidden;
-            height: 200px;
+            height: 273px;
             margin-top: 20px;
         }
 
@@ -127,13 +126,13 @@
             height: auto;
         }
 
-        /* Navigation buttons */
         .carousel-button {
             position: absolute;
             top: 50%;
             transform: translateY(-50%);
             background-color: rgba(255, 255, 255, 0.7);
             border: none;
+            border-radius: 4pxpx;
             padding: 10px;
             cursor: pointer;
             z-index: 10;
@@ -382,33 +381,88 @@
         
         <!-- Statistics Cards -->
         <div class="flex flex-wrap justify-center gap-4 mt-4">
-            <div class="flex-1 min-w-[250px] max-w-[300px] bg-green-500 text-white p-4 rounded-lg shadow-md">
-                <h2 class="text-lg font-semibold">Personal</h2>
-                <p>Issued: P 0.00</p>
-                <p>NAP: P 0.00</p>
-                <p>TOTAL MTD: P 0.00</p>
-                <p>YTD: P 0.00</p>
-                <p>YTD NON-PULSE CC: 0.00</p>
-            </div>
-            <div class="flex-1 min-w-[250px] max-w-[300px] bg-teal-500 text-white p-4 rounded-lg shadow-md">
-                <h2 class="text-lg font-semibold">Sub-Unit</h2>
-                <p>Issued: P 352,499.15</p>
-                <p>Pending Issuance: P 0.00</p>
-                <p>TOTAL MTD: P 352,499.15</p>
-            </div>
-            <div class="flex-1 min-w-[250px] max-w-[300px] bg-teal-500 text-white p-4 rounded-lg shadow-md">
-                <h2 class="text-lg font-semibold">Unit</h2>
-                <p>Issued: P 352,499.15</p>
-                <p>Pending Issuance: P 0.00</p>
-                <p>TOTAL MTD: P 352,499.15</p>
-            </div>
-            <div class="flex-1 min-w-[250px] max-w-[300px] bg-blue-500 text-white p-4 rounded-lg shadow-md">
-                <h2 class="text-lg font-semibold">Branch</h2>
-                <p>Issued: P 2,345,319.39</p>
-                <p>Pending Issuance: P 0.00</p>
-                <p>TOTAL MTD: P 2,345,319.39</p>
+
+    <!-- First Row -->
+    <div class="flex flex-wrap justify-center gap-4 w-full">
+        <div class="flex-1 w-1/2 bg-gradient-to-b from-[rgb(246,220,172)] to-[rgb(245,240,231)] rounded-xl shadow-xl p-8 border-[rgb(247,195,98)] border-b-8 flex items-center">
+            <div class="flex items-center justify-center bg-[rgb(247,195,98)] w-32 h-32 rounded-full" style="background-image: url('{{ asset('images/personal_white.png')}}'); background-size: 50%; background-repeat: no-repeat; background-position: center;"></div>
+            <div class="flex flex-col ml-6"> <!-- Added flex and margin-left -->
+                <div>    
+                    <p class="text-3xl font-bold">Personal</p>
+                </div>
+                <div class="mt-2 flex">
+                    <div>
+                        <p class="font-medium text-gray-800 mt-2">Issued</p>
+                        <p class="font-medium text-gray-800">NAP</p>
+                        <p class="font-bold">TOTAL MTD</p>
+                        <p class="font-bold">YTD</p>
+                        <p class="font-bold">YTD-NON-PULSE CC</p>
+                        <p class="font-bold">YTD PULSE CC</p>
+                    </div>   
+                    <div class="ml-16">
+                        <p class="font-bold mt-2">₱ <span class="font-normal">00.00</span></p>
+                        <p class="font-bold">₱ <span class="font-normal">00.00</span></p>
+                        <p class="font-bold">₱ <span class="font-normal">00.00</span></p>
+                        <p class="font-bold">₱ <span class="font-normal">00.00</span></p>
+                        <p class="font-bold"><span class="font-normal">00.00</span></p>
+                        <p class="font-bold"><span class="font-normal">00.00</span></p>
+                    </div>
+                </div>
             </div>
         </div>
+
+        <div class="flex-1 w-1/2 bg-gradient-to-b from-[rgb(250,170,104)] to-[rgb(246,232,221)] rounded-xl shadow-xl p-8 border-[rgb(252,144,56)] border-b-8 flex items-center">
+            <div class="flex items-center justify-center bg-[rgb(252,144,56)]  w-32 h-32 rounded-full" style="background-image: url('{{ asset('images/Sub-unit_white.png')}}'); background-size: 50%; background-repeat: no-repeat; background-position: center;"></div>
+            <div class="flex flex-col ml-6"> <!-- Added flex and margin-left -->
+                <div>
+                    <p class="text-3xl font-bold">Sub-Unit</p>
+                </div>
+                <div class="mt-2 h-36 flex">
+                    <div>
+                        <p class="font-medium text-gray-800">Issued</p>
+                        <p class="font-medium text-gray-800">Pending Issuance</p>
+                        <p class="font-bold">TOTAL MTD</p>
+                    </div>
+                    <div class="ml-16">
+                        <p class="font-bold">₱ <span class="font-normal">00.00</span></p>
+                        <p class="font-bold">₱ <span class="font-normal">00.00</span></p>
+                        <p class="font-bold">₱ <span class="font-normal">00.00</span></p>
+                    </div>
+                </div>
+            </div>    
+        </div>
+    </div>
+
+    <!-- Second Row -->
+    <div class="flex flex-wrap justify-center gap-4 w-full mt">
+        <div class="flex-1 w-1/2 bg-gradient-to-b from-[rgb(250,210,194)] to-[rgb(252,252,252)] rounded-xl shadow-xl p-8 border-[rgb(251,184,157)] border-b-8 flex items-center">
+            <div class="flex items-center justify-center bg-[rgb(251,184,157)]  w-32 h-32 rounded-full" style="background-image: url('{{ asset('images/Unit_white.png')}}'); background-size: 50%; background-repeat: no-repeat; background-position: center;"></div>
+            <div class="flex flex-col ml-6"> <!-- Added flex and margin-left -->
+                <div>
+                    <p class="text-3xl font-bold">Unit</p>
+                </div>
+                <div class="mt-2">
+                    <p class="font-medium text-gray-800">Issued</p>
+                    <p class="font-medium text-gray-800">Pending Issuance</p>
+                    <p class="font-bold">TOTAL MTD</p>
+                </div>
+            </div>  
+        </div>
+        <div class="flex-1 w-1/2 bg-gradient-to-b from-[rgb(246,163,149)] to-[rgb(225,241,247)] rounded-xl shadow-xl p-8 border-[rgb(247,144,126)] border-b-8 flex items-center">
+            <div class="flex items-center justify-center bg-[rgb(247,144,126)]  w-32 h-32 rounded-full" style="background-image: url('{{ asset('images/branch_white.png')}}'); background-size: 50%; background-repeat: no-repeat; background-position: center;"></div> 
+            <div class="flex flex-col ml-6"> <!-- Added flex and margin-left -->
+                <div>
+                    <p class="text-3xl font-bold">Branch</p>
+                </div>
+                <div class="mt-2">
+                    <p class="font-medium text-gray-800">Issued</p>
+                    <p class="font-medium text-gray-800">Pending Issuance</p>
+                    <p class="font-bold">TOTAL MTD</p>
+                </div>
+            </div>  
+        </div>
+    </div>
+</div>
 
         <!-- Incentive and Recognition Section -->
         <div class="container mx-auto p-4 mt-8 mb-4">
@@ -416,7 +470,7 @@
                 Incentive and Recognition
             </ol>
 
-            <div class="flex space-x-4">
+            <div class=" flex space-x-4">
                 <div class="w-1/2">
                     <table class="table-auto w-full border border-gray-300 rounded-md shadow-md">
                         <thead>
@@ -541,26 +595,95 @@
 
         <!-- Chart -->
 
-        <div class="max-w-8xl mx-auto">
+        <div class="bg-gray-200 text-center py-2 mt-4 mb-4">
+            Production Year-to-Date 2025
+        </div>
 
-    <div class="bg-white rounded-b-xl shadow-lg">
-      <div class="flex space-x-4 p-5 bg-gray-900">
-        <div class="w-full">
-            <div class="bg-white">Branch Monthly Production</div>
-            <div class="w-full bg-gray-400">
-                <canvas id="myChart1"></canvas>
+        <div class="flex space-x-4 mb-10">
+            <div class="w-1/2 bg-white">
+                <div class="bg-white text-center">Branch Monthly Production</div>
+                <div class="w-full">
+                    <canvas id="myChart1"></canvas>
+                </div>
+            </div>
+                
+            <div class="w-1/2 bg-white">
+                <div class="bg-white text-center">Unit Monthly Production</div>
+                <div class="w-full">
+                    <canvas id="myChart2" ></canvas>
+                </div>
             </div>
         </div>
-        
-        <div class="w-full">
-            <div class="bg-white">Unit Monthly Production</div>
-            <div class="w-full bg-gray-400">
-                <canvas id="myChart2"></canvas>
+
+        <div class="flex space-x-4">
+            <div class="w-1/2 bg-white">
+                <div class="bg-white text-center">Branch Monthly Production</div>
+                <div class="w-full">
+                    <canvas id="myChart3"></canvas>
+                </div>
+            </div>
+
+            <div class="w-1/2 bg-white">
+                <div class="bg-white text-center">Branch Monthly Production</div>
+                <div class="w-full">
+                    <canvas id="myChart4"></canvas>
+                </div>
             </div>
         </div>
-      </div>
-    </div>
-  </div>
+
+        <!-- Production Summary -->
+
+        <div class="bg-gray-200 text-center py-2 mt-4 mb-1">
+            Production Summary
+        </div>
+
+        <div class="container mx-auto w-8xl p-4 ">
+            <div class="p-3 bg-gray-300 text-center font-bold border-b border-gray-400">
+                ISSUED
+            </div>
+            <table class="table-auto w-full border border-gray-300 rounded-md shadow-md">
+                <thead>
+                    <tr class="bg-gray-300">
+                        <td class="py-2 px-4 font-bold">MONTH</td>
+                        <td class="py-2 px-4 font-bold">TOTAL APE</td>
+                        <td class="py-2 px-4 font-bold">NAP</td>
+                        <td class="py-2 px-4 font-bold">TOTAL CC</td>
+                        <td class="py-2 px-4 font-bold">TOTAL PULSE CASE</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="bg-white border-b">
+                        <td class="py-2 px-4">100</td>
+                        <td class="py-2 px-4">100</td>
+                        <td class="py-2 px-4">250,000.00</td>
+                        <td class="py-2 px-4">50,000.00</td>
+                        <td class="py-2 px-4">10</td>
+                    </tr>
+                    <tr class="bg-gray-100 border-b">
+                        <td class="py-2 px-4">150</td>
+                        <td class="py-2 px-4">100</td>
+                        <td class="py-2 px-4">300,000.00</td>
+                        <td class="py-2 px-4">75,000.00</td>
+                        <td class="py-2 px-4">15</td>
+                    </tr>
+                    <tr class="bg-white border-b">
+                        <td class="py-2 px-4">200</td>
+                        <td class="py-2 px-4">100</td>
+                        <td class="py-2 px-4">500,000.00</td>
+                        <td class="py-2 px-4">100,000.00</td>
+                        <td class="py-2 px-4">20</td>
+                    </tr>
+                    <tr class="bg-gray-100 border-b">
+                        <td class="py-2 px-4">250</td>
+                        <td class="py-2 px-4">100</td>
+                        <td class="py-2 px-4">600,000.00</td>
+                        <td class="py-2 px-4">125,000.00</td>
+                        <td class="py-2 px-4">25</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
 
   <script>
     // Function to generate random color
@@ -568,7 +691,7 @@
       const letters = '0123456789ABCDEF';
       let color = '#';
       for (let i = 0; i < 6; i++) {
-        color += letters[Math.floor(Math.random() * 16)];
+        color += letters[Math.floor(Math.random() * 12)];
       }
       return color;
     }
@@ -624,6 +747,74 @@
           pointRadius: 4,
           fill: true,
           backgroundColor: 'rgba(255, 0, 0, 0.3)',  // Fill color with 30% opacity
+        }]
+      },
+      options: {
+        responsive: true,
+        plugins: {
+          legend: {
+            position: 'top',
+          },
+        },
+        scales: {
+          y: {
+            beginAtZero: true
+          }
+        }
+      }
+    });
+
+    // third Line Chart Data
+    const ctx3 = document.getElementById('myChart3').getContext('2d');
+    const myChart3 = new Chart(ctx3, {
+      type: 'line',
+      data: {
+        labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul','Aug', 'Sep', 'Oct', 'Nov','Dec'],
+        datasets: [{
+          label: 'Sales in USD',
+          data: [654, 434, 800, 500, 343, 765, 234, 423, 654, 876, 543, 765],
+          borderColor: 'black',
+          backgroundColor: 'rgba(0, 0, 0, 0)',
+          borderWidth: 1,
+          pointBackgroundColor: Array.from({ length: 12 }, () => getRandomColor()),
+          pointBorderColor: 'black',
+          pointRadius: 4,
+          fill: true,
+          backgroundColor: 'rgba(0, 255, 255, 0.3)',
+        }]
+      },
+      options: {
+        responsive: true,
+        plugins: {
+          legend: {
+            position: 'top',
+          },
+        },
+        scales: {
+          y: {
+            beginAtZero: true
+          }
+        }
+      }
+    });
+
+    // fourth Line Chart Data
+    const ctx4 = document.getElementById('myChart4').getContext('2d');
+    const myChart4 = new Chart(ctx4, {
+      type: 'line',
+      data: {
+        labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul','Aug', 'Sep', 'Oct', 'Nov','Dec'],
+        datasets: [{
+          label: 'Sales in USD',
+          data: [654, 434, 800, 500, 343, 765, 234, 423, 654, 876, 543, 765],
+          borderColor: 'black',
+          backgroundColor: 'rgba(0, 0, 0, 0)',
+          borderWidth: 1,
+          pointBackgroundColor: Array.from({ length: 12 }, () => getRandomColor()),
+          pointBorderColor: 'black',
+          pointRadius: 4,
+          fill: true,
+          backgroundColor: 'rgba(0, 255, 255, 0.3)',
         }]
       },
       options: {
