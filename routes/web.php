@@ -101,6 +101,7 @@ Route::get('/personaltogo'  , function () {
     return view('Reports_Tab/personaltogo');
 });
 
+//ehhh ano
 Route::get('/qualifier'  , function () {
     return view('Reports_Tab/Qualifier');
 });

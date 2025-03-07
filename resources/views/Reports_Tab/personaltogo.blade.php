@@ -13,9 +13,13 @@
 
         <div class="mb-4 p-4 bg-blue-900 rounded-md flex justify-between items-center">
             <h2 class="text-lg font-semibold text-yellow-300">Personal Monitoring</h2>
-            <a class="px-3 py-1 bg-white text-gray-700 rounded-md hover:bg-yellow-300 hover:text-white text-sm font-bold">
-                <img src="path_to_image.png" alt="Download Icon" class="h-5 w-3"/>
-            </a>
+                <a class="px-3 py-1 bg-white text-gray-700 rounded-md hover:bg-yellow-300 hover:text-white text-sm font-bold">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" class="w-3 h-6">
+                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                    <polyline points="7 10 12 15 17 10"></polyline>
+                    <line x1="12" y1="15" x2="12" y2="3"></line>
+                    </svg>
+                </a>
         </div>
 
         <div class="mb-4 p-4 bg-blue-200 rounded-md flex justify-between items-center">
@@ -23,6 +27,7 @@
         </div>
 
         <!-- Tabs Section -->
+        <div class="mb-4 p-4 bg-white rounded-md shadow-md">
         <div class="flex border-b border-gray-300 mb-4">
             <a href="#" class="tab border-r border-l py-2 px-4 text-gray-600 hover:text-black font-semibold border-b-2 border-transparent hover:border-yellow-300 transition-all duration-300 active-tab" id="tab1">A-AC Agent</a>
             <a href="#" class="tab border-r border-l py-2 px-4 text-gray-600 hover:text-black font-semibold border-b-2 border-transparent hover:border-yellow-300 transition-all duration-300" id="tab2">B-AC UM</a>
@@ -54,6 +59,7 @@
                 <!-- Dynamic Table Rows will be inserted here -->
             </div>
         </div>
+</div>
         
         <!-- Pagination Section -->
         <div class="flex justify-end items-center mt-4 space-x-2">
