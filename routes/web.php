@@ -101,16 +101,8 @@ Route::get('/personaltogo'  , function () {
     return view('Reports_Tab/personaltogo');
 });
 
-Route::get('/ciq'  , function () {
-    return view('Reports_Tab/ciq');
-});
-
-Route::get('/qualifiers'  , function () {
-    return view('Reports_Tab/qualifiers');
-});
-
-Route::get('/agm'  , function () {
-    return view('Reports_Tab/agm');
+Route::get('/qualifier'  , function () {
+    return view('Reports_Tab/Qualifier');
 });
 
 

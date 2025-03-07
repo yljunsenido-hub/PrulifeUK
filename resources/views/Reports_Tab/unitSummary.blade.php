@@ -40,7 +40,7 @@
         <div class="container mx-auto max-w-8xl bg-white-100 p-2 rounded-l rounded-r shadow-md mb-3 pb-5">
         
         <!-- Show Entries and Search Section -->
-        <div class="mb-4 flex items-center justify-between">
+        <div class="mb-4 px-3 flex items-center justify-between">
             <div class="flex items-center">
                 <label for="entries" class="mr-2 text-sm text-gray-600">Show entries:</label>
                 <select id="entries" class="border border-gray-300 rounded-md p-2">
@@ -58,7 +58,7 @@
         </div>
 
         <!-- Data Table Section -->
-        <div class="overflow-x-auto">
+        <div class="overflow-x-auto px-5">
             <table id="dataTable" class="min-w-full bg-white border border-gray-300">
                 <thead>
                     <tr class="bg-gray-200 text-gray-600 uppercase text-sm leading-normal">
