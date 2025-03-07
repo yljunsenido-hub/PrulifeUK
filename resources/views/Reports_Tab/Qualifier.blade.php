@@ -4,30 +4,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <title>Personal To Go</title>
+    <title>Contest and Incentives Qualifiers</title>
 </head>
+<body class="bg-gray-100 p-6 border border-gray-300">
 
-    <body class="bg-gray-100 p-6 border border-gray-300">
-    <div class="container mx-auto max-w-8xl bg-white p-6 rounded-lg shadow-md">
-        <h2 class="text-4xl font-semibold mb-4">Personal To Go</h2>
+    <div class="container mx-auto max-w-9xl bg-white p-6 rounded-lg shadow-md">
+        <h2 class="text-4xl font-semibold mb-4">Contest and Incentives Qualifiers</h2>
 
         <div class="mb-4 p-4 bg-blue-900 rounded-md flex justify-between items-center">
-            <h2 class="text-lg font-semibold text-yellow-300">Personal Monitoring</h2>
+            <h2 class="text-lg font-semibold text-yellow-300">Team Monitoring</h2>
             <a class="px-3 py-1 bg-white text-gray-700 rounded-md hover:bg-yellow-300 hover:text-white text-sm font-bold">
                 <img src="path_to_image.png" alt="Download Icon" class="h-5 w-3"/>
             </a>
         </div>
 
-        <div class="mb-4 p-4 bg-blue-200 rounded-md flex justify-between items-center">
-            <h3 class="text-xs font-semibold text-gray-600">Please note that any results presented here are for informational purposes only and are not official. These results are subject to finance validation and may change based on further analysis or updates.</h3>
-        </div>
-
         <!-- Tabs Section -->
         <div class="flex border-b border-gray-300 mb-4">
-            <a href="#" class="tab border-r border-l py-2 px-4 text-gray-600 hover:text-black font-semibold border-b-2 border-transparent hover:border-yellow-300 transition-all duration-300 active-tab" id="tab1">A-AC Agent</a>
-            <a href="#" class="tab border-r border-l py-2 px-4 text-gray-600 hover:text-black font-semibold border-b-2 border-transparent hover:border-yellow-300 transition-all duration-300" id="tab2">B-AC UM</a>
-            <a href="#" class="tab border-r border-l py-2 px-4 text-gray-600 hover:text-black font-semibold border-b-2 border-transparent hover:border-yellow-300transition-all duration-300" id="tab3">C-100K Club</a>
-            <a href="#" class="tab border-r border-l py-2 px-4 text-gray-600 hover:text-black font-semibold border-b-2 border-transparent hover:border-yellow-300 transition-all duration-300" id="tab4">C-HO Incentives</a>
+            <a href="#" class="tab py-2 px-4 text-gray-600 hover:text-black font-semibold border-b-2 border-transparent hover:border-yellow-300 transition-all duration-300 active-tab" id="tab1">A-AC Agent</a>
+            <a href="#" class="tab py-2 px-4 text-gray-600 hover:text-black font-semibold border-b-2 border-transparent hover:border-yellow-300 transition-all duration-300" id="tab2">B-AC UM</a>
+            <a href="#" class="tab py-2 px-4 text-gray-600 hover:text-black font-semibold border-b-2 border-transparent hover:border-yellow-300 transition-all duration-300" id="tab3">C-100K Club</a>
+            <a href="#" class="tab py-2 px-4 text-gray-600 hover:text-black font-semibold border-b-2 border-transparent hover:border-yellow-300 transition-all duration-300" id="tab4">C-HO Incentives</a>
+            <a href="#" class="tab py-2 px-4 text-gray-600 hover:text-black font-semibold border-b-2 border-transparent hover:border-yellow-300 transition-all duration-300" id="tab5">C-Promotions</a>
+            <a href="#" class="tab py-2 px-4 text-gray-600 hover:text-black font-semibold border-b-2 border-transparent hover:border-yellow-300 transition-all duration-300" id="tab6">D-Branch Incentives</a>
+            <a href="#" class="tab py-2 px-4 text-gray-600 hover:text-black font-semibold border-b-2 border-transparent hover:border-yellow-300 transition-all duration-300" id="tab7">Z-Others</a>
         </div>
 
         <!-- Table Section -->
@@ -56,8 +55,12 @@
         </div>
         
         <!-- Pagination Section -->
-        <div class="flex justify-end items-center mt-4 space-x-2">
-            <div class="ml-4 flex space-x-2">
+        <div class="mt-4 flex justify-between items-center">
+            <div class="text-sm text-gray-600">
+                Showing 1 to 10 of 489 entries
+            </div>
+
+            <div class="flex items-center space-x-2 ml-auto">
                 <button class="px-3 py-1 bg-gray-300 text-gray-700 rounded-md hover:bg-gray-400 text-sm" id="previousBtn">Previous</button>
                 <div class="mr-1 flex items-center space-x-2">
                     <div id="pageNumbers" class="flex space-x-1">
@@ -67,12 +70,11 @@
                 <button class="px-3 py-1 bg-gray-300 text-gray-700 rounded-md hover:bg-gray-400 text-sm" id="nextBtn">Next</button>
             </div>
         </div>
-
     </div>
 
     <script>
         let currentPage = 1;
-        const totalPages = 3; // Total number of pages (can be updated dynamically)
+        const totalPages = 3;
         const previousBtn = document.getElementById('previousBtn');
         const nextBtn = document.getElementById('nextBtn');
         const pageNumbersContainer = document.getElementById('pageNumbers');
@@ -95,54 +97,22 @@
             tab4: [
                 { No: 1, Incentives: 'D001', Status: 'Operations', Parameters: 'Logistics', Current: 'Supply Chain', 'To Go': 'Eve Blue' },
                 { No: 2, Incentives: 'D002', Status: 'Support', Parameters: 'Customer Service', Current: 'Resolution', 'To Go': 'Frank Gold' }
+            ],
+            tab5: [
+                { No: 1, Incentives: 'E001', Status: 'Marketing', Parameters: 'Campaign', Current: 'Advertising', 'To Go': 'Grace Hill' },
+                { No: 2, Incentives: 'E002', Status: 'HR', Parameters: 'Training', Current: 'Employee Onboarding', 'To Go': 'Hannah Moore' }
+            ],
+            tab6: [
+                { No: 1, Incentives: 'F001', Status: 'Operations', Parameters: 'Production', Current: 'Manufacturing', 'To Go': 'Ivy Lee' },
+                { No: 2, Incentives: 'F002', Status: 'IT', Parameters: 'Maintenance', Current: 'System Updates', 'To Go': 'Jack Adams' }
+            ],
+            tab7: [
+                { No: 1, Incentives: 'G001', Status: 'Sales', Parameters: 'Product Launch', Current: 'Market Research', 'To Go': 'Kaitlyn Rivers' },
+                { No: 2, Incentives: 'G002', Status: 'Support', Parameters: 'Customer Care', Current: 'Issue Resolution', 'To Go': 'Liam Carter' }
             ]
         };
 
-        // Dynamically generate page numbers
-        function generatePageNumbers() {
-            pageNumbersContainer.innerHTML = '';  // Clear previous page numbers
-            for (let i = 1; i <= totalPages; i++) {
-                const pageButton = document.createElement('button');
-                pageButton.textContent = i;
-                pageButton.classList.add('px-3', 'py-1', 'border', 'border-gray-300', 'rounded-md', 'hover:bg-gray-400', 'text-sm');
-                pageButton.addEventListener('click', () => goToPage(i));
-                pageNumbersContainer.appendChild(pageButton);
-            }
-        }
-
-        // Update page numbers and highlight current page
-        function updatePageInfo() {
-            const pageButtons = document.querySelectorAll('#pageNumbers button');
-            pageButtons.forEach(button => {
-                button.classList.remove('bg-gray-400', 'text-white'); // Remove highlight from all buttons
-                if (parseInt(button.textContent) === currentPage) {
-                    button.classList.add('bg-gray-400', 'text-white'); // Highlight the current page
-                }
-            });
-        }
-
-        // Go to a selected page
-        function goToPage(page) {
-            currentPage = page;
-            updatePageInfo();
-        }
-
-        // Handle Previous and Next Button actions
-        previousBtn.addEventListener('click', () => {
-            if (currentPage > 1) {
-                currentPage--;
-                updatePageInfo();
-            }
-        });
-
-        nextBtn.addEventListener('click', () => {
-            if (currentPage < totalPages) {
-                currentPage++;
-                updatePageInfo();
-            }
-        });
-
-        // Change table content based on the selected tab
+        // Update table content based on the selected tab
         function updateTableContent(tabKey) {
             const data = tabData[tabKey];
             let tableHTML = ` 
@@ -167,26 +137,30 @@
                         <td class="py-2 px-4 border-r border-gray-300">${item.Status}</td>
                         <td class="py-2 px-4 border-r border-gray-300">${item.Parameters}</td>
                         <td class="py-2 px-4 border-r border-gray-300">${item.Current}</td>
-                        <td class="py-2 px-4">${item['To Go']}</td>
+                        <td class="py-2 px-4">
+                            <a href="https://example.com/${item.Incentives}" class="text-blue-500 hover:text-blue-700" target="_blank">View</a>
+                        </td>
                     </tr>
                 `;
             });
 
-            tableHTML += `</tbody></table>`;
+            tableHTML += '</tbody></table>';
             tableContent.innerHTML = tableHTML;
         }
 
-        // Event listeners for tabs
-        document.getElementById('tab1').addEventListener('click', () => updateTableContent('tab1'));
-        document.getElementById('tab2').addEventListener('click', () => updateTableContent('tab2'));
-        document.getElementById('tab3').addEventListener('click', () => updateTableContent('tab3'));
-        document.getElementById('tab4').addEventListener('click', () => updateTableContent('tab4'));
+        // Tab switch functionality
+        document.querySelectorAll('.tab').forEach(tab => {
+            tab.addEventListener('click', (e) => {
+                e.preventDefault();
+                document.querySelectorAll('.tab').forEach(t => t.classList.remove('text-black', 'border-yellow-300'));
+                e.target.classList.add('text-black', 'border-yellow-300');
+                const tabKey = e.target.id;
+                updateTableContent(tabKey);
+            });
+        });
 
-        // Initialize
-        generatePageNumbers();
-        updatePageInfo();
-        updateTableContent('tab1'); // Show content for the first tab by default
+        // Initialize with the first tab (tab1)
+        updateTableContent('tab1');
     </script>
-
 </body>
 </html>
