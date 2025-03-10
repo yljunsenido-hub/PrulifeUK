@@ -10,7 +10,7 @@
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     
-    <!-- Font Awesome -->
+    <!-- Font Awesome -->   
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
     
     <!-- CSS Styles -->
@@ -147,7 +147,7 @@
         }
     </style>
 </head>
-<body class="bg-gray-100">
+<body class="bg-white">
     <!-- Sticky Navigation Bar -->
     <nav class="bg-gray-800 p-4 flex justify-between items-center">
         <div class="flex items-center">
@@ -375,7 +375,7 @@
         </script>
 
         <!-- Production Month-to-Date -->
-        <div class="bg-gray-200 text-center py-2 mt-4">
+        <div class="bg-gray-300 text-center py-4 mt-4">
             Production Month-to-Date as of February 24, 2025
         </div>
         
@@ -384,8 +384,8 @@
 
     <!-- First Row -->
     <div class="flex flex-wrap justify-center gap-4 w-full">
-        <div class="flex-1 w-1/2 bg-gradient-to-b from-[rgb(246,220,172)] to-[rgb(245,240,231)] rounded-xl shadow-xl p-8 border-[rgb(247,195,98)] border-b-8 flex items-center">
-            <div class="flex items-center justify-center bg-[rgb(247,195,98)] w-32 h-32 rounded-full" style="background-image: url('{{ asset('images/personal_white.png')}}'); background-size: 50%; background-repeat: no-repeat; background-position: center;"></div>
+        <div class="flex-1 w-1/2 bg-gradient-to-b from-[rgb(133,191,236)] to-[rgb(217,228,237)] rounded-xl shadow-xl p-8 border-[rgb(0,133,235)] border-b-8 flex items-center">
+            <div class="flex items-center justify-center bg-[rgb(0,133,235)] w-32 h-32 rounded-full" style="background-image: url('{{ asset('images/personal_white.png')}}'); background-size: 50%; background-repeat: no-repeat; background-position: center;"></div>
             <div class="flex flex-col ml-6"> <!-- Added flex and margin-left -->
                 <div>    
                     <p class="text-3xl font-bold">Personal</p>
@@ -411,13 +411,13 @@
             </div>
         </div>
 
-        <div class="flex-1 w-1/2 bg-gradient-to-b from-[rgb(250,170,104)] to-[rgb(246,232,221)] rounded-xl shadow-xl p-8 border-[rgb(252,144,56)] border-b-8 flex items-center">
-            <div class="flex items-center justify-center bg-[rgb(252,144,56)]  w-32 h-32 rounded-full" style="background-image: url('{{ asset('images/Sub-unit_white.png')}}'); background-size: 50%; background-repeat: no-repeat; background-position: center;"></div>
+        <div class="flex-1 w-1/2 bg-gradient-to-b from-[rgb(152,242,236)] to-[rgb(234,244,243)] rounded-xl shadow-xl p-8 border-[rgb(7,190,178)] border-b-8 flex items-center">
+            <div class="flex items-center justify-center bg-[rgb(7,190,178)]  w-32 h-32 rounded-full" style="background-image: url('{{ asset('images/Sub-unit_white.png')}}'); background-size: 50%; background-repeat: no-repeat; background-position: center;"></div>
             <div class="flex flex-col ml-6"> <!-- Added flex and margin-left -->
-                <div>
+                <div >
                     <p class="text-3xl font-bold">Sub-Unit</p>
                 </div>
-                <div class="mt-2 h-36 flex">
+                <div class="mt-2 h-24 flex">
                     <div>
                         <p class="font-medium text-gray-800">Issued</p>
                         <p class="font-medium text-gray-800">Pending Issuance</p>
@@ -435,29 +435,43 @@
 
     <!-- Second Row -->
     <div class="flex flex-wrap justify-center gap-4 w-full mt">
-        <div class="flex-1 w-1/2 bg-gradient-to-b from-[rgb(250,210,194)] to-[rgb(252,252,252)] rounded-xl shadow-xl p-8 border-[rgb(251,184,157)] border-b-8 flex items-center">
-            <div class="flex items-center justify-center bg-[rgb(251,184,157)]  w-32 h-32 rounded-full" style="background-image: url('{{ asset('images/Unit_white.png')}}'); background-size: 50%; background-repeat: no-repeat; background-position: center;"></div>
+        <div class="flex-1 w-1/2 bg-gradient-to-b from-[rgb(129,180,216)] to-[rgb(230,235,238)] rounded-xl shadow-xl p-8 border-[rgb(25,138,219)] border-b-8 flex items-center">
+            <div class="flex items-center justify-center bg-[rgb(25,138,219)]  w-32 h-32 rounded-full" style="background-image: url('{{ asset('images/Unit_white.png')}}'); background-size: 50%; background-repeat: no-repeat; background-position: center;"></div>
             <div class="flex flex-col ml-6"> <!-- Added flex and margin-left -->
-                <div>
+                <div class="mb-2">
                     <p class="text-3xl font-bold">Unit</p>
                 </div>
-                <div class="mt-2">
-                    <p class="font-medium text-gray-800">Issued</p>
-                    <p class="font-medium text-gray-800">Pending Issuance</p>
-                    <p class="font-bold">TOTAL MTD</p>
+                <div class="mt-2 h-24 flex">
+                    <div>
+                        <p class="font-medium text-gray-800">Issued</p>
+                        <p class="font-medium text-gray-800">Pending Issuance</p>
+                        <p class="font-bold">TOTAL MTD</p>
+                    </div>
+                    <div class="ml-16">
+                        <p class="font-bold">₱ <span class="font-normal">00.00</span></p>
+                        <p class="font-bold">₱ <span class="font-normal">00.00</span></p>
+                        <p class="font-bold">₱ <span class="font-normal">00.00</span></p>
+                    </div>
                 </div>
             </div>  
         </div>
-        <div class="flex-1 w-1/2 bg-gradient-to-b from-[rgb(246,163,149)] to-[rgb(225,241,247)] rounded-xl shadow-xl p-8 border-[rgb(247,144,126)] border-b-8 flex items-center">
-            <div class="flex items-center justify-center bg-[rgb(247,144,126)]  w-32 h-32 rounded-full" style="background-image: url('{{ asset('images/branch_white.png')}}'); background-size: 50%; background-repeat: no-repeat; background-position: center;"></div> 
+        <div class="flex-1 w-1/2 bg-gradient-to-b from-[rgb(121,198,204)] to-[rgb(255,255,255)] rounded-xl shadow-xl p-8 border-[rgb(7,167,178)] border-b-8 flex items-center">
+            <div class="flex items-center justify-center bg-[rgb(7,167,178)]  w-32 h-32 rounded-full" style="background-image: url('{{ asset('images/branch_white.png')}}'); background-size: 50%; background-repeat: no-repeat; background-position: center;"></div> 
             <div class="flex flex-col ml-6"> <!-- Added flex and margin-left -->
-                <div>
+                <div  class="mb-2">
                     <p class="text-3xl font-bold">Branch</p>
                 </div>
-                <div class="mt-2">
-                    <p class="font-medium text-gray-800">Issued</p>
-                    <p class="font-medium text-gray-800">Pending Issuance</p>
-                    <p class="font-bold">TOTAL MTD</p>
+                <div class="mt-2 h-24 flex">
+                    <div>
+                        <p class="font-medium text-gray-800">Issued</p>
+                        <p class="font-medium text-gray-800">Pending Issuance</p>
+                        <p class="font-bold">TOTAL MTD</p>
+                    </div>
+                    <div class="ml-16">
+                        <p class="font-bold">₱ <span class="font-normal">00.00</span></p>
+                        <p class="font-bold">₱ <span class="font-normal">00.00</span></p>
+                        <p class="font-bold">₱ <span class="font-normal">00.00</span></p>
+                    </div>
                 </div>
             </div>  
         </div>
@@ -465,127 +479,127 @@
 </div>
 
         <!-- Incentive and Recognition Section -->
-        <div class="container mx-auto p-4 mt-8 mb-4">
-            <ol class="w-full h-16 bg-gray-200 text-black text-center flex items-center justify-center border border-gray-300 rounded-md mb-4">
+        <div class="mx-auto mt-12 mb-4 bg-gray-100 rounded-t-2xl border border-gray-400">
+            <div class="bg-gray-300 text-center py-5 text-xl rounded-t-2xl mb-4">
                 Incentive and Recognition
-            </ol>
+            </div>
 
-            <div class=" flex space-x-4">
-                <div class="w-1/2">
-                    <table class="table-auto w-full border border-gray-300 rounded-md shadow-md">
+            <div class="flex space-x-4 p-3">
+                <div class="w-1/2 rounded-t-2xl overflow-hidden">
+                    <table class="table-auto w-full border border-gray-300 rounded-t-2xl shadow-md">
                         <thead>
-                            <tr class="bg-gray-300">
-                                <th scope="col" colspan="2" class="py-2 text-left px-4">TO-GO's</th>
+                            <tr class="bg-blue-900 text-white uppercase text-sm leading-normal">
+                                <th scope="col" colspan="2" class="py-3 text-left px-6 border-b border-gray-400">TO-GO's</th>
                             </tr>
-                            <tr>
-                                <th scope="col" class="py-2 text-left px-4">Incentive</th>
-                                <th scope="col" class="py-2 text-left px-4">To-go</th>
+                            <tr class="bg-gray-200 text-black uppercase text-sm leading-normal">
+                                <th scope="col" class="py-3 text-left px-6 border-b border-gray-400 border-r border-gray-400">Incentive</th>
+                                <th scope="col" class="py-3 text-left px-6 border-b border-gray-400">To-go</th>
                             </tr>
                         </thead>
-                        <tbody>
-                            <tr class="bg-white border-b">
-                                <td class="py-2 px-4">BRANCH ACHIEVER</td>
-                                <td class="py-2 px-4">250,000 APE; 8 CC;</td>
+                        <tbody class="bg-white border-b">
+                            <tr class="border-b border-gray-300 hover:bg-gray-100 hover:text-blue-900">
+                                <td class="py-3 px-6 border-b border-gray-300 border-r border-gray-300">BRANCH ACHIEVER</td>
+                                <td class="py-3 px-6 border-b border-gray-300">250,000 APE; 8 CC;</td>
                             </tr>
-                            <tr class="bg-gray-100 border-b">
-                                <td class="py-2 px-4">SECTORAL ACHIEVER</td>
-                                <td class="py-2 px-4">500,000 APE; 10 CC;</td>
+                            <tr class="border-b border-gray-300 hover:bg-gray-100 hover:text-blue-900">
+                                <td class="py-3 px-6 border-b border-gray-300 border-r border-gray-300">SECTORAL ACHIEVER</td>
+                                <td class="py-3 px-6 border-b border-gray-300">500,000 APE; 10 CC;</td>
                             </tr>
-                            <tr class="bg-white border-b">
-                                <td class="py-2 px-4">NATIONAL ACHIEVER</td>
-                                <td class="py-2 px-4">750,000 APE; 12 CC;</td>
+                            <tr class="border-b border-gray-300 hover:bg-gray-100 hover:text-blue-900">
+                                <td class="py-3 px-6 border-b border-gray-300 border-r border-gray-300">NATIONAL ACHIEVER</td>
+                                <td class="py-3 px-6 border-b border-gray-300">750,000 APE; 12 CC;</td>
                             </tr>
-                            <tr class="bg-gray-100 border-b">
-                                <td class="py-2 px-4">SENIOR ACHIEVER</td>
-                                <td class="py-2 px-4">1,500,000 APE; 18 CC;</td>
+                            <tr class="border-b border-gray-300 hover:bg-gray-100 hover:text-blue-900">
+                                <td class="py-3 px-6 border-b border-gray-300 border-r border-gray-300">SENIOR ACHIEVER</td>
+                                <td class="py-3 px-6 border-b border-gray-300">1,500,000 APE; 18 CC;</td>
                             </tr>
-                            <tr class="bg-white border-b">
-                                <td class="py-2 px-4">ELITE ACHIEVER</td>
-                                <td class="py-2 px-4">2,500,000 APE; 21 CC;</td>
+                            <tr class="border-b border-blue-900 border-b-4 hover:bg-gray-100 hover:text-blue-900"> <!-- Changed here -->
+                                <td class="py-3 px-6 border-b border-gray-300 border-r border-gray-300">ELITE ACHIEVER</td>
+                                <td class="py-3 px-6 border-b border-gray-300">2,500,000 APE; 21 CC;</td>
                             </tr>
                         </tbody>
                     </table>
                 </div>
 
-                <div class="w-1/2">
-                    <table class="table-auto w-full border border-gray-300 rounded-md shadow-md">
+                <div class="w-1/2 rounded-t-2xl overflow-hidden">
+                    <table class="table-auto w-full border border-gray-300 rounded-t-2xl shadow-md">
                         <thead>
-                            <tr class="bg-gray-300">
-                                <th scope="col" colspan="4" class="py-2 text-left px-4">TOP AGENTS MTD as of MAR. 02 BRANCH WIDE</th>
+                            <tr class="bg-blue-900 text-white uppercase text-sm leading-normal">
+                                <th scope="col" colspan="4" class="py-3 text-left px-6">TOP AGENTS MTD as of MAR. 02 BRANCH WIDE</th>
                             </tr>
-                            <tr>
-                                <th scope="col" class="py-2 text-left px-4">Rank</th>
-                                <th scope="col" class="py-2 text-left px-4">Unit</th>
-                                <th scope="col" class="py-2 text-left px-4">Name</th>
-                                <th scope="col" class="py-2 text-left px-4">APE</th>
+                            <tr class="bg-gray-200 text-black uppercase text-sm leading-normal">
+                                <th scope="col" class="py-3 text-left px-6 border-b border-gray-400 border-r border-gray-400">Rank</th>
+                                <th scope="col" class="py-3 text-left px-6 border-b border-gray-400 border-r border-gray-400">Unit</th>
+                                <th scope="col" class="py-3 text-left px-6 border-b border-gray-400 border-r border-gray-400">Name</th>
+                                <th scope="col" class="py-3 text-left px-6 border-b border-gray-400">APE</th>
                             </tr>
                         </thead>
                         <tbody>
-                            <tr class="bg-white border-b">
-                                <th scope="row" class="py-2 px-4">1</th>
-                                <td class="py-2 px-4">BLUE CHALCEDONY DIRECT</td>
-                                <td class="py-2 px-4">Christine Mercado &nbsp;&nbsp; == $0</td>
-                                <td class="py-2 px-4">26,613.00</td>
+                            <tr class="border-b hover:bg-gray-100 hover:text-blue-900">
+                                <th scope="row" class="py-3 px-6 border-b border-gray-300 border-r border-gray-300">1</th>
+                                <td class="py-3 px-6 border-b border-gray-300 border-r border-gray-300">BLUE CHALCEDONY DIRECT</td>
+                                <td class="py-3 px-6 border-b border-gray-300 border-r border-gray-300">Christine Mercado &nbsp;&nbsp; == $0</td>
+                                <td class="py-3 px-6 border-b border-gray-300 ">26,613.00</td>
                             </tr>
-                            <tr class="bg-gray-100 border-b">
-                                <th scope="row" class="py-2 px-4">2</th>
-                                <td class="py-2 px-4">ANOTHER UNIT</td>
-                                <td class="py-2 px-4">John Doe &nbsp;&nbsp; == $0</td>
-                                <td class="py-2 px-4">20,000.00</td>
+                            <tr class="border-b border-blue-900 border-b-4 hover:bg-gray-100 hover:text-blue-900">
+                                <th scope="row" class="py-3 px-6 border-b border-gray-300 border-r border-gray-300">2</th>
+                                <td class="py-3 px-6 border-b border-gray-300 border-r border-gray-300">ANOTHER UNIT</td>
+                                <td class="py-3 px-6 border-b border-gray-300 border-r border-gray-300">John Doe &nbsp;&nbsp; == $0</td>
+                                <td class="py-3 px-6 border-b border-gray-300">20,000.00</td>
                             </tr>
                         </tbody>                
                     </table>
                 </div>
             </div>
 
-            <div class="flex space-x-4 mt-8">
-                <div class="w-1/2">
-                    <table class="table-auto w-full border border-gray-300 rounded-md shadow-md">
+            <div class="flex space-x-4 mt-8 p-3">
+                <div class="w-1/2 rounded-t-2xl overflow-hidden">
+                    <table class="table-auto w-full border border-gray-300 rounded-t-2xl shadow-md">
                         <thead>
-                            <tr class="bg-gray-300">
-                                <th scope="col" colspan="4" class="py-2 text-left px-4">TOP UNIT MTD as of MAR. 02 - BRANCH WIDE</th>
+                            <tr class="bg-blue-900 text-white uppercase text-sm leading-normal">
+                                <th scope="col" colspan="4" class="py-3 text-left px-6">TOP UNIT MTD as of MAR. 02 - BRANCH WIDE</th>
                             </tr>
-                            <tr>
-                                <th scope="col" class="py-2 text-left px-4">Rank</th>
-                                <th scope="col" class="py-2 text-left px-4">Unit</th>
-                                <th scope="col" class="py-2 text-left px-4">APE</th>
+                            <tr class="bg-gray-200 text-black uppercase text-sm leading-normal">
+                                <th scope="col" class="py-3 px-6 border-b border-gray-400 border-r border-gray-400 ">Rank</th>
+                                <th scope="col" class="py-3 text-left px-6 border-b border-gray-400 border-r border-gray-400">Unit</th>
+                                <th scope="col" class="py-3 text-left px-6 border-b border-gray-400">APE</th>
                             </tr>
                         </thead>
                         <tbody>
-                            <tr class="bg-white border-b">
-                                <th scope="row" class="py-2 px-4">1</th>
-                                <td class="py-2 px-4">BRANCH ACHIEVER</td>
-                                <td class="py-2 px-4">250,000 APE; 8 CC;</td>
+                            <tr class="border-b border-blue-900 border-b-4 hover:bg-gray-100 hover:text-blue-900">
+                                <th scope="row" class="py-3 px-6 border-b border-gray-300 border-r border-gray-300">1</th>
+                                <td class="py-3 text-left px-6 border-b border-gray-400 border-r border-gray-400">BRANCH ACHIEVER</td>
+                                <td class="py-3 text-left px-6 border-b border-gray-400">250,000 APE; 8 CC;</td>
                             </tr>
                         </tbody>
                     </table>
                 </div>
 
-                <div class="w-1/2">
-                    <table class="table-auto w-full border border-gray-300 rounded-md shadow-md">
+                <div class="w-1/2 rounded-t-2xl overflow-hidden">
+                    <table class="table-auto w-full border border-gray-300 rounded-t-2xl shadow-md">
                         <thead>
-                            <tr class="bg-gray-300">
-                                <th scope="col" colspan="4" class="py-2 text-left px-4">TOP ROOKIES MTD as of MAR. 02 - BRANCH WIDE</th>
+                            <tr class="bg-blue-900 text-white uppercase text-sm leading-normal">
+                                <th scope="col" colspan="4" class="py-3 text-left px-6">TOP ROOKIES MTD as of MAR. 02 - BRANCH WIDE</th>
                             </tr>
-                            <tr>
-                                <th scope="col" class="py-2 text-left px-4">Rank</th>
-                                <th scope="col" class="py-2 text-left px-4">Unit</th>
-                                <th scope="col" class="py-2 text-left px-4">Name</th>
-                                <th scope="col" class="py-2 text-left px-4">APE</th>
+                            <tr class="bg-gray-200 text-black uppercase text-sm leading-normal">
+                                <th scope="col" class="py-3 px-6 border-b border-gray-400 border-r border-gray-400">Rank</th>
+                                <th scope="col" class="py-3 text-left px-6 border-b border-gray-400 border-r border-gray-400">Unit</th>
+                                <th scope="col" class="py-3 text-left px-6 border-b border-gray-400 border-r border-gray-400">Name</th>
+                                <th scope="col" class="py-3 text-left px-6 border-b border-gray-400">APE</th>
                             </tr>
                         </thead>
                         <tbody>
-                            <tr class="bg-white border-b">
-                                <th scope="row" class="py-2 px-4">1</th>
-                                <td class="py-2 px-4">BLUE CHALCEDONY SAMPLE</td>
-                                <td class="py-2 px-4">NAME</td>
-                                <td class="py-2 px-4">0</td>
+                            <tr class="border-b hover:bg-gray-100 hover:text-blue-900">
+                                <th scope="row" class="py-3 px-6 border-b border-gray-300 border-r border-gray-300">1</th>
+                                <td class="py-3 px-6 border-b border-gray-300 border-r border-gray-300 border-r border-gray-300">BLUE CHALCEDONY SAMPLE</td>
+                                <td class="py-3 px-6 border-b border-gray-300 border-r border-gray-300 border-r border-gray-300">NAME</td>
+                                <td class="py-3 px-6 border-b border-gray-300 border-r border-gray-300">0</td>
                             </tr>
-                            <tr class="bg-gray-100 border-b">
-                                <th scope="row" class="py-2 px-4">2</th>
-                                <td class="py-2 px-4">ANOTHER UNIT</td>
-                                <td class="py-2 px-4">SAMPLE</td>
-                                <td class="py-2 px-4">20,000.00</td>
+                            <tr class="border-b border-blue-900 border-b-4 hover:bg-gray-100 hover:text-blue-900">
+                                <th scope="row" class="py-3 px-6 border-b border-gray-300 border-r border-gray-300">2</th>
+                                <td class="py-3 px-6 border-b border-gray-300 border-r border-gray-300 border-r border-gray-300">ANOTHER UNIT</td>
+                                <td class="py-3 px-6 border-b border-gray-300 border-r border-gray-300 border-r border-gray-300">SAMPLE</td>
+                                <td class="py-3 px-6 border-b border-gray-300 border-r border-gray-300">20,000.00</td>
                             </tr>
                         </tbody>                
                     </table>
@@ -595,21 +609,21 @@
 
         <!-- Chart -->
 
-        <div class="bg-gray-200 text-center py-2 mt-4 mb-4">
+        <div class="bg-gray-300 text-center py-5 text-xl mt-12 rounded-t-2xl mb-4">
             Production Year-to-Date 2025
         </div>
-
-        <div class="flex space-x-4 mb-10">
+            
+        <div class="flex space-x-4 mb-4">
             <div class="w-1/2 bg-white">
-                <div class="bg-white text-center">Branch Monthly Production</div>
-                <div class="w-full">
+                <div class="bg-white text-center bg-blue-900 py-3 text-white rounded-t-2xl border-2 border-black">Branch Monthly Production</div>
+                <div class="w-full bg-gray-200 rounded-b-2xl p-5 border border-gray-400">
                     <canvas id="myChart1"></canvas>
                 </div>
             </div>
                 
             <div class="w-1/2 bg-white">
-                <div class="bg-white text-center">Unit Monthly Production</div>
-                <div class="w-full">
+                <div class="bg-white text-center bg-blue-900 py-3 text-white rounded-t-2xl border-2 border-black">Unit Monthly Production</div>
+                <div class="w-full bg-gray-200 rounded-b-2xl p-5 border border-gray-400">
                     <canvas id="myChart2" ></canvas>
                 </div>
             </div>
@@ -617,15 +631,15 @@
 
         <div class="flex space-x-4">
             <div class="w-1/2 bg-white">
-                <div class="bg-white text-center">Branch Monthly Production</div>
-                <div class="w-full">
+                <div class="bg-white text-center bg-blue-900 py-3 text-white rounded-t-2xl border-2 border-black">Branch Monthly Production</div>
+                <div class="w-full bg-gray-200 rounded-b-2xl p-5 border border-gray-400">
                     <canvas id="myChart3"></canvas>
                 </div>
             </div>
 
             <div class="w-1/2 bg-white">
-                <div class="bg-white text-center">Branch Monthly Production</div>
-                <div class="w-full">
+                <div class="bg-white text-center bg-blue-900 py-3 text-white rounded-t-2xl border-2 border-black">Branch Monthly Production</div>
+                <div class="w-full bg-gray-200 rounded-b-2xl p-5 border border-gray-400">
                     <canvas id="myChart4"></canvas>
                 </div>
             </div>
@@ -633,52 +647,52 @@
 
         <!-- Production Summary -->
 
-        <div class="bg-gray-200 text-center py-2 mt-4 mb-1">
+        <div class="bg-gray-300 text-center py-5 text-xl mt-12 rounded-t-2xl">
             Production Summary
         </div>
 
-        <div class="container mx-auto w-8xl p-4 ">
-            <div class="p-3 bg-gray-300 text-center font-bold border-b border-gray-400">
+        <div class="container bg-gray-100 mx-auto w-8xl p-4 mb-10 border border-gray-400">
+            <div class="p-5 bg-blue-900 text-white text-center font-bold border-b border-gray-400 rounded-t-2xl">
                 ISSUED
             </div>
-            <table class="table-auto w-full border border-gray-300 rounded-md shadow-md">
+            <table class="table-auto w-full border border-gray-300 rounded-t-2xl shadow-md">
                 <thead>
-                    <tr class="bg-gray-300">
-                        <td class="py-2 px-4 font-bold">MONTH</td>
-                        <td class="py-2 px-4 font-bold">TOTAL APE</td>
-                        <td class="py-2 px-4 font-bold">NAP</td>
-                        <td class="py-2 px-4 font-bold">TOTAL CC</td>
-                        <td class="py-2 px-4 font-bold">TOTAL PULSE CASE</td>
+                    <tr class="bg-gray-200 text-black uppercase text-sm leading-normal">
+                        <td class="py-3 px-6 border-b border-gray-300 border-r border-gray-300 border-r border-gray-300 font-bold">MONTH</td>
+                        <td class="py-3 px-6 border-b border-gray-300 border-r border-gray-300 border-r border-gray-300 font-bold">TOTAL APE</td>
+                        <td class="py-3 px-6 border-b border-gray-300 border-r border-gray-300 border-r border-gray-300 font-bold">NAP</td>
+                        <td class="py-3 px-6 border-b border-gray-300 border-r border-gray-300 border-r border-gray-300 font-bold">TOTAL CC</td>
+                        <td class="py-3 px-6 border-b border-gray-300 border-r border-gray-300 font-bold">TOTAL PULSE CASE</td>
                     </tr>
                 </thead>
                 <tbody>
-                    <tr class="bg-white border-b">
-                        <td class="py-2 px-4">100</td>
-                        <td class="py-2 px-4">100</td>
-                        <td class="py-2 px-4">250,000.00</td>
-                        <td class="py-2 px-4">50,000.00</td>
-                        <td class="py-2 px-4">10</td>
+                    <tr class="border-b hover:bg-gray-100 hover:text-blue-900">
+                        <td class="py-3 px-6 border-b border-gray-300 border-r border-gray-300 border-r border-gray-300 bg-white">100</td>
+                        <td class="py-3 px-6 border-b border-gray-300 border-r border-gray-300 border-r border-gray-300 bg-white">100</td>
+                        <td class="py-3 px-6 border-b border-gray-300 border-r border-gray-300 border-r border-gray-300 bg-white">250,000.00</td>
+                        <td class="py-3 px-6 border-b border-gray-300 border-r border-gray-300 border-r border-gray-300 bg-white">50,000.00</td>
+                        <td class="py-3 px-6 border-b border-gray-300 border-r border-gray-300 bg-white">10</td>
                     </tr>
-                    <tr class="bg-gray-100 border-b">
-                        <td class="py-2 px-4">150</td>
-                        <td class="py-2 px-4">100</td>
-                        <td class="py-2 px-4">300,000.00</td>
-                        <td class="py-2 px-4">75,000.00</td>
-                        <td class="py-2 px-4">15</td>
+                    <tr class="border-b hover:bg-gray-100 hover:text-blue-900">
+                        <td class="py-3 px-6 border-b border-gray-300 border-r border-gray-300 border-r border-gray-300 bg-white">150</td>
+                        <td class="py-3 px-6 border-b border-gray-300 border-r border-gray-300 border-r border-gray-300 bg-white">100</td>
+                        <td class="py-3 px-6 border-b border-gray-300 border-r border-gray-300 border-r border-gray-300 bg-white">300,000.00</td>
+                        <td class="py-3 px-6 border-b border-gray-300 border-r border-gray-300 border-r border-gray-300 bg-white">75,000.00</td>
+                        <td class="py-3 px-6 border-b border-gray-300 border-r border-gray-300 bg-white">15</td>
                     </tr>
-                    <tr class="bg-white border-b">
-                        <td class="py-2 px-4">200</td>
-                        <td class="py-2 px-4">100</td>
-                        <td class="py-2 px-4">500,000.00</td>
-                        <td class="py-2 px-4">100,000.00</td>
-                        <td class="py-2 px-4">20</td>
+                    <tr class="border-b hover:bg-gray-100 hover:text-blue-900">
+                        <td class="py-3 px-6 border-b border-gray-300 border-r border-gray-300 border-r border-gray-300 bg-white">200</td>
+                        <td class="py-3 px-6 border-b border-gray-300 border-r border-gray-300 border-r border-gray-300 bg-white">100</td>
+                        <td class="py-3 px-6 border-b border-gray-300 border-r border-gray-300 border-r border-gray-300 bg-white">500,000.00</td>
+                        <td class="py-3 px-6 border-b border-gray-300 border-r border-gray-300 border-r border-gray-300 bg-white">100,000.00</td>
+                        <td class="py-3 px-6 border-b border-gray-300 border-r border-gray-300 bg-white">20</td>
                     </tr>
-                    <tr class="bg-gray-100 border-b">
-                        <td class="py-2 px-4">250</td>
-                        <td class="py-2 px-4">100</td>
-                        <td class="py-2 px-4">600,000.00</td>
-                        <td class="py-2 px-4">125,000.00</td>
-                        <td class="py-2 px-4">25</td>
+                    <tr class="border-b hover:bg-gray-100 hover:text-blue-900">
+                        <td class="py-3 px-6 border-b border-gray-300 border-r border-gray-300 border-r border-gray-300 bg-white">250</td>
+                        <td class="py-3 px-6 border-b border-gray-300 border-r border-gray-300 border-r border-gray-300 bg-white">100</td>
+                        <td class="py-3 px-6 border-b border-gray-300 border-r border-gray-300 border-r border-gray-300 bg-white">600,000.00</td>
+                        <td class="py-3 px-6 border-b border-gray-300 border-r border-gray-300 border-r border-gray-300 bg-white">125,000.00</td>
+                        <td class="py-3 px-6 border-b border-gray-300 border-r border-gray-300 bg-white">25</td>
                     </tr>
                 </tbody>
             </table>
@@ -686,151 +700,150 @@
 
 
   <script>
-    // Function to generate random color
     function getRandomColor() {
-      const letters = '0123456789ABCDEF';
-      let color = '#';
-      for (let i = 0; i < 6; i++) {
-        color += letters[Math.floor(Math.random() * 12)];
-      }
-      return color;
+    const letters = '0123456789ABCDEF';
+    let color = '#';
+    for (let i = 0; i < 6; i++) {
+        color += letters[Math.floor(Math.random() * 16)]; // Changed to 16 to include all hex digits
+    }
+    return color;
+}
+
+    // Function to randomize bar colors
+    function randomizeBarColors(chart) {
+        chart.data.datasets[0].backgroundColor = Array.from({ length: 6 }, () => getRandomColor());
+        chart.update(); // Update the chart to reflect the new colors
     }
 
-    // First Line Chart Data
-    const ctx1 = document.getElementById('myChart1').getContext('2d');
-    const myChart1 = new Chart(ctx1, {
-      type: 'line',
-      data: {
-        labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul','Aug', 'Sep', 'Oct', 'Nov','Dec'],
-        datasets: [{
-          label: 'Sales in USD',
-          data: [654, 434, 800, 500, 343, 765, 234, 423, 654, 876, 543, 765],
-          borderColor: 'black',
-          backgroundColor: 'rgba(0, 0, 0, 0)',
-          borderWidth: 1,
-          pointBackgroundColor: Array.from({ length: 12 }, () => getRandomColor()),
-          pointBorderColor: 'black',
-          pointRadius: 4,
-          fill: true,
-          backgroundColor: 'rgba(0, 255, 255, 0.3)',
-        }]
-      },
-      options: {
-        responsive: true,
-        plugins: {
-          legend: {
-            position: 'top',
-          },
-        },
-        scales: {
-          y: {
-            beginAtZero: true
-          }
-        }
-      }
-    });
+        // First Bar Chart Data
+        const ctx1 = document.getElementById('myChart1').getContext('2d');
+        const myChart1 = new Chart(ctx1, {
+            type: 'bar', // Changed to 'bar'
+            data: {
+                labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
+                datasets: [{
+                    label: 'Sales in USD',
+                    data: [654, 434, 800, 500, 343, 765, 234, 423, 654, 876, 543, 765],
+                    borderColor: 'black',
+                    borderWidth: 1,
+                    backgroundColor: Array.from({ length: 12 }, () => getRandomColor()), // Random colors for bars
+                }]
+            },
+            options: {
+                responsive: true,
+                plugins: {
+                    legend: {
+                        position: 'top',
+                    },
+                },
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        });
+
+        // Call the function to randomize colors once
+        randomizeBarColors(myChart1);
+
+
 
     // Second Line Chart Data
-    const ctx2 = document.getElementById('myChart2').getContext('2d');
-    const myChart2 = new Chart(ctx2, {
-      type: 'line',
-      data: {
-        labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul','Aug', 'Sep', 'Oct', 'Nov','Dec'],
-        datasets: [{
-          label: 'Expenses in USD',
-          data: [400, 300, 600, 200, 500, 700, 300, 400, 500, 600, 700, 800],
-          borderColor: 'red',
-          backgroundColor: 'rgba(0, 0, 0, 0)',
-          borderWidth: 1,
-          pointBackgroundColor: Array.from({ length: 12 }, () => getRandomColor()),
-          pointBorderColor: 'red',
-          pointRadius: 4,
-          fill: true,
-          backgroundColor: 'rgba(255, 0, 0, 0.3)',  // Fill color with 30% opacity
-        }]
-      },
-      options: {
-        responsive: true,
-        plugins: {
-          legend: {
-            position: 'top',
-          },
-        },
-        scales: {
-          y: {
-            beginAtZero: true
-          }
-        }
-      }
-    });
+        const ctx2 = document.getElementById('myChart2').getContext('2d');
+        const myChart2 = new Chart(ctx2, {
+            type: 'bar', // Changed to 'bar'
+            data: {
+                labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
+                datasets: [{
+                    label: 'Sales in USD',
+                    data: [232, 434, 600, 500, 343, 765, 554, 423, 654, 876, 522, 765],
+                    borderColor: 'black',
+                    borderWidth: 1,
+                    backgroundColor: Array.from({ length: 12 }, () => getRandomColor()), // Random colors for bars
+                }]
+            },
+            options: {
+                responsive: true,
+                plugins: {
+                    legend: {
+                        position: 'top',
+                    },
+                },
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        });
+
+        // Call the function to randomize colors once
+        randomizeBarColors(myChart2);
 
     // third Line Chart Data
     const ctx3 = document.getElementById('myChart3').getContext('2d');
-    const myChart3 = new Chart(ctx3, {
-      type: 'line',
-      data: {
-        labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul','Aug', 'Sep', 'Oct', 'Nov','Dec'],
-        datasets: [{
-          label: 'Sales in USD',
-          data: [654, 434, 800, 500, 343, 765, 234, 423, 654, 876, 543, 765],
-          borderColor: 'black',
-          backgroundColor: 'rgba(0, 0, 0, 0)',
-          borderWidth: 1,
-          pointBackgroundColor: Array.from({ length: 12 }, () => getRandomColor()),
-          pointBorderColor: 'black',
-          pointRadius: 4,
-          fill: true,
-          backgroundColor: 'rgba(0, 255, 255, 0.3)',
-        }]
-      },
-      options: {
-        responsive: true,
-        plugins: {
-          legend: {
-            position: 'top',
-          },
-        },
-        scales: {
-          y: {
-            beginAtZero: true
-          }
-        }
-      }
-    });
+        const myChart3 = new Chart(ctx3, {
+            type: 'bar', // Changed to 'bar'
+            data: {
+                labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
+                datasets: [{
+                    label: 'Sales in USD',
+                    data: [232, 434, 600, 500, 343, 765, 554, 423, 654, 876, 522, 765],
+                    borderColor: 'black',
+                    borderWidth: 1,
+                    backgroundColor: Array.from({ length: 12 }, () => getRandomColor()), // Random colors for bars
+                }]
+            },
+            options: {
+                responsive: true,
+                plugins: {
+                    legend: {
+                        position: 'top',
+                    },
+                },
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        });
+
+        // Call the function to randomize colors once
+        randomizeBarColors(myChart3);
 
     // fourth Line Chart Data
     const ctx4 = document.getElementById('myChart4').getContext('2d');
-    const myChart4 = new Chart(ctx4, {
-      type: 'line',
-      data: {
-        labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul','Aug', 'Sep', 'Oct', 'Nov','Dec'],
-        datasets: [{
-          label: 'Sales in USD',
-          data: [654, 434, 800, 500, 343, 765, 234, 423, 654, 876, 543, 765],
-          borderColor: 'black',
-          backgroundColor: 'rgba(0, 0, 0, 0)',
-          borderWidth: 1,
-          pointBackgroundColor: Array.from({ length: 12 }, () => getRandomColor()),
-          pointBorderColor: 'black',
-          pointRadius: 4,
-          fill: true,
-          backgroundColor: 'rgba(0, 255, 255, 0.3)',
-        }]
-      },
-      options: {
-        responsive: true,
-        plugins: {
-          legend: {
-            position: 'top',
-          },
-        },
-        scales: {
-          y: {
-            beginAtZero: true
-          }
-        }
-      }
-    });
+        const myChart4 = new Chart(ctx4, {
+            type: 'bar', // Changed to 'bar'
+            data: {
+                labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
+                datasets: [{
+                    label: 'Sales in USD',
+                    data: [232, 434, 600, 500, 343, 765, 554, 423, 654, 876, 522, 765],
+                    borderColor: 'black',
+                    borderWidth: 1,
+                    backgroundColor: Array.from({ length: 12 }, () => getRandomColor()), // Random colors for bars
+                }]
+            },
+            options: {
+                responsive: true,
+                plugins: {
+                    legend: {
+                        position: 'top',
+                    },
+                },
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        });
+
+        // Call the function to randomize colors once
+        randomizeBarColors(myChart4);
   </script>
     </div>
 
