@@ -22,15 +22,13 @@
         </h1>
 
         <!-- Table Controls Section -->
-        <div class="container mx-auto max-w-8xl bg-white-100 p-5 rounded-l rounded-r shadow-md mb-2 ">
+        <div class="container mx-auto max-w-8xl bg-white-100 p-3 rounded-l rounded-r shadow-md mb-2 ">
             
-            <!-- Entries and Search Controls -->
-            <div class="mb-1 flex justify-between items-center pb-3">
-
-                <!-- Entries Dropdown -->
+            <!-- Show Entries and Search Section -->
+            <div class="flex items-center justify-between mb-3">
                 <div class="flex items-center">
                     <label for="entries" class="mr-2 text-sm text-gray-600">Show entries:</label>
-                    <select id="entries" class="border border-gray-300 rounded-md p-2 py-1 mr-4">
+                    <select id="entries" class="border border-gray-300 rounded-md p-1 text-sm">
                         <option value="10">10</option>
                         <option value="25">25</option>
                         <option value="50">50</option>
@@ -38,8 +36,7 @@
                     </select>
                 </div>
 
-                <!-- Search Input -->
-                <div class="flex items-center px-2 py-2">
+                <div class="flex items-center">
                     <label for="search" class="mr-2 text-sm text-gray-600">Search:</label>
                     <input type="text" id="search" class="px-3 py-1 border border-gray-300 rounded-md shadow-sm text-sm" placeholder="Search...">
                 </div>
@@ -84,29 +81,31 @@
         </div>
 
         <!-- Pagination Section -->
-        <div class="flex justify-end items-center mt-4 space-x-2 ml-auto">
-            <button class="px-3 py-1 bg-gray-300 text-gray-700 rounded-md hover:bg-gray-400 text-sm" id="previousBtn">Previous</button>
-
-            <!-- Page Numbers Container -->
-            <div class="mr-1 flex items-center space-x-2">
-                <div id="pageNumbers" class="flex space-x-1">
-                    <!-- Page numbers will be dynamically inserted here -->
-                </div>
+        <div class="mt-4 ml-3 mr-3 flex justify-between items-center">
+            <div class="text-sm text-gray-600">
+                Showing 1 to 10 of 489 entries
             </div>
-
-            <button class="px-3 py-1 bg-gray-300 text-gray-700 rounded-md hover:bg-gray-400 text-sm" id="nextBtn">Next</button>
+            
+<div class="flex justify-end items-center space-x-2 ml-auto">
+            <div class="ml-4 flex space-x-2">
+                <button class="px-3 py-1 bg-gray-300 text-gray-700 rounded-md hover:bg-gray-400 text-sm" id="previousBtn">Previous</button>
+                <div class="mr-1 flex items-center space-x-2">
+                    <div id="pageNumbers" class="flex space-x-1">
+                        <!-- Page numbers will be dynamically inserted here -->
+                    </div>
+                </div>
+                <button class="px-3 py-1 bg-gray-300 text-gray-700 rounded-md hover:bg-gray-400 text-sm" id="nextBtn">Next</button>
         </div>
-
     </div>
 
-    <!-- JavaScript Section -->
     <script>
         let currentPage = 1;
         const totalPages = 3; // Total number of pages (can be updated dynamically)
         const previousBtn = document.getElementById('previousBtn');
         const nextBtn = document.getElementById('nextBtn');
         const pageNumbersContainer = document.getElementById('pageNumbers');
-
+        const tableContent = document.getElementById('tableContent');
+        
         // Dynamically generate page numbers
         function generatePageNumbers() {
             pageNumbersContainer.innerHTML = '';  // Clear previous page numbers
@@ -150,9 +149,6 @@
                 updatePageInfo();
             }
         });
-
-        // Generate the initial page numbers on page load
-        window.onload = generatePageNumbers;
     </script>
 
 </body>

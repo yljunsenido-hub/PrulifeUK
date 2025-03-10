@@ -1,15 +1,243 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Poster Maintenance</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <title>Agent Group Maintenance</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        /* Sticky Navbar */
+        nav {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        /* Sidebar Style */
+        .sidebar {
+            position: fixed;
+            top: 72px;
+            left: 0;
+            width: 260px;
+            height: calc(100% - 72px);
+            background-color: #1f2937;
+            color: white;
+            box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
+            z-index: 1000;
+            padding: 20px;
+            transform: translateX(-100%);
+            opacity: 0;
+            visibility: hidden;
+            transition: transform 0.4s ease, opacity 0.1s ease;
+            overflow-y: auto;
+        }
+
+        .sidebar.show {
+            transform: translateX(0);
+            opacity: 1;
+            visibility: visible;
+        }
+
+        /* Highlight menu items on hover */
+        .menu-item:hover .menu-text {
+            color: #60a5fa;
+        }
+
+        /* Custom scrollbar */
+        .sidebar::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        .sidebar::-webkit-scrollbar-thumb {
+            background: #dbd8d8;
+            border-radius: 10px;
+        }
+
+        .sidebar::-webkit-scrollbar-thumb:hover {
+            background: #6b7280;
+        }
+
+        /* Dropdown Styles */
+        .dropdown {
+            transition: max-height 0.3s ease-out, opacity 0.3s ease-out;
+            max-height: 0;
+            opacity: 0;
+            overflow: hidden;
+            display: block;
+        }
+
+        .dropdown.show {
+            max-height: 500px;
+            opacity: 1;
+        }
+
+        /* Highlight dropdown items on hover */
+        .dropdown a:hover {
+            background-color: #4b5563;
+            color: #ffffff;
+        }
+
+        /* Main content styles */
+        .content {
+            transition: margin-left 0.4s ease;
+            margin: 0 auto;
+            max-width: 1200px; /* Set a max-width for the content */
+            padding: 10px 20px; /* Add padding to the sides */
+            margin-top: 15px;
+            margin-left: 0; /* Default margin */
+        }
+
+        .content.shift {
+            margin-left: 260px; /* Adjusted to match sidebar width */
+        }
+    </style>
 </head>
 
-<body class="bg-gray-100 p-6 border border-gray-300">
-    <div class="container mx-auto max-w-8xl bg-white p-6 rounded-lg shadow-md">
+<body class="bg-gray-100">
+
+    <!-- Sticky Navigation Bar -->
+    <nav class="bg-gray-800 p-4 flex justify-between items-center">
+        <div class="flex items-center">
+            <button class="mr-2 bg-transparent text-white p-2 rounded-md hover:bg-gray-700" onclick="toggleSidebar()">
+                <i class="fas fa-bars"></i>
+            </button>
+            <img src="https://placehold.co/50x50" alt="Blue Chalcedony Quartz logo" class="h-10 w-10 mr-2">
+            <span class="text-white text-lg font-semibold">BLUE CHALCEDONY QUARTZ BRANCH</span>
+        </div>
+        <div class="flex items-center space-x-6">
+            <div class="relative">
+                <input type="text" placeholder="Search for..." class="p-1 rounded-md text-sm">
+                <button class="absolute right-0 top-0 mt-1 mr-2">
+                    <i class="fas fa-search text-blue-500"></i>
+                </button>
+            </div>
+            <i class="fas fa-bell text-white px-0"></i>
+            <i class="fas fa-user text-white px-2.5"></i>
+        </div>
+    </nav>
+<!-- Sidebar -->
+    <div class="sidebar" id="sidebar">
+        <ul>
+            <li class="menu-item text-white w-full text-left py-1 pb-2">
+                <span class="text-yellow-200">Activities</span>
+            </li>
+            <li class="menu-item">
+                <button class="text-white w-full text-left py-1 pb-4" onclick="toggleDropdown('eventsDropdown')">
+                    <span class="menu-text">Events</span> <i class="fas fa-chevron-down px-2"></i>
+                </button>
+                <ul class="dropdown" id="eventsDropdown">
+                    <li><a href="#" class="block pl-4 py-1">Upcoming Events</a></li>
+                    <li><a href="#" class="block pl-4 py-1">My Events</a></li>
+                    <li><a href="#" class="block pl-4 py-1">Event Maintenance</a></li>
+                </ul>
+            </li>
+            <li class="menu-item text-white w-full text-left py-1 pb-2">
+                <span class="text-yellow-200">Operations</span>
+            </li>
+            <li class="menu-item">
+                <button class="text-white w-full text-left py-1" onclick="toggleDropdown('leadsDropdown')">
+                    <span class="menu-text">Leads & Cases</span> <i class="fas fa-chevron-down px-2"></i>
+                </button>
+                <ul class="dropdown" id="leadsDropdown">
+                    <li><a href="#" class="block pl-4 py-1">Submitted Cases</a></li>
+                    <li><a href="#" class="block pl-4 py-1">Issued Cases</a></li>
+                    <li><a href="#" class="block pl-4 py-1">Outreq Cases</a></li>
+                    <li><a href="#" class="block pl-4 py-1">Declined/Postponed Cases</a></li>
+                </ul>
+            </li>
+            <li class="menu-item">
+                <button class="text-white w-full text-left py-1" onclick="toggleDropdown('newBusinessDropdown')">
+                    <span class="menu-text">New Business</span> <i class="fas fa-chevron-down px-2"></i>
+                </button>
+                <ul class="dropdown" id="newBusinessDropdown">
+                    <li><a href="#" class="block pl-4 py-1">Submission Approval</a></li>
+                    <li><a href="#" class="block pl-4 py-1">New Business Maintenance</a></li>
+                    <li><a href="#" class="block pl-4 py-1">Issued Cases</a></li>
+                </ul>
+            </li>
+            <li class="menu-item">
+                <button class="text-white w-full text-left py-1" onclick="toggleDropdown('reportsDropdown')">
+                    <span class="menu-text">Reports</span> <i class="fas fa-chevron-down px-2"></i>
+                </button>
+                <ul class="dropdown" id="reportsDropdown">
+                    <li><a href="#" class="block pl-4 py-1">Agent MTD</a></li>
+                    <li><a href="#" class="block pl-4 py-1">Agent YTD</a></li>
+                    <li><a href="#" class="block pl-4 py-1">Sub-Unit Summary</a></li>
+                    <li><a href="#" class="block pl-4 py-1">Unit Summary</a></li>
+                    <li><a href="#" class="block pl-4 py-1">Branch Summary</a></li>
+                    <li><a href="#" class="block pl-4 py-1">Branch Honor Rolls</a></li>
+                    <li><a href="#" class="block pl-4 py-1">Unit Honor Rolls</a></li>
+                    <li><a href="#" class="block pl-4 py-1">Custom Group</a></li>
+                    <li><a href="#" class="block pl-4 py-1">Personal To Go's (BETA)</a></li>
+                    <li><a href="#" class="block pl-4 py-1">Qualifiers (BETA)</a></li>
+                    <li><a href="#" class="block pl-4 py-1">MDRT Tracker</a></li>
+                    <li><a href="#" class="block pl-4 py-1">Easy Reports</a></li>
+                </ul>
+            </li>
+            <li class="menu-item">
+                <button class="text-white w-full text-left py-1" onclick="toggleDropdown('marketingDropdown')">
+                    <span class="menu-text">Marketing</span> <i class="fas fa-chevron-down px-2"></i>
+                </button>
+                <ul class="dropdown" id="marketingDropdown">
+<li><a href="#" class="block pl-4 py-1">Poster Templates</a></li>
+                </ul>
+            </li>
+            <li class="menu-item">
+                <button class="text-white w-full text-left py-1" onclick="toggleDropdown('proposalBankDropdown')">
+                    <span class="menu-text">Proposal Bank</span> <i class="fas fa-chevron-down px-2"></i>
+                </button>
+                <ul class="dropdown" id="proposalBankDropdown">
+                    <li><a href="#" class="block pl-4 py-1">Proposal Search</a></li>
+                    <li><a href="#" class="block pl-4 py-1">Proposal List</a></li>
+                </ul>
+            </li>
+            <li class="menu-item">
+                <button class="text-white w-full text-left py-1" onclick="toggleDropdown('recruitmentDropdown')">
+                    <span class="menu-text">Recruitment</span> <i class="fas fa-chevron-down px-2"></i>
+                </button>
+                <ul class="dropdown" id="recruitmentDropdown">
+                    <li><a href="#" class="block pl-4 py-1">Recruit</a></li>
+                    <li><a href="#" class="block pl-4 py-1">Recruitment Process</a></li>
+                </ul>
+            </li>
+            <li class="menu-item">
+                <button class="text-white w-full text-left py-1" onclick="toggleDropdown('appointmentsDropdown')">
+                    <span class="menu-text">Appointments</span>
+                </button>
+            </li>
+            <li class="menu-item">
+                <button class="text-white w-full text-left py-1" onclick="toggleDropdown('bcmsDropdown')">
+                    <span class="menu-text">BCMS Maintenance</span> <i class="fas fa-chevron-down px-2"></i>
+                </button>
+                <ul class="dropdown" id="bcmsDropdown">
+                    <li><a href="#" class="block pl-4 py-1">Poster Template Maintenance</a></li>
+                    <li><a href="#" class="block pl-4 py-1">Poster Maintenance</a></li>
+                    <li><a href="#" class="block pl-4 py-1">Agent Maintenance</a></li>
+                    <li><a href="#" class="block pl-4 py-1">Unit Maintenance</a></li>
+                    <li><a href="#" class="block pl-4 py-1">Sub-Unit Maintenance</a></li>
+                    <li><a href="#" class="block pl-4 py-1">Digital Card Maintenance</a></li>
+                </ul>
+            </li>
+            <li class="menu-item">
+                <button class="text-white w-full text-left py-1" onclick="toggleDropdown('branchOperationsDropdown')">
+                    <span class="menu-text">Branch Operations Utility</span> <i class="fas fa-chevron-down px-2"></i>
+                </button>
+                <ul class="dropdown" id="branchOperationsDropdown">
+                    <li><a href="#" class="block pl-4 py-1">Upload Issued</a></li>
+                    <li><a href="#" class="block pl-4 py-1">Upload NAP</a></li>
+                    <li><a href="#" class="block pl-4 py-1">Upload Due List</a></li>
+                    <li><a href="#" class="block pl-4 py-1">Upload Batch Photos</a></li>
+                    <li><a href="#" class="block pl-4 py-1">Update Submission/Policy Record</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+    <!-- Main Content -->
+    <div class="container w-full p-8 content" id="main-content">
+
+        <div class="container mx-auto max-w-8xl bg-white p-6 rounded-lg shadow-md">
         <h2 class="text-4xl font-semibold mb-4">Agent Group Maintenance</h2>
 
         <!-- Personal Monitoring Section -->
@@ -25,12 +253,12 @@
         </div>
 
         <!-- Table Section -->
-        <div class="pb-5 pt-5 p-5 bg-white rounded-md shadow-md">
+        <div class="p-3 bg-white rounded-md shadow-md">
             <div class="mb-4 flex items-center justify-between">
                 <!-- Entries Dropdown -->
                 <div class="flex items-center">
-                    <label for="entries" class="mr-2 text-sm text-gray-600">Show entries:</label>
-                    <select id="entries" class="border border-gray-300 rounded-md p-2">
+                    <label for="entries" class="mr-2 text-sm text-gray-600 py-1">Show entries:</label>
+                    <select id="entries" class="border border-gray-300 rounded-md p-2 px-1 py-1">
                         <option value="10">10</option>
                         <option value="25">25</option>
                         <option value="50">50</option>
@@ -41,7 +269,7 @@
                 <!-- Search Input -->
                 <div class="flex items-center">
                     <label for="search" class="mr-2 text-sm text-gray-600">Search:</label>
-                    <input type="text" id="search" class="px-4 py-2 border border-gray-300 rounded-md shadow-sm text-sm" placeholder="Search...">
+                    <input type="text" id="search" class="px-4 py-1 border border-gray-300 rounded-md shadow-sm text-sm" placeholder="Search...">
                 </div>
             </div>
 
@@ -65,25 +293,74 @@
         </div>
 
         <!-- Pagination Section -->
-        <div class="flex justify-end items-center mt-4 space-x-2">
+        <div class="mt-4 ml-3 mr-3 flex justify-between items-center">
+            <div class="text-sm text-gray-600">
+                Showing 1 to 10 of 489 entries
+            </div>
+            
+    <div class="flex justify-end items-center space-x-2 ml-auto">
             <div class="ml-4 flex space-x-2">
-                <!-- Previous Button -->
                 <button class="px-3 py-1 bg-gray-300 text-gray-700 rounded-md hover:bg-gray-400 text-sm" id="previousBtn">Previous</button>
-
-                <!-- Page Numbers -->
                 <div class="mr-1 flex items-center space-x-2">
-                    <span class="text-xs text-gray-600"></span>
                     <div id="pageNumbers" class="flex space-x-1">
                         <!-- Page numbers will be dynamically inserted here -->
-                    </div>
-                    <span class="ml-1 text-xs text-gray-600"></span>
                 </div>
-
-                <!-- Next Button -->
                 <button class="px-3 py-1 bg-gray-300 text-gray-700 rounded-md hover:bg-gray-400 text-sm" id="nextBtn">Next</button>
-            </div>
         </div>
     </div>
+
+    <script>
+        let currentPage = 1;
+        const totalPages = 3; // Total number of pages (can be updated dynamically)
+        const previousBtn = document.getElementById('previousBtn');
+        const nextBtn = document.getElementById('nextBtn');
+        const pageNumbersContainer = document.getElementById('pageNumbers');
+        const tableContent = document.getElementById('tableContent');
+        
+        // Dynamically generate page numbers
+        function generatePageNumbers() {
+            pageNumbersContainer.innerHTML = '';  // Clear previous page numbers
+            for (let i = 1; i <= totalPages; i++) {
+                const pageButton = document.createElement('button');
+                pageButton.textContent = i;
+                pageButton.classList.add('px-3', 'py-1', 'border', 'border-gray-300', 'rounded-md', 'hover:bg-gray-400', 'text-sm');
+                pageButton.addEventListener('click', () => goToPage(i));
+                pageNumbersContainer.appendChild(pageButton);
+            }
+        }
+
+        // Update page numbers and highlight current page
+        function updatePageInfo() {
+            const pageButtons = document.querySelectorAll('#pageNumbers button');
+            pageButtons.forEach(button => {
+                button.classList.remove('bg-gray-400', 'text-white'); // Remove highlight from all buttons
+                if (parseInt(button.textContent) === currentPage) {
+                    button.classList.add('bg-gray-400', 'text-white'); // Highlight the current page
+                }
+            });
+        }
+
+        // Go to a selected page
+        function goToPage(page) {
+            currentPage = page;
+            updatePageInfo();
+        }
+
+        // Handle Previous and Next Button actions
+        previousBtn.addEventListener('click', () => {
+            if (currentPage > 1) {
+                currentPage--;
+                updatePageInfo();
+            }
+        });
+
+        nextBtn.addEventListener('click', () => {
+            if (currentPage < totalPages) {
+                currentPage++;
+                updatePageInfo();
+            }
+        });
+    </script>
 
     <script>
         // Example data, replace this with your actual data source
@@ -176,13 +453,14 @@
         window.onload = calculateTotalsAndAverages;
     </script>
 
-    <script>
+<script>
         let currentPage = 1;
-        const totalPages = 3;  // Total number of pages (can be updated dynamically)
+        const totalPages = 3; // Total number of pages (can be updated dynamically)
         const previousBtn = document.getElementById('previousBtn');
         const nextBtn = document.getElementById('nextBtn');
         const pageNumbersContainer = document.getElementById('pageNumbers');
-
+        const tableContent = document.getElementById('tableContent');
+        
         // Dynamically generate page numbers
         function generatePageNumbers() {
             pageNumbersContainer.innerHTML = '';  // Clear previous page numbers
@@ -226,11 +504,46 @@
                 updatePageInfo();
             }
         });
+    </script>
+       
+    </div>
 
-        // Initialize page numbers and update info
-        generatePageNumbers();
-        updatePageInfo();
+   
+
+    <script>
+        // Function to toggle the sidebar
+        function toggleSidebar() {
+            const sidebar = document.getElementById("sidebar");
+            const content = document.getElementById("main-content");
+            sidebar.classList.toggle("show"); // Show or hide the sidebar
+            content.classList.toggle("shift"); // Shift content when sidebar is visible
+        }
+
+        let currentOpenDropdown = null;
+
+        function toggleDropdown(dropdownId) {
+            const dropdown = document.getElementById(dropdownId);
+// Close the currently open dropdown if it's not the one being clicked
+            if (currentOpenDropdown && currentOpenDropdown !== dropdown) {
+                currentOpenDropdown.classList.remove('show');
+                currentOpenDropdown.style.maxHeight = '0'; // Reset max-height
+                currentOpenDropdown.style.opacity = '0'; // Reset opacity
+            }
+
+            // Toggle the clicked dropdown
+            if (dropdown.classList.contains('show')) {
+                dropdown.classList.remove('show');
+                dropdown.style.maxHeight = '0'; // Reset max-height
+                dropdown.style.opacity = '0'; // Reset opacity
+            } else {
+                dropdown.classList.add('show');
+                dropdown.style.maxHeight = '500px'; // Set max-height to allow transition
+                dropdown.style.opacity = '1'; // Set opacity to allow transition
+            }
+
+            // Update the current open dropdown reference
+            currentOpenDropdown = dropdown.classList.contains('show') ? dropdown : null;
+        }
     </script>
 </body>
-
 </html>

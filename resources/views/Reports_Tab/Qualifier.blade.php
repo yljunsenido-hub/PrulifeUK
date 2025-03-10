@@ -23,7 +23,7 @@
         </div>
 
         <!-- Tabs Section -->
-        <div class="mb-4 p-4 bg-white rounded-md shadow-md">
+        <div class="mb-4 p-3 bg-white rounded-md shadow-md">
         <div class="flex border-b border-gray-300 mb-4">
             <a href="#" class="tab py-2 px-4 text-gray-600 hover:text-black font-semibold border-b-2 border-transparent hover:border-yellow-300 transition-all duration-300 active-tab" id="tab1">A-AC Agent</a>
             <a href="#" class="tab py-2 px-4 text-gray-600 hover:text-black font-semibold border-b-2 border-transparent hover:border-yellow-300 transition-all duration-300" id="tab2">B-AC UM</a>
@@ -35,7 +35,7 @@
         </div>
 
         <!-- Table Section -->
-        <div class="mb-4 p-4 bg-white rounded-md shadow-md">
+        <div class="p-4 bg-white rounded-md shadow-md">
             <div class="flex items-center justify-between mb-4">
                 <div class="flex items-center">
                     <label for="entries" class="mr-2 text-sm text-gray-600">Show entries:</label>
@@ -61,7 +61,7 @@
 </div>
         
         <!-- Pagination Section -->
-        <div class="mt-4 flex justify-between items-center">
+        <div class="mt-4 ml-3 mr-3 flex justify-between items-center">
             <div class="text-sm text-gray-600">
                 Showing 1 to 10 of 489 entries
             </div>

@@ -11,7 +11,8 @@
     <div class="container mx-auto max-w-8xl bg-white p-6 rounded-lg shadow-md">
         <h2 class="text-4xl font-semibold mb-4">Personal To Go</h2>
 
-        <div class="mb-4 p-4 bg-blue-900 rounded-md flex justify-between items-center">
+        <div class="pl-3 pr-3 pt-3 pb-3 mb-4 bg-blue-900 rounded-md flex justify-between items-center">
+            
             <h2 class="text-lg font-semibold text-yellow-300">Personal Monitoring</h2>
                 <a class="px-3 py-1 bg-white text-gray-700 rounded-md hover:bg-yellow-300 hover:text-white text-sm font-bold">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" class="w-3 h-6">
@@ -27,7 +28,7 @@
         </div>
 
         <!-- Tabs Section -->
-        <div class="mb-4 p-4 bg-white rounded-md shadow-md">
+        <div class="mb-4 p-3 bg-white rounded-md shadow-md">
         <div class="flex border-b border-gray-300 mb-4">
             <a href="#" class="tab border-r border-l py-2 px-4 text-gray-600 hover:text-black font-semibold border-b-2 border-transparent hover:border-yellow-300 transition-all duration-300 active-tab" id="tab1">A-AC Agent</a>
             <a href="#" class="tab border-r border-l py-2 px-4 text-gray-600 hover:text-black font-semibold border-b-2 border-transparent hover:border-yellow-300 transition-all duration-300" id="tab2">B-AC UM</a>
@@ -36,7 +37,7 @@
         </div>
 
         <!-- Table Section -->
-        <div class="mb-4 p-4 bg-white rounded-md shadow-md">
+        <div class="p-4 bg-white rounded-md shadow-md">
             <div class="flex items-center justify-between mb-4">
                 <div class="flex items-center">
                     <label for="entries" class="mr-2 text-sm text-gray-600">Show entries:</label>
@@ -62,7 +63,12 @@
 </div>
         
         <!-- Pagination Section -->
-        <div class="flex justify-end items-center mt-4 space-x-2">
+        <div class="mt-4 ml-3 mr-3 flex justify-between items-center">
+            <div class="text-sm text-gray-600">
+                Showing 1 to 10 of 489 entries
+            </div>
+            
+        <div class="flex justify-end items-center space-x-2">
             <div class="ml-4 flex space-x-2">
                 <button class="px-3 py-1 bg-gray-300 text-gray-700 rounded-md hover:bg-gray-400 text-sm" id="previousBtn">Previous</button>
                 <div class="mr-1 flex items-center space-x-2">

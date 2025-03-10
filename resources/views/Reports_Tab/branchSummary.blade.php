@@ -14,8 +14,8 @@
         <h1 class="pl-2 text-l text-yellow-300 font-semibold ">Month-to-date</h1>
 </div>
         
-<div class="mb-4 p-4 bg-white rounded-md shadow-md">
-            <div class="flex items-center justify-between mb-4">
+<div class="mb-3 p-3 bg-white rounded-md shadow-md">
+            <div class="flex items-center justify-between mb-3">
                 <div class="flex items-center">
                     <label for="entries" class="mr-2 text-sm text-gray-600">Show entries:</label>
                     <select id="entries" class="border border-gray-300 rounded-md p-1 text-sm">
@@ -101,81 +101,75 @@
     </div>
 
 <!-- Pagination section -->
-<div class="mt-4 flex justify-between items-center">
-    <!-- Showing entries text on the left -->
-    <div class="text-sm text-gray-600">
-        Showing 1 to 10 of 489 entries
-    </div>
-
-    <!-- Pagination Section - Aligned to the Right -->
-    <div class="flex items-center space-x-2 ml-auto">
-        <button class="px-3 py-1 bg-gray-300 text-gray-700 rounded-md hover:bg-gray-400 text-sm" id="previousBtn">Previous</button>
-
-        <div class="mr-1 flex items-center space-x-2">
-            <div id="pageNumbers" class="flex space-x-1">
-                <!-- Page numbers will be dynamically inserted here -->
+<div class="mt-4 ml-3 mr-3 flex justify-between items-center">
+            <div class="text-sm text-gray-600">
+                Showing 1 to 10 of 489 entries
             </div>
+            
+<div class="flex justify-end items-center space-x-2 ml-auto">
+            <div class="ml-4 flex space-x-2">
+                <button class="px-3 py-1 bg-gray-300 text-gray-700 rounded-md hover:bg-gray-400 text-sm" id="previousBtn">Previous</button>
+                <div class="mr-1 flex items-center space-x-2">
+                    <div id="pageNumbers" class="flex space-x-1">
+                        <!-- Page numbers will be dynamically inserted here -->
+                    </div>
+                </div>
+                <button class="px-3 py-1 bg-gray-300 text-gray-700 rounded-md hover:bg-gray-400 text-sm" id="nextBtn">Next</button>
         </div>
-
-        <button class="px-3 py-1 bg-gray-300 text-gray-700 rounded-md hover:bg-gray-400 text-sm" id="nextBtn">Next</button>
     </div>
-</div>
 
-<!-- JavaScript Section -->
-<script>
-    let currentPage = 1;
-    const totalPages = 3; // Total number of pages (can be updated dynamically)
-    const previousBtn = document.getElementById('previousBtn');
-    const nextBtn = document.getElementById('nextBtn');
-    const pageNumbersContainer = document.getElementById('pageNumbers');
-
-    // Dynamically generate page numbers
-    function generatePageNumbers() {
-        pageNumbersContainer.innerHTML = '';  // Clear previous page numbers
-        for (let i = 1; i <= totalPages; i++) {
-            const pageButton = document.createElement('button');
-            pageButton.textContent = i;
-            pageButton.classList.add('px-3', 'py-1', 'border', 'border-gray-300', 'rounded-md', 'hover:bg-gray-400', 'text-sm');
-            pageButton.addEventListener('click', () => goToPage(i));
-            pageNumbersContainer.appendChild(pageButton);
+    <script>
+        let currentPage = 1;
+        const totalPages = 3; // Total number of pages (can be updated dynamically)
+        const previousBtn = document.getElementById('previousBtn');
+        const nextBtn = document.getElementById('nextBtn');
+        const pageNumbersContainer = document.getElementById('pageNumbers');
+        const tableContent = document.getElementById('tableContent');
+        
+        // Dynamically generate page numbers
+        function generatePageNumbers() {
+            pageNumbersContainer.innerHTML = '';  // Clear previous page numbers
+            for (let i = 1; i <= totalPages; i++) {
+                const pageButton = document.createElement('button');
+                pageButton.textContent = i;
+                pageButton.classList.add('px-3', 'py-1', 'border', 'border-gray-300', 'rounded-md', 'hover:bg-gray-400', 'text-sm');
+                pageButton.addEventListener('click', () => goToPage(i));
+                pageNumbersContainer.appendChild(pageButton);
+            }
         }
-    }
 
-    // Update page numbers and highlight current page
-    function updatePageInfo() {
-        const pageButtons = document.querySelectorAll('#pageNumbers button');
-        pageButtons.forEach(button => {
-            button.classList.remove('bg-gray-400', 'text-white'); // Remove highlight from all buttons
-            if (parseInt(button.textContent) === currentPage) {
-                button.classList.add('bg-gray-400', 'text-white'); // Highlight the current page
+        // Update page numbers and highlight current page
+        function updatePageInfo() {
+            const pageButtons = document.querySelectorAll('#pageNumbers button');
+            pageButtons.forEach(button => {
+                button.classList.remove('bg-gray-400', 'text-white'); // Remove highlight from all buttons
+                if (parseInt(button.textContent) === currentPage) {
+                    button.classList.add('bg-gray-400', 'text-white'); // Highlight the current page
+                }
+            });
+        }
+
+        // Go to a selected page
+        function goToPage(page) {
+            currentPage = page;
+            updatePageInfo();
+        }
+
+        // Handle Previous and Next Button actions
+        previousBtn.addEventListener('click', () => {
+            if (currentPage > 1) {
+                currentPage--;
+                updatePageInfo();
             }
         });
-    }
 
-    // Go to a selected page
-    function goToPage(page) {
-        currentPage = page;
-        updatePageInfo();
-    }
-
-    // Handle Previous and Next Button actions
-    previousBtn.addEventListener('click', () => {
-        if (currentPage > 1) {
-            currentPage--;
-            updatePageInfo();
-        }
-    });
-
-    nextBtn.addEventListener('click', () => {
-        if (currentPage < totalPages) {
-            currentPage++;
-            updatePageInfo();
-        }
-    });
-
-    // Generate the initial page numbers on page load
-    window.onload = generatePageNumbers;
-</script>
+        nextBtn.addEventListener('click', () => {
+            if (currentPage < totalPages) {
+                currentPage++;
+                updatePageInfo();
+            }
+        });
+    </script>
 
 </body>
 </html>

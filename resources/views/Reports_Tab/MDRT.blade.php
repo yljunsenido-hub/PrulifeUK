@@ -14,7 +14,7 @@
         <p class="ml-2 text-yellow-300 hover:underline hover:text-white">Switch to YTD</p> </h1>
         
 
-        <div class="mb-4 p-4 bg-white rounded-md shadow-md">
+        <div class="mb-4 p-3 bg-white rounded-md shadow-md">
         <div class="overflow-x-auto">
             <table class="min-w-full bg-white border border-gray-300">
                 <thead>
