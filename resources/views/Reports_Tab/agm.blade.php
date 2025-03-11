@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Poster Maintenance</title>
+    <title>Agent Group Maintenance</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
         /* Sticky Navbar */
         nav {
@@ -17,7 +17,7 @@
         /* Sidebar Style */
         .sidebar {
             position: fixed;
-            top: 72px;
+            top: 72px; /* Height of the navbar */
             left: 0;
             width: 260px;
             height: calc(100% - 72px);
@@ -80,22 +80,24 @@
 
         /* Main content styles */
         .content {
-            transition: margin-left 0.4s ease;
+            transition: margin-left 0.4s ease, margin-right 0.4s ease;
             margin: 0 auto;
-            max-width: 1200px; /* Set a max-width for the content */
-            padding: 10px 20px; /* Add padding to the sides */
+            max-width: 1500px;
+            padding: 5px;
+            padding-bottom: 20px;
             margin-top: 15px;
-            margin-left: 0; /* Default margin */
+            margin-left: 20px;
+            margin-right: 20px;
         }
 
         .content.shift {
-            margin-left: 260px; /* Adjusted to match sidebar width */
+            margin-left: 280px; /* Adjust based on sidebar width */
+            margin-right: 20px;
         }
     </style>
 </head>
 
-<body class="bg-gray-100">
-
+<body>
     <!-- Sticky Navigation Bar -->
     <nav class="bg-gray-800 p-4 flex justify-between items-center">
         <div class="flex items-center">
@@ -105,18 +107,29 @@
             <img src="https://placehold.co/50x50" alt="Blue Chalcedony Quartz logo" class="h-10 w-10 mr-2">
             <span class="text-white text-lg font-semibold">BLUE CHALCEDONY QUARTZ BRANCH</span>
         </div>
+        
         <div class="flex items-center space-x-6">
-            <div class="relative">
-                <input type="text" placeholder="Search for..." class="p-1 rounded-md text-sm">
-                <button class="absolute right-0 top-0 mt-1 mr-2">
-                    <i class="fas fa-search text-blue-500"></i>
-                </button>
+    <div class="relative">
+        <input type="text" placeholder="Search..." class="p-1 rounded-md bg-gray-700 text-white pl-2">
+        <button class="absolute right-0 top-0 mt-1 mr-2">
+            <i class="fas fa-search text-white"></i>
+        </button>
+
             </div>
             <i class="fas fa-bell text-white px-0"></i>
             <i class="fas fa-user text-white px-2.5"></i>
         </div>
+
+        
+        <style>
+         input::placeholder {
+            color: white;
+            }
+        </style>
+
     </nav>
-<!-- Sidebar -->
+
+    <!-- Sidebar -->
     <div class="sidebar" id="sidebar">
         <ul>
             <li class="menu-item text-white w-full text-left py-1 pb-2">
@@ -180,7 +193,7 @@
                     <span class="menu-text">Marketing</span> <i class="fas fa-chevron-down px-2"></i>
                 </button>
                 <ul class="dropdown" id="marketingDropdown">
-<li><a href="#" class="block pl-4 py-1">Poster Templates</a></li>
+                    <li><a href="#" class="block pl-4 py-1">Poster Templates</a></li>
                 </ul>
             </li>
             <li class="menu-item">
@@ -234,9 +247,9 @@
         </ul>
     </div>
 
-    <!-- Main Content -->
-    <div class="container w-full p-8 content" id="main-content">
-
+    <!-- Main Content Area -->
+    <div id="main-content" class="content">
+        
         <div class="container mx-auto max-w-8xl bg-white p-6 rounded-lg shadow-md">
         <h2 class="text-4xl font-semibold mb-4">Agent Group Maintenance</h2>
 
@@ -507,8 +520,11 @@
     </script>
        
     </div>
-
-   
+        
+ 
+        
+    </div>
+    </div>
 
     <script>
         // Function to toggle the sidebar
@@ -523,7 +539,8 @@
 
         function toggleDropdown(dropdownId) {
             const dropdown = document.getElementById(dropdownId);
-// Close the currently open dropdown if it's not the one being clicked
+
+            // Close the currently open dropdown if it's not the one being clicked
             if (currentOpenDropdown && currentOpenDropdown !== dropdown) {
                 currentOpenDropdown.classList.remove('show');
                 currentOpenDropdown.style.maxHeight = '0'; // Reset max-height
@@ -544,6 +561,7 @@
             // Update the current open dropdown reference
             currentOpenDropdown = dropdown.classList.contains('show') ? dropdown : null;
         }
+
     </script>
 </body>
 </html>
