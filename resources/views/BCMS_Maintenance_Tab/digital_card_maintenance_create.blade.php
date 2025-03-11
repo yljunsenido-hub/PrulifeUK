@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/chartist.js/latest/chartist.min.js"></script>
+<link type="text/css" rel="stylesheet" href="https://cdn.jsdelivr.net/chartist.js/latest/chartist.min.css"/>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard with Sidebar</title>
@@ -306,47 +308,30 @@
 
     <!-- Main Content Area -->
     <div id="main-content" class="content">
-        <div class="container mx-auto max-w-7xl bg-white p-6 rounded-lg shadow-md">
-            <h2 class="text-4xl font-bold mb-4 text-center text-gray-800">Branch Operations</h2>
-    <p class="text-2xl text-gray-600 mb-6 text-center">Upload CSV of Due List</p> <!-- Changed NAP to Due List -->
+            <h2 class="text-xl font-semibold mb-4">Digital Card Maintenance</h2>
+        <h4 class="text-lg mb-2">Add Agent Detail</h4>
 
-    <!-- File upload section -->
-    <div class="space-y-6">
-      <!-- File input -->
-      <div class="flex flex-col md:flex-row items-center md:space-x-4">
-        <input type="file" id="file-upload" class="border border-gray-300 p-3 rounded-md w-full md:w-auto focus:outline-none focus:ring-2 focus:ring-blue-500 text-center" accept=".csv">
-      </div>
+        <form id="agentForm" onsubmit="return validateForm()" class="bg-white p-6 rounded-lg shadow-md">
+            <div class="mb-4">
+                <label for="digitalCardId" class="block text-sm font-medium text-gray-700">Digital Card ID</label>
+                <input type="text" id="digitalCardId" name="digitalCardId" required class="mt-1 block w-1/2 border border-gray-300 rounded-md p-2 focus:ring focus:ring-blue-500" />
+            </div>
 
-      <!-- Date Range Text -->
-      <p class="text-gray-700 text-sm text-center">
-        Please upload data from 
-        <span class="font-semibold text-blue-600" id="start-date"></span> 
-        to 
-        <span class="font-semibold text-blue-600" id="end-date"></span>
-      </p>
-
-      <!-- Upload Button with Confirmation -->
-      <button onclick="confirmUpload()" class="w-full bg-blue-600 text-white py-3 rounded-md hover:bg-blue-700 transition duration-300 text-center">
-        UPLOAD CSV
-      </button>
-
-      <!-- Success Message -->
-      <div id="upload-success" class="hidden text-green-600 text-center mt-4">
-        <p>File uploaded successfully!</p>
-      </div>
+        
+                <label class="block text-sm font-medium text-gray-700 mb-2">Agent</label>
+                <div class="flex flex-col space-y-2 mb">
+                    <input type="text" id="agentCode" name="agentCode" placeholder="Agent Code" required class="block w-1/3 border border-gray-300 rounded-md p-2 focus:ring focus:ring-blue-500 mb-2" />
+                    <input type="text" id="agentName" name="agentName" placeholder="Agent Name" required class="block w-1/3 border border-gray-300 rounded-md p-2 focus:ring focus:ring-blue-500 mb-2" />
+            
+            <div class="flex items-center justify-start gap-72">
+                <button type="submit" class="bg-green-500 text-white py-2 px-4 rounded-md hover:bg-green-600 mt-2">Link</button>
+                <button type="button" class="bg-red-500 text-white py-2 px-4 rounded-md hover:bg-red-600" onclick="goBack()">Back</button>
+            </div>
+        </form>
     </div>
-  </div>
 
-  <!-- Confirmation Modal -->
-  <div id="modal" class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 hidden">
-    <div class="bg-white rounded-lg p-6 w-11/12 md:w-1/3">
-      <h3 class="text-lg font-semibold mb-4" id="modal-message">Are you sure you want to upload this file?</h3>
-      <div class="flex justify-end">
-        <button onclick="handleUploadConfirmation(true)" class="bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition duration-300">Yes</button>
-        <button onclick="handleUploadConfirmation(false)" class="ml-2 bg-gray-300 text-gray-700 px-4 py-2 rounded-md hover:bg-gray-400 transition duration-300">No</button>
-      </div>
-    </div>
-  </div>
+           
+  
 
     <script>
         // Function to toggle the sidebar
