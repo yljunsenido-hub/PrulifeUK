@@ -103,8 +103,6 @@ Route::get('/qualifier'  , function () {
     return view('Reports_Tab/Qualifier');
 });
 
-//ffff
-
 
 // Recruitment Tab
 
