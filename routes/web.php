@@ -134,3 +134,11 @@ Route::get('/proposalSearch'  , function () {
 Route::get('/proposalList'  , function () {
     return view('Proposal_Bank_Tab/proposal_list');
 });
+
+
+
+// Appointment Tab
+
+Route::get('/appointments'  , function () {
+    return view('Appointment_Tab/appointments');
+});
