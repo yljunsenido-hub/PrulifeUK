@@ -15,8 +15,6 @@ Route::get('/home', function () {
 Route::get('/sampleDB', [AgentLoginController::class, 'index']);
 
 
-
-
 // Leads Cases Tab
 
 Route::get('/submittedCases', function (){
