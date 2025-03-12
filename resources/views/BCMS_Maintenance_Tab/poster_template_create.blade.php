@@ -320,11 +320,12 @@
     <div id="main-content" class="content">
         <div class="container mx-auto max-w-7xl bg-white p-6 rounded-lg shadow-md">
             <div class="container mx-auto p-8 content" id="main-content">
-        <h1 class="text-3xl font-semibold mb-4">Poster Maintenance</h1>
+        <h1 class="text-3xl font-semibold mb-6">Poster Maintenance</h1>
 
-        <div class="bg-white shadow rounded p-6">
+        
             <div class="mb-4">
-                <a href="#" class="text-blue-500 hover:underline">Back to list</a>
+                <button type="submit" class="bg-blue-500 text-white hover:underline px-4 py-2 rounded text-sm ">Back to list</button> 
+                
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-3 gap-4">

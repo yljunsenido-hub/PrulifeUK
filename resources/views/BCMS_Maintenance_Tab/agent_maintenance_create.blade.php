@@ -322,11 +322,13 @@
         
         <div class="container mx-auto max-w-7xl bg-white p-6 rounded-lg shadow-md">
               <h2 class="text-4xl font-semibold mb-4">Create Agent</h2>
-        <div class="mb-4">
-            <a href="#" class="px-8 text-blue-500 hover:underline">Back to list</a>
-            
-        </div>
+      
 
+
+
+<button type="submit" class="bg-blue-500 text-white hover:underline px-4 py-2 mb-4 rounded text-sm ">Back to list</button> 
+                     
+             
         <form>
             <div class="grid grid-cols-2 gap-2 px-8 ml-8 mr-32">
                 <div>

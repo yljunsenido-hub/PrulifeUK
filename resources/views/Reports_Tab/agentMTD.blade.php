@@ -434,7 +434,7 @@
                 dropdown.style.opacity = '1'; // Set opacity to allow transition
             }
 
-            // Update the current open dropdown reference s
+            // Update the current open dropdown reference
             currentOpenDropdown = dropdown.classList.contains('show') ? dropdown : null;
         }
 
