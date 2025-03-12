@@ -318,10 +318,8 @@
 
     <!-- Main Content Area -->
     <div id="main-content" class="content">
-        <div class="container mx-auto max-w-8xl bg-white p-6 rounded-lg shadow-md mb-3">
-            <p class="text-4xl font-semibold mb-4">Appointment Schedule</p>
-            <div class="container shadow-md mb-3 mb-4 p-4 bg-blue-900 rounded-md flex justify-between items-center">
-            </div>
+        <div class="container mx-auto max-w-8xl bg-white p-5 rounded-lg shadow-md mb-5">
+            <p class="text-4xl font-semibold mb-5">Appointment Schedule</p>
 
             <div class="flex flex-wrap justify-center gap-4 w-full">
                 <!-- Calendar -->
@@ -422,7 +420,7 @@
                         }
                     </style>
                     <div class="flex-1 w-1/6">
-                        <div class="calendar-container w-full rounded-3xl border-2 border-gray-300">
+                        <div class="calendar-container w-full rounded-3xl border-2 border-gray-300 mb-7">
                         <header class="calendar-header bg-blue-900 flex rounded-t-2xl items-center justify-between py-3 px-4 text-yellow-300">
                         <p class="calendar-current-date"></p>   
                         <div class="calendar-navigation flex items-center pr-3">
@@ -433,7 +431,7 @@
                                 </svg>
                             </span>
                             <span id="calendar-next" class="material-symbols-rounded bg-yellow-400">
-                                <svg class="h-9 w-9 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <svg class="h-9 w-10 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                     <polyline points="9 18 15 12 9 6" />
                                 </svg>
                             </span>
@@ -575,7 +573,7 @@
 
 
                     <div class="mt-3 flex space-x-3">
-                        <div class="bg-blue-900 rounded-xl w-1/2 p-1 flex items-center justify-between px-5 py-2">
+                        <div class="bg-blue-900 rounded-xl w-1/2 p-1 flex items-center justify-between px-3 py-2">
                             <p class="text-lg text-white font-semibold">Time Slots</p>
                             <button class="flex items-center justify-center w-10 h-10 bg-yellow-400 text-white rounded-md hover:bg-yellow-600 transition duration-200">
                                 <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24">
@@ -583,7 +581,7 @@
                                 </svg>
                             </button>
                         </div>
-                        <div class="bg-blue-900 rounded-xl w-1/2 p-1 flex items-center justify-between px-5 py-2">
+                        <div class="bg-blue-900 rounded-xl w-1/2 p-1 flex items-center justify-between px-3 py-2    ">
                             <p class="text-lg text-white font-semibold">Appointment Schedule</p>
                             <button class="flex items-center justify-center w-10 h-10 bg-yellow-400 text-white rounded-md hover:bg-yellow-600 transition duration-200">
                                 <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24">
@@ -595,7 +593,7 @@
                 </div>
                 
                 <!-- table -->
-                <div class="flex-1 w-5/6 mb-4 p-4 bg-white rounded-md shadow-md border border-gray-300">
+                <div class="flex-1 w-5/6 mb-4 p-5 bg-white rounded-md shadow-md border border-gray-300">
                     <div class="flex items-center justify-between mb-4">
                         <div class="flex items-center">
                             <label for="entries" class="mr-2 text-sm text-gray-600">Show entries:</label>

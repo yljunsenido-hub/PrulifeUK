@@ -383,7 +383,7 @@
     </div>
 
         <div class=" rounded-lg flex justify-center  ">
-            <button type="button" class="mt-1 mb-1 w-full h-9 text-md text-white bg-blue-600 hover:bg-blue-800 font-normal rounded-lg">Search</button>
+            <button type="button" class="mt-1 mb-1 w-full h-9 text-md text-white bg-blue-700 hover:bg-blue-800 font-normal rounded-lg">Search</button>
         </div>
 
     <div class="p-3 border-2 border-gray-300 font-medium mt-3 mb-2 text-blue-900 rounded-tr-xl rounded-tl-xl p-4 bg-white rounded-md shadow-md">
