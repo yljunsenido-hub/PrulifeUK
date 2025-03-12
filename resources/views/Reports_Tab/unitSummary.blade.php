@@ -143,9 +143,9 @@
                     <i class="fas fa-chevron-down px-2 mb-custom-mb-2 mr-1"></i>
                 </button>
                 <ul class="dropdown" id="eventsDropdown">
-                    <li><a href="#" class="text-md text-gray-400 block pl-8 py-2">Upcoming Events</a></li>
-                    <li><a href="#" class="text-md text-gray-400 block pl-8 py-2">My Events</a></li>
-                    <li><a href="#" class="text-md text-gray-400 block pl-8 py-2 mb-6">Event Maintenance</a></li>
+                    <li><a href="#" class="text-md text-gray-300 block pl-8 py-2">Upcoming Events</a></li>
+                    <li><a href="#" class="text-md text-gray-300 block pl-8 py-2">My Events</a></li>
+                    <li><a href="#" class="text-md text-gray-300 block pl-8 py-2 mb-6">Event Maintenance</a></li>
                 </ul>
             </li>
             <li class="menu-item text-white w-full text-left py-1 pb-2">
@@ -161,10 +161,10 @@
                     <i class="fas fa-chevron-down px-2"></i>
                 </button>
                 <ul class="dropdown" id="leadsDropdown">
-                    <li><a href="#" class="text-md text-gray-400 block pl-8 py-2">Submitted Cases</a></li>
-                    <li><a href="#" class="text-md text-gray-400 block pl-8 py-2">Issued Cases</a></li>
-                    <li><a href="#" class="text-md text-gray-400 block pl-8 py-2">Outreq Cases</a></li>
-                    <li><a href="#" class="text-md text-gray-400 block pl-8 py-2 mb-6">Declined/Postponed Cases</a></li>
+                    <li><a href="#" class="text-md text-gray-300 block pl-8 py-2">Submitted Cases</a></li>
+                    <li><a href="#" class="text-md text-gray-300 block pl-8 py-2">Issued Cases</a></li>
+                    <li><a href="#" class="text-md text-gray-300 block pl-8 py-2">Outreq Cases</a></li>
+                    <li><a href="#" class="text-md text-gray-300 block pl-8 py-2 mb-6">Declined/Postponed Cases</a></li>
                 </ul>
             </li>
             <li class="menu-item">
@@ -178,9 +178,9 @@
                     <i class="fas fa-chevron-down px-2"></i>
                 </button>
                 <ul class="dropdown" id="newBusinessDropdown">
-                    <li><a href="#" class="text-md text-gray-400 block pl-8 py-2">Submission Approval</a></li>
-                    <li><a href="#" class="text-md text-gray-400 block pl-8 py-2">New Business Maintenance</a></li>
-                    <li><a href="#" class="text-md text-gray-400 block pl-8 py-2 mb-6">Issued Cases</a></li>
+                    <li><a href="#" class="text-md text-gray-300 block pl-8 py-2">Submission Approval</a></li>
+                    <li><a href="#" class="text-md text-gray-300 block pl-8 py-2">New Business Maintenance</a></li>
+                    <li><a href="#" class="text-md text-gray-300 block pl-8 py-2 mb-6">Issued Cases</a></li>
                 </ul>
             </li>
             <li class="menu-item">
@@ -193,18 +193,18 @@
                     <i class="fas fa-chevron-down px-2"></i>
                 </button>
                 <ul class="dropdown" id="reportsDropdown">
-                    <li><a href="#" class="text-md text-gray-400 block pl-8 py-2">Agent MTD</a></li>
-                    <li><a href="#" class="text-md text-gray-400 block pl-8 py-2">Agent YTD</a></li>
-                    <li><a href="#" class="text-md text-gray-400 block pl-8 py-2">Sub-Unit Summary</a></li>
-                    <li><a href="#" class="text-md text-gray-400 block pl-8 py-2">Unit Summary</a></li>
-                    <li><a href="#" class="text-md text-gray-400 block pl-8 py-2">Branch Summary</a></li>
-                    <li><a href="#" class="text-md text-gray-400 block pl-8 py-2">Branch Honor Rolls</a></li>
-                    <li><a href="#" class="text-md text-gray-400 block pl-8 py-2">Unit Honor Rolls</a></li>
-                    <li><a href="#" class="text-md text-gray-400 block pl-8 py-2">Custom Group</a></li>
-                    <li><a href="#" class="text-md text-gray-400 block pl-8 py-2">Personal To Go's (BETA)</a></li>
-                    <li><a href="#" class="text-md text-gray-400 block pl-8 py-2">Qualifiers (BETA)</a></li>
-                    <li><a href="#" class="text-md text-gray-400 block pl-8 py-2">MDRT Tracker</a></li>
-                    <li><a href="#" class="text-md text-gray-400 block pl-8 py-2 mb-6">Easy Reports</a></li>
+                    <li><a href="#" class="text-md text-gray-300 block pl-8 py-2">Agent MTD</a></li>
+                    <li><a href="#" class="text-md text-gray-300 block pl-8 py-2">Agent YTD</a></li>
+                    <li><a href="#" class="text-md text-gray-300 block pl-8 py-2">Sub-Unit Summary</a></li>
+                    <li><a href="#" class="text-md text-gray-300 block pl-8 py-2">Unit Summary</a></li>
+                    <li><a href="#" class="text-md text-gray-300 block pl-8 py-2">Branch Summary</a></li>
+                    <li><a href="#" class="text-md text-gray-300 block pl-8 py-2">Branch Honor Rolls</a></li>
+                    <li><a href="#" class="text-md text-gray-300 block pl-8 py-2">Unit Honor Rolls</a></li>
+                    <li><a href="#" class="text-md text-gray-300 block pl-8 py-2">Custom Group</a></li>
+                    <li><a href="#" class="text-md text-gray-300 block pl-8 py-2">Personal To Go's (BETA)</a></li>
+                    <li><a href="#" class="text-md text-gray-300 block pl-8 py-2">Qualifiers (BETA)</a></li>
+                    <li><a href="#" class="text-md text-gray-300 block pl-8 py-2">MDRT Tracker</a></li>
+                    <li><a href="#" class="text-md text-gray-300 block pl-8 py-2 mb-6">Easy Reports</a></li>
                 </ul>
             </li>
             <li class="menu-item">
@@ -217,7 +217,7 @@
                     <i class="fas fa-chevron-down px-2"></i>
                 </button>
                 <ul class="dropdown" id="marketingDropdown">
-                    <li><a href="#" class="text-md text-gray-400 block pl-7 py-3 mb-6">Poster Templates</a></li>
+                    <li><a href="#" class="text-md text-gray-300 block pl-7 py-3 mb-6">Poster Templates</a></li>
                 </ul>
             </li>
             <li class="menu-item">
@@ -238,8 +238,8 @@
                     <i class="fas fa-chevron-down px-2"></i>
                 </button>
                 <ul class="dropdown" id="proposalBankDropdown">
-                    <li><a href="#" class="text-md text-gray-400 block pl-7 py-3">Proposal Search</a></li>
-                    <li><a href="#" class="text-md text-gray-400 block pl-7 py-3 mb-6">Proposal List</a></li>
+                    <li><a href="#" class="text-md text-gray-300 block pl-7 py-3">Proposal Search</a></li>
+                    <li><a href="#" class="text-md text-gray-300 block pl-7 py-3 mb-6">Proposal List</a></li>
                 </ul>
             </li>
             <li class="menu-item">
@@ -255,8 +255,8 @@
                     <i class="fas fa-chevron-down px-2"></i>
                 </button>
                 <ul class="dropdown" id="recruitmentDropdown">
-                    <li><a href="#" class="text-md text-gray-400 block pl-8 py-3">Recruit</a></li>
-                    <li><a href="#" class="text-md text-gray-400 block pl-8 py-3 mb-6">Recruitment Process</a></li>
+                    <li><a href="#" class="text-md text-gray-300 block pl-8 py-3">Recruit</a></li>
+                    <li><a href="#" class="text-md text-gray-300 block pl-8 py-3 mb-6">Recruitment Process</a></li>
                 </ul>
             </li>
             
@@ -270,12 +270,12 @@
                     <i class="fas fa-chevron-down px-2"></i>
                 </button>
                 <ul class="dropdown" id="bcmsDropdown">
-                    <li><a href="#" class="text-md text-gray-400 block pl-8 py-3">Poster Template Maintenance</a></li>
-                    <li><a href="#" class="text-md text-gray-400 block pl-8 py-3">Poster Maintenance</a></li>
-                    <li><a href="#" class="text-md text-gray-400 block pl-8 py-3">Agent Maintenance</a></li>
-                    <li><a href="#" class="text-md text-gray-400 block pl-8 py-3">Unit Maintenance</a></li>
-                    <li><a href="#" class="text-md text-gray-400 block pl-8 py-3">Sub-Unit Maintenance</a></li>
-                    <li><a href="#" class="text-md text-gray-400 block pl-8 py-3 mb-6">Digital Card Maintenance</a></li>
+                    <li><a href="#" class="text-md text-gray-300 block pl-8 py-3">Poster Template Maintenance</a></li>
+                    <li><a href="#" class="text-md text-gray-300 block pl-8 py-3">Poster Maintenance</a></li>
+                    <li><a href="#" class="text-md text-gray-300 block pl-8 py-3">Agent Maintenance</a></li>
+                    <li><a href="#" class="text-md text-gray-300 block pl-8 py-3">Unit Maintenance</a></li>
+                    <li><a href="#" class="text-md text-gray-300 block pl-8 py-3">Sub-Unit Maintenance</a></li>
+                    <li><a href="#" class="text-md text-gray-300 block pl-8 py-3 mb-6">Digital Card Maintenance</a></li>
                 </ul>
             </li>
             <li class="menu-item">
@@ -291,11 +291,11 @@
                     <i class="fas fa-chevron-down px-2"></i>
                 </button>
                 <ul class="dropdown" id="branchOperationsDropdown">
-                    <li><a href="#" class="text-md text-gray-400 block pl-8 py-3">Upload Issued</a></li>
-                    <li><a href="#" class="text-md text-gray-400 block pl-8 py-3">Upload NAP</a></li>
-                    <li><a href="#" class="text-md text-gray-400 block pl-8 py-3">Upload Due List</a></li>
-                    <li><a href="#" class="text-md text-gray-400 block pl-8 py-3">Upload Batch Photos</a></li>
-                    <li><a href="#" class="text-md text-gray-400 block pl-8 py-3 mb-6">Update Submission/Policy Record</a></li>
+                    <li><a href="#" class="text-md text-gray-300 block pl-8 py-3">Upload Issued</a></li>
+                    <li><a href="#" class="text-md text-gray-300 block pl-8 py-3">Upload NAP</a></li>
+                    <li><a href="#" class="text-md text-gray-300 block pl-8 py-3">Upload Due List</a></li>
+                    <li><a href="#" class="text-md text-gray-300 block pl-8 py-3">Upload Batch Photos</a></li>
+                    <li><a href="#" class="text-md text-gray-300 block pl-8 py-3 mb-6">Update Submission/Policy Record</a></li>
                 </ul>
                 <li class="menu-item">
                 <button class="text-gray-400 w-full text-left py-1 pb-3" 
