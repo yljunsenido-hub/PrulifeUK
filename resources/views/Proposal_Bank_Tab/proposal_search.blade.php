@@ -322,9 +322,9 @@
   
         <p class="text-4xl font-semibold mb-4">Proposal Search</p>
 
-        <div class="bg-white p-6 flex space-x-6">
+        <div class="bg-white p-1 flex space-x-6">
         <div class="bg-white p-6 rounded-lg shadow-lg flex-1 border-2 border-slate-500">
-            <div class="bg-gray-200 p-3 rounded-md mb-4">
+            <div class="bg-gray-200 p-1 rounded-md mb-4">
                 <h2 class="text-lg font-semibold">Client Information</h2>
             </div>
                 
@@ -345,7 +345,7 @@
         </div>
 
         <div class="bg-white p-6 rounded-lg shadow-lg flex-1 border-2 border-slate-500">
-            <div class="bg-gray-200 p-3 rounded-md mb-4">
+            <div class="bg-gray-200 p-1 rounded-md mb-4">
                 <h2 class="text-lg font-semibold">Proposal Information</h2>
             </div>
                 
