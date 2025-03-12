@@ -8,11 +8,17 @@ Route::get('/', function () {
 });
 
 
+
+
+// Home Tab
+
 Route::get('/home', function () {
     return view('Home_Tab/home');
 });
 
 Route::get('/sampleDB', [AgentLoginController::class, 'index']);
+
+
 
 
 // Leads Cases Tab
@@ -104,6 +110,8 @@ Route::get('/qualifier'  , function () {
 });
 
 
+
+
 // Recruitment Tab
 
 Route::get('/recmaintenance'  , function () {
@@ -125,6 +133,7 @@ Route::get('/posterTemplates'  , function () {
 
 
 
+
 // Proposal Bank Tab
 
 Route::get('/proposalSearch'  , function () {
@@ -141,4 +150,49 @@ Route::get('/proposalList'  , function () {
 
 Route::get('/appointments'  , function () {
     return view('Appointment_Tab/appointments');
+});
+
+
+
+
+// BCMS Tab
+
+Route::get('/agentMaintenanceCreate'  , function () {
+    return view('BCMS_Maintenance_Tab/agent_maintenance_create');
+});
+
+Route::get('/agentMaintenance'  , function () {
+    return view('BCMS_Maintenance_Tab/agent_maintenance');
+});
+
+Route::get('/digitalCardMaintenanceCreate'  , function () {
+    return view('BCMS_Maintenance_Tab/digital_card_maintenance_create');
+});
+
+Route::get('/digitalCardMaintenance'  , function () {
+    return view('BCMS_Maintenance_Tab/digital_card_maintenance');
+});
+
+Route::get('/posterTemplateCreate'  , function () {
+    return view('BCMS_Maintenance_Tab/poster_template_create');
+});
+
+Route::get('/posterTemplateMaintenance'  , function () {
+    return view('BCMS_Maintenance_Tab/poster_template_maintenance');
+});
+
+Route::get('/subUnitMaintenanceCreate'  , function () {
+    return view('BCMS_Maintenance_Tab/sub_unit_maintenance_create');
+});
+
+Route::get('/subUnitMaintenance'  , function () {
+    return view('BCMS_Maintenance_Tab/sub_unit_maintenance');
+});
+
+Route::get('/unitMaintenanceCreate'  , function () {
+    return view('BCMS_Maintenance_Tab/unit_maintenance_create');
+});
+
+Route::get('/unitMaintenance'  , function () {
+    return view('BCMS_Maintenance_Tab/unit_maintenance');
 });

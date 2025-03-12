@@ -117,7 +117,6 @@
             <i class="fas fa-bell text-white px-0"></i>
             <i class="fas fa-user text-white px-2.5"></i>
         </div>
-
         
         <style>
          input::placeholder {
