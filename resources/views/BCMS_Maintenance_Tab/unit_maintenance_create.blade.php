@@ -319,6 +319,7 @@
     <!-- Main Content Area -->
     <div id="main-content" class="content">
         <div class="container mx-auto max-w-7xl bg-white p-6 rounded-lg shadow-md">
+            <h2 class="text-4xl font-semibold mb-6">Unit Create</h2>
             <form action="/create-unit" method="POST">
                 <div class="mb-4">
                     <label class="block text-sm font-medium text-gray-700" for="officer-code">Officer Code</label>

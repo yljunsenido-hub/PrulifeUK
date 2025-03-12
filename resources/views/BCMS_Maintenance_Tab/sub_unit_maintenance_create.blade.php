@@ -318,17 +318,21 @@
 
     <!-- Main Content Area -->
     <div id="main-content" class="content">
+        
         <div class="container mx-auto max-w-7xl bg-white p-6 rounded-lg shadow-md">
+             <h2 class="text-4xl font-semibold mb-6">Sub-Unit Create</h2>
+             
              <form action="/create-subunit" method="POST">
-                <div class="mb-4">
+                <div class="mb-4 ml-4">
+                    
                     <label class="block text-sm font-medium text-gray-700" for="officer-code">Officer Code</label>
                     <input type="text" id="officer-code" required class="mt-1 block w-1/3 border-gray-300 rounded-md shadow-sm focus:border-blue-500 focus:ring focus:ring-blue-500 focus:ring-opacity-50" placeholder="Enter Officer Code">
                 </div>
-                <div class="mb-4">
+                <div class="mb-4 ml-4">
                     <label class="block text-sm font-medium text-gray-700" for="subunit-name">Sub-unit Name</label>
                     <input type="text" id="subunit-name" required class="mt-1 block w-1/3 border-gray-300 rounded-md shadow-sm focus:border-blue-500 focus:ring focus:ring-blue-500 focus:ring-opacity-50" placeholder="Enter Subunit Name">
                 </div>
-                <div class="mb-4">
+                <div class="mb-4 ml-4">
                     <label class="block text-sm font-medium text-gray-700" for="promotion-date">Promotion Date</label>
                     <input type="date" id="promotion-date" required class="mt-1 block w-1/5 border-gray-300 rounded-md shadow-sm focus:border-blue-500 focus:ring focus:ring-blue-500 focus:ring-opacity-50">
                 </div>
