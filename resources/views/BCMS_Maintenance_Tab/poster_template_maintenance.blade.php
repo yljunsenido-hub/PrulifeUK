@@ -316,8 +316,11 @@
         </ul>
     </div>
 
-        <!-- Table Section -->
-        <div class="mb-4 p-4 bg-white rounded-md shadow-md">
+
+         <div id="main-content" class="content">
+        <div class="container mx-auto max-w-7xl bg-white p-6 rounded-lg shadow-md">
+            <h2 class="text-4xl font-semibold mb-4">Poster Maintenance</h2>
+             <div class="mb-4 p-4 bg-white rounded-md shadow-md">
             <div class="flex items-center justify-between mb-4">
                 <div class="flex items-center">
                     <label for="entries" class="mr-2 text-sm text-gray-600">Show entries:</label>
@@ -330,12 +333,14 @@
                 </div>
 
                 <div class="flex items-center">
+                    
                     <label for="search" class="mr-2 text-sm text-gray-600">Search:</label>
                     <input type="text" id="search" class="px-3 py-1 border border-gray-300 rounded-md shadow-sm text-sm" placeholder="Search...">
                 </div>
             </div>
 
             <!-- Table Content -->
+
             <div id="tableContent" class="overflow-x-auto">
                 <table class="min-w-full bg-white border border-gray-300 text-sm">
                     <thead>
@@ -382,6 +387,15 @@
         </div>
     </div>
     </div>
+        </div>
+
+        <!-- Pagination Section -->
+        
+    </div>
+
+        
+        <!-- Table Section -->
+       
 
     <script>
         // Function to toggle the sidebar

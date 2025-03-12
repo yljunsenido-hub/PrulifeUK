@@ -323,11 +323,9 @@
             <h2 class="text-4xl font-semibold mb-4">Agent Maintenance</h2>
 
             <!-- Create New Agent Button -->
-            <div class="mb-4 p-4 bg-blue-200 rounded-md flex justify-between items-center">
-                <h3 class="text-xs font-semibold text-gray-600">
-                    <a href="#" id="createNewAgent" class="text-base xl:text-blue-600 hover:text-blue-900 font-semibold">Create New Agent</a>
-                </h3>
-            </div>
+             <div class="container shadow-md mb-3 mb-4 p-2 bg-blue-900 rounded-md flex justify-between items-center">
+        <h1 class="pl-2 text-l text-yellow-300 font-semibold "><a href="#" id="createNewAgent" class="text-base xl:text-yellow-600 hover:text-yellow-100 font-semibold">Create New Agent </a></h1>
+</div>
 
             <!-- Table Section -->
             <div class="mb-4 p-4 bg-white rounded-md shadow-md">
