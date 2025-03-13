@@ -316,11 +316,15 @@
         </ul>
     </div>
 
-    <!-- Main Content Area -->
-    <div id="main-content" class="content">
+
+         <div id="main-content" class="content">
         <div class="container mx-auto max-w-7xl bg-white p-6 rounded-lg shadow-md">
-            <h2 class="text-4xl font-semibold mb-6">Issued Cases</h2>
-           
+            <h2 class="text-4xl font-semibold mb-4">Top Poster Maintenance</h2>
+                 <div class="container shadow-md mb-3 mb-4 p-2 bg-blue-900 rounded-md flex justify-between items-center">
+        <h1 class="pl-2 text-l text-yellow-300 font-semibold "><a href="#" id="createNewAgent" class="text-base xl:text-yellow-600 hover:text-yellow-100 font-semibold">Create New Poster </a></h1>
+</div>
+
+             <div class="mb-4 p-4 bg-white rounded-md shadow-md">
             <div class="flex items-center justify-between mb-4">
                 <div class="flex items-center">
                     <label for="entries" class="mr-2 text-sm text-gray-600">Show entries:</label>
@@ -328,59 +332,86 @@
                         <option value="10">10</option>
                         <option value="25">25</option>
                         <option value="50">50</option>
+                        <option value="100">100</option>
                     </select>
                 </div>
 
                 <div class="flex items-center">
+                    
                     <label for="search" class="mr-2 text-sm text-gray-600">Search:</label>
                     <input type="text" id="search" class="px-3 py-1 border border-gray-300 rounded-md shadow-sm text-sm" placeholder="Search...">
                 </div>
             </div>
 
             <!-- Table Content -->
+
             <div id="tableContent" class="overflow-x-auto">
                 <table class="min-w-full bg-white border border-gray-300 text-sm">
                     <thead>
-                        <tr class="bg-blue-200 text-gray-600">
+                        <tr class="bg-gray-200 text-gray-600">
                             <th class="py-2 px-4 text-left border-r border-gray-300 w-1/12">ID</th>
-                            <th class="py-2 px-4 text-left border-r border-gray-300 w-1/4">First Name</th>
-                            <th class="py-2 px-4 text-left border-r border-gray-300 w-1/4">Last Name</th>
-                            <th class="py-2 px-4 text-left border-r border-gray-300 w-1/4">Application No.</th>
-                            <th class="py-2 px-4 text-left border-r border-gray-300 w-1/4">Policy No.</th>
-                            <th class="py-2 px-4 text-left border-r border-gray-300 w-1/4">APE</th>
-                            <th class="py-2 px-4 text-left border-r border-gray-300 w-1/4">Status</th>
+                            <th class="py-2 px-4 text-left border-r border-gray-300 w-1/4">Description</th>
+                            <th class="py-2 px-4 text-left border-r border-gray-300 w-1/3">Poster</th>
+                            <th class="py-2 px-4 text-left border-r border-gray-300 w-1/6">Action</th>
                         </tr>
                     </thead>
                     <tbody class="text-gray-600">
                         <!-- Sample Row (You can duplicate this for more rows) -->
-                        <tr class="border-b border-gray-300 hover:bg-blue-50">
+                        <tr class="border-b border-gray-300 hover:bg-gray-100">
                             <td class="py-2 px-4 border-r border-gray-300">1</td>
-                            <td class="py-2 px-4 border-r border-gray-300">name</td>
-                            <td class="py-2 px-4 border-r border-gray-300">Blue</td>
-                            <td class="py-2 px-4 border-r border-gray-300">123</td>
-                            <td class="py-2 px-4 border-r border-gray-300">12</td>
-                            <td class="py-2 px-4 border-r border-gray-300">0</td>
+                            <td class="py-2 px-4 border-r border-gray-300">Top Rookie</td>
+                            <td class="py-2 px-4 border-r border-gray-300 flex justify-center items-center">
+                                <img src="path_to_your_image.jpg" alt="Poster" class="h-10 w-10 object-cover rounded-md">
+                            </td>
                             <td class="py-2 px-4 border-r border-gray-300 text-center">
-                                status</a>
+                                
+                                <a href="update_link_here" class="px-3 py-1 bg-yellow-500 text-white rounded-md hover:bg-yellow-700">Update</a>
+                            </td>
+                        </tr>
+
+                        <tr class="border-b border-gray-300 hover:bg-gray-100">
+                            <td class="py-2 px-4 border-r border-gray-300">1</td>
+                            <td class="py-2 px-4 border-r border-gray-300">Top Agent</td>
+                            <td class="py-2 px-4 border-r border-gray-300 flex justify-center items-center">
+                                <img src="path_to_your_image.jpg" alt="Poster" class="h-10 w-10 object-cover rounded-md">
+                            </td>
+                            <td class="py-2 px-4 border-r border-gray-300 text-center">
+                                
+                                <a href="update_link_here" class="px-3 py-1 bg-yellow-500 text-white rounded-md hover:bg-yellow-700">Update</a>
                             </td>
                         </tr>
                         <!-- Add more rows as needed -->
                     </tbody>
                 </table>
             </div>
-            <div class="flex justify-end items-center mt-4 space-x-2">
-            <button class="px-3 py-1 bg-gray-300 text-gray-700 rounded-md hover:bg-gray-400 text-sm" id="previousBtn">Previous</button>
-            <div class="flex items-center space-x-2" id="pageNumbers"></div>
-            <button class="px-3 py-1 bg-gray-300 text-gray-700 rounded-md hover:bg-gray-400 text-sm" id="nextBtn">Next</button>
         </div>
+        
+        <!-- Pagination Section -->
+        <div class="flex justify-end items-center mt-4 space-x-2">
+            <div class="ml-4 flex space-x-2">
+                <button class="px-3 py-1 bg-gray-300 text-gray-700 rounded-md hover:bg-gray-400 text-sm" id="previousBtn">Previous</button>
+                <div class="mr-1 flex items-center space-x-2">
+                    <div id="pageNumbers" class="flex space-x-1">
+                        <!-- Page numbers will be dynamically inserted here -->
+                        <button class="px-2 py-1 bg-gray-200 text-gray-700 rounded-md hover:bg-gray-300">1</button>
+                        <button class="px-2 py-1 bg-gray-200 text-gray-700 rounded-md hover:bg-gray-300">2</button>
+                        <button class="px-2 py-1 bg-gray-200 text-gray-700 rounded-md hover:bg-gray-300">3</button>
+                    </div>
+                </div>
+                <button class="px-3 py-1 bg-gray-300 text-gray-700 rounded-md hover:bg-gray-400 text-sm" id="nextBtn">Next</button>
+            </div>
+        </div>
+    </div>
+    </div>
         </div>
 
         <!-- Pagination Section -->
         
     </div>
-            
 
-         
+        
+        <!-- Table Section -->
+       
 
     <script>
         // Function to toggle the sidebar
@@ -418,6 +449,49 @@
             currentOpenDropdown = dropdown.classList.contains('show') ? dropdown : null;
         }
 
+        // JavaScript functionality can be added here
+        document.getElementById('createNewEntry').addEventListener('click', function(event) {
+            event.preventDefault();
+            // Functionality to create a new entry from template
+            alert('Create New from Template functionality to be implemented.');
+        });
+
+        // Pagination functionality (example)
+        let currentPage = 1;
+        const totalPages = 3; // Example total pages
+
+        document.getElementById('previousBtn').addEventListener('click', function() {
+            if (currentPage > 1) {
+                currentPage--;
+                updatePagination();
+            }
+        });
+
+        document.getElementById('nextBtn').addEventListener('click', function() {
+            if (currentPage < totalPages) {
+                currentPage++;
+                updatePagination();
+            }
+        });
+
+        function updatePagination() {
+            const pageNumbers = document.getElementById('pageNumbers');
+            pageNumbers.innerHTML = ''; // Clear existing page numbers
+
+            for (let i = 1; i <= totalPages; i++) {
+                const pageButton = document.createElement('button');
+                pageButton.textContent = i;
+                pageButton.className = `px-2 py-1 rounded-md ${i === currentPage ? 'bg-blue-500 text-white' : 'bg-gray-200 text-gray-700 hover:bg-gray-300'}`;
+                pageButton.addEventListener('click', function() {
+                    currentPage = i;
+                    updatePagination();
+                });
+                pageNumbers.appendChild(pageButton);
+            }
+        }
+
+        // Initial pagination setup
+        updatePagination();
     </script>
 </body>
 </html>
