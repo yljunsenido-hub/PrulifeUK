@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/chartist.js/latest/chartist.min.js"></script>
+    <link type="text/css" rel="stylesheet" href="https://cdn.jsdelivr.net/chartist.js/latest/chartist.min.css"/>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard with Sidebar</title>
@@ -99,37 +101,33 @@
     <!-- Sticky Navigation Bar -->
     <nav class="bg-gradient-to-r from-blue-900 to-blue-700 p-4 flex justify-between items-center">
         <div class="flex items-center">
-        <button class="mr-3 bg-transparent text-white p-2 rounded-md relative hover:bg-blue-800" onclick="toggleSidebar()">
-        <i class="fas fa-bars text-white hover:text-white"></i>
-    </button>
+            <button class="mr-3 bg-transparent text-white p-2 rounded-md relative hover:bg-blue-800" onclick="toggleSidebar()">
+                <i class="fas fa-bars text-white hover:text-white"></i>
+            </button>
             <img src="images/bcdqlogo.png" alt="bcdq log" class="h-10 w-10 mr-4">
             <span class="text-white text-lg font-semibold">BLUE CHALCEDONY QUARTZ BRANCH</span>
         </div>
 
         <div class="flex items-center space-x-6">
-    <div class="relative">
-        <input type="text" placeholder="Search..." class="p-1 rounded-md bg-blue-900 text-white pl-2">
-        <button class="absolute right-0 top-0 mt-1 mr-2">
-            <i class="fas fa-search text-white"></i>
-        </button>
-
+            <div class="relative">
+                <input type="text" placeholder="Search..." class="p-1 rounded-md bg-blue-900 text-white pl-2">
+                <button class="absolute right-0 top-0 mt-1 mr-2">
+                    <i class="fas fa-search text-white"></i>
+                </button>
             </div>
             <i class="fas fa-bell text-white px-0"></i>
             <i class="fas fa-user text-white px-2.5"></i>
         </div>
 
-        
         <style>
-         input::placeholder {
-            color: white;
+            input::placeholder {
+                color: white;
             }
         </style>
-
     </nav>
 
     <!-- Sidebar -->
     <div class="sidebar" id="sidebar">
-       
         <ul>
             <li class="menu-item text-white w-full text-left py-1 pb-2">
                 <span class="text-yellow-300 font-bold text-xs">ACTIVITIES</span>
@@ -152,8 +150,7 @@
                 <span class="text-yellow-300 font-bold text-xs">OPERATIONS</span>
             </li>
             <li class="menu-item">
-                <button class="text-gray-400 w-full text-left py-1 pb-2" 
-                onclick="toggleDropdown('leadsDropdown')">
+                <button class="text-gray-400 w-full text-left py-1 pb-2" onclick="toggleDropdown('leadsDropdown')">
                     <svg class="w-3  h-3 text-white dark:text-white inline-block mr-2 mb-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 20">
                         <path d="M16 14V2a2 2 0 0 0-2-2H2a2 2 0 0 0-2 2v15a3 3 0 0 0 3 3h12a1 1 0 0 0 0-2h-1v-2a2 2 0 0 0 2-2ZM4 2h2v12H4V2Zm8 16H3a1 1 0 0 1 0-2h9v2Z"/>
                     </svg>
@@ -168,8 +165,7 @@
                 </ul>
             </li>
             <li class="menu-item">
-                <button class="text-gray-400 w-full text-left py-1 pb-3" 
-                onclick="toggleDropdown('newBusinessDropdown')">
+                <button class="text-gray-400 w-full text-left py-1 pb-3" onclick="toggleDropdown('newBusinessDropdown')">
                     <svg class="w-3 h-3 text-white dark:text-white inline-block mr-2 mb-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
                         <path d="M19.728 10.686c-2.38 2.256-6.153 3.381-9.875 3.381-3.722 0-7.4-1.126-9.571-3.371L0 10.437V18a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-7.6l-.272.286Z"/>
                         <path d="m.135 7.847 1.542 1.417c3.6 3.712 12.747 3.7 16.635.01L19.605 7.9A.98.98 0 0 1 20 7.652V6a2 2 0 0 0-2-2h-3V3a3 3 0 0 0-3-3H8a3 3 0 0 0-3 3v1H2a2 2 0 0 0-2 2v1.765c.047.024.092.051.135.082ZM10 10.25a1.25 1.25 0 1 1 0-2.5 1.25 1.25 0 0 1 0 2.5ZM7 3a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v1H7V3Z"/>
@@ -184,8 +180,7 @@
                 </ul>
             </li>
             <li class="menu-item">
-                <button class="text-gray-400 w-full text-left py-1 pb-3" 
-                onclick="toggleDropdown('reportsDropdown')">
+                <button class="text-gray-400 w-full text-left py-1 pb-3" onclick="toggleDropdown('reportsDropdown')">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" class="w-4 h-4 text-white dark:text-white inline-block mr-1 mb-2">
                         <path d="M19 3h-4.5L13 1H5c-1.1 0-2 .9-2 2v18c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V7l-5-4zm0 18H5V2h7v5h5v14zM8 10h8v2H8zm0 4h8v2H8zm0 4h8v2H8z"/>
                     </svg>
@@ -208,8 +203,7 @@
                 </ul>
             </li>
             <li class="menu-item">
-                <button class="text-gray-400 w-full text-left py-1 pb-3" 
-                onclick="toggleDropdown('marketingDropdown')">
+                <button class="text-gray-400 w-full text-left py-1 pb-3" onclick="toggleDropdown('marketingDropdown')">
                     <svg class="w-4 h-4 text-white dark:text-white inline-block mr-1 mb-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 18 19">
                         <path d="M15 1.943v12.114a1 1 0 0 1-1.581.814L8 11V5l5.419-3.871A1 1 0 0 1 15 1.943ZM7 4H2a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2v5a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2V4ZM4 17v-5h1v5H4ZM16 5.183v5.634a2.984 2.984 0 0 0 0-5.634Z"/>
                     </svg>
@@ -221,8 +215,7 @@
                 </ul>
             </li>
             <li class="menu-item">
-                <button class="text-gray-400 w-full text-left py-1 pb-3" 
-                onclick="toggleDropdown('proposalBankDropdown')">
+                <button class="text-gray-400 w-full text-left py-1 pb-3" onclick="toggleDropdown('proposalBankDropdown')">
                     <svg class="w-4 h-4 text-white inline-block mb-2 mr-1" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
                         <path stroke="none" d="M0 0h24v24H0z"/>
                         <line x1="3" y1="21" x2="21" y2="21" />
@@ -243,8 +236,7 @@
                 </ul>
             </li>
             <li class="menu-item">
-                <button class="text-gray-400 w-full text-left py-1 pb-3" 
-                onclick="toggleDropdown('recruitmentDropdown')">
+                <button class="text-gray-400 w-full text-left py-1 pb-3" onclick="toggleDropdown('recruitmentDropdown')">
                     <svg class="w-4 h-4 text-white inline-block mr-1 mb-2" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                         <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
                         <circle cx="9" cy="7" r="4" />
@@ -259,10 +251,8 @@
                     <li><a href="#" class="text-md text-gray-300 block pl-8 py-3 mb-6">Recruitment Process</a></li>
                 </ul>
             </li>
-            
             <li class="menu-item">
-                <button class="text-gray-400 w-full text-left py-1 pb-3" 
-                onclick="toggleDropdown('bcmsDropdown')">
+                <button class="text-gray-400 w-full text-left py-1 pb-3" onclick="toggleDropdown('bcmsDropdown')">
                     <svg class="w-4 h-4 text-white inline-block mr-1 mb-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
                     </svg>
@@ -279,8 +269,7 @@
                 </ul>
             </li>
             <li class="menu-item">
-                <button class="text-gray-400 w-full text-left py-1 pb-1" 
-                onclick="toggleDropdown('branchOperationsDropdown')">
+                <button class="text-gray-400 w-full text-left py-1 pb-1" onclick="toggleDropdown('branchOperationsDropdown')">
                     <svg class="w-4 h-4 text-white inline-block mr-1 mb-2" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
                         <path stroke="none" d="M0 0h24v24H0z"/>
                         <path d="M7 18a4.6 4.4 0 0 1 0 -9h0a5 4.5 0 0 1 11 2h1a3.5 3.5 0 0 1 0 7h-1" />
@@ -297,9 +286,9 @@
                     <li><a href="#" class="text-md text-gray-300 block pl-8 py-3">Upload Batch Photos</a></li>
                     <li><a href="#" class="text-md text-gray-300 block pl-8 py-3 mb-6">Update Submission/Policy Record</a></li>
                 </ul>
-                <li class="menu-item">
-                <button class="text-gray-400 w-full text-left py-1 pb-3" 
-                onclick="toggleDropdown('appointmentsDropdown')">
+            </li>
+            <li class="menu-item">
+                <button class="text-gray-400 w-full text-left py-1 pb-3" onclick="toggleDropdown('appointmentsDropdown')">
                     <svg class="w-4 h-4 text-white inline-block mr-1 mb-2" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
                         <path stroke="none" d="M0 0h24v24H0z"/>
                         <rect x="4" y="5" width="16" height="16" rx="2" />
@@ -312,95 +301,137 @@
                     <span class="menu-text text-md text-white">Appointments</span>
                 </button>
             </li>
-            </li>
         </ul>
     </div>
 
+    <!-- Main Content Area -->
+<div id="main-content" class="content">
+    <div class="container mx-auto max-w-7xl bg-white p-6 rounded-lg shadow-md">
+    <h1 class="text-3xl font-bold mb-4">Poster Maintenance</h1>
+   <div class="mb-4">
+                <button type="submit" class="bg-blue-500 text-white hover:underline px-4 py-2 rounded text-sm ">Back to list</button> 
+                
+            </div>
+    <div class="border-t border-gray-200 mt-4 pt-4 flex">
+        <div class="w-2/4">
+            <table class="w-full">
+                <thead>
+                    <tr>
+                        <th class="text-left font-semibold w-1/3">Item</th>
+                        <th class="text-left font-semibold w-2/3">Value</th>
+                       
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="border-t border-gray-200">
+                        <td class="py-2">Template</td>
+                        <td class="py-2">
+                            <select class="border border-gray-300 rounded p-2 w-full">
+                                <option>Select Template</option>
+                            </select>
+                        </td>
+                        <td class="py-2"></td>
+                    </tr>
+                    <tr class="border-t border-gray-200">
+                        <td class="py-2">Preview (JPG)</td>
+                        <td class="py-2">
+                            <div class="flex items-center">
+                                <input class="border border-gray-300 rounded p-2 w-full" type="file"/>
+                                <button class="bg-gray-200 text-gray-700 rounded px-4 py-2 ml-2">Upload</button>
+                            </div>
+                        </td>
+                        <td class="py-2"></td>
+                    </tr>
+                    <tr class="border-t border-gray-200">
+                        <td class="py-2">Foreground (PNG)</td>
+                        <td class="py-2">
+                            <div class="flex items-center">
+                                <input class="border border-gray-300 rounded p-2 w-full" type="file"/>
+                                <button class="bg-gray-200 text-gray-700 rounded px-4 py-2 ml-2">Upload</button>
+                            </div>
+                        </td>
+                        <td class="py-2"></td>
+                    </tr>
+                    <tr class="border-t border-gray-200">
+                        <td class="py-2">Background (JPG)</td>
+                        <td class="py-2">
+                            <div class="flex items-center">
+                                <input class="border border-gray-300 rounded p-2 w-full" type="file"/>
+                                <button class="bg-gray-200 text-gray-700 rounded px-4 py-2 ml-2">Upload</button>
+                            </div>
+                        </td>
+                        <td class="py-2"></td>
+                    </tr>
+                    <tr class="border-t border-gray-200">
+                        <td class="py-2">Name Font (TTF or OTF)</td>
+                        <td class="py-2">
+                            <div class="flex items-center">
+                                <input class="border border-gray-300 rounded p-2 w-full" type="file"/>
+                                <button class="bg-gray-200 text-gray-700 rounded px-4 py-2 ml-2">Upload</button>
+                            </div>
+                        </td>
+                        <td class="py-2"></td>
+                    </tr>
+                    <tr class="border-t border-gray-200">
+                        <td class="py-2">Date Font (TTF or OTF)</td>
+                        <td class="py-2">
+                            <div class="flex items-center">
+                                <input class="border border-gray-300 rounded p-2 w-full" type="file"/>
+                                <button class="bg-gray-200 text-gray-700 rounded px-4 py-2 ml-2">Upload</button>
+                            </div>
+                        </td>
+                        <td class="py-2"></td>
+                    </tr>
+                    <tr class="border-t border-gray-200">
+                        <td class="py-2">Unit Font (TTF or OTF)</td>
+                        <td class="py-2">
+                            <div class="flex items-center">
+                                <input class="border border-gray-300 rounded p-2 w-full" type="file"/>
+                                <button class="bg-gray-200 text-gray-700 rounded px-4 py-2 ml-2">Upload</button>
+                            </div>
+                        </td>
+                        <td class="py-2"></td>
+                    </tr>
+                    <tr class="border-t border-gray-200">
+                        <td class="py-2">Custom Text Font (TTF or OTF)</td>
+                        <td class="py-2">
+                            <div class="flex items-center">
+                                <input class="border border-gray-300 rounded p-2 w-full" type="file"/>
+                                <button class="bg-gray-200 text-gray-700 rounded px-4 py-2 ml-2">Upload</button>
+                            </div>
+                        </td>
+                        <td class="py-2"></td>
+                    </tr>
+                    <tr class="border-t border-gray-200">
+                        <td class="py-2">Custom Text Font 2 (TTF or OTF)</td>
+                        <td class="py-2">
+                            <div class="flex items-center">
+                                <input class="border border-gray-300 rounded p-2 w-full" type="file"/>
+                                <button class="bg-gray-200 text-gray-700 rounded px-4 py-2 ml-2">Upload</button>
+                            </div>
+                        </td>
+                        <td class="py-2"></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
 
-         <div id="main-content" class="content">
-        <div class="container mx-auto max-w-7xl bg-white p-6 rounded-lg shadow-md">
-            <h2 class="text-4xl font-semibold mb-4">Marketing Poster Maintenance</h2>
-                 <div class="container shadow-md mb-3 mb-4 p-2 bg-blue-900 rounded-md flex justify-between items-center">
-        <h1 class="pl-2 text-l text-yellow-300 font-semibold "><a href="#" id="createNewAgent" class="text-base xl:text-yellow-600 hover:text-yellow-100 font-semibold">Create New Poster </a></h1>
+        <!-- Preview Section -->
+        <div class="w-1/3 pl-4">
+            <h2 class="text-2xl font-semibold mb-2">Preview</h2>
+            <div class="flex space-x-2">
+                <img alt="Template preview 1" class="w-32 h-32" src="https://placehold.co/128x128"/>
+                <img alt="Template preview 2" class="w-32 h-32" src="https://placehold.co/128x128"/>
+                <img alt="Template preview 3" class="w-32 h-32" src="https://placehold.co/128x128"/>
+            </div>
+        </div>
+    </div>
+
+    <div class="mt-4 flex justify-end space-x-4">
+    <button class="bg-blue-500 text-white rounded px-4 py-2">Render</button>
+    <button class="bg-green-500 text-white rounded px-4 py-2">Preview &amp; Create</button>
 </div>
-
-             <div class="mb-4 p-4 bg-white rounded-md shadow-md">
-            <div class="flex items-center justify-between mb-4">
-                <div class="flex items-center">
-                    <label for="entries" class="mr-2 text-sm text-gray-600">Show entries:</label>
-                    <select id="entries" class="border border-gray-300 rounded-md p-1 text-sm">
-                        <option value="10">10</option>
-                        <option value="25">25</option>
-                        <option value="50">50</option>
-                        <option value="100">100</option>
-                    </select>
-                </div>
-
-                <div class="flex items-center">
-                    
-                    <label for="search" class="mr-2 text-sm text-gray-600">Search:</label>
-                    <input type="text" id="search" class="px-3 py-1 border border-gray-300 rounded-md shadow-sm text-sm" placeholder="Search...">
-                </div>
-            </div>
-
-            <!-- Table Content -->
-
-            <div id="tableContent" class="overflow-x-auto">
-                <table class="min-w-full bg-white border border-gray-300 text-sm">
-                    <thead>
-                        <tr class="bg-gray-200 text-gray-600">
-                            <th class="py-2 px-4 text-left border-r border-gray-300 w-1/12">ID</th>
-                            <th class="py-2 px-4 text-left border-r border-gray-300 w-1/4">Description</th>
-                            <th class="py-2 px-4 text-left border-r border-gray-300 w-1/3">Poster</th>
-                            <th class="py-2 px-4 text-left border-r border-gray-300 w-1/6">Action</th>
-                        </tr>
-                    </thead>
-                    <tbody class="text-gray-600">
-                        <!-- Sample Row (You can duplicate this for more rows) -->
-                        <tr class="border-b border-gray-300 hover:bg-gray-100">
-                            <td class="py-2 px-4 border-r border-gray-300">1</td>
-                            <td class="py-2 px-4 border-r border-gray-300">Sample Description</td>
-                            <td class="py-2 px-4 border-r border-gray-300 flex justify-center items-center">
-                                <img src="path_to_your_image.jpg" alt="Poster" class="h-10 w-10 object-cover rounded-md">
-                            </td>
-                            <td class="py-2 px-4 border-r border-gray-300 text-center">
-                                <a href="download_link_here" class="px-3 py-1 bg-blue-500 text-white rounded-md hover:bg-blue-700">Download</a>
-                                <a href="update_link_here" class="px-3 py-1 bg-yellow-500 text-white rounded-md hover:bg-yellow-700">Update</a>
-                            </td>
-                        </tr>
-                        <!-- Add more rows as needed -->
-                    </tbody>
-                </table>
-            </div>
-        </div>
-        
-        <!-- Pagination Section -->
-        <div class="flex justify-end items-center mt-4 space-x-2">
-            <div class="ml-4 flex space-x-2">
-                <button class="px-3 py-1 bg-gray-300 text-gray-700 rounded-md hover:bg-gray-400 text-sm" id="previousBtn">Previous</button>
-                <div class="mr-1 flex items-center space-x-2">
-                    <div id="pageNumbers" class="flex space-x-1">
-                        <!-- Page numbers will be dynamically inserted here -->
-                        <button class="px-2 py-1 bg-gray-200 text-gray-700 rounded-md hover:bg-gray-300">1</button>
-                        <button class="px-2 py-1 bg-gray-200 text-gray-700 rounded-md hover:bg-gray-300">2</button>
-                        <button class="px-2 py-1 bg-gray-200 text-gray-700 rounded-md hover:bg-gray-300">3</button>
-                    </div>
-                </div>
-                <button class="px-3 py-1 bg-gray-300 text-gray-700 rounded-md hover:bg-gray-400 text-sm" id="nextBtn">Next</button>
-            </div>
-        </div>
-    </div>
-    </div>
-        </div>
-
-        <!-- Pagination Section -->
-        
-    </div>
-
-        
-        <!-- Table Section -->
-       
-
+</div>
     <script>
         // Function to toggle the sidebar
         function toggleSidebar() {
@@ -436,50 +467,6 @@
             // Update the current open dropdown reference
             currentOpenDropdown = dropdown.classList.contains('show') ? dropdown : null;
         }
-
-        // JavaScript functionality can be added here
-        document.getElementById('createNewEntry').addEventListener('click', function(event) {
-            event.preventDefault();
-            // Functionality to create a new entry from template
-            alert('Create New from Template functionality to be implemented.');
-        });
-
-        // Pagination functionality (example)
-        let currentPage = 1;
-        const totalPages = 3; // Example total pages
-
-        document.getElementById('previousBtn').addEventListener('click', function() {
-            if (currentPage > 1) {
-                currentPage--;
-                updatePagination();
-            }
-        });
-
-        document.getElementById('nextBtn').addEventListener('click', function() {
-            if (currentPage < totalPages) {
-                currentPage++;
-                updatePagination();
-            }
-        });
-
-        function updatePagination() {
-            const pageNumbers = document.getElementById('pageNumbers');
-            pageNumbers.innerHTML = ''; // Clear existing page numbers
-
-            for (let i = 1; i <= totalPages; i++) {
-                const pageButton = document.createElement('button');
-                pageButton.textContent = i;
-                pageButton.className = `px-2 py-1 rounded-md ${i === currentPage ? 'bg-blue-500 text-white' : 'bg-gray-200 text-gray-700 hover:bg-gray-300'}`;
-                pageButton.addEventListener('click', function() {
-                    currentPage = i;
-                    updatePagination();
-                });
-                pageNumbers.appendChild(pageButton);
-            }
-        }
-
-        // Initial pagination setup
-        updatePagination();
     </script>
 </body>
 </html>

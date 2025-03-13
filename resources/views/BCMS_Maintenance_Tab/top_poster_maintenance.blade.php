@@ -319,7 +319,7 @@
 
          <div id="main-content" class="content">
         <div class="container mx-auto max-w-7xl bg-white p-6 rounded-lg shadow-md">
-            <h2 class="text-4xl font-semibold mb-4">Marketing Poster Maintenance</h2>
+            <h2 class="text-4xl font-semibold mb-4">Top Poster Maintenance</h2>
                  <div class="container shadow-md mb-3 mb-4 p-2 bg-blue-900 rounded-md flex justify-between items-center">
         <h1 class="pl-2 text-l text-yellow-300 font-semibold "><a href="#" id="createNewAgent" class="text-base xl:text-yellow-600 hover:text-yellow-100 font-semibold">Create New Poster </a></h1>
 </div>
@@ -359,12 +359,24 @@
                         <!-- Sample Row (You can duplicate this for more rows) -->
                         <tr class="border-b border-gray-300 hover:bg-gray-100">
                             <td class="py-2 px-4 border-r border-gray-300">1</td>
-                            <td class="py-2 px-4 border-r border-gray-300">Sample Description</td>
+                            <td class="py-2 px-4 border-r border-gray-300">Top Rookie</td>
                             <td class="py-2 px-4 border-r border-gray-300 flex justify-center items-center">
                                 <img src="path_to_your_image.jpg" alt="Poster" class="h-10 w-10 object-cover rounded-md">
                             </td>
                             <td class="py-2 px-4 border-r border-gray-300 text-center">
-                                <a href="download_link_here" class="px-3 py-1 bg-blue-500 text-white rounded-md hover:bg-blue-700">Download</a>
+                                
+                                <a href="update_link_here" class="px-3 py-1 bg-yellow-500 text-white rounded-md hover:bg-yellow-700">Update</a>
+                            </td>
+                        </tr>
+
+                        <tr class="border-b border-gray-300 hover:bg-gray-100">
+                            <td class="py-2 px-4 border-r border-gray-300">1</td>
+                            <td class="py-2 px-4 border-r border-gray-300">Top Agent</td>
+                            <td class="py-2 px-4 border-r border-gray-300 flex justify-center items-center">
+                                <img src="path_to_your_image.jpg" alt="Poster" class="h-10 w-10 object-cover rounded-md">
+                            </td>
+                            <td class="py-2 px-4 border-r border-gray-300 text-center">
+                                
                                 <a href="update_link_here" class="px-3 py-1 bg-yellow-500 text-white rounded-md hover:bg-yellow-700">Update</a>
                             </td>
                         </tr>
