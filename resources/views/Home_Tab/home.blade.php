@@ -206,10 +206,10 @@
                     <i class="fas fa-chevron-down px-1 mb-custom-mb-1 mr-1 text-xs"></i>
                 </button>
                 <ul class="dropdown" id="leadsDropdown">
-                    <li><a href="#" class="text-md text-gray-300 block pl-8 py-2">Submitted Cases</a></li>
-                    <li><a href="#" class="text-md text-gray-300 block pl-8 py-2">Issued Cases</a></li>
-                    <li><a href="#" class="text-md text-gray-300 block pl-8 py-2">Outreq Cases</a></li>
-                    <li><a href="#" class="text-md text-gray-300 block pl-8 py-2 mb-6">Declined/Postponed Cases</a></li>
+                    <li><a href="{{ route('submitted_cases') }}" class="text-md text-gray-300 block pl-8 py-2">Submitted Cases</a></li>
+                    <li><a href="{{ route('issued_casesNew') }}" class="text-md text-gray-300 block pl-8 py-2">Issued Cases</a></li>
+                    <li><a href="{{ route('outreq_cases') }}" class="text-md text-gray-300 block pl-8 py-2">Outreq Cases</a></li>
+                    <li><a href="{{ route('declined_cases') }}" class="text-md text-gray-300 block pl-8 py-2 mb-6">Declined/Postponed Cases</a></li>
                 </ul>
             </li>
             <li class="menu-item">
@@ -223,9 +223,9 @@
                     <i class="fas fa-chevron-down px-1 mb-custom-mb-1 mr-1 text-xs"></i>
                 </button>
                 <ul class="dropdown" id="newBusinessDropdown">
-                    <li><a href="#" class="text-md text-gray-300 block pl-8 py-2">Submission Approval</a></li>
-                    <li><a href="#" class="text-md text-gray-300 block pl-8 py-2">New Business Maintenance</a></li>
-                    <li><a href="#" class="text-md text-gray-300 block pl-8 py-2 mb-6">Issued Cases</a></li>
+                    <li><a href="{{ route('submission_Approval') }}" class="text-md text-gray-300 block pl-8 py-2">Submission Approval</a></li>
+                    <li><a href="{{ route('new_Business_Maintenance') }}" class="text-md text-gray-300 block pl-8 py-2">New Business Maintenance</a></li>
+                    <li><a href="{{ route('business_issued_Cases') }}" class="text-md text-gray-300 block pl-8 py-2 mb-6">Issued Cases</a></li>
                 </ul>
             </li>
             <li class="menu-item">
@@ -238,18 +238,18 @@
                     <i class="fas fa-chevron-down px-1 mb-custom-mb-1 mr-1 text-xs"></i>
                 </button>
                 <ul class="dropdown" id="reportsDropdown">
-                    <li><a href="#" class="text-md text-gray-300 block pl-8 py-2">Agent MTD</a></li>
-                    <li><a href="#" class="text-md text-gray-300 block pl-8 py-2">Agent YTD</a></li>
-                    <li><a href="#" class="text-md text-gray-300 block pl-8 py-2">Sub-Unit Summary</a></li>
-                    <li><a href="#" class="text-md text-gray-300 block pl-8 py-2">Unit Summary</a></li>
-                    <li><a href="#" class="text-md text-gray-300 block pl-8 py-2">Branch Summary</a></li>
-                    <li><a href="#" class="text-md text-gray-300 block pl-8 py-2">Branch Honor Rolls</a></li>
-                    <li><a href="#" class="text-md text-gray-300 block pl-8 py-2">Unit Honor Rolls</a></li>
-                    <li><a href="#" class="text-md text-gray-300 block pl-8 py-2">Custom Group</a></li>
-                    <li><a href="#" class="text-md text-gray-300 block pl-8 py-2">Personal To Go's (BETA)</a></li>
-                    <li><a href="#" class="text-md text-gray-300 block pl-8 py-2">Qualifiers (BETA)</a></li>
-                    <li><a href="#" class="text-md text-gray-300 block pl-8 py-2">MDRT Tracker</a></li>
-                    <li><a href="#" class="text-md text-gray-300 block pl-8 py-2 mb-6">Easy Reports</a></li>
+                    <li><a href="{{ route('agentMTD') }}" class="text-md text-gray-300 block pl-8 py-2">Agent MTD</a></li>
+                    <li><a href="{{ route('agentYTD') }}" class="text-md text-gray-300 block pl-8 py-2">Agent YTD</a></li>
+                    <li><a href="{{ route('subUnitSummary') }}" class="text-md text-gray-300 block pl-8 py-2">Sub-Unit Summary</a></li>
+                    <li><a href="{{ route('unitSummary') }}" class="text-md text-gray-300 block pl-8 py-2">Unit Summary</a></li>
+                    <li><a href="{{ route('branchSummary') }}" class="text-md text-gray-300 block pl-8 py-2">Branch Summary</a></li>
+                    <li><a href="{{ route('branchHonorRollsMTD') }}" class="text-md text-gray-300 block pl-8 py-2">Branch Honor Rolls</a></li>
+                    <li><a href="{{ route('unitHonorRolls') }}" class="text-md text-gray-300 block pl-8 py-2">Unit Honor Rolls</a></li>
+                    <li><a href="{{ route('agm') }}" class="text-md text-gray-300 block pl-8 py-2">Custom Group</a></li>
+                    <li><a href="{{ route('personaltogo') }}" class="text-md text-gray-300 block pl-8 py-2">Personal To Go's (BETA)</a></li>
+                    <li><a href="{{ route('Qualifier') }}" class="text-md text-gray-300 block pl-8 py-2">Qualifiers (BETA)</a></li>
+                    <li><a href="{{ route('MDRT') }}" class="text-md text-gray-300 block pl-8 py-2">MDRT Tracker</a></li>
+                    <li><a href="{{ route('easyReports') }}" class="text-md text-gray-300 block pl-8 py-2 mb-6">Easy Reports</a></li>
                 </ul>
             </li>
             <li class="menu-item">
@@ -262,7 +262,7 @@
                     <i class="fas fa-chevron-down px-1 mb-custom-mb-1 mr-1 text-xs"></i>
                 </button>
                 <ul class="dropdown" id="marketingDropdown">
-                    <li><a href="#" class="text-md text-gray-300 block pl-7 py-3 mb-6">Poster Templates</a></li>
+                    <li><a href="{{ route('poster_templates') }}" class="text-md text-gray-300 block pl-7 py-3 mb-6">Poster Templates</a></li>
                 </ul>
             </li>
             <li class="menu-item">
@@ -283,8 +283,8 @@
                     <i class="fas fa-chevron-down px-1 mb-custom-mb-1 mr-1 text-xs"></i>
                 </button>
                 <ul class="dropdown" id="proposalBankDropdown">
-                    <li><a href="#" class="text-md text-gray-300 block pl-7 py-3">Proposal Search</a></li>
-                    <li><a href="#" class="text-md text-gray-300 block pl-7 py-3 mb-6">Proposal List</a></li>
+                    <li><a href="{{ route('proposal_search') }}" class="text-md text-gray-300 block pl-7 py-3">Proposal Search</a></li>
+                    <li><a href="{{ route('proposal_list') }}" class="text-md text-gray-300 block pl-7 py-3 mb-6">Proposal List</a></li>
                 </ul>
             </li>
             <li class="menu-item">
@@ -300,8 +300,8 @@
                     <i class="fas fa-chevron-down px-1 mb-custom-mb-1 mr-1 text-xs"></i>
                 </button>
                 <ul class="dropdown" id="recruitmentDropdown">
-                    <li><a href="#" class="text-md text-gray-300 block pl-8 py-3">Recruit</a></li>
-                    <li><a href="#" class="text-md text-gray-300 block pl-8 py-3 mb-6">Recruitment Process</a></li>
+                    <li><a href="{{ route('recmaintenance') }}" class="text-md text-gray-300 block pl-8 py-3">Recruit</a></li>
+                    <li><a href="{{ route('recprocess') }}" class="text-md text-gray-300 block pl-8 py-3 mb-6">Recruitment Process</a></li>
                 </ul>
             </li>
             
@@ -315,12 +315,12 @@
                     <i class="fas fa-chevron-down px-1 mb-custom-mb-1 mr-1 text-xs"></i>
                 </button>
                 <ul class="dropdown" id="bcmsDropdown">
-                    <li><a href="#" class="text-md text-gray-300 block pl-8 py-3">Poster Template Maintenance</a></li>
-                    <li><a href="#" class="text-md text-gray-300 block pl-8 py-3">Poster Maintenance</a></li>
-                    <li><a href="#" class="text-md text-gray-300 block pl-8 py-3">Agent Maintenance</a></li>
-                    <li><a href="#" class="text-md text-gray-300 block pl-8 py-3">Unit Maintenance</a></li>
-                    <li><a href="#" class="text-md text-gray-300 block pl-8 py-3">Sub-Unit Maintenance</a></li>
-                    <li><a href="#" class="text-md text-gray-300 block pl-8 py-3 mb-6">Digital Card Maintenance</a></li>
+                    <li><a href="{{ route('poster_template_maintenance') }}" class="text-md text-gray-300 block pl-8 py-3">Poster Template Maintenance</a></li>
+                    <li><a href="{{ route('agentMTD') }}" class="text-md text-gray-300 block pl-8 py-3">Poster Maintenance</a></li>
+                    <li><a href="{{ route('agent_maintenance') }}" class="text-md text-gray-300 block pl-8 py-3">Agent Maintenance</a></li>
+                    <li><a href="{{ route('unit_maintenance') }}" class="text-md text-gray-300 block pl-8 py-3">Unit Maintenance</a></li>
+                    <li><a href="{{ route('sub_unit_maintenance') }}" class="text-md text-gray-300 block pl-8 py-3">Sub-Unit Maintenance</a></li>
+                    <li><a href="{{ route('digital_card_maintenance') }}" class="text-md text-gray-300 block pl-8 py-3 mb-6">Digital Card Maintenance</a></li>
                 </ul>
             </li>
             <li class="menu-item">
@@ -336,11 +336,11 @@
                     <i class="fas fa-chevron-down px-1 mb-custom-mb-1 mr-1 text-xs"></i>
                 </button>
                 <ul class="dropdown" id="branchOperationsDropdown">
-                    <li><a href="#" class="text-md text-gray-300 block pl-8 py-3">Upload Issued</a></li>
-                    <li><a href="#" class="text-md text-gray-300 block pl-8 py-3">Upload NAP</a></li>
-                    <li><a href="#" class="text-md text-gray-300 block pl-8 py-3">Upload Due List</a></li>
-                    <li><a href="#" class="text-md text-gray-300 block pl-8 py-3">Upload Batch Photos</a></li>
-                    <li><a href="#" class="text-md text-gray-300 block pl-8 py-3 mb-6">Update Submission/Policy Record</a></li>
+                    <li><a href="{{ route('agentMTD') }}" class="text-md text-gray-300 block pl-8 py-3">Upload Issued</a></li>
+                    <li><a href="{{ route('agentMTD') }}" class="text-md text-gray-300 block pl-8 py-3">Upload NAP</a></li>
+                    <li><a href="{{ route('agentMTD') }}" class="text-md text-gray-300 block pl-8 py-3">Upload Due List</a></li>
+                    <li><a href="{{ route('agentMTD') }}" class="text-md text-gray-300 block pl-8 py-3">Upload Batch Photos</a></li>
+                    <li><a href="{{ route('agentMTD') }}" class="text-md text-gray-300 block pl-8 py-3 mb-6">Update Submission/Policy Record</a></li>
                 </ul>
                 <li class="menu-item">
                 <button class="text-gray-400 w-full text-left py-1 pb-3" 
@@ -354,7 +354,7 @@
                         <line x1="11" y1="15" x2="12" y2="15" />
                         <line x1="12" y1="15" x2="12" y2="18" />
                     </svg>
-                    <span class="menu-text text-md text-white">Appointments</span>
+                    <span class="menu-text text-md text-white"><a href="{{ route('appointments') }}">Appointments</a></span>
                 </button>
             </li>
             </li>
@@ -458,7 +458,7 @@
 
     <!-- First Row -->
     <div class="flex flex-wrap justify-center gap-4 w-full">
-        <div class="flex-1 w-1/2 bg-gradient-to-b from-[rgb(180,215,243)] to-[rgb(217,228,237)] rounded-xl shadow-xl p-8 border-[rgb(0,133,235)] border-b-8 flex items-center">
+        <div class="transition duration-300 ease-in-out transform hover:scale-105 flex-1 w-1/2 bg-gradient-to-b from-[rgb(180,215,243)] to-[rgb(217,228,237)] rounded-xl shadow-xl p-8 border-[rgb(0,133,235)] border-b-8 flex items-center">
             <div class="flex items-center justify-center bg-[rgb(0,133,235)] w-32 h-32 rounded-full" style="background-image: url('{{ asset('images/personal_white.png')}}'); background-size: 50%; background-repeat: no-repeat; background-position: center;"></div>
             <div class="flex flex-col ml-6"> <!-- Added flex and margin-left -->
                 <div>    
@@ -485,7 +485,7 @@
             </div>
         </div>
 
-        <div class="flex-1 w-1/2 bg-gradient-to-b from-[rgb(152,242,236)] to-[rgb(234,244,243)] rounded-xl shadow-xl p-8 border-[rgb(7,190,178)] border-b-8 flex items-center">
+        <div class="transition duration-300 ease-in-out transform hover:scale-105 flex-1 w-1/2 bg-gradient-to-b from-[rgb(152,242,236)] to-[rgb(234,244,243)] rounded-xl shadow-xl p-8 border-[rgb(7,190,178)] border-b-8 flex items-center">
             <div class="flex items-center justify-center bg-[rgb(7,190,178)]  w-32 h-32 rounded-full" style="background-image: url('{{ asset('images/Sub-unit_white.png')}}'); background-size: 50%; background-repeat: no-repeat; background-position: center;"></div>
             <div class="flex flex-col ml-6"> <!-- Added flex and margin-left -->
                 <div >
@@ -509,7 +509,7 @@
 
     <!-- Second Row -->
     <div class="flex flex-wrap justify-center gap-4 w-full mt">
-        <div class="flex-1 w-1/2 bg-gradient-to-b from-[rgb(129,180,216)] to-[rgb(230,235,238)] rounded-xl shadow-xl p-8 border-[rgb(25,138,219)] border-b-8 flex items-center">
+        <div class="transition duration-300 ease-in-out transform hover:scale-105 flex-1 w-1/2 bg-gradient-to-b from-[rgb(129,180,216)] to-[rgb(230,235,238)] rounded-xl shadow-xl p-8 border-[rgb(25,138,219)] border-b-8 flex items-center">
             <div class="flex items-center justify-center bg-[rgb(25,138,219)]  w-32 h-32 rounded-full" style="background-image: url('{{ asset('images/Unit_white.png')}}'); background-size: 50%; background-repeat: no-repeat; background-position: center;"></div>
             <div class="flex flex-col ml-6"> <!-- Added flex and margin-left -->
                 <div class="mb-2">
@@ -529,7 +529,7 @@
                 </div>
             </div>  
         </div>
-        <div class="flex-1 w-1/2 bg-gradient-to-b from-[rgb(121,198,204)] to-[rgb(255,255,255)] rounded-xl shadow-xl p-8 border-[rgb(7,167,178)] border-b-8 flex items-center">
+        <div class="transition duration-300 ease-in-out transform hover:scale-105 flex-1 w-1/2 bg-gradient-to-b from-[rgb(121,198,204)] to-[rgb(255,255,255)] rounded-xl shadow-xl p-8 border-[rgb(7,167,178)] border-b-8 flex items-center">
             <div class="flex items-center justify-center bg-[rgb(7,167,178)]  w-32 h-32 rounded-full" style="background-image: url('{{ asset('images/branch_white.png')}}'); background-size: 50%; background-repeat: no-repeat; background-position: center;"></div> 
             <div class="flex flex-col ml-6"> <!-- Added flex and margin-left -->
                 <div  class="mb-2">
@@ -778,7 +778,7 @@
     const letters = '0123456789ABCDEF';
     let color = '#';
     for (let i = 0; i < 6; i++) {
-        color += letters[Math.floor(Math.random() * 16)]; // Changed to 16 to include all hex digits
+        color += letters[Math.floor(Math.random() * 10)]; // Changed to 16 to include all hex digits
     }
     return color;
 }
@@ -798,8 +798,6 @@
                 datasets: [{
                     label: 'Sales in USD',
                     data: [654, 434, 800, 500, 343, 765, 234, 423, 654, 876, 543, 765],
-                    borderColor: 'black',
-                    borderWidth: 1,
                     backgroundColor: Array.from({ length: 12 }, () => getRandomColor()), // Random colors for bars
                 }]
             },
@@ -832,8 +830,6 @@
                 datasets: [{
                     label: 'Sales in USD',
                     data: [232, 434, 600, 500, 343, 765, 554, 423, 654, 876, 522, 765],
-                    borderColor: 'black',
-                    borderWidth: 1,
                     backgroundColor: Array.from({ length: 12 }, () => getRandomColor()), // Random colors for bars
                 }]
             },
@@ -864,8 +860,6 @@
                 datasets: [{
                     label: 'Sales in USD',
                     data: [232, 434, 600, 500, 343, 765, 554, 423, 654, 876, 522, 765],
-                    borderColor: 'black',
-                    borderWidth: 1,
                     backgroundColor: Array.from({ length: 12 }, () => getRandomColor()), // Random colors for bars
                 }]
             },
@@ -896,8 +890,6 @@
                 datasets: [{
                     label: 'Sales in USD',
                     data: [232, 434, 600, 500, 343, 765, 554, 423, 654, 876, 522, 765],
-                    borderColor: 'black',
-                    borderWidth: 1,
                     backgroundColor: Array.from({ length: 12 }, () => getRandomColor()), // Random colors for bars
                 }]
             },
