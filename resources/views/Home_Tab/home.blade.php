@@ -376,8 +376,8 @@
                     <img src="https://picsum.photos/800/300?image=3" alt="Image 3">
                 </div>
             </div>
-            <button class="carousel-button left" onclick="prevSlide()">&#10094;</button>
-            <button class="carousel-button right" onclick="nextSlide()">&#10095;</button>
+            <button class="carousel-button left rounded-xl shadow-md" onclick="prevSlide()">&#10094;</button>
+            <button class="carousel-button right rounded-xl" onclick="nextSlide()">&#10095;</button>
         </div>
 
         <!-- JavaScript Functions -->
@@ -449,7 +449,7 @@
         </script>
 
         <!-- Production Month-to-Date -->
-        <div class="bg-gray-300 text-center py-4 mt-4">
+        <div class="bg-blue-900 text-white text-center py-4 mt-4 rounded-md">
             Production Month-to-Date as of February 24, 2025
         </div>
         
@@ -553,149 +553,149 @@
 </div>
 
         <!-- Incentive and Recognition Section -->
-        <div class="mx-auto mt-12 mb-4 bg-gray-100 rounded-t-2xl border border-gray-400">
-            <div class="bg-gray-300 text-center py-5 text-xl rounded-t-2xl mb-4">
+        <div class="mx-auto mt-12 mb-4 rounded-xl border border-gray-300">
+            <div class="bg-blue-900 text-white uppercase text-center p-4 text-md rounded-xl mx-2 my-2">
                 Incentive and Recognition
             </div>
 
             <div class="flex space-x-4 p-3">
-                <div class="w-1/2 rounded-t-2xl overflow-hidden">
-                    <table class="table-auto w-full border border-gray-300 rounded-t-2xl shadow-md">
-                        <thead>
-                            <tr class="bg-blue-900 text-white uppercase text-sm leading-normal">
-                                <th scope="col" colspan="2" class="py-3 text-left px-6 border-b border-gray-400">TO-GO's</th>
-                            </tr>
-                            <tr class="bg-gray-200 text-black uppercase text-sm leading-normal">
-                                <th scope="col" class="py-3 text-left px-6 border-b border-gray-400 border-r border-gray-400">Incentive</th>
-                                <th scope="col" class="py-3 text-left px-6 border-b border-gray-400">To-go</th>
-                            </tr>
-                        </thead>
-                        <tbody class="bg-white border-b">
-                            <tr class="border-b border-gray-300 hover:bg-gray-100 hover:text-blue-900">
-                                <td class="py-3 px-6 border-b border-gray-300 border-r border-gray-300">BRANCH ACHIEVER</td>
-                                <td class="py-3 px-6 border-b border-gray-300">250,000 APE; 8 CC;</td>
-                            </tr>
-                            <tr class="border-b border-gray-300 hover:bg-gray-100 hover:text-blue-900">
-                                <td class="py-3 px-6 border-b border-gray-300 border-r border-gray-300">SECTORAL ACHIEVER</td>
-                                <td class="py-3 px-6 border-b border-gray-300">500,000 APE; 10 CC;</td>
-                            </tr>
-                            <tr class="border-b border-gray-300 hover:bg-gray-100 hover:text-blue-900">
-                                <td class="py-3 px-6 border-b border-gray-300 border-r border-gray-300">NATIONAL ACHIEVER</td>
-                                <td class="py-3 px-6 border-b border-gray-300">750,000 APE; 12 CC;</td>
-                            </tr>
-                            <tr class="border-b border-gray-300 hover:bg-gray-100 hover:text-blue-900">
-                                <td class="py-3 px-6 border-b border-gray-300 border-r border-gray-300">SENIOR ACHIEVER</td>
-                                <td class="py-3 px-6 border-b border-gray-300">1,500,000 APE; 18 CC;</td>
-                            </tr>
-                            <tr class="border-b border-blue-900 border-b-4 hover:bg-gray-100 hover:text-blue-900"> <!-- Changed here -->
-                                <td class="py-3 px-6 border-b border-gray-300 border-r border-gray-300">ELITE ACHIEVER</td>
-                                <td class="py-3 px-6 border-b border-gray-300">2,500,000 APE; 21 CC;</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-
-                <div class="w-1/2 rounded-t-2xl overflow-hidden">
-                    <table class="table-auto w-full border border-gray-300 rounded-t-2xl shadow-md">
-                        <thead>
-                            <tr class="bg-blue-900 text-white uppercase text-sm leading-normal">
-                                <th scope="col" colspan="4" class="py-3 text-left px-6">TOP AGENTS MTD as of MAR. 02 BRANCH WIDE</th>
-                            </tr>
-                            <tr class="bg-gray-200 text-black uppercase text-sm leading-normal">
-                                <th scope="col" class="py-3 text-left px-6 border-b border-gray-400 border-r border-gray-400">Rank</th>
-                                <th scope="col" class="py-3 text-left px-6 border-b border-gray-400 border-r border-gray-400">Unit</th>
-                                <th scope="col" class="py-3 text-left px-6 border-b border-gray-400 border-r border-gray-400">Name</th>
-                                <th scope="col" class="py-3 text-left px-6 border-b border-gray-400">APE</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr class="border-b hover:bg-gray-100 hover:text-blue-900">
-                                <th scope="row" class="py-3 px-6 border-b border-gray-300 border-r border-gray-300">1</th>
-                                <td class="py-3 px-6 border-b border-gray-300 border-r border-gray-300">BLUE CHALCEDONY DIRECT</td>
-                                <td class="py-3 px-6 border-b border-gray-300 border-r border-gray-300">Christine Mercado &nbsp;&nbsp; == $0</td>
-                                <td class="py-3 px-6 border-b border-gray-300 ">26,613.00</td>
-                            </tr>
-                            <tr class="border-b border-blue-900 border-b-4 hover:bg-gray-100 hover:text-blue-900">
-                                <th scope="row" class="py-3 px-6 border-b border-gray-300 border-r border-gray-300">2</th>
-                                <td class="py-3 px-6 border-b border-gray-300 border-r border-gray-300">ANOTHER UNIT</td>
-                                <td class="py-3 px-6 border-b border-gray-300 border-r border-gray-300">John Doe &nbsp;&nbsp; == $0</td>
-                                <td class="py-3 px-6 border-b border-gray-300">20,000.00</td>
-                            </tr>
-                        </tbody>                
-                    </table>
-                </div>
-            </div>
-
-            <div class="flex space-x-4 mt-8 p-3">
-                <div class="w-1/2 rounded-t-2xl overflow-hidden">
-                    <table class="table-auto w-full border border-gray-300 rounded-t-2xl shadow-md">
-                        <thead>
-                            <tr class="bg-blue-900 text-white uppercase text-sm leading-normal">
-                                <th scope="col" colspan="4" class="py-3 text-left px-6">TOP UNIT MTD as of MAR. 02 - BRANCH WIDE</th>
-                            </tr>
-                            <tr class="bg-gray-200 text-black uppercase text-sm leading-normal">
-                                <th scope="col" class="py-3 px-6 border-b border-gray-400 border-r border-gray-400 ">Rank</th>
-                                <th scope="col" class="py-3 text-left px-6 border-b border-gray-400 border-r border-gray-400">Unit</th>
-                                <th scope="col" class="py-3 text-left px-6 border-b border-gray-400">APE</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr class="border-b border-blue-900 border-b-4 hover:bg-gray-100 hover:text-blue-900">
-                                <th scope="row" class="py-3 px-6 border-b border-gray-300 border-r border-gray-300">1</th>
-                                <td class="py-3 text-left px-6 border-b border-gray-400 border-r border-gray-400">BRANCH ACHIEVER</td>
-                                <td class="py-3 text-left px-6 border-b border-gray-400">250,000 APE; 8 CC;</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-
-                <div class="w-1/2 rounded-t-2xl overflow-hidden">
-                    <table class="table-auto w-full border border-gray-300 rounded-t-2xl shadow-md">
-                        <thead>
-                            <tr class="bg-blue-900 text-white uppercase text-sm leading-normal">
-                                <th scope="col" colspan="4" class="py-3 text-left px-6">TOP ROOKIES MTD as of MAR. 02 - BRANCH WIDE</th>
-                            </tr>
-                            <tr class="bg-gray-200 text-black uppercase text-sm leading-normal">
-                                <th scope="col" class="py-3 px-6 border-b border-gray-400 border-r border-gray-400">Rank</th>
-                                <th scope="col" class="py-3 text-left px-6 border-b border-gray-400 border-r border-gray-400">Unit</th>
-                                <th scope="col" class="py-3 text-left px-6 border-b border-gray-400 border-r border-gray-400">Name</th>
-                                <th scope="col" class="py-3 text-left px-6 border-b border-gray-400">APE</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr class="border-b hover:bg-gray-100 hover:text-blue-900">
-                                <th scope="row" class="py-3 px-6 border-b border-gray-300 border-r border-gray-300">1</th>
-                                <td class="py-3 px-6 border-b border-gray-300 border-r border-gray-300 border-r border-gray-300">BLUE CHALCEDONY SAMPLE</td>
-                                <td class="py-3 px-6 border-b border-gray-300 border-r border-gray-300 border-r border-gray-300">NAME</td>
-                                <td class="py-3 px-6 border-b border-gray-300 border-r border-gray-300">0</td>
-                            </tr>
-                            <tr class="border-b border-blue-900 border-b-4 hover:bg-gray-100 hover:text-blue-900">
-                                <th scope="row" class="py-3 px-6 border-b border-gray-300 border-r border-gray-300">2</th>
-                                <td class="py-3 px-6 border-b border-gray-300 border-r border-gray-300 border-r border-gray-300">ANOTHER UNIT</td>
-                                <td class="py-3 px-6 border-b border-gray-300 border-r border-gray-300 border-r border-gray-300">SAMPLE</td>
-                                <td class="py-3 px-6 border-b border-gray-300 border-r border-gray-300">20,000.00</td>
-                            </tr>
-                        </tbody>                
-                    </table>
-                </div>
-            </div>
+        <div class="w-1/2 overflow-hidden">
+            <table class="table-auto w-full border border-gray-300 rounded-xl shadow-md">
+                <thead>
+                    <tr class="bg-blue-900 text-white uppercase text-sm leading-normal">
+                        <th scope="col" colspan="2" class="px-3 py-3 text-left border-b border-gray-400">TO-GO's</th>
+                    </tr>
+                    <tr class="bg-gray-200 text-black uppercase text-sm leading-normal">
+                        <th scope="col" class="py-3 text-left px-3 border-b border-gray-400 border-r border-gray-400">Incentive</th>
+                        <th scope="col" class="py-3 text-left px-3 border-b border-gray-400">To-go</th>
+                    </tr>
+                </thead>
+                <tbody class="bg-white border-b">
+                    <tr class="border-b border-gray-300 hover:bg-gray-100 hover:text-blue-900">
+                        <td class="py-3 px-3 border-b border-gray-300 border-r border-gray-300">BRANCH ACHIEVER</td>
+                        <td class="py-3 px-3 border-b border-gray-300">250,000 APE; 8 CC;</td>
+                    </tr>
+                    <tr class="border-b border-gray-300 hover:bg-gray-100 hover:text-blue-900">
+                        <td class="py-3 px-3 border-b border-gray-300 border-r border-gray-300">SECTORAL ACHIEVER</td>
+                        <td class="py-3 px-3 border-b border-gray-300">500,000 APE; 10 CC;</td>
+                    </tr>
+                    <tr class="border-b border-gray-300 hover:bg-gray-100 hover:text-blue-900">
+                        <td class="py-3 px-3 border-b border-gray-300 border-r border-gray-300">NATIONAL ACHIEVER</td>
+                        <td class="py-3 px-3 border-b border-gray-300">750,000 APE; 12 CC;</td>
+                    </tr>
+                    <tr class="border-b border-gray-300 hover:bg-gray-100 hover:text-blue-900">
+                        <td class="py-3 px-3 border-b border-gray-300 border-r border-gray-300">SENIOR ACHIEVER</td>
+                        <td class="py-3 px-3 border-b border-gray-300">1,500,000 APE; 18 CC;</td>
+                    </tr>
+                    <tr class="border-b border-blue-900 border-b-4 hover:bg-gray-100 hover:text-blue-900"> <!-- Changed here -->
+                        <td class="py-3 px-3 border-b border-gray-300 border-r border-gray-300">ELITE ACHIEVER</td>
+                        <td class="py-3 px-3 border-b border-gray-300">2,500,000 APE; 21 CC;</td>
+                    </tr>
+                </tbody>
+            </table>
         </div>
 
-        <!-- Chart -->
+        <div class="w-1/2 overflow-hidden">
+            <table class="table-auto w-full border border-gray-300 rounded-xl shadow-md">
+                <thead>
+                    <tr class="bg-blue-900 text-white uppercase text-sm leading-normal">
+                        <th scope="col" colspan="4" class="py-3 px-3 text-left">TOP AGENTS MTD as of MAR. 02 BRANCH WIDE</th>
+                    </tr>
+                    <tr class="bg-gray-200 text-black uppercase text-sm leading-normal">
+                        <th scope="col" class="py-3 text-left px-3 border-b border-gray-400 border-r border-gray-400">Rank</th>
+                        <th scope="col" class="py-3 text-left px-3 border-b border-gray-400 border-r border-gray-400">Unit</th>
+                        <th scope="col" class="py-3 text-left px-3 border-b border-gray-400 border-r border-gray-400">Name</th>
+                        <th scope="col" class="py-3 text-left px-3 border-b border-gray-400">APE</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="border-b hover:bg-gray-200 hover:text-blue-900">
+                        <th scope="row" class="py-3 px-3 border-b border-gray-300 border-r border-gray-300">1</th>
+                        <td class="py-3 px-3 border-b border-gray-300 border-r border-gray-300">BLUE CHALCEDONY DIRECT</td>
+                        <td class="py-3 px-3 border-b border-gray-300 border-r border-gray-300">Christine Mercado &nbsp;&nbsp; == $0</td>
+                        <td class="py-3 px-3 border-b border-gray-300 ">26,613.00</td>
+                    </tr>
+                    <tr class="border-b border-blue-900 border-b-4 hover:bg-gray-100 hover:text-blue-900">
+                        <th scope="row" class="py-3 px-3 border-b border-gray-300 border-r border-gray-300">2</th>
+                        <td class="py-3 px-3 border-b border-gray-300 border-r border-gray-300">ANOTHER UNIT</td>
+                        <td class="py-3 px-3 border-b border-gray-300 border-r border-gray-300">John Doe &nbsp;&nbsp; == $0</td>
+                        <td class="py-3 px-3 border-b border-gray-300">20,000.00</td>
+                    </tr>
+                </tbody>                
+            </table>
+        </div>
+    </div>
 
-        <div class="bg-gray-300 text-center py-5 text-xl mt-12 rounded-t-2xl mb-4">
+    <div class="flex space-x-4 p-3">
+        <div class="w-1/2 overflow-hidden">
+            <table class="table-auto w-full border border-gray-300 rounded-xl shadow-md">
+                <thead>
+                    <tr class="bg-blue-900 text-white uppercase text-sm leading-normal">
+                        <th scope="col" colspan="4" class="py-3 text-left px-6">TOP UNIT MTD as of MAR. 02 - BRANCH WIDE</th>
+                    </tr>
+                    <tr class="bg-gray-200 text-black uppercase text-sm leading-normal">
+                        <th scope="col" class="py-3 px-3 border-b border-gray-400 border-r border-gray-400 ">Rank</th>
+                        <th scope="col" class="py-3 text-left px-3 border-b border-gray-400 border-r border-gray-400">Unit</th>
+                        <th scope="col" class="py-3 text-left px-3 border-b border-gray-400">APE</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="border-b border-blue-900 border-b-4 hover:bg-gray-200 hover:text-blue-900">
+                        <th scope="row" class="py-3 px-3 border-b border-gray-300 border-r border-gray-300">1</th>
+                        <td class="py-3 text-left px-3 border-b border-gray-400 border-r border-gray-400">BRANCH ACHIEVER</td>
+                        <td class="py-3 text-left px-3 border-b border-gray-400">250,000 APE; 8 CC;</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="w-1/2 overflow-hidden">
+            <table class="table-auto w-full border border-gray-300 rounded-xl shadow-md">
+                <thead>
+                    <tr class="bg-blue-900 text-white uppercase text-sm leading-normal">
+                        <th scope="col" colspan="4" class="py-3 text-left px-3">TOP ROOKIES MTD as of MAR. 02 - BRANCH WIDE</th>
+                    </tr>
+                    <tr class="bg-gray-200 text-black uppercase text-sm leading-normal">
+                        <th scope="col" class="py-3 px-3 text-left border-b border-gray-400 border-r border-gray-400">Rank</th>
+                        <th scope="col" class="py-3 text-left px-3 border-b border-gray-400 border-r border-gray-400">Unit</th>
+                        <th scope="col" class="py-3 text-left px-3 border-b border-gray-400 border-r border-gray-400">Name</th>
+                        <th scope="col" class="py-3 text-left px-3 border-b border-gray-400">APE</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="border-b hover:bg-gray-200 hover:text-blue-900">
+                        <th scope="row" class="py-3 px-3 text-left border-b border-gray-200 border-r border-gray-300">1</th>
+                        <td class="py-3 px-3 border-b border-gray-300 border-r border-gray-300 border-r border-gray-300">BLUE CHALCEDONY SAMPLE</td>
+                        <td class="py-3 px-3 border-b border-gray-300 border-r border-gray-300 border-r border-gray-300">NAME</td>
+                        <td class="py-3 px-3 border-b border-gray-300 border-r border-gray-300">0</td>
+                    </tr>
+                    <tr class="border-b border-blue-900 border-b-4 hover:bg-gray-200 hover:text-blue-900">
+                        <th scope="row" class="py-3 px-3 text-left border-b border-gray-300 border-r border-gray-300">2</th>
+                        <td class="py-3 px-3 border-b border-gray-300 border-r border-gray-300 border-r border-gray-300">ANOTHER UNIT</td>
+                        <td class="py-3 px-3 border-b border-gray-300 border-r border-gray-300 border-r border-gray-300">SAMPLE</td>
+                        <td class="py-3 px-3 border-b border-gray-300 border-r border-gray-300">20,000.00</td>
+                    </tr>
+                </tbody>                
+            </table>
+        </div>
+    </div>
+</div>
+
+    <!-- Chart -->
+    <div class="border border-gray-300 text-white uppercase text-center text-md rounded-xl">
+        <div class="bg-blue-900 text-white uppercase text-center p-4 text-md rounded-xl mx-2 my-2">
             Production Year-to-Date 2025
         </div>
             
-        <div class="flex space-x-4 mb-4">
+        <div class="flex space-x-4 mb-4 p-3">
             <div class="w-1/2 bg-white">
-                <div class="bg-white text-center bg-blue-900 py-3 text-white rounded-t-2xl border-2 border-black">Branch Monthly Production</div>
+                <div class="bg-white text-center bg-blue-900 py-3 text-black rounded-t-2xl border-2 border-black">Branch Monthly Production</div>
                 <div class="w-full bg-gray-200 rounded-b-2xl p-5 border border-gray-400">
                     <canvas id="myChart1"></canvas>
                 </div>
             </div>
                 
-            <div class="w-1/2 bg-white">
+            <div class="w-1/2 bg-blue-900">
                 <div class="bg-white text-center bg-blue-900 py-3 text-white rounded-t-2xl border-2 border-black">Unit Monthly Production</div>
                 <div class="w-full bg-gray-200 rounded-b-2xl p-5 border border-gray-400">
                     <canvas id="myChart2" ></canvas>
@@ -703,8 +703,8 @@
             </div>
         </div>
 
-        <div class="flex space-x-4">
-            <div class="w-1/2 bg-white">
+        <div class="flex space-x-4 p-3">
+            <div class="w-1/2 bg-blue-900">
                 <div class="bg-white text-center bg-blue-900 py-3 text-white rounded-t-2xl border-2 border-black">Branch Monthly Production</div>
                 <div class="w-full bg-gray-200 rounded-b-2xl p-5 border border-gray-400">
                     <canvas id="myChart3"></canvas>
@@ -717,6 +717,7 @@
                     <canvas id="myChart4"></canvas>
                 </div>
             </div>
+        </div>
         </div>
 
         <!-- Production Summary -->

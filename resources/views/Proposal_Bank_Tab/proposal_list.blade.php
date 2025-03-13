@@ -317,8 +317,8 @@
     </div>
     
     <!-- Main Content Area -->
-    <div id="main-content" class="content"><div class="container mx-auto max-w-8xl bg-white p-6 rounded-lg shadow-md">
-        <p class="text-4xl font-semibold mb-10">Proposal List</p>
+    <div id="main-content" class="content"><div class="container mx-auto max-w-8xl bg-white p-5 rounded-lg shadow-md">
+        <p class="text-4xl font-semibold mb-5">Proposal List</p>
 
         <div class="pl-3 pr-3 pt-3 pb-3 mb-4 bg-blue-900 rounded-md flex justify-between items-center">
 
