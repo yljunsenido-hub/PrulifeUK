@@ -320,7 +320,7 @@
     <div id="main-content" class="content">
         <div class="container mx-auto max-w-7xl bg-white p-6 rounded-lg shadow-md">
             <div class="container mx-auto p-8 content" id="main-content">
-        <h1 class="text-3xl font-semibold mb-6">Poster Maintenance</h1>
+        <h1 class="text-3xl font-semibold mb-6">Marketing Poster Maintenance</h1>
 
         
             <div class="mb-4">

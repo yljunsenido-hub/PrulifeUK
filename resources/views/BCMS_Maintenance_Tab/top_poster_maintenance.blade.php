@@ -161,10 +161,10 @@
                     <i class="fas fa-chevron-down px-1 mb-custom-mb-1 mr-1 text-xs"></i>
                 </button>
                 <ul class="dropdown" id="leadsDropdown">
-                    <li><a href="{{ route('submitted_cases') }}" class="text-md text-gray-300 block pl-8 py-2">Submitted Cases</a></li>
-                    <li><a href="{{ route('issued_casesNew') }}" class="text-md text-gray-300 block pl-8 py-2">Issued Cases</a></li>
-                    <li><a href="{{ route('outreq_cases') }}" class="text-md text-gray-300 block pl-8 py-2">Outreq Cases</a></li>
-                    <li><a href="{{ route('declined_cases') }}" class="text-md text-gray-300 block pl-8 py-2 mb-6">Declined/Postponed Cases</a></li>
+                    <li><a href="#" class="text-md text-gray-300 block pl-8 py-2">Submitted Cases</a></li>
+                    <li><a href="#" class="text-md text-gray-300 block pl-8 py-2">Issued Cases</a></li>
+                    <li><a href="#" class="text-md text-gray-300 block pl-8 py-2">Outreq Cases</a></li>
+                    <li><a href="#" class="text-md text-gray-300 block pl-8 py-2 mb-6">Declined/Postponed Cases</a></li>
                 </ul>
             </li>
             <li class="menu-item">
@@ -178,9 +178,9 @@
                     <i class="fas fa-chevron-down px-1 mb-custom-mb-1 mr-1 text-xs"></i>
                 </button>
                 <ul class="dropdown" id="newBusinessDropdown">
-                    <li><a href="{{ route('submission_Approval') }}" class="text-md text-gray-300 block pl-8 py-2">Submission Approval</a></li>
-                    <li><a href="{{ route('new_Business_Maintenance') }}" class="text-md text-gray-300 block pl-8 py-2">New Business Maintenance</a></li>
-                    <li><a href="{{ route('business_issued_Cases') }}" class="text-md text-gray-300 block pl-8 py-2 mb-6">Issued Cases</a></li>
+                    <li><a href="#" class="text-md text-gray-300 block pl-8 py-2">Submission Approval</a></li>
+                    <li><a href="#" class="text-md text-gray-300 block pl-8 py-2">New Business Maintenance</a></li>
+                    <li><a href="#" class="text-md text-gray-300 block pl-8 py-2 mb-6">Issued Cases</a></li>
                 </ul>
             </li>
             <li class="menu-item">
@@ -193,18 +193,18 @@
                     <i class="fas fa-chevron-down px-1 mb-custom-mb-1 mr-1 text-xs"></i>
                 </button>
                 <ul class="dropdown" id="reportsDropdown">
-                    <li><a href="{{ route('agentMTD') }}" class="text-md text-gray-300 block pl-8 py-2">Agent MTD</a></li>
-                    <li><a href="{{ route('agentYTD') }}" class="text-md text-gray-300 block pl-8 py-2">Agent YTD</a></li>
-                    <li><a href="{{ route('subUnitSummary') }}" class="text-md text-gray-300 block pl-8 py-2">Sub-Unit Summary</a></li>
-                    <li><a href="{{ route('unitSummary') }}" class="text-md text-gray-300 block pl-8 py-2">Unit Summary</a></li>
-                    <li><a href="{{ route('branchSummary') }}" class="text-md text-gray-300 block pl-8 py-2">Branch Summary</a></li>
-                    <li><a href="{{ route('branchHonorRollsMTD') }}" class="text-md text-gray-300 block pl-8 py-2">Branch Honor Rolls</a></li>
-                    <li><a href="{{ route('unitHonorRolls') }}" class="text-md text-gray-300 block pl-8 py-2">Unit Honor Rolls</a></li>
-                    <li><a href="{{ route('agm') }}" class="text-md text-gray-300 block pl-8 py-2">Custom Group</a></li>
-                    <li><a href="{{ route('personaltogo') }}" class="text-md text-gray-300 block pl-8 py-2">Personal To Go's (BETA)</a></li>
-                    <li><a href="{{ route('Qualifier') }}" class="text-md text-gray-300 block pl-8 py-2">Qualifiers (BETA)</a></li>
-                    <li><a href="{{ route('MDRT') }}" class="text-md text-gray-300 block pl-8 py-2">MDRT Tracker</a></li>
-                    <li><a href="{{ route('easyReports') }}" class="text-md text-gray-300 block pl-8 py-2 mb-6">Easy Reports</a></li>
+                    <li><a href="#" class="text-md text-gray-300 block pl-8 py-2">Agent MTD</a></li>
+                    <li><a href="#" class="text-md text-gray-300 block pl-8 py-2">Agent YTD</a></li>
+                    <li><a href="#" class="text-md text-gray-300 block pl-8 py-2">Sub-Unit Summary</a></li>
+                    <li><a href="#" class="text-md text-gray-300 block pl-8 py-2">Unit Summary</a></li>
+                    <li><a href="#" class="text-md text-gray-300 block pl-8 py-2">Branch Summary</a></li>
+                    <li><a href="#" class="text-md text-gray-300 block pl-8 py-2">Branch Honor Rolls</a></li>
+                    <li><a href="#" class="text-md text-gray-300 block pl-8 py-2">Unit Honor Rolls</a></li>
+                    <li><a href="#" class="text-md text-gray-300 block pl-8 py-2">Custom Group</a></li>
+                    <li><a href="#" class="text-md text-gray-300 block pl-8 py-2">Personal To Go's (BETA)</a></li>
+                    <li><a href="#" class="text-md text-gray-300 block pl-8 py-2">Qualifiers (BETA)</a></li>
+                    <li><a href="#" class="text-md text-gray-300 block pl-8 py-2">MDRT Tracker</a></li>
+                    <li><a href="#" class="text-md text-gray-300 block pl-8 py-2 mb-6">Easy Reports</a></li>
                 </ul>
             </li>
             <li class="menu-item">
@@ -217,7 +217,7 @@
                     <i class="fas fa-chevron-down px-1 mb-custom-mb-1 mr-1 text-xs"></i>
                 </button>
                 <ul class="dropdown" id="marketingDropdown">
-                    <li><a href="{{ route('poster_templates') }}" class="text-md text-gray-300 block pl-7 py-3 mb-6">Poster Templates</a></li>
+                    <li><a href="#" class="text-md text-gray-300 block pl-7 py-3 mb-6">Poster Templates</a></li>
                 </ul>
             </li>
             <li class="menu-item">
@@ -238,8 +238,8 @@
                     <i class="fas fa-chevron-down px-1 mb-custom-mb-1 mr-1 text-xs"></i>
                 </button>
                 <ul class="dropdown" id="proposalBankDropdown">
-                    <li><a href="{{ route('proposal_search') }}" class="text-md text-gray-300 block pl-7 py-3">Proposal Search</a></li>
-                    <li><a href="{{ route('proposal_list') }}" class="text-md text-gray-300 block pl-7 py-3 mb-6">Proposal List</a></li>
+                    <li><a href="#" class="text-md text-gray-300 block pl-7 py-3">Proposal Search</a></li>
+                    <li><a href="#" class="text-md text-gray-300 block pl-7 py-3 mb-6">Proposal List</a></li>
                 </ul>
             </li>
             <li class="menu-item">
@@ -255,8 +255,8 @@
                     <i class="fas fa-chevron-down px-1 mb-custom-mb-1 mr-1 text-xs"></i>
                 </button>
                 <ul class="dropdown" id="recruitmentDropdown">
-                    <li><a href="{{ route('recmaintenance') }}" class="text-md text-gray-300 block pl-8 py-3">Recruit</a></li>
-                    <li><a href="{{ route('recprocess') }}" class="text-md text-gray-300 block pl-8 py-3 mb-6">Recruitment Process</a></li>
+                    <li><a href="#" class="text-md text-gray-300 block pl-8 py-3">Recruit</a></li>
+                    <li><a href="#" class="text-md text-gray-300 block pl-8 py-3 mb-6">Recruitment Process</a></li>
                 </ul>
             </li>
             
@@ -270,12 +270,12 @@
                     <i class="fas fa-chevron-down px-1 mb-custom-mb-1 mr-1 text-xs"></i>
                 </button>
                 <ul class="dropdown" id="bcmsDropdown">
-                    <li><a href="{{ route('poster_template_maintenance') }}" class="text-md text-gray-300 block pl-8 py-3">Poster Template Maintenance</a></li>
-                    <li><a href="{{ route('agentMTD') }}" class="text-md text-gray-300 block pl-8 py-3">Poster Maintenance</a></li>
-                    <li><a href="{{ route('agent_maintenance') }}" class="text-md text-gray-300 block pl-8 py-3">Agent Maintenance</a></li>
-                    <li><a href="{{ route('unit_maintenance') }}" class="text-md text-gray-300 block pl-8 py-3">Unit Maintenance</a></li>
-                    <li><a href="{{ route('sub_unit_maintenance') }}" class="text-md text-gray-300 block pl-8 py-3">Sub-Unit Maintenance</a></li>
-                    <li><a href="{{ route('digital_card_maintenance') }}" class="text-md text-gray-300 block pl-8 py-3 mb-6">Digital Card Maintenance</a></li>
+                    <li><a href="#" class="text-md text-gray-300 block pl-8 py-3">Poster Template Maintenance</a></li>
+                    <li><a href="#" class="text-md text-gray-300 block pl-8 py-3">Poster Maintenance</a></li>
+                    <li><a href="#" class="text-md text-gray-300 block pl-8 py-3">Agent Maintenance</a></li>
+                    <li><a href="#" class="text-md text-gray-300 block pl-8 py-3">Unit Maintenance</a></li>
+                    <li><a href="#" class="text-md text-gray-300 block pl-8 py-3">Sub-Unit Maintenance</a></li>
+                    <li><a href="#" class="text-md text-gray-300 block pl-8 py-3 mb-6">Digital Card Maintenance</a></li>
                 </ul>
             </li>
             <li class="menu-item">
@@ -291,11 +291,11 @@
                     <i class="fas fa-chevron-down px-1 mb-custom-mb-1 mr-1 text-xs"></i>
                 </button>
                 <ul class="dropdown" id="branchOperationsDropdown">
-                    <li><a href="{{ route('agentMTD') }}" class="text-md text-gray-300 block pl-8 py-3">Upload Issued</a></li>
-                    <li><a href="{{ route('agentMTD') }}" class="text-md text-gray-300 block pl-8 py-3">Upload NAP</a></li>
-                    <li><a href="{{ route('agentMTD') }}" class="text-md text-gray-300 block pl-8 py-3">Upload Due List</a></li>
-                    <li><a href="{{ route('agentMTD') }}" class="text-md text-gray-300 block pl-8 py-3">Upload Batch Photos</a></li>
-                    <li><a href="{{ route('agentMTD') }}" class="text-md text-gray-300 block pl-8 py-3 mb-6">Update Submission/Policy Record</a></li>
+                    <li><a href="#" class="text-md text-gray-300 block pl-8 py-3">Upload Issued</a></li>
+                    <li><a href="#" class="text-md text-gray-300 block pl-8 py-3">Upload NAP</a></li>
+                    <li><a href="#" class="text-md text-gray-300 block pl-8 py-3">Upload Due List</a></li>
+                    <li><a href="#" class="text-md text-gray-300 block pl-8 py-3">Upload Batch Photos</a></li>
+                    <li><a href="#" class="text-md text-gray-300 block pl-8 py-3 mb-6">Update Submission/Policy Record</a></li>
                 </ul>
                 <li class="menu-item">
                 <button class="text-gray-400 w-full text-left py-1 pb-3" 
@@ -309,7 +309,7 @@
                         <line x1="11" y1="15" x2="12" y2="15" />
                         <line x1="12" y1="15" x2="12" y2="18" />
                     </svg>
-                    <span class="menu-text text-md text-white"><a href="{{ route('appointments') }}">Appointments</a></span>
+                    <span class="menu-text text-md text-white">Appointments</span>
                 </button>
             </li>
             </li>
@@ -319,7 +319,7 @@
 
          <div id="main-content" class="content">
         <div class="container mx-auto max-w-7xl bg-white p-6 rounded-lg shadow-md">
-            <h2 class="text-4xl font-semibold mb-4">Marketing Poster Maintenance</h2>
+            <h2 class="text-4xl font-semibold mb-4">Top Poster Maintenance</h2>
                  <div class="container shadow-md mb-3 mb-4 p-2 bg-blue-900 rounded-md flex justify-between items-center">
         <h1 class="pl-2 text-l text-yellow-300 font-semibold "><a href="#" id="createNewAgent" class="text-base xl:text-yellow-600 hover:text-yellow-100 font-semibold">Create New Poster </a></h1>
 </div>
@@ -359,12 +359,24 @@
                         <!-- Sample Row (You can duplicate this for more rows) -->
                         <tr class="border-b border-gray-300 hover:bg-gray-100">
                             <td class="py-2 px-4 border-r border-gray-300">1</td>
-                            <td class="py-2 px-4 border-r border-gray-300">Sample Description</td>
+                            <td class="py-2 px-4 border-r border-gray-300">Top Rookie</td>
                             <td class="py-2 px-4 border-r border-gray-300 flex justify-center items-center">
                                 <img src="path_to_your_image.jpg" alt="Poster" class="h-10 w-10 object-cover rounded-md">
                             </td>
                             <td class="py-2 px-4 border-r border-gray-300 text-center">
-                                <a href="download_link_here" class="px-3 py-1 bg-blue-500 text-white rounded-md hover:bg-blue-700">Download</a>
+                                
+                                <a href="update_link_here" class="px-3 py-1 bg-yellow-500 text-white rounded-md hover:bg-yellow-700">Update</a>
+                            </td>
+                        </tr>
+
+                        <tr class="border-b border-gray-300 hover:bg-gray-100">
+                            <td class="py-2 px-4 border-r border-gray-300">1</td>
+                            <td class="py-2 px-4 border-r border-gray-300">Top Agent</td>
+                            <td class="py-2 px-4 border-r border-gray-300 flex justify-center items-center">
+                                <img src="path_to_your_image.jpg" alt="Poster" class="h-10 w-10 object-cover rounded-md">
+                            </td>
+                            <td class="py-2 px-4 border-r border-gray-300 text-center">
+                                
                                 <a href="update_link_here" class="px-3 py-1 bg-yellow-500 text-white rounded-md hover:bg-yellow-700">Update</a>
                             </td>
                         </tr>
