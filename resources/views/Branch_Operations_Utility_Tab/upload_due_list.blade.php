@@ -317,90 +317,111 @@
     </div>
 
     <!-- Main Content Area -->
-    <div id="main-content" class="content">
-        <div class="container mx-auto max-w-3xl bg-white p-4 rounded-lg shadow-md">
-            <h2 class="text-4xl font-bold mb-4 text-center text-gray-800">Branch Operations</h2>
+<div id="main-content" class="content">
+    <div class="container mx-auto max-w-3xl mx-32 bg-white p-4 rounded-lg shadow-md">
 
-            <div class="p-1 bg-blue-900 rounded-md shadow-md items-center">
-    <p class="text-md text-yellow-300 text-center">Upload CSV of Due List</p>
+        <!-- Title -->
+        <h2 class="text-4xl font-bold mb-4 text-center text-gray-800">Branch Operations</h2>
+
+        <div class="p-1 bg-blue-900 rounded-md shadow-md items-center">
+            <p class="text-md text-gray-600 ml-3 text-yellow-300 text-center">Upload CSV of Due List</p>
         </div>
 
-    <!-- File upload section -->
-    <div class="space-y-6 mt-5">
-      <!-- File input -->
-      <div class="flex flex-col md:flex-row items-center md:space-x-4">
-        <input type="file" id="file-upload" class="border border-gray-300 p-3 rounded-md w-full md:w-auto focus:outline-none focus:ring-2 focus:ring-blue-500 text-center" accept=".csv">
+        <!-- File upload section -->
+        <div class="flex justify-between items-center space-x-4 mt-5">
 
-      </div>
+            <!-- File input (Left side) -->
+            <div class="flex flex-col md:flex-row items-center md:space-x-4 w-full md:w-1/2">
+                <input type="file" id="file-upload" class="border border-gray-300 p-3 rounded-md w-full md:w-auto focus:outline-none focus:ring-2 focus:ring-blue-500 text-center" accept=".csv">
+            </div>
 
-      <!-- Date Range Text -->
-      <p class="text-gray-700 text-sm text-center">
-        Please upload data from 
-        <span class="font-semibold text-blue-600" id="start-date"></span> 
-        to 
-        <span class="font-semibold text-blue-600" id="end-date"></span>
-      </p>
+            <!-- Date Range Text (Right side) -->
+            <p class="text-gray-700 text-sm text-center">
+                Please upload data from 
+                <span class="font-semibold text-blue-600" id="start-date"></span> 
+                to 
+                <span class="font-semibold text-blue-600" id="end-date"></span>
+            </p>
 
-      <!-- Upload Button with Confirmation -->
-      <button onclick="confirmUpload()" class="w-full bg-blue-600 text-white py-3 rounded-md hover:bg-blue-700 transition duration-300 text-center">
-        UPLOAD CSV
-      </button>
+        </div> <!-- End File upload section -->
 
-      <!-- Success Message -->
-      <div id="upload-success" class="hidden text-green-600 text-center mt-4">
-        <p>File uploaded successfully!</p>
-      </div>
-    </div>
-  </div>
+        <!-- Upload Button with Confirmation -->
+        <div class="flex justify-center">
+                <button onclick="confirmUpload()" class="w-1/4 mt-5 bg-blue-600 text-white py-2 rounded-md hover:bg-blue-700 transition duration-300">
+                    UPLOAD CSV
+                </button>
+            </div>
 
-  <!-- Confirmation Modal -->
-  <div id="modal" class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 hidden">
+        <!-- Success Message -->
+        <div id="upload-success" class="hidden text-green-600 text-center mt-4">
+            <p>File uploaded successfully!</p>
+        </div>
+
+    </div> <!-- End Main Content Area -->
+</div>
+
+<!-- Confirmation Modal -->
+<div id="modal" class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 hidden">
     <div class="bg-white rounded-lg p-6 w-11/12 md:w-1/3">
-      <h3 class="text-lg font-semibold mb-4" id="modal-message">Are you sure you want to upload this file?</h3>
-      <div class="flex justify-end">
-        <button onclick="handleUploadConfirmation(true)" class="bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition duration-300">Yes</button>
-        <button onclick="handleUploadConfirmation(false)" class="ml-2 bg-gray-300 text-gray-700 px-4 py-2 rounded-md hover:bg-gray-400 transition duration-300">No</button>
-      </div>
+        <h3 class="text-lg font-semibold mb-4" id="modal-message">Are you sure you want to upload this file?</h3>
+        <div class="flex justify-end">
+            <button onclick="handleUploadConfirmation(true)" class="bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition duration-300">Yes</button>
+            <button onclick="handleUploadConfirmation(false)" class="ml-2 bg-gray-300 text-gray-700 px-4 py-2 rounded-md hover:bg-gray-400 transition duration-300">No</button>
+        </div>
     </div>
-  </div>
+</div> <!-- End Confirmation Modal -->
 
 
     <script>
-        // Function to toggle the sidebar
-        function toggleSidebar() {
-            const sidebar = document.getElementById("sidebar");
-            const content = document.getElementById("main-content");
-            sidebar.classList.toggle("show"); // Show or hide the sidebar
-            content.classList.toggle("shift"); // Shift content when sidebar is visible
+        function getTodayToNextMonth() {
+            const today = new Date();
+            const nextMonth = new Date();
+            nextMonth.setMonth(today.getMonth() + 1); // Add one month
+
+            // Format dates as YYYY-MM-DD
+            const formatDate = (date) => date.toISOString().split('T')[0];
+
+            // Set the dates on the page
+            document.getElementById('start-date').textContent = formatDate(today);
+            document.getElementById('end-date').textContent = formatDate(nextMonth);
         }
 
-        let currentOpenDropdown = null;
+        // Function to handle file input and update file name
+        document.addEventListener('DOMContentLoaded', function () {
+            document.getElementById('file-upload').addEventListener('change', function (event) {
+                const fileName = event.target.files.length > 0 ? event.target.files[0].name : 'No file chosen';
+                document.getElementById('file-name').textContent = fileName;
+            });
+        });
 
-        function toggleDropdown(dropdownId) {
-            const dropdown = document.getElementById(dropdownId);
-
-            // Close the currently open dropdown if it's not the one being clicked
-            if (currentOpenDropdown && currentOpenDropdown !== dropdown) {
-                currentOpenDropdown.classList.remove('show');
-                currentOpenDropdown.style.maxHeight = '0'; // Reset max-height
-                currentOpenDropdown.style.opacity = '0'; // Reset opacity
-            }
-
-            // Toggle the clicked dropdown
-            if (dropdown.classList.contains('show')) {
-                dropdown.classList.remove('show');
-                dropdown.style.maxHeight = '0'; // Reset max-height
-                dropdown.style.opacity = '0'; // Reset opacity
+        // Function to confirm before uploading
+        function confirmUpload() {
+            const fileInput = document.getElementById('file-upload');
+            if (fileInput.files.length > 0) {
+                const fileName = fileInput.files[0].name;
+                document.getElementById('modal-message').textContent = `Are you sure you want to upload the file: ${fileName}?`;
+                document.getElementById('modal').classList.remove('hidden');
             } else {
-                dropdown.classList.add('show');
-                dropdown.style.maxHeight = '500px'; // Set max-height to allow transition
-                dropdown.style.opacity = '1'; // Set opacity to allow transition
+                document.getElementById('upload-success').classList.add('hidden'); // Hide success message if no file
+                document.getElementById('modal-message').textContent = "Please choose a file to upload.";
+                document.getElementById('modal').classList.remove('hidden');
             }
-
-            // Update the current open dropdown reference
-            currentOpenDropdown = dropdown.classList.contains('show') ? dropdown : null;
         }
 
+        // Function to handle the confirmation of the upload
+        function handleUploadConfirmation(isConfirmed) {
+            const modal = document.getElementById('modal');
+            if (isConfirmed) {
+                document.getElementById('upload-success').classList.remove('hidden'); // Show success message
+            }
+            modal.classList.add('hidden'); // Close the modal
+        }
+
+        // Call the function to set the date range when the page loads
+        window.onload = getTodayToNextMonth;
     </script>
+</div>
+
+
 </body>
 </html>
