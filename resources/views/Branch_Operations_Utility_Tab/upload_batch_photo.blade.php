@@ -317,36 +317,51 @@
     </div>
 
     <!-- Main Content Area -->
-    <div id="main-content" class="content">
-        <div class="container mx-auto max-w-7xl bg-white p-6 rounded-lg shadow-md">
-     
-    <h2 class="text-4xl font-bold mb-4 text-center text-gray-800">Branch Operations</h2>
-    <p class="text-2xl text-gray-600 mb-6 text-center">Upload Batch Photos</p>
+<div id="main-content" class="content">
+    <div class="container mx-auto max-w-3xl mx-32 bg-white p-4 rounded-lg shadow-md">
 
-    <!-- File upload section -->
-    <div class="space-y-6">
-      <!-- File input -->
-      <div class="flex flex-col md:flex-row items-center md:space-x-4">
-        <input type="file" id="file-upload" class="border border-gray-300 p-3 rounded-md w-full md:w-auto focus:outline-none focus:ring-2 focus:ring-blue-500 text-center" accept=".jpeg, .jpg, .png">
-      </div>
+        <!-- Title -->
+        <h2 class="text-4xl font-bold mb-4 text-center text-gray-800">Branch Operations</h2>
 
-      <!-- File Name Display -->
-      <p id="file-name" class="text-gray-700 text-sm text-center">No file chosen</p>
+        <!-- Section for uploading photos -->
+        <div class="p-1 bg-blue-900 rounded-md shadow-md items-center">
+            <p class="text-md text-gray-600 ml-3 text-yellow-300 text-center">Upload Batch Photos</p>
+        </div>
 
-      <!-- Image Preview -->
-      <img id="image-preview" class="hidden mx-auto mt-4 max-w-full h-auto rounded-md shadow-md" alt="Image Preview">
+        <!-- File upload section -->
+        <div class="space-y-6 mt-5">
 
-      <!-- Upload Button with Confirmation -->
-      <button onclick="confirmUpload()" class="w-full bg-blue-600 text-white py-3 rounded-md hover:bg-blue-700 transition duration-300 text-center">
-        UPLOAD IMAGE
-      </button>
+            <!-- File input and File name display -->
+            <div class="flex justify-between items-center">
+                <!-- File input -->
+                <input type="file" id="file-upload" class="border border-gray-300 p-3 rounded-md w-full md:w-auto focus:outline-none focus:ring-2 focus:ring-blue-500 text-left" accept=".jpeg, .jpg, .png">
+                
+                <!-- File Name Display -->
+                <p id="file-name" class="text-gray-700 text-sm">No file chosen</p>
+            </div>
 
-      <!-- Success Message -->
-      <div id="upload-success" class="hidden text-green-600 text-center mt-4">
-        <p>Image uploaded successfully!</p>
-      </div>
+            <!-- Image Preview Section -->
+            <div class="flex justify-center mt-4">
+                <img id="image-preview" class="hidden max-w-[300px] h-auto rounded-md shadow-md" alt="Image Preview">
+            </div>
+
+            <!-- Upload Button with Confirmation -->
+            <div class="flex justify-center">
+                <button onclick="confirmUpload()" class="w-1/4 bg-blue-600 text-white py-2 rounded-md hover:bg-blue-700 transition duration-300">
+                    UPLOAD IMAGE
+                </button>
+            </div>
+
+            <!-- Success Message -->
+            <div id="upload-success" class="hidden text-green-600 text-center mt-4">
+                <p>Image uploaded successfully!</p>
+            </div>
+
+        </div>
+
     </div>
-  </div>
+</div>
+
 
      <!-- Confirmation Modal -->
   <div id="modal" class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 hidden">
