@@ -131,9 +131,8 @@
         .content.shift {
             margin-left: 20px; /* When sidebar is hidden */
         }
-
-          
     </style>
+
 </head>
 <body>
     <!-- Sticky Navigation Bar -->
@@ -142,8 +141,19 @@
         <button class="mr-3 bg-transparent text-white p-2 rounded-md relative hover:bg-blue-800" onclick="toggleSidebar()">
         <i class="fas fa-bars text-white hover:text-white"></i>
     </button>
-            <img src="images/bcdqlogo.png" alt="bcdq log" class="h-10 w-10 mr-4">
-            <span class="text-white text-lg font-semibold">BLUE CHALCEDONY QUARTZ BRANCH</span>
+           
+    <a href="{{ route('home') }}">
+            <button>
+                <img src="images/bcdqlogo.png" alt="bcdq logo" class="h-8, mr-4">
+            </button>
+            
+        </a>
+        <a href="{{ route('home') }}">
+            <button>
+                <span class="text-white text-lg font-semibold">BLUE CHALCEDONY QUARTZ BRANCH</span>
+            </button>
+        </a>
+
         </div>
 
         <div class="flex items-center space-x-6">
@@ -163,9 +173,10 @@
             color: white;
             }
         </style>
+
     </nav>
 
-     <script>
+      <script>
        function toggleSidebar() {
             const sidebar = document.getElementById("sidebar");
             const content = document.getElementById("main-content");
@@ -204,7 +215,6 @@
         }
         
     </script>
-
 
     <!-- Sidebar -->
     <div class="sidebar" id="sidebar">
