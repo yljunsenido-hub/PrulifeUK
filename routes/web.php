@@ -196,3 +196,26 @@ Route::get('/unitMaintenanceCreate'  , function () {
 Route::get('/unitMaintenance'  , function () {
     return view('BCMS_Maintenance_Tab/unit_maintenance');
 })->name('unit_maintenance');
+
+
+// Branch Operations Utility Tab
+
+Route::get('/updateSubmissionPolicyRecord'  , function () {
+    return view('Branch_Operations_Utility_Tab/update_submission_policy_record');
+})->name('update_submission_policy_record');
+
+Route::get('/uploadBatchPhoto'  , function () {
+    return view('Branch_Operations_Utility_Tab/upload_batch_photo');
+})->name('upload_batch_photo');
+
+Route::get('/uploadDueList'  , function () {
+    return view('Branch_Operations_Utility_Tab/upload_due_list');
+})->name('upload_due_list');
+
+Route::get('/uploadIssued'  , function () {
+    return view('Branch_Operations_Utility_Tab/upload_issued');
+})->name('upload_issued');
+
+Route::get('/uploadNap'  , function () {
+    return view('Branch_Operations_Utility_Tab/upload_nap');
+})->name('upload_nap');

@@ -142,29 +142,11 @@
                     <span class="menu-text text-md text-white">Events</span> 
                     <i class="fas fa-chevron-down px-1 mb-custom-mb-1 mr-1 text-xs"></i>
                 </button>
-                <ul class="dropdown" id="eventsDropdown">
-                    <li><a href="#" class="text-md text-gray-300 block pl-8 py-2">Upcoming Events</a></li>
-                    <li><a href="#" class="text-md text-gray-300 block pl-8 py-2">My Events</a></li>
-                    <li><a href="#" class="text-md text-gray-300 block pl-8 py-2 mb-6">Event Maintenance</a></li>
-                </ul>
-            </li>
-            <li class="menu-item text-white w-full text-left py-1 pb-2">
-                <span class="text-yellow-300 font-bold text-xs">OPERATIONS</span>
-            </li>
-            <li class="menu-item">
-                <button class="text-gray-400 w-full text-left py-1 pb-2" 
-                onclick="toggleDropdown('leadsDropdown')">
-                    <svg class="w-3  h-3 text-white dark:text-white inline-block mr-2 mb-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 20">
-                        <path d="M16 14V2a2 2 0 0 0-2-2H2a2 2 0 0 0-2 2v15a3 3 0 0 0 3 3h12a1 1 0 0 0 0-2h-1v-2a2 2 0 0 0 2-2ZM4 2h2v12H4V2Zm8 16H3a1 1 0 0 1 0-2h9v2Z"/>
-                    </svg>
-                    <span class="menu-text text-md text-white">Leads & Cases</span> 
-                    <i class="fas fa-chevron-down px-1 mb-custom-mb-1 mr-1 text-xs"></i>
-                </button>
                 <ul class="dropdown" id="leadsDropdown">
-                    <li><a href="#" class="text-md text-gray-300 block pl-8 py-2">Submitted Cases</a></li>
-                    <li><a href="#" class="text-md text-gray-300 block pl-8 py-2">Issued Cases</a></li>
-                    <li><a href="#" class="text-md text-gray-300 block pl-8 py-2">Outreq Cases</a></li>
-                    <li><a href="#" class="text-md text-gray-300 block pl-8 py-2 mb-6">Declined/Postponed Cases</a></li>
+                    <li><a href="{{ route('submitted_cases') }}" class="text-md text-gray-300 block pl-8 py-2">Submitted Cases</a></li>
+                    <li><a href="{{ route('issued_casesNew') }}" class="text-md text-gray-300 block pl-8 py-2">Issued Cases</a></li>
+                    <li><a href="{{ route('outreq_cases') }}" class="text-md text-gray-300 block pl-8 py-2">Outreq Cases</a></li>
+                    <li><a href="{{ route('declined_cases') }}" class="text-md text-gray-300 block pl-8 py-2 mb-6">Declined/Postponed Cases</a></li>
                 </ul>
             </li>
             <li class="menu-item">
@@ -178,9 +160,9 @@
                     <i class="fas fa-chevron-down px-1 mb-custom-mb-1 mr-1 text-xs"></i>
                 </button>
                 <ul class="dropdown" id="newBusinessDropdown">
-                    <li><a href="#" class="text-md text-gray-300 block pl-8 py-2">Submission Approval</a></li>
-                    <li><a href="#" class="text-md text-gray-300 block pl-8 py-2">New Business Maintenance</a></li>
-                    <li><a href="#" class="text-md text-gray-300 block pl-8 py-2 mb-6">Issued Cases</a></li>
+                    <li><a href="{{ route('submission_Approval') }}" class="text-md text-gray-300 block pl-8 py-2">Submission Approval</a></li>
+                    <li><a href="{{ route('new_Business_Maintenance') }}" class="text-md text-gray-300 block pl-8 py-2">New Business Maintenance</a></li>
+                    <li><a href="{{ route('business_issued_Cases') }}" class="text-md text-gray-300 block pl-8 py-2 mb-6">Issued Cases</a></li>
                 </ul>
             </li>
             <li class="menu-item">
@@ -193,18 +175,18 @@
                     <i class="fas fa-chevron-down px-1 mb-custom-mb-1 mr-1 text-xs"></i>
                 </button>
                 <ul class="dropdown" id="reportsDropdown">
-                    <li><a href="#" class="text-md text-gray-300 block pl-8 py-2">Agent MTD</a></li>
-                    <li><a href="#" class="text-md text-gray-300 block pl-8 py-2">Agent YTD</a></li>
-                    <li><a href="#" class="text-md text-gray-300 block pl-8 py-2">Sub-Unit Summary</a></li>
-                    <li><a href="#" class="text-md text-gray-300 block pl-8 py-2">Unit Summary</a></li>
-                    <li><a href="#" class="text-md text-gray-300 block pl-8 py-2">Branch Summary</a></li>
-                    <li><a href="#" class="text-md text-gray-300 block pl-8 py-2">Branch Honor Rolls</a></li>
-                    <li><a href="#" class="text-md text-gray-300 block pl-8 py-2">Unit Honor Rolls</a></li>
-                    <li><a href="#" class="text-md text-gray-300 block pl-8 py-2">Custom Group</a></li>
-                    <li><a href="#" class="text-md text-gray-300 block pl-8 py-2">Personal To Go's (BETA)</a></li>
-                    <li><a href="#" class="text-md text-gray-300 block pl-8 py-2">Qualifiers (BETA)</a></li>
-                    <li><a href="#" class="text-md text-gray-300 block pl-8 py-2">MDRT Tracker</a></li>
-                    <li><a href="#" class="text-md text-gray-300 block pl-8 py-2 mb-6">Easy Reports</a></li>
+                    <li><a href="{{ route('agentMTD') }}" class="text-md text-gray-300 block pl-8 py-2">Agent MTD</a></li>
+                    <li><a href="{{ route('agentYTD') }}" class="text-md text-gray-300 block pl-8 py-2">Agent YTD</a></li>
+                    <li><a href="{{ route('subUnitSummary') }}" class="text-md text-gray-300 block pl-8 py-2">Sub-Unit Summary</a></li>
+                    <li><a href="{{ route('unitSummary') }}" class="text-md text-gray-300 block pl-8 py-2">Unit Summary</a></li>
+                    <li><a href="{{ route('branchSummary') }}" class="text-md text-gray-300 block pl-8 py-2">Branch Summary</a></li>
+                    <li><a href="{{ route('branchHonorRollsMTD') }}" class="text-md text-gray-300 block pl-8 py-2">Branch Honor Rolls</a></li>
+                    <li><a href="{{ route('unitHonorRolls') }}" class="text-md text-gray-300 block pl-8 py-2">Unit Honor Rolls</a></li>
+                    <li><a href="{{ route('agm') }}" class="text-md text-gray-300 block pl-8 py-2">Custom Group</a></li>
+                    <li><a href="{{ route('personaltogo') }}" class="text-md text-gray-300 block pl-8 py-2">Personal To Go's (BETA)</a></li>
+                    <li><a href="{{ route('Qualifier') }}" class="text-md text-gray-300 block pl-8 py-2">Qualifiers (BETA)</a></li>
+                    <li><a href="{{ route('MDRT') }}" class="text-md text-gray-300 block pl-8 py-2">MDRT Tracker</a></li>
+                    <li><a href="{{ route('easyReports') }}" class="text-md text-gray-300 block pl-8 py-2 mb-6">Easy Reports</a></li>
                 </ul>
             </li>
             <li class="menu-item">
@@ -217,7 +199,7 @@
                     <i class="fas fa-chevron-down px-1 mb-custom-mb-1 mr-1 text-xs"></i>
                 </button>
                 <ul class="dropdown" id="marketingDropdown">
-                    <li><a href="#" class="text-md text-gray-300 block pl-7 py-3 mb-6">Poster Templates</a></li>
+                    <li><a href="{{ route('poster_templates') }}" class="text-md text-gray-300 block pl-7 py-3 mb-6">Poster Templates</a></li>
                 </ul>
             </li>
             <li class="menu-item">
@@ -238,8 +220,8 @@
                     <i class="fas fa-chevron-down px-1 mb-custom-mb-1 mr-1 text-xs"></i>
                 </button>
                 <ul class="dropdown" id="proposalBankDropdown">
-                    <li><a href="#" class="text-md text-gray-300 block pl-7 py-3">Proposal Search</a></li>
-                    <li><a href="#" class="text-md text-gray-300 block pl-7 py-3 mb-6">Proposal List</a></li>
+                    <li><a href="{{ route('proposal_search') }}" class="text-md text-gray-300 block pl-7 py-3">Proposal Search</a></li>
+                    <li><a href="{{ route('proposal_list') }}" class="text-md text-gray-300 block pl-7 py-3 mb-6">Proposal List</a></li>
                 </ul>
             </li>
             <li class="menu-item">
@@ -255,8 +237,8 @@
                     <i class="fas fa-chevron-down px-1 mb-custom-mb-1 mr-1 text-xs"></i>
                 </button>
                 <ul class="dropdown" id="recruitmentDropdown">
-                    <li><a href="#" class="text-md text-gray-300 block pl-8 py-3">Recruit</a></li>
-                    <li><a href="#" class="text-md text-gray-300 block pl-8 py-3 mb-6">Recruitment Process</a></li>
+                    <li><a href="{{ route('recmaintenance') }}" class="text-md text-gray-300 block pl-8 py-3">Recruit</a></li>
+                    <li><a href="{{ route('recprocess') }}" class="text-md text-gray-300 block pl-8 py-3 mb-6">Recruitment Process</a></li>
                 </ul>
             </li>
             
@@ -270,12 +252,12 @@
                     <i class="fas fa-chevron-down px-1 mb-custom-mb-1 mr-1 text-xs"></i>
                 </button>
                 <ul class="dropdown" id="bcmsDropdown">
-                    <li><a href="#" class="text-md text-gray-300 block pl-8 py-3">Poster Template Maintenance</a></li>
-                    <li><a href="#" class="text-md text-gray-300 block pl-8 py-3">Poster Maintenance</a></li>
-                    <li><a href="#" class="text-md text-gray-300 block pl-8 py-3">Agent Maintenance</a></li>
-                    <li><a href="#" class="text-md text-gray-300 block pl-8 py-3">Unit Maintenance</a></li>
-                    <li><a href="#" class="text-md text-gray-300 block pl-8 py-3">Sub-Unit Maintenance</a></li>
-                    <li><a href="#" class="text-md text-gray-300 block pl-8 py-3 mb-6">Digital Card Maintenance</a></li>
+                    <li><a href="{{ route('poster_template_maintenance') }}" class="text-md text-gray-300 block pl-8 py-3">Poster Template Maintenance</a></li>
+                    <li><a href="{{ route('agentMTD') }}" class="text-md text-gray-300 block pl-8 py-3">Poster Maintenance</a></li>
+                    <li><a href="{{ route('agent_maintenance') }}" class="text-md text-gray-300 block pl-8 py-3">Agent Maintenance</a></li>
+                    <li><a href="{{ route('unit_maintenance') }}" class="text-md text-gray-300 block pl-8 py-3">Unit Maintenance</a></li>
+                    <li><a href="{{ route('sub_unit_maintenance') }}" class="text-md text-gray-300 block pl-8 py-3">Sub-Unit Maintenance</a></li>
+                    <li><a href="{{ route('digital_card_maintenance') }}" class="text-md text-gray-300 block pl-8 py-3 mb-6">Digital Card Maintenance</a></li>
                 </ul>
             </li>
             <li class="menu-item">
@@ -291,11 +273,11 @@
                     <i class="fas fa-chevron-down px-1 mb-custom-mb-1 mr-1 text-xs"></i>
                 </button>
                 <ul class="dropdown" id="branchOperationsDropdown">
-                    <li><a href="#" class="text-md text-gray-300 block pl-8 py-3">Upload Issued</a></li>
-                    <li><a href="#" class="text-md text-gray-300 block pl-8 py-3">Upload NAP</a></li>
-                    <li><a href="#" class="text-md text-gray-300 block pl-8 py-3">Upload Due List</a></li>
-                    <li><a href="#" class="text-md text-gray-300 block pl-8 py-3">Upload Batch Photos</a></li>
-                    <li><a href="#" class="text-md text-gray-300 block pl-8 py-3 mb-6">Update Submission/Policy Record</a></li>
+                    <li><a href="{{ route('upload_issued') }}" class="text-md text-gray-300 block pl-8 py-3">Upload Issued</a></li>
+                    <li><a href="{{ route('upload_nap') }}" class="text-md text-gray-300 block pl-8 py-3">Upload NAP</a></li>
+                    <li><a href="{{ route('upload_due_list') }}" class="text-md text-gray-300 block pl-8 py-3">Upload Due List</a></li>
+                    <li><a href="{{ route('upload_batch_photo') }}" class="text-md text-gray-300 block pl-8 py-3">Upload Batch Photos</a></li>
+                    <li><a href="{{ route('update_submission_policy_record') }}" class="text-md text-gray-300 block pl-8 py-3 mb-6">Update Submission/Policy Record</a></li>
                 </ul>
                 <li class="menu-item">
                 <button class="text-gray-400 w-full text-left py-1 pb-3" 
