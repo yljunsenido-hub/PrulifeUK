@@ -559,7 +559,7 @@
             </div>
 
             <div class="flex space-x-4 p-3">
-        <div class="w-1/2 overflow-hidden">
+            <div class="w-1/2 overflow-hidden">
             <table class="table-auto w-full border border-gray-300 rounded-xl shadow-md">
                 <thead>
                     <tr class="bg-blue-900 text-white uppercase text-sm leading-normal">
@@ -687,33 +687,33 @@
             Production Year-to-Date 2025
         </div>
             
-        <div class="flex space-x-4 mb-4 p-3">
-            <div class="w-1/2 bg-white">
-                <div class="bg-white text-center bg-blue-900 py-3 text-black rounded-t-2xl border-2 border-black">Branch Monthly Production</div>
-                <div class="w-full bg-gray-200 rounded-b-2xl p-5 border border-gray-400">
+        <div class="flex space-x-4 mb-1 p-3">
+            <div class="w-1/2 bg-white overflow-hidden">
+                <div class="bg-white text-center bg-blue-900 py-3 text-black rounded-t-2xl border-2">Branch Monthly Production</div>
+                <div class="w-full bg-gray-200 rounded-b-2xl p-4 border border-gray-400">
                     <canvas id="myChart1"></canvas>
                 </div>
             </div>
                 
-            <div class="w-1/2 bg-blue-900">
-                <div class="bg-white text-center bg-blue-900 py-3 text-white rounded-t-2xl border-2 border-black">Unit Monthly Production</div>
-                <div class="w-full bg-gray-200 rounded-b-2xl p-5 border border-gray-400">
+            <div class="w-1/2 overflow-hidden">
+                <div class="bg-white text-center bg-blue-900 py-3 text-black rounded-t-2xl border-2">Unit Monthly Production</div>
+                <div class="w-full bg-gray-200 rounded-b-2xl p-4 border border-gray-400">
                     <canvas id="myChart2" ></canvas>
                 </div>
             </div>
         </div>
 
         <div class="flex space-x-4 p-3">
-            <div class="w-1/2 bg-blue-900">
-                <div class="bg-white text-center bg-blue-900 py-3 text-white rounded-t-2xl border-2 border-black">Branch Monthly Production</div>
-                <div class="w-full bg-gray-200 rounded-b-2xl p-5 border border-gray-400">
+            <div class="w-1/2 overflow-hidden">
+                <div class="bg-white text-center bg-blue-900 py-3 text-black rounded-t-2xl border-2">Branch Monthly Production</div>
+                <div class="w-full bg-gray-200 rounded-b-2xl p-4 border border-gray-400">
                     <canvas id="myChart3"></canvas>
                 </div>
             </div>
 
-            <div class="w-1/2 bg-white">
-                <div class="bg-white text-center bg-blue-900 py-3 text-white rounded-t-2xl border-2 border-black">Branch Monthly Production</div>
-                <div class="w-full bg-gray-200 rounded-b-2xl p-5 border border-gray-400">
+            <div class="w-1/2 bg-white overflow-hidden">
+                <div class="bg-white text-center bg-blue-900 py-3 text-black rounded-t-2xl border-2">Branch Monthly Production</div>
+                <div class="w-full bg-gray-200 rounded-b-2xl p-4 border border-gray-400">
                     <canvas id="myChart4"></canvas>
                 </div>
             </div>
@@ -722,56 +722,61 @@
 
         <!-- Production Summary -->
 
-        <div class="bg-gray-300 text-center py-5 text-xl mt-12 rounded-t-2xl">
+
+        <div class="container bg-gray-100 mx-auto w-9xl mb-10 mt-5 border border-gray-300 rounded-xl">
+        <div class="bg-blue-900 text-white uppercase text-center p-3 text-md rounded-xl mx-3 my-3">
             Production Summary
         </div>
 
-        <div class="container bg-gray-100 mx-auto w-8xl p-4 mb-10 border border-gray-400">
-            <div class="p-5 bg-blue-900 text-white text-center font-bold border-b border-gray-400 rounded-t-2xl">
+        <div class="m-3">
+            <div class="m-3 text-black  text-center font-bold rounded-lg">
                 ISSUED
+            </div>  
+
+                <table class="p-5 mr-5 mb-2 table-auto w-full border border-gray-300 rounded-lg shadow-md">
+                    <thead>
+                        <tr class="bg-gray-200 text-black uppercase text-sm leading-normal">
+                            <td class="py-3 px-6 border-b border-gray-300 border-r border-gray-300 border-r border-gray-300 font-bold">MONTH</td>
+                            <td class="py-3 px-6 border-b border-gray-300 border-r border-gray-300 border-r border-gray-300 font-bold">TOTAL APE</td>
+                            <td class="py-3 px-6 border-b border-gray-300 border-r border-gray-300 border-r border-gray-300 font-bold">NAP</td>
+                            <td class="py-3 px-6 border-b border-gray-300 border-r border-gray-300 border-r border-gray-300 font-bold">TOTAL CC</td>
+                            <td class="py-3 px-6 border-b border-gray-300 border-r border-gray-300 font-bold">TOTAL PULSE CASE</td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="border-b hover:text-blue-900">
+                            <td class="py-3 px-6 hover:bg-gray-100 border-b border-gray-300 border-r border-gray-300 border-r border-gray-300 bg-white">100</td>
+                            <td class="py-3 px-6 hover:bg-gray-100 border-b border-gray-300 border-r border-gray-300 border-r border-gray-300 bg-white">100</td>
+                            <td class="py-3 px-6 hover:bg-gray-100 border-b border-gray-300 border-r border-gray-300 border-r border-gray-300 bg-white">250,000.00</td>
+                            <td class="py-3 px-6 hover:bg-gray-100 border-b border-gray-300 border-r border-gray-300 border-r border-gray-300 bg-white">50,000.00</td>
+                            <td class="py-3 px-6 hover:bg-gray-100 border-b border-gray-300 border-r border-gray-300 bg-white">10</td>
+                        </tr>
+                        <tr class="border-b hover:text-blue-900">
+                            <td class="py-3 px-6 hover:bg-gray-100 border-b border-gray-300 border-r border-gray-300 border-r border-gray-300 bg-white">150</td>
+                            <td class="py-3 px-6 hover:bg-gray-100 border-b border-gray-300 border-r border-gray-300 border-r border-gray-300 bg-white">100</td>
+                            <td class="py-3 px-6 hover:bg-gray-100 border-b border-gray-300 border-r border-gray-300 border-r border-gray-300 bg-white">300,000.00</td>
+                            <td class="py-3 px-6 hover:bg-gray-100 border-b border-gray-300 border-r border-gray-300 border-r border-gray-300 bg-white">75,000.00</td>
+                            <td class="py-3 px-6 hover:bg-gray-100 border-b border-gray-300 border-r border-gray-300 bg-white">15</td>
+                        </tr>
+                        <tr class="border-b hover:text-blue-900">
+                            <td class="py-3 px-6 hover:bg-gray-100 border-b border-gray-300 border-r border-gray-300 border-r border-gray-300 bg-white">200</td>
+                            <td class="py-3 px-6 hover:bg-gray-100 border-b border-gray-300 border-r border-gray-300 border-r border-gray-300 bg-white">100</td>
+                            <td class="py-3 px-6 hover:bg-gray-100 border-b border-gray-300 border-r border-gray-300 border-r border-gray-300 bg-white">500,000.00</td>
+                            <td class="py-3 px-6 hover:bg-gray-100 border-b border-gray-300 border-r border-gray-300 border-r border-gray-300 bg-white">100,000.00</td>
+                            <td class="py-3 px-6 hover:bg-gray-100 border-b border-gray-300 border-r border-gray-300 bg-white">20</td>
+                        </tr>
+                        <tr class="border-b hover:text-blue-900">
+                            <td class="py-3 px-6 hover:bg-gray-100 border-b border-gray-300 border-r border-gray-300 border-r border-gray-300 bg-white">250</td>
+                            <td class="py-3 px-6 hover:bg-gray-100 border-b border-gray-300 border-r border-gray-300 border-r border-gray-300 bg-white">100</td>
+                            <td class="py-3 px-6 hover:bg-gray-100 border-b border-gray-300 border-r border-gray-300 border-r border-gray-300 bg-white">600,000.00</td>
+                            <td class="py-3 px-6 hover:bg-gray-100 border-b border-gray-300 border-r border-gray-300 border-r border-gray-300 bg-white">125,000.00</td>
+                            <td class="py-3 px-6 hover:bg-gray-100 border-b border-gray-300 border-r border-gray-300 bg-white">25</td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
-            <table class="table-auto w-full border border-gray-300 rounded-t-2xl shadow-md">
-                <thead>
-                    <tr class="bg-gray-200 text-black uppercase text-sm leading-normal">
-                        <td class="py-3 px-6 border-b border-gray-300 border-r border-gray-300 border-r border-gray-300 font-bold">MONTH</td>
-                        <td class="py-3 px-6 border-b border-gray-300 border-r border-gray-300 border-r border-gray-300 font-bold">TOTAL APE</td>
-                        <td class="py-3 px-6 border-b border-gray-300 border-r border-gray-300 border-r border-gray-300 font-bold">NAP</td>
-                        <td class="py-3 px-6 border-b border-gray-300 border-r border-gray-300 border-r border-gray-300 font-bold">TOTAL CC</td>
-                        <td class="py-3 px-6 border-b border-gray-300 border-r border-gray-300 font-bold">TOTAL PULSE CASE</td>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr class="border-b hover:bg-gray-100 hover:text-blue-900">
-                        <td class="py-3 px-6 border-b border-gray-300 border-r border-gray-300 border-r border-gray-300 bg-white">100</td>
-                        <td class="py-3 px-6 border-b border-gray-300 border-r border-gray-300 border-r border-gray-300 bg-white">100</td>
-                        <td class="py-3 px-6 border-b border-gray-300 border-r border-gray-300 border-r border-gray-300 bg-white">250,000.00</td>
-                        <td class="py-3 px-6 border-b border-gray-300 border-r border-gray-300 border-r border-gray-300 bg-white">50,000.00</td>
-                        <td class="py-3 px-6 border-b border-gray-300 border-r border-gray-300 bg-white">10</td>
-                    </tr>
-                    <tr class="border-b hover:bg-gray-100 hover:text-blue-900">
-                        <td class="py-3 px-6 border-b border-gray-300 border-r border-gray-300 border-r border-gray-300 bg-white">150</td>
-                        <td class="py-3 px-6 border-b border-gray-300 border-r border-gray-300 border-r border-gray-300 bg-white">100</td>
-                        <td class="py-3 px-6 border-b border-gray-300 border-r border-gray-300 border-r border-gray-300 bg-white">300,000.00</td>
-                        <td class="py-3 px-6 border-b border-gray-300 border-r border-gray-300 border-r border-gray-300 bg-white">75,000.00</td>
-                        <td class="py-3 px-6 border-b border-gray-300 border-r border-gray-300 bg-white">15</td>
-                    </tr>
-                    <tr class="border-b hover:bg-gray-100 hover:text-blue-900">
-                        <td class="py-3 px-6 border-b border-gray-300 border-r border-gray-300 border-r border-gray-300 bg-white">200</td>
-                        <td class="py-3 px-6 border-b border-gray-300 border-r border-gray-300 border-r border-gray-300 bg-white">100</td>
-                        <td class="py-3 px-6 border-b border-gray-300 border-r border-gray-300 border-r border-gray-300 bg-white">500,000.00</td>
-                        <td class="py-3 px-6 border-b border-gray-300 border-r border-gray-300 border-r border-gray-300 bg-white">100,000.00</td>
-                        <td class="py-3 px-6 border-b border-gray-300 border-r border-gray-300 bg-white">20</td>
-                    </tr>
-                    <tr class="border-b hover:bg-gray-100 hover:text-blue-900">
-                        <td class="py-3 px-6 border-b border-gray-300 border-r border-gray-300 border-r border-gray-300 bg-white">250</td>
-                        <td class="py-3 px-6 border-b border-gray-300 border-r border-gray-300 border-r border-gray-300 bg-white">100</td>
-                        <td class="py-3 px-6 border-b border-gray-300 border-r border-gray-300 border-r border-gray-300 bg-white">600,000.00</td>
-                        <td class="py-3 px-6 border-b border-gray-300 border-r border-gray-300 border-r border-gray-300 bg-white">125,000.00</td>
-                        <td class="py-3 px-6 border-b border-gray-300 border-r border-gray-300 bg-white">25</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
+            </div>
+            </div>
 
 
   <script>
