@@ -399,15 +399,18 @@
     <!-- Main Content Area -->
     <div id="main-content" class="content">
 
-	<div class="container mx-auto max-w-9xl bg-white p-5 rounded-lg shadow-md">
+	<div class="container mx-auto max-w-9xl bg-white p-6 rounded-lg shadow-md">
         <h2 class="text-4xl font-semibold mb-4">Recruitment Maintenance</h2>
 
-        <div class="mb-2 p-2 bg-blue-900 rounded-md flex justify-between items-center">
-            <a href="your_link_here" class="block mb-1 p-1 text-white font-semibold underline hover:text-blue-500">Create New Recruit</a>
+        <div class=" bg-blue-900 rounded-lg flex justify-between items-center"> 
+
+            <a href="{{ route('createRecruitment') }}" class="text-md text-gray-300 block p-2">
+            <p class="text-yellow-300 hover:underline hover:text-white ml-1">Create Recruit Record</p></a>
+
         </div>
 
         <!-- Table Section -->
-        <div class="mb-4 p-4 bg-white rounded-md shadow-md">
+        <div class="mt-4 mb-4 p-4 bg-white rounded-md shadow-md">
             <div class="flex items-center justify-between mb-4">
                 <div class="flex items-center">
                     <label for="entries" class="mr-2 text-sm text-gray-600">Show entries:</label>

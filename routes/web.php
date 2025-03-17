@@ -122,6 +122,10 @@ Route::get('/recprocess'  , function () {
     return view('Recruitment_Tab/recprocess');
 })->name('recprocess');
 
+Route::get('/createRecruitment'  , function () {
+    return view('Recruitment_Tab/create_recruitment_rec');
+})->name('createRecruitment');
+
 
 
 
@@ -219,3 +223,4 @@ Route::get('/uploadIssued'  , function () {
 Route::get('/uploadNap'  , function () {
     return view('Branch_Operations_Utility_Tab/upload_nap');
 })->name('upload_nap');
+

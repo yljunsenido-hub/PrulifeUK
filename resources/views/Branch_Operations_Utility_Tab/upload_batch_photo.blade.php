@@ -359,6 +359,10 @@
 
         </div>
 
+        <div class="flex justify-center mt-4">
+        <img src="images/imageguide.png" alt="imageguide" class="w-full h-full  rounded-xl border-4 border-gray-300 shadow-md hover:opacity-80">
+        </div>
+
     </div>
 </div>
 
