@@ -131,52 +131,19 @@
         .content.shift {
             margin-left: 20px; /* When sidebar is hidden */
         }
+
+          
     </style>
 
-</head>
-<body>
-    <!-- Sticky Navigation Bar -->
-    <nav class="bg-gradient-to-r from-blue-900 to-blue-700 p-4 flex justify-between items-center">
-        <div class="flex items-center">
-        <button class="mr-3 bg-transparent text-white p-2 rounded-md relative hover:bg-blue-800" onclick="toggleSidebar()">
-        <i class="fas fa-bars text-white hover:text-white"></i>
-    </button>
-           
-    <a href="{{ route('home') }}">
-            <button>
-                <img src="images/bcdqlogo.png" alt="bcdq logo" class="h-10 w-10 mr-4">
-            </button>
-            
-        </a>
-        <a href="{{ route('home') }}">
-            <button>
-                <span class="text-white text-lg font-semibold">BLUE CHALCEDONY QUARTZ BRANCH</span>
-            </button>
-        </a>
-
-        </div>
-
-        <div class="flex items-center space-x-6">
-    <div class="relative">
-        <input type="text" placeholder="Search..." class="p-1 rounded-md bg-blue-900 text-white pl-2">
-        <button class="absolute right-0 top-0 mt-1 mr-2">
-            <i class="fas fa-search text-white"></i>
-        </button>
-
-            </div>
-            <i class="fas fa-bell text-white px-0"></i>
-            <i class="fas fa-user text-white px-2.5"></i>
-        </div>
         
         <style>
          input::placeholder {
             color: white;
             }
         </style>
-
     </nav>
 
-      <script>
+     <script>
        function toggleSidebar() {
             const sidebar = document.getElementById("sidebar");
             const content = document.getElementById("main-content");
@@ -215,6 +182,39 @@
         }
         
     </script>
+
+</head>
+<body>
+    <!-- Sticky Navigation Bar -->
+    <nav class="bg-gradient-to-r from-blue-900 to-blue-700 p-4 flex justify-between items-center">
+        <div class="flex items-center">
+        <button class="mr-3 bg-transparent text-white p-2 rounded-md relative hover:bg-blue-800" onclick="toggleSidebar()">
+        <i class="fas fa-bars text-white hover:text-white"></i>
+    </button>
+            <img src="images/bcdqlogo.png" alt="bcdq log" class="h-10 w-10 mr-4">
+            <span class="text-white text-lg font-semibold">BLUE CHALCEDONY QUARTZ BRANCH</span>
+        </div>
+
+        <div class="flex items-center space-x-6">
+    <div class="relative">
+        <input type="text" placeholder="Search..." class="p-1 rounded-md bg-blue-900 text-white pl-2">
+        <button class="absolute right-0 top-0 mt-1 mr-2">
+            <i class="fas fa-search text-white"></i>
+        </button>
+
+            </div>
+            <i class="fas fa-bell text-white px-0"></i>
+            <i class="fas fa-user text-white px-2.5"></i>
+        </div>
+
+        
+        <style>
+         input::placeholder {
+            color: white;
+            }
+        </style>
+
+    </nav>
 
     <!-- Sidebar -->
     <div class="sidebar" id="sidebar">
@@ -407,71 +407,202 @@
 
     <!-- Main Content Area -->
     <div id="main-content" class="content">
-        <div class="container mx-auto max-w-9xl bg-white p-6 rounded-lg shadow-md">
-            <h2 class="text-4xl font-semibold mb-6">Submitted Cases</h2>
-           
-            <div class="p-6 bg-white rounded-md shadow-md">
-            <div class="flex items-center justify-between mb-4">
-                <div class="flex items-center">
-                    <label for="entries" class="mr-2 text-sm text-gray-600">Show entries:</label>
-                    <select id="entries" class="border border-gray-300 rounded-md p-1 text-sm">
-                        <option value="10">10</option>
-                        <option value="25">25</option>
-                        <option value="50">50</option>
-                    </select>
-                </div>
 
-                <div class="flex items-center">
-                    <label for="search" class="mr-2 text-sm text-gray-600">Search:</label>
-                    <input type="text" id="search" class="px-3 py-1 border border-gray-300 rounded-md shadow-sm text-sm" placeholder="Search...">
-                </div>
-            </div>
+	<div class="container mx-auto max-w-8xl bg-white p-6 rounded-lg shadow-md">
+        <h2 class="text-4xl font-semibold mb-4">UNIT TOP AGENTS YEAR TO DATE REPORT</h2>
+        
+        <div class="container mx-auto rounded-md shadow-sm bg-white border pl-3 pr-3 pt-3 pb-3 mb-2 flex flex-col space-y-5">
 
-            <!-- Table Content -->
-            <div id="tableContent" class="overflow-x-auto">
-                <table class="min-w-full bg-white border border-gray-300 text-sm">
+        <h1 class="container mx-auto max-w-8xl bg-blue-900 p-3 rounded-l rounded-r shadow-md">
+        <a href="{{ route('unitHonorRolls') }}">
+            <p class="ml-4 text-yellow-300 hover:underline hover:text-white">Switch To MTD</p> </h1>
+        </a> </h1>
+
+        <div class="container mx-auto max-w-8xl bg-white-300 p-4 rounded-l shadow-md">
+            <div class="overflow-x-auto">
+                <table class="min-w-full bg-white border border-gray-300">
                     <thead>
-                        <tr class="bg-blue-200 text-gray-600">
-                            <th class="py-2 px-4 text-left border-r border-gray-300 w-1/12">ID</th>
-                            <th class="py-2 px-4 text-left border-r border-gray-300 w-1/4">First Name</th>
-                            <th class="py-2 px-4 text-left border-r border-gray-300 w-1/4">Last Name</th>
-                            <th class="py-2 px-4 text-left border-r border-gray-300 w-1/4">Application No.</th>
-                            <th class="py-2 px-4 text-left border-r border-gray-300 w-1/4">Policy No.</th>
-                            <th class="py-2 px-4 text-left border-r border-gray-300 w-1/4">APE</th>
-                            <th class="py-2 px-4 text-left border-r border-gray-300 w-1/4">Status</th>
+                        <tr class="bg-gray-200 text-gray-600 uppercase text-sm leading-normal">
+                            <th class="py-3 px-6 text-left border-r border-gray-300">Rank</th>
+                            <th class="py-3 px-6 text-left border-r border-gray-300">Branch</th>
+                            <th class="py-3 px-6 text-left border-r border-gray-300">Unit</th>
+                            <th class="py-3 px-6 text-left border-r border-gray-300">Name</th>
+                            <th class="py-3 px-6 text-left border-r border-gray-300">APE</th>
+                            <th class="py-3 px-6 text-left border-r border-gray-300">CC</th>
+                            <th class="py-3 px-6 text-left border-r border-gray-300">AVE. SA</th>
                         </tr>
                     </thead>
-                    <tbody class="text-gray-600">
-                        <!-- Sample Row (You can duplicate this for more rows) -->
-                        <tr class="border-b border-gray-300 hover:bg-blue-50">
-                            <td class="py-2 px-4 border-r border-gray-300">1</td>
-                            <td class="py-2 px-4 border-r border-gray-300">name</td>
-                            <td class="py-2 px-4 border-r border-gray-300">Blue</td>
-                            <td class="py-2 px-4 border-r border-gray-300">123</td>
-                            <td class="py-2 px-4 border-r border-gray-300">12</td>
-                            <td class="py-2 px-4 border-r border-gray-300">0</td>
-                            <td class="py-2 px-4 border-r border-gray-300 text-center">
-                                status</a>
-                            </td>
+                    <tbody class="text-gray-600 text-sm font-light">
+                        <tr class="border-b border-gray-300 hover:bg-gray-100">
+                            <td class="py-3 px-6 border-r border-gray-300">1</td>
+                            <td class="py-3 px-6 border-r border-gray-300">A001</td>
+                            <td class="py-3 px-6 border-r border-gray-300">Finance</td>
+                            <td class="py-3 px-6 border-r border-gray-300">Accounting</td>
+                            <td class="py-3 px-6 border-r border-gray-300">Payroll</td>
+                            <td class="py-3 px-6 border-r border-gray-300">John Doe</td>
+                            <td class="py-3 px-6 border-r border-gray-300">Jane Smith</td>
+                        </tr>
+                        <tr class="border-b border-gray-300 hover:bg-gray-100">
+                            <td class="py-3 px-6 border-r border-gray-300">2</td>
+                            <td class="py-3 px-6 border-r border-gray-300">A002</td>
+                            <td class="py-3 px-6 border-r border-gray-300">HR</td>
+                            <td class="py-3 px-6 border-r border-gray-300">Recruitment</td>
+                            <td class="py-3 px-6 border-r border-gray-300">Talent Acquisition</td>
+                            <td class="py-3 px-6 border-r border-gray-300">Jane Smith</td>
+                            <td class="py-3 px-6 border-r border-gray-300">Jane Smith</td>
                         </tr>
                         <!-- Add more rows as needed -->
                     </tbody>
                 </table>
             </div>
+        </div>
+    </div>
+
+    <!-- Pagination Section - Aligned to the Right -->
+    <div class="mt-4 ml-3 mr-3 flex justify-between items-center">
+            <div class="text-sm text-gray-600">
+                Showing 1 to 10 of 489 entries
             </div>
 
-            <div class="flex justify-end items-center mt-4 space-x-2">
-            <button class="px-3 py-1 bg-gray-300 text-gray-700 rounded-md hover:bg-gray-400 text-sm" id="previousBtn">Previous</button>
-            <div class="flex items-center space-x-2" id="pageNumbers"></div>
-            <button class="px-3 py-1 bg-gray-300 text-gray-700 rounded-md hover:bg-gray-400 text-sm" id="nextBtn">Next</button>
+    <div class="flex justify-end items-center space-x-2 ml-auto">
+            <div class="ml-4 flex space-x-2">
+                <button class="px-3 py-1 bg-gray-300 text-gray-700 rounded-md hover:bg-gray-400 text-sm" id="previousBtn">Previous</button>
+                <div class="mr-1 flex items-center space-x-2">
+                    <div id="pageNumbers" class="flex space-x-1">
+                        <!-- Page numbers will be dynamically inserted here -->
+                    </div>
+                </div>
+                <button class="px-3 py-1 bg-gray-300 text-gray-700 rounded-md hover:bg-gray-400 text-sm" id="nextBtn">Next</button>
         </div>
-        </div>
+    </div>
 
-        <!-- Pagination Section -->
+    <script>
+        let currentPage = 1;
+        const totalPages = 3; // Total number of pages (can be updated dynamically)
+        const previousBtn = document.getElementById('previousBtn');
+        const nextBtn = document.getElementById('nextBtn');
+        const pageNumbersContainer = document.getElementById('pageNumbers');
+        const tableContent = document.getElementById('tableContent');
+        
+        // Dynamically generate page numbers
+        function generatePageNumbers() {
+            pageNumbersContainer.innerHTML = '';  // Clear previous page numbers
+            for (let i = 1; i <= totalPages; i++) {
+                const pageButton = document.createElement('button');
+                pageButton.textContent = i;
+                pageButton.classList.add('px-3', 'py-1', 'border', 'border-gray-300', 'rounded-md', 'hover:bg-gray-400', 'text-sm');
+                pageButton.addEventListener('click', () => goToPage(i));
+                pageNumbersContainer.appendChild(pageButton);
+            }
+        }
+
+        // Update page numbers and highlight current page
+        function updatePageInfo() {
+            const pageButtons = document.querySelectorAll('#pageNumbers button');
+            pageButtons.forEach(button => {
+                button.classList.remove('bg-gray-400', 'text-white'); // Remove highlight from all buttons
+                if (parseInt(button.textContent) === currentPage) {
+                    button.classList.add('bg-gray-400', 'text-white'); // Highlight the current page
+                }
+            });
+        }
+
+        // Go to a selected page
+        function goToPage(page) {
+            currentPage = page;
+            updatePageInfo();
+        }
+
+        // Handle Previous and Next Button actions
+        previousBtn.addEventListener('click', () => {
+            if (currentPage > 1) {
+                currentPage--;
+                updatePageInfo();
+            }
+        });
+
+        nextBtn.addEventListener('click', () => {
+            if (currentPage < totalPages) {
+                currentPage++;
+                updatePageInfo();
+            }
+        });
+    </script>
+
+    <!-- Script Section -->
+    <script>
+        function calculateTotalsAndAverages() {
+            const table = document.getElementById('dataTable');
+            const rows = table.querySelectorAll('tbody tr');
+            
+            let totalIssued = 0, totalPending = 0, totalAmount = 0, totalAA = 0, totalMP = 0, totalAR = 0, totalCC = 0, totalCP = 0, totalAVE_CS = 0, totalAVE_SA = 0, totalNR = 0;
+            const rowCount = rows.length;
+
+            rows.forEach(row => {
+                const cells = row.querySelectorAll('td');
+                totalIssued += parseFloat(cells[2].textContent.replace(/,/g, '')) || 0;
+                totalPending += parseFloat(cells[3].textContent.replace(/,/g, '')) || 0;
+                totalAmount += parseFloat(cells[4].textContent.replace(/,/g, '')) || 0;
+                totalAA += parseFloat(cells[5].textContent) || 0;
+                totalMP += parseFloat(cells[6].textContent) || 0;
+                totalAR += parseFloat(cells[7].textContent.replace('%', '')) || 0;
+                totalCC += parseFloat(cells[8].textContent) || 0;
+                totalCP += parseFloat(cells[9].textContent) || 0;
+                totalAVE_CS += parseFloat(cells[10].textContent.replace(/,/g, '')) || 0;
+                totalAVE_SA += parseFloat(cells[11].textContent.replace(/,/g, '')) || 0;
+                totalNR += parseFloat(cells[12].textContent) || 0;
+            });
+
+            // Calculate Averages
+            const avgIssued = totalIssued / rowCount;
+            const avgPending = totalPending / rowCount;
+            const avgAmount = totalAmount / rowCount;
+            const avgAA = totalAA / rowCount;
+            const avgMP = totalMP / rowCount;
+            const avgAR = totalAR / rowCount;
+            const avgCC = totalCC / rowCount;
+            const avgCP = totalCP / rowCount;
+            const avgAVE_CS = totalAVE_CS / rowCount;
+            const avgAVE_SA = totalAVE_SA / rowCount;
+            const avgNR = totalNR / rowCount;
+
+            // Insert totals into the table
+            document.getElementById('totalIssued').textContent = totalIssued.toLocaleString();
+            document.getElementById('totalPending').textContent = totalPending.toLocaleString();
+            document.getElementById('totalAmount').textContent = totalAmount.toLocaleString();
+            document.getElementById('totalAA').textContent = totalAA.toFixed(2);
+            document.getElementById('totalMP').textContent = totalMP.toFixed(2);
+            document.getElementById('totalAR').textContent = totalAR.toFixed(2) + '%';
+            document.getElementById('totalCC').textContent = totalCC.toFixed(2);
+            document.getElementById('totalCP').textContent = totalCP.toFixed(2);
+            document.getElementById('totalAVE_CS').textContent = totalAVE_CS.toLocaleString();
+            document.getElementById('totalAVE_SA').textContent = totalAVE_SA.toLocaleString();
+            document.getElementById('totalNR').textContent = totalNR.toFixed(2);
+
+            // Insert averages into the table
+            document.getElementById('averageIssued').textContent = avgIssued.toLocaleString();
+            document.getElementById('averagePending').textContent = avgPending.toLocaleString();
+            document.getElementById('averageAmount').textContent = avgAmount.toLocaleString();
+            document.getElementById('averageAA').textContent = avgAA.toFixed(2);
+            document.getElementById('averageMP').textContent = avgMP.toFixed(2);
+            document.getElementById('averageAR').textContent = avgAR.toFixed(2) + '%';
+            document.getElementById('averageCC').textContent = avgCC.toFixed(2);
+            document.getElementById('averageCP').textContent = avgCP.toFixed(2);
+            document.getElementById('averageAVE_CS').textContent = avgAVE_CS.toLocaleString();
+            document.getElementById('averageAVE_SA').textContent = avgAVE_SA.toLocaleString();
+            document.getElementById('averageNR').textContent = avgNR.toFixed(2);
+        }
+
+        window.onload = function() {
+            calculateTotalsAndAverages();
+        }
+    </script>
+		           
+        </div>
         
     </div>
-            
+    </div>
 
-        
+  
 </body>
 </html>

@@ -412,7 +412,9 @@
         <h2 class="text-4xl font-semibold mb-4">BRANCH TOP AGENTS MONTH-TO-DATE REPORT</h2>
         
         <h1 class="container mx-auto max-w-8xl bg-blue-900 p-2 rounded-l rounded-r shadow-md mb-3">
-        <p class="ml-2 text-yellow-300 hover:underline hover:text-white">Switch to YTD</p> </h1>
+        <a href="{{ route('branchHonorRollsYTD') }}">
+            <p class="ml-4 text-yellow-300 hover:underline hover:text-white">Switch To YTD</p> </h1>
+        </a> </h1>
 
         
         <div class="container mx-auto max-w-8xl bg-white-300 p-3 rounded-l shadow-md">

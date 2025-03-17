@@ -17,27 +17,29 @@
 
         /* Sidebar Style */
         .sidebar {
-            position: fixed;
-            top: 72px; /* Height of the navbar */
-            left: 0;
-            width: 280px;
-            height: calc(100% - 72px);
-            background-image: linear-gradient(to bottom, #1e3a8a, #1d4ed8);
-            color: white;
-            box-shadow: 0 5px rgba(0, 0, 0, 0.1), inset 0 4px 8px rgba(0, 0, 0, 0.3); /* Added inner shadow */
-            z-index: 1000;
-            padding: 20px;
-            transform: translateX(-100%);
-            opacity: 0;
-            visibility: hidden;
-            transition: transform 0.4s ease, opacity 0.1s ease;
-            overflow-y: auto;
+    position: fixed;
+    top: 72px; /* Height of the navbar */
+    left: 0;
+    width: 280px;
+    height: calc(100% - 72px);
+    background-image: linear-gradient(to bottom, #1e3a8a, #1d4ed8);
+    color: white;
+    box-shadow: 0 5px rgba(0, 0, 0, 0.1), inset 0 4px 8px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+    padding: 20px;
+    overflow-y: auto;
+    
+    /* Sidebar is visible by default */
+        transform: translateX(0);
+         opacity: 1;
+         visibility: visible;
+            transition: transform 0.4s ease, opacity 0.3s ease, visibility 0.3s ease;
         }
 
-        .sidebar.show {
-            transform: translateX(0);
-            opacity: 1;
-            visibility: visible;
+        .sidebar.hide {
+            transform: translateX(-100%);
+             opacity: 0;
+            visibility: hidden;
         }
 
         /* Highlight menu items on hover */
@@ -73,28 +75,65 @@
             opacity: 1;
         }
 
-        /* Highlight dropdown items on hover */
-        .dropdown a:hover {
-            color: white;
+        .sidebar.hide {
+            transform: translateX(-100%);
+            opacity: 0;
+            visibility: hidden;
         }
+
+        /* Highlight menu items on hover */
+        .menu-item:hover .menu-text {
+            color: #f8e9a1;
+        }
+
+        /* Custom scrollbar */
+        .sidebar::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        .sidebar::-webkit-scrollbar-thumb {
+            background: #dbd8d8;
+            border-radius: 10px;
+        }
+
+        .sidebar::-webkit-scrollbar-thumb:hover {
+            background: #6b7280;
+        }
+
+        /* Dropdown Styles */
+        .dropdown {
+            transition: max-height 0.3s ease-out, opacity 0.3s ease-out;
+            max-height: 0;
+            opacity: 0;
+            overflow: hidden;
+            display: block;
+        }
+
+        .dropdown.show {
+            max-height: 500px;
+            opacity: 1;
+        }
+        
+        .dropdown li:hover a {
+    color: #f8e9a1; /* Change this to your desired hover color */
+    background-color: rgba(255, 255, 255, 0.1); /* Optional: Add a background color on hover */
+    border-radius: 4px; /* Optional: Add rounded corners */
+}
 
         /* Main content styles */
         .content {
             transition: margin-left 0.4s ease, margin-right 0.4s ease;
             margin: 0 auto;
             max-width: 1500px;
-            padding: 0px;
-            padding-bottom: 20px;
-            margin-top: 15px;
-            margin-left: 20px;
-            margin-right: 20px;
+            padding: 20px;
+            margin-left: 295px; /* Adjust based on sidebar width */
         }
 
         .content.shift {
-            margin-left: 295px; /* Adjust based on sidebar width */
-            margin-right: 20px;
+            margin-left: 20px; /* When sidebar is hidden */
         }
     </style>
+
 </head>
 <body>
     <!-- Sticky Navigation Bar -->
@@ -103,8 +142,19 @@
         <button class="mr-3 bg-transparent text-white p-2 rounded-md relative hover:bg-blue-800" onclick="toggleSidebar()">
         <i class="fas fa-bars text-white hover:text-white"></i>
     </button>
-            <img src="images/bcdqlogo.png" alt="bcdq log" class="h-10 w-10 mr-4">
-            <span class="text-white text-lg font-semibold">BLUE CHALCEDONY QUARTZ BRANCH</span>
+           
+    <a href="{{ route('home') }}">
+            <button>
+                <img src="images/bcdqlogo.png" alt="bcdq logo" class="h-10 w-10 mr-4">
+            </button>
+            
+        </a>
+        <a href="{{ route('home') }}">
+            <button>
+                <span class="text-white text-lg font-semibold">BLUE CHALCEDONY QUARTZ BRANCH</span>
+            </button>
+        </a>
+
         </div>
 
         <div class="flex items-center space-x-6">
@@ -118,7 +168,6 @@
             <i class="fas fa-bell text-white px-0"></i>
             <i class="fas fa-user text-white px-2.5"></i>
         </div>
-
         
         <style>
          input::placeholder {
@@ -127,6 +176,46 @@
         </style>
 
     </nav>
+
+      <script>
+       function toggleSidebar() {
+            const sidebar = document.getElementById("sidebar");
+            const content = document.getElementById("main-content");
+
+            if (sidebar.classList.contains("hide")) {
+                sidebar.classList.remove("hide");
+                content.classList.remove("shift"); // Shift content when sidebar is visible
+            } else {
+                sidebar.classList.add("hide");
+                content.classList.add("shift"); // Shift content when sidebar is hidden
+            }
+        }
+
+        let currentOpenDropdown = null;
+
+        function toggleDropdown(dropdownId) {
+            const dropdown = document.getElementById(dropdownId);
+
+            if (currentOpenDropdown && currentOpenDropdown !== dropdown) {
+                currentOpenDropdown.classList.remove('show');
+                currentOpenDropdown.style.maxHeight = '0';
+                currentOpenDropdown.style.opacity = '0';
+            }
+
+            if (dropdown.classList.contains('show')) {
+                dropdown.classList.remove('show');
+                dropdown.style.maxHeight = '0';
+                dropdown.style.opacity = '0';
+            } else {
+                dropdown.classList.add('show');
+                dropdown.style.maxHeight = '500px';
+                dropdown.style.opacity = '1';
+            }
+
+            currentOpenDropdown = dropdown.classList.contains('show') ? dropdown : null;
+        }
+        
+    </script>
 
     <!-- Sidebar -->
     <div class="sidebar" id="sidebar">

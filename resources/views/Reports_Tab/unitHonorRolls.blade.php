@@ -414,7 +414,9 @@
         <div class="container mx-auto rounded-md shadow-sm bg-white border pl-3 pr-3 pt-3 pb-3 mb-2 flex flex-col space-y-5">
 
         <h1 class="container mx-auto max-w-8xl bg-blue-900 p-3 rounded-l rounded-r shadow-md">
-        <p class="ml-2 text-yellow-300 hover:underline hover:text-white">Switch to YTD</p> </h1>
+        <a href="{{ route('unitHonorRollsYTD') }}">
+            <p class="ml-4 text-yellow-300 hover:underline hover:text-white">Switch To YTD</p> </h1>
+        </a> </h1>
 
         <div class="container mx-auto max-w-8xl bg-white-300 p-4 rounded-l shadow-md">
             <div class="overflow-x-auto">
