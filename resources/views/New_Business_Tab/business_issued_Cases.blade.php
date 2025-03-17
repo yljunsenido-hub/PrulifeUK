@@ -291,11 +291,11 @@
                     <i class="fas fa-chevron-down px-1 mb-custom-mb-1 mr-1 text-xs"></i>
                 </button>
                 <ul class="dropdown" id="branchOperationsDropdown">
-                    <li><a href="{{ route('agentMTD') }}" class="text-md text-gray-300 block pl-8 py-3">Upload Issued</a></li>
-                    <li><a href="{{ route('agentMTD') }}" class="text-md text-gray-300 block pl-8 py-3">Upload NAP</a></li>
-                    <li><a href="{{ route('agentMTD') }}" class="text-md text-gray-300 block pl-8 py-3">Upload Due List</a></li>
-                    <li><a href="{{ route('agentMTD') }}" class="text-md text-gray-300 block pl-8 py-3">Upload Batch Photos</a></li>
-                    <li><a href="{{ route('agentMTD') }}" class="text-md text-gray-300 block pl-8 py-3 mb-6">Update Submission/Policy Record</a></li>
+                    <li><a href="{{ route('upload_issued') }}" class="text-md text-gray-300 block pl-8 py-3">Upload Issued</a></li>
+                    <li><a href="{{ route('upload_nap') }}" class="text-md text-gray-300 block pl-8 py-3">Upload NAP</a></li>
+                    <li><a href="{{ route('upload_due_list') }}" class="text-md text-gray-300 block pl-8 py-3">Upload Due List</a></li>
+                    <li><a href="{{ route('upload_batch_photo') }}" class="text-md text-gray-300 block pl-8 py-3">Upload Batch Photos</a></li>
+                    <li><a href="{{ route('update_submission_policy_record') }}" class="text-md text-gray-300 block pl-8 py-3 mb-6">Update Submission/Policy Record</a></li>
                 </ul>
                 <li class="menu-item">
                 <button class="text-gray-400 w-full text-left py-1 pb-3" 
@@ -318,9 +318,10 @@
 
     <!-- Main Content Area -->
     <div id="main-content" class="content">
-        <div class="container mx-auto max-w-7xl bg-white p-6 rounded-lg shadow-md">
+        <div class="container mx-auto max-w-9xl bg-white p-6 rounded-lg shadow-md">
             <h2 class="text-4xl font-semibold mb-6">Agents Submission for Approval</h2>
            
+            <div class="p-6 bg-white rounded-md shadow-md">
             <div class="flex items-center justify-between mb-4">
                 <div class="flex items-center">
                     <label for="entries" class="mr-2 text-sm text-gray-600">Show entries:</label>
@@ -378,6 +379,8 @@
                     </tbody>
                 </table>
             </div>
+            </div>
+            
             <div class="flex justify-end items-center mt-4 space-x-2">
             <button class="px-3 py-1 bg-gray-300 text-gray-700 rounded-md hover:bg-gray-400 text-sm" id="previousBtn">Previous</button>
             <div class="flex items-center space-x-2" id="pageNumbers"></div>
