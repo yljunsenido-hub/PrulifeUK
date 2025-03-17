@@ -144,7 +144,7 @@
            
     <a href="{{ route('home') }}">
             <button>
-                <img src="images/bcdqlogo.png" alt="bcdq logo" class="h-8, mr-4">
+                <img src="images/bcdqlogo.png" alt="bcdq logo" class="h-10 w-10 mr-4">
             </button>
             
         </a>
