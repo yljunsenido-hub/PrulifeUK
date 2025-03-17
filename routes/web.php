@@ -73,17 +73,33 @@ Route::get('/branchHonorRollsMTD'  , function () {
     return view('Reports_Tab/branchHonorRollsMTD');
 })->name('branchHonorRollsMTD');
 
+Route::get('/branchHonorRollsYTD'  , function () {
+    return view('Reports_Tab/branchHonorRollsYTD');
+})->name('branchHonorRollsYTD');
+
 Route::get('/unitHonorRolls'  , function () {
     return view('Reports_Tab/unitHonorRolls');
 })->name('unitHonorRolls');
+
+Route::get('/unitHonorRollsYTD'  , function () {
+    return view('Reports_Tab/unitHonorRollsYTD');
+})->name('unitHonorRollsYTD');
 
 Route::get('/unitSummary'  , function () {
     return view('Reports_Tab/unitSummary');
 })->name('unitSummary');
 
+Route::get('/unitSummaryYTD'  , function () {
+    return view('Reports_Tab/unitSummaryYTD');
+})->name('unitSummaryYTD');
+
 Route::get('/subUnitSummary'  , function () {
     return view('Reports_Tab/subUnitSummary');
 })->name('subUnitSummary');
+
+Route::get('/subUnitSummaryYTD'  , function () {
+    return view('Reports_Tab/subUnitSummaryYTD');
+})->name('subUnitSummaryYTD');
 
 Route::get('/branchSummary'  , function () {
     return view('Reports_Tab/branchSummary');
@@ -92,6 +108,10 @@ Route::get('/branchSummary'  , function () {
 Route::get('/MDRT'  , function () {
     return view('Reports_Tab/MDRT');
 })->name('MDRT');
+
+Route::get('/MDRTpersonal'  , function () {
+    return view('Reports_Tab/MDRT_personal');
+})->name('MDRT_personal');
 
 Route::get('/easyReports'  , function () {
     return view('Reports_Tab/easyReports');

@@ -410,12 +410,13 @@
     <div id="main-content" class="content">
 
 	<div class="container mx-auto max-w-8xl bg-white p-6 rounded-lg shadow-md">
-        <h2 class="text-4xl font-semibold mb-4">MDRT Tracker</h2>
+        <h2 class="text-4xl font-semibold mb-4">MDRT PERSONAL TRACKER</h2>
         
         <h1 class="container mx-auto max-w-8xl bg-blue-900 p-2 rounded-l rounded-r shadow-md mb-3">
-        <a href="{{ route('MDRT_personal') }}">
-            <p class="ml-2 text-yellow-300 hover:underline hover:text-white">Go to Personal Tracker</p> </h1>
+        <a href="{{ route('MDRT') }}">
+            <p class="ml-2 text-yellow-300 hover:underline hover:text-white">Go to Assumed Tracker</p> </h1>
         </a>
+        
         
 
         <div class="mb-4 p-3 bg-white rounded-md shadow-md">

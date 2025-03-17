@@ -415,7 +415,9 @@
 
     <!-- Year and Month Selection Section -->
     <div class="container mx-auto rounded-md shadow-sm bg-blue-900 border pt-2 pb-2 flex items-center justify-between"> <!-- Added justify-between -->
-    <p class="ml-3 text-yellow-300">Year-to-Date</p>
+        <a href="{{ route('unitSummaryYTD') }}">
+            <p class="ml-4 text-yellow-300 hover:underline hover:text-white">Switch To YTD</p> </h1>
+        </a>
     <div class="flex space-x-5 mr-3"> 
         <select id="yearSelect" class="border border-gray-300 rounded-md p-1 w-40">
             <option value="10">2025</option>

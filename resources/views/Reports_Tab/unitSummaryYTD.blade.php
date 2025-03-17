@@ -3,10 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard with Sidebar</title>
+    <title>Unit Production Reports</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-   
     <style>
         /* Sticky Navbar */
         nav {
@@ -217,8 +216,8 @@
 
     </nav>
 
-        <!-- Sidebar -->
-        <div class="sidebar" id="sidebar">
+     <!-- Sidebar -->
+     <div class="sidebar" id="sidebar">
        
        <ul>
            <li class="menu-item text-white w-full text-left py-1 pb-2">
@@ -405,94 +404,181 @@
            </li>
        </ul>
    </div>
-
+    
     <!-- Main Content Area -->
     <div id="main-content" class="content">
 
 	<div class="container mx-auto max-w-8xl bg-white p-6 rounded-lg shadow-md">
-        <h2 class="text-4xl font-semibold mb-4">MDRT Tracker</h2>
+        <h2 class="text-4xl font-semibold mb-4">Unit Production Reports</h2>
         
-        <h1 class="container mx-auto max-w-8xl bg-blue-900 p-2 rounded-l rounded-r shadow-md mb-3">
-        <a href="{{ route('MDRT_personal') }}">
-            <p class="ml-2 text-yellow-300 hover:underline hover:text-white">Go to Personal Tracker</p> </h1>
+    <div class="container mx-auto rounded-md shadow-sm bg-white border pl-3 pr-3 pt-3 pb-3 mb-5 flex flex-col space-y-5">
+
+    <!-- Year and Month Selection Section -->
+    <div class="container mx-auto rounded-md shadow-sm bg-blue-900 border pt-2 pb-2 flex items-center justify-between"> <!-- Added justify-between -->
+        <a href="{{ route('unitSummary') }}">
+            <p class="ml-4 text-yellow-300 hover:underline hover:text-white">Switch To MTD</p> </h1>
         </a>
-        
+    <div class="flex space-x-5 mr-3"> 
+        <select id="yearSelect" class="border border-gray-300 rounded-md p-1 w-40">
+            <option value="10">2025</option>
+            <option value="25">2024</option>
+            <option value="50">2023</option>
+            <option value="100">2022</option>
+            <option value="10">2021</option>
+            <option value="10">2020</option>
+            <option value="25">2019</option>
+        </select>
+        <select id="monthSelect" class="border border-gray-300 rounded-md p-1 w-40">
+            <option value="01">January</option>
+            <option value="02">February</option>
+            <option value="03">March</option>
+            <option value="04">April</option>
+            <option value="05">May</option>
+            <option value="06">June</option>
+            <option value="07">July</option>
+            <option value="08">August</option>
+            <option value="09">September</option>
+            <option value="10">October</option>
+            <option value="11">November</option>
+            <option value="12">December</option>
+        </select>
+    </div>
+</div>
 
-        <div class="mb-4 p-3 bg-white rounded-md shadow-md">
-        <div class="overflow-x-auto">
-            <table class="min-w-full bg-white border border-gray-300">
-                <thead>
-                    <tr class="bg-gray-200 text-gray-600 uppercase text-sm leading-normal">
-                        <th class="py-3 px-6 text-left">Policy No.</th>
-                        <th class="py-3 px-6 text-left">Client</th>
-                        <th class="py-3 px-6 text-left">Mode</th>
-                        <th class="py-3 px-6 text-left">Effectivity</th>
-                        <th class="py-3 px-6 text-left">JAN</th>
-                        <th class="py-3 px-6 text-left">FEB</th>
-                        <th class="py-3 px-6 text-left">MAR</th>
-                        <th class="py-3 px-6 text-left">APR</th>
-                        <th class="py-3 px-6 text-left">MAY</th>
-                        <th class="py-3 px-6 text-left">JUN</th>
-                        <th class="py-3 px-6 text-left">JUL</th>
-                        <th class="py-3 px-6 text-left">AUG</th>
-                        <th class="py-3 px-6 text-left">SEP</th>
-                        <th class="py-3 px-6 text-left">OCT</th>
-                        <th class="py-3 px-6 text-left">NOV</th>
-                        <th class="py-3 px-6 text-left">DEC</th>
-                    </tr>
-                </thead>
-                <tbody class="text-gray-600 text-sm font-semibold">
-                    <tr class="border-b border-gray-300 hover:bg-gray-100">
-                        <td class="py-3 px-6">MONTHLY TOTAL</td>
-                        <td class="py-3 px-6"></td>
-                        <td class="py-3 px-6"></td>
-                        <td class="py-3 px-6"></td>
-                        <td class="py-3 px-6">0.00</td>
-                        <td class="py-3 px-6">0.00</td>
-                        <td class="py-3 px-6">0.00</td>
-                        <td class="py-3 px-6">0.00</td>
-                        <td class="py-3 px-6">0.00</td>
-                        <td class="py-3 px-6">0.00</td>
-                        <td class="py-3 px-6">0.00</td>
-                        <td class="py-3 px-6">0.00</td>
-                        <td class="py-3 px-6">0.00</td>
-                        <td class="py-3 px-6">0.00</td>
-                        <td class="py-3 px-6">0.00</td>
-                        <td class="py-3 px-6">0.00</td>
-                    </tr>
-                    <!-- Overall summary row -->
-                    <tr class="font-semibold">
-                        <td class="py-3 px-6" colspan="15">ASSUMED TOTAL FYP</td>
-                        <td class="py-3 px-6">0.00</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-        </div>
+    <!-- Show Entries and Search Section -->
+    <div class="flex items-center justify-between mb-3">
+                <div class="flex items-center mr-3">
+                    <label for="entries" class="mr-2 pl-1 text-sm text-gray-600">Show entries:</label>
+                    <select id="entries" class="border border-gray-300 rounded-md p-1 text-sm">
+                        <option value="10">10</option>
+                        <option value="25">25</option>
+                        <option value="50">50</option>
+                        <option value="100">100</option>
+                    </select>
+                </div>
 
-<!-- Pagination Section - Aligned to the Right -->
-<div class="flex justify-end items-center mt-4 space-x-2 ml-auto">
-            <button class="px-3 py-1 bg-gray-300 text-gray-700 rounded-md hover:bg-gray-400 text-sm" id="previousBtn">Previous</button>
-
-            <div class="mr-1 flex items-center space-x-2">
-                <div id="pageNumbers" class="flex space-x-1">
-                    <!-- Page numbers will be dynamically inserted here -->
+                <div class="flex items-center">
+                    <label for="search" class="mr-2 text-sm text-gray-600">Search:</label>
+                    <input type="text" id="search" class="px-3 py-1 border border-gray-300 rounded-md shadow-sm text-sm" placeholder="Search...">
                 </div>
             </div>
 
-            <button class="px-3 py-1 bg-gray-300 text-gray-700 rounded-md hover:bg-gray-400 text-sm" id="nextBtn">Next</button>
-        </div>
+    <!-- Data Table Section -->
+    <div class="overflow-x-auto px-5 bg-white-100 p-3 rounded-l rounded-r shadow-md mb-5 pb-5">
+        <table id="dataTable" class="min-w-full bg-white border border-gray-300">
+            <thead>
+                <tr class="bg-gray-200 text-gray-600 uppercase text-sm leading-normal">
+                    <th class="py-3 px-6 text-left border-r border-gray-300">Branch</th>
+                    <th class="py-3 px-6 text-left border-r border-gray-300">Unit</th>
+                    <th class="py-3 px-6 text-left border-r border-gray-300">Issued</th>
+                    <th class="py-3 px-6 text-left border-r border-gray-300">Pending</th>
+                    <th class="py-3 px-6 text-left border-r border-gray-300">Total</th>
+                    <th class="py-3 px-6 text-left border-r border-gray-300">AAA</th>
+                    <th class="py-3 px-6 text-left border-r border-gray-300">MP</th>
+                    <th class="py-3 px-6 text-left border-r border-gray-300">AAR</th>
+                    <th class="py-3 px-6 text-left border-r border-gray-300">CC</th>
+                    <th class="py-3 px-6 text-left border-r border-gray-300">ACP</th>
+                    <th class="py-3 px-6 text-left border-r border-gray-300">AVE. CS</th>
+                    <th class="py-3 px-6 text-left border-r border-gray-300">AVE. SA</th>
+                </tr>
+            </thead>
+            <tbody class="text-gray-600 text-sm font-light">
+                <tr class="border-b border-gray-300 hover:bg-gray-100">
+                    <td class="py-3 px-6 border-r border-gray-300">BCDQ</td>
+                    <td class="py-3 px-6 border-r border-gray-300">Blue Royals</td>
+                    <td class="py-3 px-6 border-r border-gray-300">730,290.52</td>
+                    <td class="py-3 px-6 border-r border-gray-300">0.00</td>
+                    <td class="py-3 px-6 border-r border-gray-300">730,290.52</td>
+                    <td class="py-3 px-6 border-r border-gray-300">9.00</td>
+                    <td class="py-3 px-6 border-r border-gray-300">75.00</td>
+                    <td class="py-3 px-6 border-r border-gray-300">12.00%</td>
+                    <td class="py-3 px-6 border-r border-gray-300">12.00</td>
+                    <td class="py-3 px-6 border-r border-gray-300">1.33</td>
+                    <td class="py-3 px-6 border-r border-gray-300">60,857.54</td>
+                    <td class="py-3 px-6 border-r border-gray-300">1,969,264.17</td>
+                    <td class="py-3 px-6 border-r border-gray-300">0.00</td>
+                </tr>
+                <tr class="border-b border-gray-300 hover:bg-gray-100">
+                    <td class="py-3 px-6 border-r border-gray-300">BCDQ</td>
+                    <td class="py-3 px-6 border-r border-gray-300">Blue Royals</td>
+                    <td class="py-3 px-6 border-r border-gray-300">730,290.52</td>
+                    <td class="py-3 px-6 border-r border-gray-300">0.00</td>
+                    <td class="py-3 px-6 border-r border-gray-300">730,290.52</td>
+                    <td class="py-3 px-6 border-r border-gray-300">9.00</td>
+                    <td class="py-3 px-6 border-r border-gray-300">75.00</td>
+                    <td class="py-3 px-6 border-r border-gray-300">12.00%</td>
+                    <td class="py-3 px-6 border-r border-gray-300">12.00</td>
+                    <td class="py-3 px-6 border-r border-gray-300">1.33</td>
+                    <td class="py-3 px-6 border-r border-gray-300">60,857.54</td>
+                    <td class="py-3 px-6 border-r border-gray-300">1,969,264.17</td>
+                    <td class="py-3 px-6 border-r border-gray-300">0.00</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <!-- Total Row -->
+                <tr id="totalRow" class="bg-gray-200 text-gray-600 uppercase text-sm leading-normal">
+                    <td class="py-3 px-6 text-left">Total</td>
+                    <td class="py-3 px-6 text-left border-r border-gray-300"></td>
+                    <td class="py-3 px-6 text-left border-r border-gray-300" id="totalIssued"></td>
+                    <td class="py-3 px-6 text-left border-r border-gray-300" id="totalPending"></td>
+                    <td class="py-3 px-6 text-left border-r border-gray-300" id="totalAmount"></td>
+                    <td class="py-3 px-6 text-left border-r border-gray-300" id="totalAA"></td>
+                    <td class="py-3 px-6 text-left border-r border-gray-300" id="totalMP"></td>
+                    <td class="py-3 px-6 text-left border-r border-gray-300" id="totalAR"></td>
+                    <td class="py-3 px-6 text-left border-r border-gray-300" id="totalCC"></td>
+                    <td class="py-3 px-6 text-left border-r border-gray-300" id="totalCP"></td>
+                    <td class="py-3 px-6 text-left border-r border-gray-300" id="totalAVE_CS"></td>
+                    <td class="py-3 px-6 text-left border-r border-gray-300" id="totalAVE_SA"></td>
+                    <td class="py-3 px-6 text-left border-r border-gray-300" id="totalNR"></td>
+                </tr>
+                <!-- Average Row -->
+                <tr id="averageRow" class="bg-gray-100 text-gray-600 uppercase text-sm leading-normal">
+                    <td class="py-3 px-6 text-left">Average</td>
+                    <td class="py-3 px-6 text-left border-r border-gray-300"></td>
+                    <td class="py-3 px-6 text-left border-r border-gray-300" id="averageIssued"></td>
+                    <td class="py-3 px-6 text-left border-r border-gray-300" id="averagePending"></td>
+                    <td class="py-3 px-6 text-left border-r border-gray-300" id="averageAmount"></td>
+                    <td class="py-3 px-6 text-left border-r border-gray-300" id="averageAA"></td>
+                    <td class="py-3 px-6 text-left border-r border-gray-300" id="averageMP"></td>
+                    <td class="py-3 px-6 text-left border-r border-gray-300" id="averageAR"></td>
+                    <td class="py-3 px-6 text-left border-r border-gray-300" id="averageCC"></td>
+                    <td class="py-3 px-6 text-left border-r border-gray-300" id="averageCP"></td>
+                    <td class="py-3 px-6 text-left border-r border-gray-300" id="averageAVE_CS"></td>
+                    <td class="py-3 px-6 text-left border-r border-gray-300" id="averageAVE_SA"></td>
+                    <td class="py-3 px-6 text-left border-r border-gray-300" id="averageNR"></td>
+                </tr>
+            </tfoot>
+        </table>
+    </div>
+</div>
 
+<!-- Pagination Section - Aligned to the Right -->
+
+<div class="mt-4 ml-3 mr-3 flex justify-between items-center">
+            <div class="text-sm text-gray-600">
+                Showing 1 to 10 of 489 entries
+            </div>
+            
+<div class="flex justify-end items-center space-x-2 ml-auto">
+            <div class="ml-4 flex space-x-2">
+                <button class="px-3 py-1 bg-gray-300 text-gray-700 rounded-md hover:bg-gray-400 text-sm" id="previousBtn">Previous</button>
+                <div class="mr-1 flex items-center space-x-2">
+                    <div id="pageNumbers" class="flex space-x-1">
+                        <!-- Page numbers will be dynamically inserted here -->
+                    </div>
+                </div>
+                <button class="px-3 py-1 bg-gray-300 text-gray-700 rounded-md hover:bg-gray-400 text-sm" id="nextBtn">Next</button>
+        </div>
     </div>
 
-    <!-- JavaScript Section -->
     <script>
         let currentPage = 1;
         const totalPages = 3; // Total number of pages (can be updated dynamically)
         const previousBtn = document.getElementById('previousBtn');
         const nextBtn = document.getElementById('nextBtn');
         const pageNumbersContainer = document.getElementById('pageNumbers');
-
+        const tableContent = document.getElementById('tableContent');
+        
         // Dynamically generate page numbers
         function generatePageNumbers() {
             pageNumbersContainer.innerHTML = '';  // Clear previous page numbers
@@ -536,17 +622,82 @@
                 updatePageInfo();
             }
         });
+    </script>
 
-        // Generate the initial page numbers on page load
-        window.onload = generatePageNumbers;
+    <!-- Script Section -->
+    <script>
+        function calculateTotalsAndAverages() {
+            const table = document.getElementById('dataTable');
+            const rows = table.querySelectorAll('tbody tr');
+            
+            let totalIssued = 0, totalPending = 0, totalAmount = 0, totalAA = 0, totalMP = 0, totalAR = 0, totalCC = 0, totalCP = 0, totalAVE_CS = 0, totalAVE_SA = 0, totalNR = 0;
+            const rowCount = rows.length;
+
+            rows.forEach(row => {
+                const cells = row.querySelectorAll('td');
+                totalIssued += parseFloat(cells[2].textContent.replace(/,/g, '')) || 0;
+                totalPending += parseFloat(cells[3].textContent.replace(/,/g, '')) || 0;
+                totalAmount += parseFloat(cells[4].textContent.replace(/,/g, '')) || 0;
+                totalAA += parseFloat(cells[5].textContent) || 0;
+                totalMP += parseFloat(cells[6].textContent) || 0;
+                totalAR += parseFloat(cells[7].textContent.replace('%', '')) || 0;
+                totalCC += parseFloat(cells[8].textContent) || 0;
+                totalCP += parseFloat(cells[9].textContent) || 0;
+                totalAVE_CS += parseFloat(cells[10].textContent.replace(/,/g, '')) || 0;
+                totalAVE_SA += parseFloat(cells[11].textContent.replace(/,/g, '')) || 0;
+                totalNR += parseFloat(cells[12].textContent) || 0;
+            });
+
+            // Calculate Averages
+            const avgIssued = totalIssued / rowCount;
+            const avgPending = totalPending / rowCount;
+            const avgAmount = totalAmount / rowCount;
+            const avgAA = totalAA / rowCount;
+            const avgMP = totalMP / rowCount;
+            const avgAR = totalAR / rowCount;
+            const avgCC = totalCC / rowCount;
+            const avgCP = totalCP / rowCount;
+            const avgAVE_CS = totalAVE_CS / rowCount;
+            const avgAVE_SA = totalAVE_SA / rowCount;
+            const avgNR = totalNR / rowCount;
+
+            // Insert totals into the table
+            document.getElementById('totalIssued').textContent = totalIssued.toLocaleString();
+            document.getElementById('totalPending').textContent = totalPending.toLocaleString();
+            document.getElementById('totalAmount').textContent = totalAmount.toLocaleString();
+            document.getElementById('totalAA').textContent = totalAA.toFixed(2);
+            document.getElementById('totalMP').textContent = totalMP.toFixed(2);
+            document.getElementById('totalAR').textContent = totalAR.toFixed(2) + '%';
+            document.getElementById('totalCC').textContent = totalCC.toFixed(2);
+            document.getElementById('totalCP').textContent = totalCP.toFixed(2);
+            document.getElementById('totalAVE_CS').textContent = totalAVE_CS.toLocaleString();
+            document.getElementById('totalAVE_SA').textContent = totalAVE_SA.toLocaleString();
+            document.getElementById('totalNR').textContent = totalNR.toFixed(2);
+
+            // Insert averages into the table
+            document.getElementById('averageIssued').textContent = avgIssued.toLocaleString();
+            document.getElementById('averagePending').textContent = avgPending.toLocaleString();
+            document.getElementById('averageAmount').textContent = avgAmount.toLocaleString();
+            document.getElementById('averageAA').textContent = avgAA.toFixed(2);
+            document.getElementById('averageMP').textContent = avgMP.toFixed(2);
+            document.getElementById('averageAR').textContent = avgAR.toFixed(2) + '%';
+            document.getElementById('averageCC').textContent = avgCC.toFixed(2);
+            document.getElementById('averageCP').textContent = avgCP.toFixed(2);
+            document.getElementById('averageAVE_CS').textContent = avgAVE_CS.toLocaleString();
+            document.getElementById('averageAVE_SA').textContent = avgAVE_SA.toLocaleString();
+            document.getElementById('averageNR').textContent = avgNR.toFixed(2);
+        }
+
+        window.onload = function() {
+            calculateTotalsAndAverages();
+        }
     </script>
 		           
-
         </div>
         
     </div>
     </div>
 
-  
+ 
 </body>
 </html>
