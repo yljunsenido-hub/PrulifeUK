@@ -318,9 +318,10 @@
 
     <!-- Main Content Area -->
     <div id="main-content" class="content">
-        <div class="container mx-auto max-w-7xl bg-white p-6 rounded-lg shadow-md">
+        <div class="container mx-auto max-w-9xl bg-white p-6 rounded-lg shadow-md">
             <h2 class="text-4xl font-semibold mb-6">Outreq Cases</h2>
            
+            <div class="p-4 bg-white rounded-md shadow-md">
             <div class="flex items-center justify-between mb-4">
                 <div class="flex items-center">
                     <label for="entries" class="mr-2 text-sm text-gray-600">Show entries:</label>
@@ -368,6 +369,8 @@
                     </tbody>
                 </table>
             </div>
+            </div>
+
             <div class="flex justify-end items-center mt-4 space-x-2">
             <button class="px-3 py-1 bg-gray-300 text-gray-700 rounded-md hover:bg-gray-400 text-sm" id="previousBtn">Previous</button>
             <div class="flex items-center space-x-2" id="pageNumbers"></div>

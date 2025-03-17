@@ -326,7 +326,7 @@
         <h1 class="pl-2 text-l text-yellow-300 font-semibold ">Month-to-date</h1>
 </div>
 
-<div class="mb-4 p-4 bg-white rounded-md shadow-md">
+    <div class="mb-4 p-4 bg-white rounded-md shadow-md">
             <div class="flex items-center justify-between mb-4">
                 <div class="flex items-center">
                     <label for="entries" class="mr-2 text-sm text-gray-600">Show entries:</label>

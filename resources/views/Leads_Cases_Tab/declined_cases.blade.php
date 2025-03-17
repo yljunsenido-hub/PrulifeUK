@@ -318,9 +318,10 @@
 
     <!-- Main Content Area -->
     <div id="main-content" class="content">
-        <div class="container mx-auto max-w-7xl bg-white p-6 rounded-lg shadow-md">
-            <h2 class="text-4xl font-semibold mb-9">Declined/Postponed Cases</h2>
+        <div class="container mx-auto max-w-9xl bg-white p-6 rounded-lg shadow-md">
+            <h2 class="text-4xl font-semibold mb-4">Declined/Postponed Cases</h2>
            
+            <div class="p-4 bg-white rounded-md shadow-md">
             <div class="flex items-center justify-between mb-4">
                 <div class="flex items-center">
                     <label for="entries" class="mr-2 text-sm text-gray-600">Show entries:</label>
@@ -328,6 +329,7 @@
                         <option value="10">10</option>
                         <option value="25">25</option>
                         <option value="50">50</option>
+                        <option value="100">100</option>
                     </select>
                 </div>
 
@@ -338,17 +340,18 @@
             </div>
 
             <!-- Table Content -->
-            <div id="tableContent" class="overflow-x-auto">
-                <table class="min-w-full bg-white border border-gray-300 text-sm">
+             <div class="flex item-center justify-between">
+            <div id="tableContent" class="overflow-x-auto w-full">
+                <table class="min-w-full bg-white border border-gray-300">
                     <thead>
                         <tr class="bg-blue-200 text-gray-600">
                             <th class="py-2 px-4 text-left border-r border-gray-300 w-1/12">ID</th>
                             <th class="py-2 px-4 text-left border-r border-gray-300 w-1/4">First Name</th>
                             <th class="py-2 px-4 text-left border-r border-gray-300 w-1/4">Last Name</th>
                             <th class="py-2 px-4 text-left border-r border-gray-300 w-1/4">Application No.</th>
-                            <th class="py-2 px-4 text-left border-r border-gray-300 w-1/4">Policy No.</th>
-                            <th class="py-2 px-4 text-left border-r border-gray-300 w-1/4">APE</th>
-                            <th class="py-2 px-4 text-left border-r border-gray-300 w-1/4">Status</th>
+                            <th class="py-2 px-4 text-left border-r border-gray-300 w-1/12">Policy No.</th>
+                            <th class="py-2 px-4 text-left border-r border-gray-300 w-1/12">APE</th>
+                            <th class="py-2 px-4 text-left border-r border-gray-300 w-1/12 text-center">Status</th>
                         </tr>
                     </thead>
                     <tbody class="text-gray-600">
@@ -360,14 +363,18 @@
                             <td class="py-2 px-4 border-r border-gray-300">123</td>
                             <td class="py-2 px-4 border-r border-gray-300">12</td>
                             <td class="py-2 px-4 border-r border-gray-300">0</td>
-                            <td class="py-2 px-4 border-r border-gray-300 text-center">
+                            <td class="py-2 px-8 border-r border-gray-300 text-center">
                                 status</a>
                             </td>
                         </tr>
                         <!-- Add more rows as needed -->
                     </tbody>
                 </table>
-            </div>
+        </div>
+        </div>
+        </div>
+
+
             <div class="flex justify-end items-center mt-4 space-x-2">
             <button class="px-3 py-1 bg-gray-300 text-gray-700 rounded-md hover:bg-gray-400 text-sm" id="previousBtn">Previous</button>
             <div class="flex items-center space-x-2" id="pageNumbers"></div>
