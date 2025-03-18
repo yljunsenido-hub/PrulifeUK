@@ -405,136 +405,131 @@
         </ul>
     </div>
     
-    <!-- Main Content Area -->
-    <div id="main-content" class="content">
-        <div class="container mx-auto max-w-7xl bg-white p-6 rounded-lg shadow-md">
-            <div class="container mx-auto p-8 content" id="main-content">
-        <h1 class="text-3xl font-semibold mb-6">Marketing Poster Maintenance</h1>
+     <!-- Main Content Area -->
+<div id="main-content" class="content">
+    <div class="container mx-auto max-w-7xl bg-white p-4 rounded-lg shadow-md">
+        <h1 class="text-3xl font-semibold mb-4">Marketing Poster Maintenance</h1>
+        <h1 class=" text-l font-semibold">
+    <a href="{{ route('poster_template_maintenance') }}" class="bg-blue-500 text-white rounded-lg px-4 py-2 inline-block hover:bg-blue-600 mb-4">Back to list</a>
+</h1>
+     
+        <!-- Template Selection -->
+        <div class="mb-2">
+            <label class="block text-lg font-medium">Template</label>
+            <select class="block w-full mt-1 rounded border border-gray-300 py-1 px-2 focus:outline-none focus:border-blue-500">
+                <option>Select Template</option>
+            </select>
+        </div>
 
-        
-            <div class="mb-4">
-                <button type="submit" class="bg-blue-500 text-white hover:underline px-4 py-2 rounded text-sm ">Back to list</button> 
-                
-            </div>
+        <div class="mb-2">
+            <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" alt="Preview" class="border border-gray-300 mt-1" style="height: 150px; width: 200px;">
+        </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-                <!-- Template Selection -->
-                <div>
-                    <label class="block text-lg font-medium">Template</label>
-                    <select class="block w-full mt-1 rounded border border-gray-300 py-2 px-3 focus:outline-none focus:border-blue-500">
-                        <option>Select Template</option>
-                    </select>
-                </div>
-                <div class="col-span-1 md:col-span-2">
-                    <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" alt="Preview" class="border border-gray-300 mt-1" style="height: 150px; width: 200px;">
-                </div>
-            </div>
+        <!-- Template for Unit -->
+        <div class="mb-2">
+            <label class="block text-lg font-medium">Template for your unit <br>(BLUE CHALCEDONY DIRECT)?</label>
+            <label class="inline-flex items-center mt-1">
+                <input type="checkbox" class="form-checkbox h-5 w-5 text-blue-500">
+                <span class="ml-2">Yes</span>
+            </label>
+        </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mt-4">
-                <!-- Template for Unit -->
-                <div>
-                    <label class="block text-lg font-medium">Template for your unit <br>(BLUE CHALCEDONY DIRECT)?</label>
-                    <label class="inline-flex items-center mt-2">
-                        <input type="checkbox" class="form-checkbox h-5 w-5 text-blue-500">
-                        <span class="ml-2">Yes</span>
-                    </label>
-                </div>
+        <!-- Featured Template -->
+        <div class="mb-2">
+            <label class="block text-lg font-medium">Featured Template</label>
+            <label class="inline-flex items-center mt-1">
+                <input type="checkbox" class="form-checkbox h-5 w-5 text-blue-500">
+                <span class="ml-2">Yes</span>
+            </label>
+        </div>
 
-                <!-- Featured Template -->
-                <div>
-                    <label class="block text-lg font-medium">Featured Template</label>
-                    <label class="inline-flex items-center mt-2">
-                        <input type="checkbox" class="form-checkbox h-5 w-5 text-blue-500">
-                        <span class="ml-2">Yes</span>
-                    </label>
-                </div>
+        <!-- Poster Title -->
+        <div class="mb-2">
+            <label class="block text-lg font-medium">Poster Title</label>
+            <input type="text" class="block w-full mt-1 rounded border border-gray-300 py-1 px-2 focus:outline-none focus:border-blue-500">
+        </div>
 
-                <!-- Poster Title -->
-                <div>
-                    <label class="block text-lg font-medium">Poster Title</label>
-                    <input type="text" class="block w-full mt-1 rounded border border-gray-300 py-2 px-3 focus:outline-none focus:border-blue-500">
-                </div>
-            </div>
+        <!-- Description -->
+        <div class="mb-2">
+            <label class="block text-lg font-medium">Description</label>
+            <textarea class="block w-full mt-1 rounded border border-gray-300 py-1 px-2 focus:outline-none focus:border-blue-500 h-16"></textarea>
+        </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mt-4">
-                <!-- Description -->
-                <div class="md:col-span-3">
-                    <label class="block text-lg font-medium">Description</label>
-                    <textarea class="block w-full mt-1 rounded border border-gray-300 py-2 px-3 focus:outline-none focus:border-blue-500 h-20"></textarea>
-                </div>
-            </div>
-
-            <!-- File Uploads -->
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mt-4">
-                <div>
+        <!-- File Uploads -->
+        <div class="mb-2">
+            <h2 class="text-lg font-medium mb-2">File Uploads</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                <!-- File Upload Item -->
+                <div class="flex flex-col mb-2">
                     <label class="block text-lg font-medium">Preview (JPG)</label>
-                    <label class="block mt-2">
-                        <input type="file" class="hidden">
-                        <span class="bg-gray-200 hover:bg-gray-300 text-gray-700 py-1 px-2 rounded cursor-pointer text-sm">Choose File</span>
-                        <span class="ml-2 text-gray-500">No file chosen</span>
-                    </label>
-                    <button class="bg-gray-200 hover:bg-gray-300 text-gray-700 py-1 px-2 rounded text-sm mt-2">Upload</button>
+                    <div class="flex items-center mt-1">
+                        <label class="block flex-grow">
+                            <input type="file" class="hidden">
+                            <span class="bg-gray-200 hover:bg-gray-300 text-gray-700 py-1 px-2 rounded cursor-pointer text-sm">Choose File</span>
+                            <span class="ml-2 text-gray-500">No file chosen</span>
+                        </label>
+                    </div>
+                     <button class="bg-gray-200 hover:bg-gray-300 text-gray-700 py-1 px-2 rounded text-sm mt-4 w-20">Upload</button> <!-- Fixed width -->
                 </div>
-
-                <div>
+                <!-- Repeat for other file uploads -->
+                <div class="flex flex-col mb-2">
                     <label class="block text-lg font-medium">Foreground (PNG)</label>
-                    <label class="block mt-2">
-                        <input type="file" class="hidden">
-                        <span class="bg-gray-200 hover:bg-gray-300 text-gray-700 py-1 px-2 rounded cursor-pointer text-sm">Choose File</span>
-                        <span class="ml-2 text-gray-500">No file chosen</span>
-                    </label>
-                    <button class="bg-gray-200 hover:bg-gray-300 text-gray-700 py-1 px-2 rounded text-sm mt-2">Upload</button>
+                    <div class="flex items-center mt-1">
+                        <label class="block flex-grow">
+                            <input type="file" class="hidden">
+                            <span class="bg-gray-200 hover:bg-gray-300 text-gray-700 py-1 px-2 rounded cursor-pointer text-sm">Choose File</span>
+                            <span class="ml-2 text-gray-500">No file chosen</span>
+                        </label>
+                    </div>
+                    <button class="bg-gray-200 hover:bg-gray-300 text-gray-700 py-1 px-2 rounded text-sm mt-4 w-20">Upload</button> <!-- Fixed width -->
                 </div>
-
-                <div>
+                <div class="flex flex-col mb-2">
                     <label class="block text-lg font-medium">Background (JPG)</label>
-                    <label class="block mt-2">
-                        <input type="file" class="hidden">
-                        <span class="bg-gray-200 hover:bg-gray-300 text-gray-700 py-1 px-2 rounded cursor-pointer text-sm">Choose File</span>
-                        <span class="ml-2 text-gray-500">No file chosen</span>
-                    </label>
-                    <button class="bg-gray-200 hover:bg-gray-300 text-gray-700 py-1 px-2 rounded text-sm mt-2">Upload</button>
+                    <div class="flex items-center mt-1">
+                        <label class="block flex-grow">
+                            <input type="file" class="hidden">
+                            <span class="bg-gray-200 hover:bg-gray-300 text-gray-700 py-1 px-2 rounded cursor-pointer text-sm">Choose File</span>
+                            <span class="ml-2 text-gray-500">No file chosen</span>
+                        </label>
+                    </div>
+                     <button class="bg-gray-200 hover:bg-gray-300 text-gray-700 py-1 px-2 rounded text-sm mt-4 w-20">Upload</button> <!-- Fixed width -->
                 </div>
-
-                <div>
+                <div class="flex flex-col mb-2">
                     <label class="block text-lg font-medium">Name Font (TTF or OTF)</label>
-                    <label class="block mt-2">
-                        <input type="file" class="hidden">
-                        <span class="bg-gray-200 hover:bg-gray-300 text-gray-700 py-1 px-2 rounded cursor-pointer text-sm">Choose File</span>
-                        <span class="ml-2 text-gray-500">No file chosen</span>
-                    </label>
-                    <button class="bg-gray-200 hover:bg-gray-300 text-gray-700 py-1 px-2 rounded text-sm mt-2">Upload</button>
+                    <div class="flex items-center mt-1">
+                        <label class="block flex-grow">
+                            <input type="file" class="hidden">
+                            <span class="bg-gray-200 hover:bg-gray-300 text-gray-700 py-1 px-2 rounded cursor-pointer text-sm">Choose File</span>
+                            <span class="ml-2 text-gray-500">No file chosen</span>
+                        </label>
+                    </div>
+                     <button class="bg-gray-200 hover:bg-gray-300 text-gray-700 py-1 px-2 rounded text-sm mt-4 w-20">Upload</button> <!-- Fixed width -->
                 </div>
-
-                <div>
+                <div class="flex flex-col mb-2">
                     <label class="block text-lg font-medium">Title Font (TTF or OTF)</label>
-                    <label class="block mt-2">
-                        <input type="file" class="hidden">
-                        <span class="bg-gray-200 hover:bg-gray-300 text-gray-700 py-1 px-2 rounded cursor-pointer text-sm">Choose File</span>
-                        <span class="ml-2 text-gray-500">No file chosen</span>
-                    </label>
-                    <button class="bg-gray-200 hover:bg-gray-300 text-gray-700 py-1 px-2 rounded text-sm mt-2">Upload</button>
+                    <div class="flex items-center mt-1">
+                        <label class="block flex-grow">
+                            <input type="file" class="hidden">
+                            <span class="bg-gray-200 hover:bg-gray-300 text-gray-700 py-1 px-2 rounded cursor-pointer text-sm">Choose File</span>
+                            <span class="ml-2 text-gray-500">No file chosen</span>
+                        </label>
+                    </div>
+                    <button class="bg-gray-200 hover:bg-gray-300 text-gray-700 py-1 px-2 rounded text-sm mt-4 w-20">Upload</button> <!-- Fixed width -->
                 </div>
             </div>
-    
-            <!-- Action Buttons -->
-            <div class="flex justify-end space-x-4 mt-4">
-                <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
-                    Render
-                </button>
-                <button class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded">
-                    Preview & Create
-                </button>
-            </div>
         </div>
-    </div>
 
-           
+        <!-- Action Buttons -->
+        <div class="flex justify-end space-x-4 mt-4">
+            <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+                Render
+            </button>
+            <button class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded">
+                Preview & Create
+            </button>
         </div>
-        
- 
-    
     </div>
+</div>
 
     <script>
         // Function to toggle the sidebar
