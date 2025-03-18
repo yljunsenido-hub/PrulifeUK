@@ -16,17 +16,17 @@
 
         /* Sidebar Style */
         .sidebar {
-    position: fixed;
-    top: 72px; /* Height of the navbar */
-    left: 0;
-    width: 280px;
-    height: calc(100% - 72px);
-    background-image: linear-gradient(to bottom, #1e3a8a, #1d4ed8);
-    color: white;
-    box-shadow: 0 5px rgba(0, 0, 0, 0.1), inset 0 4px 8px rgba(0, 0, 0, 0.3);
-    z-index: 1000;
-    padding: 20px;
-    overflow-y: auto;
+            position: fixed;
+            top: 72px; /* Height of the navbar */
+            left: 0;
+            width: 280px;
+            height: calc(100% - 72px);
+            background-image: linear-gradient(to bottom, #1e3a8a, #1d4ed8);
+            color: white;
+            box-shadow: 0 5px rgba(0, 0, 0, 0.1), inset 0 4px 8px rgba(0, 0, 0, 0.3);
+            z-index: 1000;
+            padding: 20px;
+            overflow-y: auto;
     
     /* Sidebar is visible by default */
         transform: translateX(0);
@@ -114,10 +114,10 @@
         }
         
         .dropdown li:hover a {
-    color: #f8e9a1; /* Change this to your desired hover color */
-    background-color: rgba(255, 255, 255, 0.1); /* Optional: Add a background color on hover */
-    border-radius: 4px; /* Optional: Add rounded corners */
-}
+            color: #f8e9a1; /* Change this to your desired hover color */
+            background-color: rgba(255, 255, 255, 0.1); /* Optional: Add a background color on hover */
+            border-radius: 4px; /* Optional: Add rounded corners */
+        }
 
         /* Main content styles */
         .content {
@@ -125,7 +125,7 @@
             margin: 0 auto;
             max-width: 1500px;
             padding: 20px;
-            margin-left: 295px; /* Adjust based on sidebar width */
+            margin-left: 280px; /* Adjust based on sidebar width */
         }
 
         .content.shift {

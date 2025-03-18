@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+s<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -126,7 +126,7 @@
             margin: 0 auto;
             max-width: 1500px;
             padding: 20px;
-            margin-left: 295px; /* Adjust based on sidebar width */
+            margin-left: 280px; /* Adjust based on sidebar width */
         }
 
         .content.shift {
