@@ -714,7 +714,7 @@
                         <th scope="col" colspan="4" class="py-3 text-left px-3">TOP ROOKIES MTD as of MAR. 02 - BRANCH WIDE</th>
                     </tr>
                     <tr class="bg-gray-200 text-black uppercase text-sm leading-normal">
-                        <th scope="col" class="py-3 px-3 text-left border-b border-gray-400 border-r border-gray-400">Rank</th>
+                        <th scope="col" class="py-3 px-3 border-b border-gray-400 border-r border-gray-400">Rank</th>
                         <th scope="col" class="py-3 text-left px-3 border-b border-gray-400 border-r border-gray-400">Unit</th>
                         <th scope="col" class="py-3 text-left px-3 border-b border-gray-400 border-r border-gray-400">Name</th>
                         <th scope="col" class="py-3 text-left px-3 border-b border-gray-400">APE</th>
@@ -722,13 +722,13 @@
                 </thead>
                 <tbody>
                     <tr class="border-b hover:bg-gray-200 hover:text-blue-900">
-                        <th scope="row" class="py-3 px-3 text-left border-b border-gray-200 border-r border-gray-300">1</th>
+                        <th scope="row" class="py-3 px-3 border-b border-gray-200 border-r border-gray-300">1</th>
                         <td class="py-3 px-3 border-b border-gray-300 border-r border-gray-300 border-r border-gray-300">BLUE CHALCEDONY SAMPLE</td>
                         <td class="py-3 px-3 border-b border-gray-300 border-r border-gray-300 border-r border-gray-300">NAME</td>
                         <td class="py-3 px-3 border-b border-gray-300 border-r border-gray-300">0</td>
                     </tr>
                     <tr class="border-b border-blue-900 border-b-4 hover:bg-gray-200 hover:text-blue-900">
-                        <th scope="row" class="py-3 px-3 text-left border-b border-gray-300 border-r border-gray-300">2</th>
+                        <th scope="row" class="py-3 px-3 border-b border-gray-300 border-r border-gray-300">2</th>
                         <td class="py-3 px-3 border-b border-gray-300 border-r border-gray-300 border-r border-gray-300">ANOTHER UNIT</td>
                         <td class="py-3 px-3 border-b border-gray-300 border-r border-gray-300 border-r border-gray-300">SAMPLE</td>
                         <td class="py-3 px-3 border-b border-gray-300 border-r border-gray-300">20,000.00</td>
@@ -779,8 +779,6 @@
         </div>
 
         <!-- Production Summary -->
-
-
         <div class="container bg-gray-100 mx-auto w-9xl mb-10 mt-5 border border-gray-300 rounded-xl">
         <div class="bg-blue-900 text-white uppercase text-center p-3 text-md rounded-xl mx-3 my-3">
             Production Summary
@@ -828,7 +826,7 @@
                             <td class="py-3 px-6 hover:bg-gray-100 border-b border-gray-300 border-r border-gray-300 border-r border-gray-300 bg-white">100</td>
                             <td class="py-3 px-6 hover:bg-gray-100 border-b border-gray-300 border-r border-gray-300 border-r border-gray-300 bg-white">600,000.00</td>
                             <td class="py-3 px-6 hover:bg-gray-100 border-b border-gray-300 border-r border-gray-300 border-r border-gray-300 bg-white">125,000.00</td>
-                            <td class="py-3 px-6 hover:bg-gray-100 border-b border-gray-300 border-r border-gray-300 bg-white">25</td>
+                            <td class="py-3 px-6 hover:bg-gray-100 border-b border-gray-300 border-r border-gray-300 border-r border-gray-300 bg-white">25</td>
                         </tr>
                     </tbody>
                 </table>
