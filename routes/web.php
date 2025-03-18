@@ -244,3 +244,10 @@ Route::get('/uploadNap'  , function () {
     return view('Branch_Operations_Utility_Tab/upload_nap');
 })->name('upload_nap');
 
+
+
+
+// Database Migrations
+
+Route::get('customer/import'  , [App\Http\Controllers\CustomerController::class, 'index']);
+Route::post('customer/import'  , [App\Http\Controllers\CustomerController::class, 'importExcelData']);

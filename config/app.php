@@ -104,7 +104,6 @@ return [
             explode(',', env('APP_PREVIOUS_KEYS', ''))
         ),
     ],
-
     
     /*
     |--------------------------------------------------------------------------
@@ -118,6 +117,19 @@ return [
     | Supported drivers: "file", "cache"
     |
     */
+    'aliases' => [
+    /*
+     * Application Aliases...
+     */
+    // Other aliases...
+    
+    'Excel' => Maatwebsite\Excel\Facades\Excel::class, // Add this line
+    ],
+
+    'aliases' => [
+    'Excel' => Maatwebsite\Excel\Facades\Excel::class,
+    ],
+
 
     'maintenance' => [
         'driver' => env('APP_MAINTENANCE_DRIVER', 'file'),
