@@ -139,10 +139,10 @@
     <nav class="bg-gradient-to-r from-blue-900 to-blue-700 p-4 flex justify-between items-center">
         <div class="flex items-center">
         <button class="mr-3 bg-transparent text-white p-2 rounded-md relative hover:bg-blue-800" onclick="toggleSidebar()">
-        <i class="fas fa-bars text-white hover:text-white"></i>
-    </button>
-           
-    <a href="{{ route('home') }}">
+            <i class="fas fa-bars text-white hover:text-white"></i>
+        </button>
+
+        <a href="{{ route('home') }}">
             <button>
                 <img src="images/bcdqlogo.png" alt="bcdq logo" class="h-10 w-10 mr-4">
             </button>
@@ -153,7 +153,7 @@
                 <span class="text-white text-lg font-semibold">BLUE CHALCEDONY QUARTZ BRANCH</span>
             </button>
         </a>
-
+        
         </div>
 
         <div class="flex items-center space-x-6">
@@ -167,54 +167,10 @@
             <i class="fas fa-bell text-white px-0"></i>
             <i class="fas fa-user text-white px-2.5"></i>
         </div>
-        
-        <style>
-         input::placeholder {
-            color: white;
-            }
-        </style>
 
+        
+      
     </nav>
-
-      <script>
-       function toggleSidebar() {
-            const sidebar = document.getElementById("sidebar");
-            const content = document.getElementById("main-content");
-
-            if (sidebar.classList.contains("hide")) {
-                sidebar.classList.remove("hide");
-                content.classList.remove("shift"); // Shift content when sidebar is visible
-            } else {
-                sidebar.classList.add("hide");
-                content.classList.add("shift"); // Shift content when sidebar is hidden
-            }
-        }
-
-        let currentOpenDropdown = null;
-
-        function toggleDropdown(dropdownId) {
-            const dropdown = document.getElementById(dropdownId);
-
-            if (currentOpenDropdown && currentOpenDropdown !== dropdown) {
-                currentOpenDropdown.classList.remove('show');
-                currentOpenDropdown.style.maxHeight = '0';
-                currentOpenDropdown.style.opacity = '0';
-            }
-
-            if (dropdown.classList.contains('show')) {
-                dropdown.classList.remove('show');
-                dropdown.style.maxHeight = '0';
-                dropdown.style.opacity = '0';
-            } else {
-                dropdown.classList.add('show');
-                dropdown.style.maxHeight = '500px';
-                dropdown.style.opacity = '1';
-            }
-
-            currentOpenDropdown = dropdown.classList.contains('show') ? dropdown : null;
-        }
-        
-    </script>
 
     <!-- Sidebar -->
     <div class="sidebar" id="sidebar">
@@ -364,7 +320,8 @@
                     <li><a href="{{ route('agent_maintenance') }}" class="text-md text-gray-300 block pl-8 py-3">Agent Maintenance</a></li>
                     <li><a href="{{ route('unit_maintenance') }}" class="text-md text-gray-300 block pl-8 py-3">Unit Maintenance</a></li>
                     <li><a href="{{ route('sub_unit_maintenance') }}" class="text-md text-gray-300 block pl-8 py-3">Sub-Unit Maintenance</a></li>
-                    <li><a href="{{ route('digital_card_maintenance') }}" class="text-md text-gray-300 block pl-8 py-3 mb-6">Digital Card Maintenance</a></li>
+                    <li><a href="{{ route('digital_card_maintenance') }}" class="text-md text-gray-300 block pl-8 py-3">Digital Card Maintenance</a></li>
+                    <li><a href="{{ route('scheduled_tasks') }}" class="text-md text-gray-300 block pl-8 py-3 mb-6">Scheduled Tasks</a></li>
                 </ul>
             </li>
             <li class="menu-item">
