@@ -205,6 +205,10 @@ Route::get('/posterTemplateMaintenance'  , function () {
     return view('BCMS_Maintenance_Tab/poster_template_maintenance');
 })->name('poster_template_maintenance');
 
+Route::get('/scheduledTasks'  , function () {
+    return view('BCMS_Maintenance_Tab/scheduled_tasks');
+})->name('scheduled_tasks');
+
 Route::get('/subUnitMaintenanceCreate'  , function () {
     return view('BCMS_Maintenance_Tab/sub_unit_maintenance_create');
 })->name('sub_unit_maintenance_create');
