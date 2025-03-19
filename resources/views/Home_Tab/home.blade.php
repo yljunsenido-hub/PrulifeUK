@@ -821,7 +821,7 @@
                             <td class="py-3 px-6 hover:bg-gray-100 border-b border-gray-300 border-r border-gray-300 border-r border-gray-300 bg-white">100,000.00</td>
                             <td class="py-3 px-6 hover:bg-gray-100 border-b border-gray-300 border-r border-gray-300 bg-white">20</td>
                         </tr>
-                        <tr class="border-b hover:text-blue-900">
+                    <tr class="border-b hover:text-blue-900">
                             <td class="py-3 px-6 hover:bg-gray-100 border-b border-gray-300 border-r border-gray-300 border-r border-gray-300 bg-white">250</td>
                             <td class="py-3 px-6 hover:bg-gray-100 border-b border-gray-300 border-r border-gray-300 border-r border-gray-300 bg-white">100</td>
                             <td class="py-3 px-6 hover:bg-gray-100 border-b border-gray-300 border-r border-gray-300 border-r border-gray-300 bg-white">600,000.00</td>

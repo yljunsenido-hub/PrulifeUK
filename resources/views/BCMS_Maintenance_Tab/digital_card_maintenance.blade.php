@@ -407,145 +407,210 @@
 
     <!-- Main Content Area -->
     <div id="main-content" class="content">
-            <div class="mb-4 p-4 bg-white rounded-md shadow-md">
+    <div class="container mx-auto max-w-9xl bg-white p-4 rounded-lg shadow-md">
                 <h2 class="text-4xl font-semibold mb-4">Digital Card Maintenance</h2>
-                <div class="flex items-center justify-between mb-4">                  
-                    <div class="flex items-center">
-                        <label for="entries" class="mr-2 text-sm text-gray-600">Show entries:</label>
-                        <select id="entries" class="border border-gray-300 rounded-md p-1 text-sm">
-                            <option>10</option>
-                            <option>25</option>
-                            <option>50</option>
-                        </select>
-                        <span class="ml-2 text-sm text-gray-600">entries</span>
-                    </div>
-                    <div class="flex items-center">
-                        <input type="text" placeholder="Search..." class="px-3 py-1 border border-gray-300 rounded-md shadow-sm text-sm">
-                        <button class="bg-blue-500 text-white rounded px-4 py-1 ml-2 hover:bg-blue-700">+ Add</button>
-                    </div>
+
+                <div class="flex items-center justify-between mb-3 bg-blue-900 rounded-md shadow-md p-3">
+                    <p class="text-left text-white ml-1">Agent Personal Details</p>
+                    <a href="{{ route('digital_card_maintenance_create') }}" class="bg-blue-600 text-white rounded-lg px-4 py-1 mr-1 hover:bg-yellow-300 text-center">Add Agent</a>
+                </div>
+
+                <div class="bg-white rounded-md shadow-md p-3">
+                <div class="flex items-center justify-between mb-3">
+                <div class="flex items-center">
+                    <label for="entries" class="mr-2 text-sm text-gray-600">Show entries:</label>
+                    <select id="entries" class="border border-gray-300 rounded-md p-1 text-sm">
+                        <option value="10">10</option>
+                        <option value="25">25</option>
+                        <option value="50">50</option>
+                        <option value="100">100</option>
+                    </select>
+                </div>
+
+                
+                <div class="flex items-center">
+                    <label for="search" class="mr-2 text-sm text-gray-600">Search:</label>
+                    <input type="text" id="search" class="px-3 py-1 border border-gray-300 rounded-md shadow-sm text-sm" placeholder="Search...">
+                </div>
                 </div>
 
                 <div id="tableContent" class="overflow-x-auto">
                     <table class="min-w-full bg-white border border-gray-300 text-sm">
                         <thead>
                             <tr class="bg-gray-200 text-gray-600">
-                                <th class="py-2 px-4 text-left border-r border-gray-300">Card_ID</th>
+                                <th class="py-2 px-4 w-20 text-center text-left border-r border-gray-300">Card_ID</th>
                                 <th class="py-2 px-4 text-left border-r border-gray-300">Agent</th>
-                                <th class="py-2 px-4 text-left border-r border-gray-300">Status</th>
-                                <th class="py-2 px-4 text-left border-r border-gray-300 text-center">Action</th>
+                                <th class="py-2 px-4 w-48 text-left text-center border-r border-gray-300">Status</th>
+                                <th class="py-2 px-4 w-1/5 text-left border-r border-gray-300 text-center">Action</th>
                             </tr>
                         </thead>
                         <tbody class="text-gray-600">
                             <tr class="border-b border-gray-300 hover:bg-gray-100">
-                                <td class="border px-4 py-2">152</td>
+                                <td class="border px-4 py-2 text-center">152</td>
                                 <td class="border px-4 py-2">201 - CORDOVA, ALFREN</td>
-                                <td class="border px-4 py-2">Active</td>
+                                <td class="border px-4 py-2 text-center">Active</td>
                                 <td class="border px-4 py-2 text-center">
                                     <button class="px-3 py-1 bg-blue-500 text-white rounded-md hover:bg-blue-700">Update</button>
-                                    <button class="px-3 py-1 bg-yellow-500 text-white rounded-md hover:bg-yellow-600">Unlink</button>
+                                    <button class="px-3 py-1 bg-yellow-400 text-white rounded-md hover:bg-yellow-600">Unlink</button>
                                 </td>
                             </tr>
                             <tr class="border-b border-gray-300 hover:bg-gray-100">
-                                <td class="border px-4 py-2">52</td>
+                                <td class="border px-4 py-2 text-center">52</td>
                                 <td class="border px-4 py-2">202 - TORRES, AJ</td>
-                                <td class="border px-4 py-2">Active</td>
+                                <td class="border px-4 py-2 text-center">Active</td>
                                 <td class="border px-4 py-2 text-center">
                                     <button class="px-3 py-1 bg-blue-500 text-white rounded-md hover:bg-blue-700">Update</button>
-                                    <button class="px-3 py-1 bg-yellow-500 text-white rounded-md hover:bg-yellow-600">Unlink</button>
+                                    <button class="px-3 py-1 bg-yellow-400 text-white rounded-md hover:bg-yellow-600">Unlink</button>
                                 </td>
                             </tr>
                             <tr class="border-b border-gray-300 hover:bg-gray-100">
-                                <td class="border px-4 py-2">1</td>
+                                <td class="border px-4 py-2 text-center">1</td>
                                 <td class="border px-4 py-2">70010293 - Fabian, Ocel</td>
-                                <td class="border px-4 py-2">Active</td>
+                                <td class="border px-4 py-2 text-center">Active</td>
                                 <td class="border px-4 py-2 text-center">
                                     <button class="px-3 py-1 bg-blue-500 text-white rounded-md hover:bg-blue-700">Update</button>
-                                    <button class="px-3 py-1 bg-yellow-500 text-white rounded-md hover:bg-yellow-600">Unlink</button>
+                                    <button class="px-3 py-1 bg-yellow-400 text-white rounded-md hover:bg-yellow-600">Unlink</button>
                                 </td>
                             </tr>
                             <tr class="border-b border-gray-300 hover:bg-gray-100">
-                                <td class="border px-4 py-2">2</td>
+                                <td class="border px-4 py-2 text-center">2</td>
                                 <td class="border px-4 py-2">70024953 - DEL MUNDO, ISRAEL</td>
-                                <td class="border px-4 py-2">Active</td>
+                                <td class="border px-4 py-2 text-center">Active</td>
                                 <td class="border px-4 py-2 text-center">
                                     <button class="px-3 py-1 bg-blue-500 text-white rounded-md hover:bg-blue-700">Update</button>
-                                    <button class="px-3 py-1 bg-yellow-500 text-white rounded-md hover:bg-yellow-600">Unlink</button>
+                                    <button class="px-3 py-1 bg-yellow-400 text-white rounded-md hover:bg-yellow-600">Unlink</button>
                                 </td>
                             </tr>
                             <tr class="border-b border-gray-300 hover:bg-gray-100">
-                                <td class="border px-4 py-2">6</td>
+                                <td class="border px-4 py-2 text-center">6</td>
                                 <td class="border px-4 py-2">70025613 - PUNONGBAYAN, MARIA LOURDES</td>
-                                <td class="border px-4 py-2">Active</td>
+                                <td class="border px-4 py-2 text-center">Active</td>
                                 <td class="border px-4 py-2 text-center">
                                     <button class="px-3 py-1 bg-blue-500 text-white rounded-md hover:bg-blue-700">Update</button>
-                                    <button class="px-3 py-1 bg-yellow-500 text-white rounded-md hover:bg-yellow-600">Unlink</button>
+                                    <button class="px-3 py-1 bg-yellow-400 text-white rounded-md hover:bg-yellow-600">Unlink</button>
                                 </td>
                             </tr>
                             <tr class="border-b border-gray-300 hover:bg-gray-100">
-                                <td class="border px-4 py-2">8</td>
+                                <td class="border px-4 py-2 text-center">8</td>
                                 <td class="border px-4 py-2">70033873 - CLUTARIO, EULALVI SAM</td>
-                                <td class="border px-4 py-2">Active</td>
+                                <td class="border px-4 py-2 text-center">Active</td>
                                 <td class="border px-4 py-2 text-center">
                                     <button class="px-3 py-1 bg-blue-500 text-white rounded-md hover:bg-blue-700">Update</button>
-                                    <button class="px-3 py-1 bg-yellow-500 text-white rounded-md hover:bg-yellow-600">Unlink</button>
+                                    <button class="px-3 py-1 bg-yellow-400 text-white rounded-md hover:bg-yellow-600">Unlink</button>
                                 </td>
                             </tr>
                             <tr class="border-b border-gray-300 hover:bg-gray-100">
-                                <td class="border px-4 py-2">4</td>
+                                <td class="border px-4 py-2 text-center">4</td>
                                 <td class="border px-4 py-2">70038966 - CERIOLA, JEANEROSE</td>
-                                <td class="border px-4 py-2">Active</td>
+                                <td class="border px-4 py-2 text-center">Active</td>
                                 <td class="border px-4 py-2 text-center">
                                     <button class="px-3 py-1 bg-blue-500 text-white rounded-md hover:bg-blue-700">Update</button>
-                                    <button class="px-3 py-1 bg-yellow-500 text-white rounded-md hover:bg-yellow-600">Unlink</button>
+                                    <button class="px-3 py-1 bg-yellow-400 text-white rounded-md hover:bg-yellow-600">Unlink</button>
                                 </td>
                             </tr>
                             <tr class="border-b border-gray-300 hover:bg-gray-100">
-                                <td class="border px-4 py-2">3</td>
+                                <td class="border px-4 py-2 text-center">3</td>
                                 <td class="border px-4 py-2">70039569 - FABIAN, JOSEFINA</td>
-                                <td class="border px-4 py-2">Active</td>
+                                <td class="border px-4 py-2 text-center">Active</td>
                                 <td class="border px-4 py-2 text-center">
                                     <button class="px-3 py-1 bg-blue-500 text-white rounded-md hover:bg-blue-700">Update</button>
-                                    <button class="px-3 py-1 bg-yellow-500 text-white rounded-md hover:bg-yellow-600">Unlink</button>
+                                    <button class="px-3 py-1 bg-yellow-400 text-white rounded-md hover:bg-yellow-600">Unlink</button>
                                 </td>
                             </tr>
                             <tr class="border-b border-gray-300 hover:bg-gray-100">
-                                <td class="border px-4 py-2">5</td>
+                                <td class="border px-4 py-2 text-center">5</td>
                                 <td class="border px-4 py-2">70046799 - VILLAUZ, TEDDY</td>
-                                <td class="border px-4 py-2">Active</td>
+                                <td class="border px-4 py-2 text-center">Active</td>
                                 <td class="border px-4 py-2 text-center">
                                     <button class="px-3 py-1 bg-blue-500 text-white rounded-md hover:bg-blue-700">Update</button>
-                                    <button class="px-3 py-1 bg-yellow-500 text-white rounded-md hover:bg-yellow-600">Unlink</button>
+                                    <button class="px-3 py-1 bg-yellow-400 text-white rounded-md hover:bg-yellow-600">Unlink</button>
                                 </td>
                             </tr>
                             <tr class="border-b border-gray-300 hover:bg-gray-100">
-                                <td class="border px-4 py-2">9</td>
+                                <td class="border px-4 py-2 text-center">9</td>
                                 <td class="border px-4 py-2">70048843 - FRAYCO JR., NESTOR</td>
-                                <td class="border px-4 py-2">Active</td>
+                                <td class="border px-4 py-2 text-center">Active</td>
                                 <td class="border px-4 py-2 text-center">
                                     <button class="px-3 py-1 bg-blue-500 text-white rounded-md hover:bg-blue-700">Update</button>
-                                    <button class="px-3 py-1 bg-yellow-500 text-white rounded-md hover:bg-yellow-600">Unlink</button>
+                                    <button class="px-3 py-1 bg-yellow-400 text-white rounded-md hover:bg-yellow-600">Unlink</button>
                                 </td>
                             </tr>
                         </tbody>
                     </table>
-                </div>
-            </div>
+                    </div>
+                    </div>
 
-            <div class="flex justify-between mt-4">
-                <span class="text-gray-700">Showing 1 to 10 of 15 entries</span>
-                <div>
-                    <button class="px-3 py-1 bg-gray-300 text-gray-700 rounded-md hover:bg-gray-400" disabled>Previous</button>
-                    <button class="px-3 py-1 bg-gray-200 text-gray-700 rounded-md hover:bg-gray-300">1</button>
-                    <button class="px-3 py-1 bg-gray-200 text-gray-700 rounded-md hover:bg-gray-300">2</button>
-                    <button class="px-3 py-1 bg-gray-300 text-gray-700 rounded-md hover:bg-gray-400">Next</button>
-                </div>
+            <!-- Pagination Section -->
+        <div class="mt-4 ml-3 mr-3 flex justify-between items-center">
+            <div class="text-sm text-gray-600">
+                Showing 1 to 10 of 489 entries
             </div>
+            
+        <div class="flex justify-end items-center space-x-2 ml-auto">
+            <div class="ml-4 flex space-x-2">
+                <button class="px-3 py-1 bg-gray-300 text-gray-700 rounded-md hover:bg-gray-400 text-sm" id="previousBtn">Previous</button>
+                <div class="mr-1 flex items-center space-x-2">
+                    <div id="pageNumbers" class="flex space-x-1">
+                        <!-- Page numbers will be dynamically inserted here -->
+                    </div>
+                </div>
+                <button class="px-3 py-1 bg-gray-300 text-gray-700 rounded-md hover:bg-gray-400 text-sm" id="nextBtn">Next</button>
         </div>
     </div>
-            
 
-         
+    <script>
+        let currentPage = 1;
+        const totalPages = 3; // Total number of pages (can be updated dynamically)
+        const previousBtn = document.getElementById('previousBtn');
+        const nextBtn = document.getElementById('nextBtn');
+        const pageNumbersContainer = document.getElementById('pageNumbers');
+        const tableContent = document.getElementById('tableContent');
+        
+        // Dynamically generate page numbers
+        function generatePageNumbers() {
+            pageNumbersContainer.innerHTML = '';  // Clear previous page numbers
+            for (let i = 1; i <= totalPages; i++) {
+                const pageButton = document.createElement('button');
+                pageButton.textContent = i;
+                pageButton.classList.add('px-3', 'py-1', 'border', 'border-gray-300', 'rounded-md', 'hover:bg-gray-400', 'text-sm');
+                pageButton.addEventListener('click', () => goToPage(i));
+                pageNumbersContainer.appendChild(pageButton);
+            }
+        }
 
+        // Update page numbers and highlight current page
+        function updatePageInfo() {
+            const pageButtons = document.querySelectorAll('#pageNumbers button');
+            pageButtons.forEach(button => {
+                button.classList.remove('bg-gray-400', 'text-white'); // Remove highlight from all buttons
+                if (parseInt(button.textContent) === currentPage) {
+                    button.classList.add('bg-gray-400', 'text-white'); // Highlight the current page
+                }
+            });
+        }
+
+        // Go to a selected page
+        function goToPage(page) {
+            currentPage = page;
+            updatePageInfo();
+        }
+
+        // Handle Previous and Next Button actions
+        previousBtn.addEventListener('click', () => {
+            if (currentPage > 1) {
+                currentPage--;
+                updatePageInfo();
+            }
+        });
+
+        nextBtn.addEventListener('click', () => {
+            if (currentPage < totalPages) {
+                currentPage++;
+                updatePageInfo();
+            }
+        });
+    </script>
+    
     <script>
         // Function to toggle the sidebar
         function toggleSidebar() {
@@ -581,7 +646,7 @@
             // Update the current open dropdown reference
             currentOpenDropdown = dropdown.classList.contains('show') ? dropdown : null;
         }
-
     </script>
+
 </body>
 </html>

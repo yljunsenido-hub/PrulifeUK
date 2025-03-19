@@ -407,7 +407,7 @@
     
      <!-- Main Content Area -->
 <div id="main-content" class="content">
-    <div class="container mx-auto max-w-7xl bg-white p-4 rounded-lg shadow-md">
+    <div class="container mx-auto max-w-9xl bg-white p-4 rounded-lg shadow-md">
         <h1 class="text-3xl font-semibold mb-4">Marketing Poster Maintenance</h1>
         <h1 class=" text-l font-semibold">
     <a href="{{ route('poster_template_maintenance') }}" class="bg-blue-500 text-white rounded-lg px-4 py-2 inline-block hover:bg-blue-600 mb-4">Back to list</a>

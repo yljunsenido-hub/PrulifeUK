@@ -131,7 +131,7 @@
         }
 
         .content.shift {
-            margin-left: 20px; /* When sidebar is hidden */
+            margin-left: 15px; /* When sidebar is hidden */
         }
     </style>
 
@@ -409,67 +409,109 @@
 
     <!-- Main Content Area -->
     <div id="main-content" class="content">
-            <h2 class="text-xl font-semibold mb-4">Digital Card Maintenance</h2>
-        <h4 class="text-lg mb-2">Add Agent Detail</h4>
+    <div class="container mx-auto max-w-9xl mb-4 p-4 bg-white rounded-md shadow-md">
 
-        <form id="agentForm" onsubmit="return validateForm()" class="bg-white p-6 rounded-lg shadow-md">
-            <div class="mb-4">
-                <label for="digitalCardId" class="block text-sm font-medium text-gray-700">Digital Card ID</label>
-                <input type="text" id="digitalCardId" name="digitalCardId" required class="mt-1 block w-1/2 border border-gray-300 rounded-md p-2 focus:ring focus:ring-blue-500" />
+        <!-- Heading Section -->
+        <h1 class="text-4xl font-semibold mb-4">Digital Card Maintenance</h1>
+
+        <button onclick="window.location.href='{{ route('digital_card_maintenance') }}'" 
+        class="bg-blue-900 rounded-md p-2 pr-3 text-white hover:text-blue-900 hover:bg-white border hover:border-blue-900 cursor-pointer flex items-center text-sm">
+            <!-- SVG for the back arrow icon -->
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-4 mr-1">
+                <path d="M19 12H5"></path>
+                <path d="M12 19l-7-7 7-7"></path>
+            </svg>
+            <!-- Optional text if needed -->
+            <span>Back</span>
+        </button>
+        
+
+        <!-- Agent Form Section -->
+        <form id="agentForm" onsubmit="return validateForm()" class="bg-white p-3 rounded-lg shadow-md mt-3 ">
+
+        <h4 class="text-l mt-3 mb-5 font-bold text-green-600">ADD AGENT DETAIL</h4>
+            
+            <!-- Digital Card ID Input -->
+            <div class="mb-4 mr-2">
+                <div class="flex items-center space-x-4">
+                    <!-- Label aligned to the left with margin to the right for spacing -->
+                    <label for="digitalCardId" class="text-sm font-medium text-gray-700 mr-10">Digital Card ID:</label>
+                    
+                    <!-- Input aligned beside the label -->
+                    <input type="text" id="digitalCardId" name="digitalCardId" required
+                        class="mt-1 block flex-1 border border-gray-300 rounded-md p-2 text-left" />
+                </div>
             </div>
 
-        
-                <label class="block text-sm font-medium text-gray-700 mb-2">Agent</label>
-                <div class="flex flex-col space-y-2 mb">
-                    <input type="text" id="agentCode" name="agentCode" placeholder="Agent Code" required class="block w-1/3 border border-gray-300 rounded-md p-2 focus:ring focus:ring-blue-500 mb-2" />
-                    <input type="text" id="agentName" name="agentName" placeholder="Agent Name" required class="block w-1/3 border border-gray-300 rounded-md p-2 focus:ring focus:ring-blue-500 mb-2" />
-            
-            <div class="flex items-center justify-start gap-72">
-                <button type="submit" class="bg-green-500 text-white py-2 px-4 rounded-md hover:bg-green-600 mt-2">Link</button>
-                <button type="button" class="bg-red-500 text-white py-2 px-4 rounded-md hover:bg-red-600" onclick="goBack()">Back</button>
+            <!-- Agent Details Section -->
+            <div class="mb-4 mr-2">
+                <div class="flex items-center space-x-4">
+                    <!-- Label aligned to the left with margin to the right for spacing -->
+                    <label for="agentCode" class="text-sm font-medium text-gray-700 mr-24">Agent:</label>
+
+                    <!-- Agent Code Input (aligned beside the label) -->
+                    <input type="text" id="agentCode" name="agentCode" placeholder="Agent Code" required
+                        class="flex-1 border border-gray-300 rounded-md p-2 text-left" />
+                    
+                    <!-- Agent Name Input (aligned beside the agent code input) -->
+                    <input type="text" id="agentName" name="agentName" placeholder="Agent Name" required
+                        class="flex-1 border border-gray-300 rounded-md p-2 text-left" />
+                </div>
+            </div>
+
+
+
+
+            <!-- Form Buttons Section -->
+            <div class="flex items-center justify-end mr-2">
+                <button type="submit" class="bg-green-500 text-white py-2 px-4 rounded-md hover:bg-green-600">
+                    Link
+                </button>
+                
             </div>
         </form>
     </div>
+</div>
 
-           
-  
 
-    <script>
-        // Function to toggle the sidebar
-        function toggleSidebar() {
-            const sidebar = document.getElementById("sidebar");
-            const content = document.getElementById("main-content");
-            sidebar.classList.toggle("show"); // Show or hide the sidebar
-            content.classList.toggle("shift"); // Shift content when sidebar is visible
+<!-- JavaScript Section -->
+<script>
+    // Function to toggle the sidebar visibility
+    function toggleSidebar() {
+        const sidebar = document.getElementById("sidebar");
+        const content = document.getElementById("main-content");
+        sidebar.classList.toggle("show"); // Show or hide the sidebar
+        content.classList.toggle("shift"); // Shift content when sidebar is visible
+    }
+
+    let currentOpenDropdown = null;
+
+    // Function to toggle the dropdown visibility
+    function toggleDropdown(dropdownId) {
+        const dropdown = document.getElementById(dropdownId);
+
+        // Close the currently open dropdown if it's not the one being clicked
+        if (currentOpenDropdown && currentOpenDropdown !== dropdown) {
+            currentOpenDropdown.classList.remove('show');
+            currentOpenDropdown.style.maxHeight = '0'; // Reset max-height
+            currentOpenDropdown.style.opacity = '0'; // Reset opacity
         }
 
-        let currentOpenDropdown = null;
-
-        function toggleDropdown(dropdownId) {
-            const dropdown = document.getElementById(dropdownId);
-
-            // Close the currently open dropdown if it's not the one being clicked
-            if (currentOpenDropdown && currentOpenDropdown !== dropdown) {
-                currentOpenDropdown.classList.remove('show');
-                currentOpenDropdown.style.maxHeight = '0'; // Reset max-height
-                currentOpenDropdown.style.opacity = '0'; // Reset opacity
-            }
-
-            // Toggle the clicked dropdown
-            if (dropdown.classList.contains('show')) {
-                dropdown.classList.remove('show');
-                dropdown.style.maxHeight = '0'; // Reset max-height
-                dropdown.style.opacity = '0'; // Reset opacity
-            } else {
-                dropdown.classList.add('show');
-                dropdown.style.maxHeight = '500px'; // Set max-height to allow transition
-                dropdown.style.opacity = '1'; // Set opacity to allow transition
-            }
-
-            // Update the current open dropdown reference
-            currentOpenDropdown = dropdown.classList.contains('show') ? dropdown : null;
+        // Toggle the clicked dropdown
+        if (dropdown.classList.contains('show')) {
+            dropdown.classList.remove('show');
+            dropdown.style.maxHeight = '0'; // Reset max-height
+            dropdown.style.opacity = '0'; // Reset opacity
+        } else {
+            dropdown.classList.add('show');
+            dropdown.style.maxHeight = '500px'; // Set max-height to allow transition
+            dropdown.style.opacity = '1'; // Set opacity to allow transition
         }
 
-    </script>
+        // Update the current open dropdown reference
+        currentOpenDropdown = dropdown.classList.contains('show') ? dropdown : null;
+    }
+</script>
+
 </body>
 </html>
