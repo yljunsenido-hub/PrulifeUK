@@ -483,7 +483,7 @@
                 Showing 1 to 10 of 489 entries
             </div>
             
-<div class="flex justify-end items-center space-x-2 ml-auto">
+        <div class="flex justify-end items-center space-x-2 ml-auto">
             <div class="ml-4 flex space-x-2">
                 <button class="px-3 py-1 bg-gray-300 text-gray-700 rounded-md hover:bg-gray-400 text-sm" id="previousBtn">Previous</button>
                 <div class="mr-1 flex items-center space-x-2">
