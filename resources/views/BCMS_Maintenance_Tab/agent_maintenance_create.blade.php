@@ -408,101 +408,136 @@
     </div>
 
     <!-- Main Content Area -->
-    <div id="main-content" class="content">
-        
-        <div class="container mx-auto max-w-7xl bg-white p-6 rounded-lg shadow-md">
-              <h2 class="text-4xl font-semibold mb-4">Create Agent</h2>
-      
-<button type="submit" class="bg-blue-500 text-white hover:underline px-4 py-2 mb-4 rounded text-sm ">Back to list</button> 
-                     
-        <form>
-            <div class="grid grid-cols-2 gap-2 px-8 ml-8 mr-32">
-                <div>
-                    <label class="block text-gray-700 text-sm">Agent Code:</label>
-                    <input type="text" class="border border-gray-300 rounded p-1 w-60 text-sm" />
-                </div>
-                <div>
-                    <label class="block text-gray-700 text-sm">Recruiter:</label>
-                    <input type="text" class="border border-gray-300 rounded p-1 w-60 text-sm" />
-                </div>
-                <div>
-                    <label class="block text-gray-700 text-sm">Role:</label>
-                    <select class="border border-gray-300 rounded p-1 w-60 text-sm">
-                        <option>Select Role</option>
-                        <option>Financial Advisor</option>
-                        <option>Manager</option>
-                    </select>
-                </div>
-                <div>
-                    <label class="block text-gray-700 text-sm">Branch:</label>
-                    <select class="border border-gray-300 rounded p-1 w-60 text-sm">
-                        <option>Select Branch</option>
-                    </select>
-                </div>
-                <div>
-                    <label class="block text-gray-700 text-sm">Unit:</label>
-                    <select class="border border-gray-300 rounded p-1 w-60 text-sm">
-                        <option>Select Unit</option>
-                    </select>
-                </div>
-                <div>
-                    <label class="block text-gray-700 text-sm">SubUnit:</label>
-                    <select class="border border-gray-300 rounded p-1 w-60 text-sm">
-                        <option>Select SubUnit</option>
-                    </select>
-                </div>
-                <div>
-                    <label class="block text-gray-700 text-sm">First Name:</label>
-                    <input type="text" class="border border-gray-300 rounded p-1 w-60 text-sm" />
-                </div>
-                <div>
-                    <label class="block text-gray-700 text-sm">Middle Name:</label>
-                    <input type="text" class="border border-gray-300 rounded p-1 w-60 text-sm" />
-                </div>
-                <div>
-                    <label class="block text-gray-700 text-sm">Last Name:</label>
-                    <input type="text" class="border border-gray-300 rounded p-1 w-60 text-sm" />
-                </div>
-                <div>
-                    <label class="block text-gray-700 text-sm">Display Name:</label>
-                    <input type="text" class="border border-gray-300 rounded p-1 w-60 text-sm" />
-                </div>
-                <div>
-                    <label class="block text-gray-700 text-sm">Email:</label>
-                    <input type="email" class="border border-gray-300 rounded p-1 w-60 text-sm" />
-                </div>
-                <div>
-                    <label class="block text-gray-700 text-sm">Mobile:</label>
-                    <input type="text" class="border border-gray-300 rounded p-1 w-60 text-sm" />
-                </div>
-                <div>
-                    <label class="block text-gray-700 text-sm">Coding Date:</label>
-                    <input type="date" class="border border-gray-300 rounded p-1 w-60 text-sm " />
-                </div>
-                <div>
-                    <label class="block text-gray-700 text-sm">Agent Status:</label>
-                    <select class="border border-gray-300 rounded p-1 w-60 text-sm">
-                        <option>Active</option>
-                        <option>Inactive</option>
-                    </select>
+<div id="main-content" class="content">
+    <div class="container mx-auto max-w-9xl bg-white p-6 rounded-lg shadow-md">
+        <h2 class="text-4xl font-semibold mb-4">Create Agent</h2>
 
-                     <div><button type="submit" class="mt-8 mr-5 ml-32 bg-green-500 text-white px-4 py-2 rounded text-sm ">Create Agent</button> </div>
+        <!-- Back to List Link -->
+        <button onclick="window.location.href='{{ route('digital_card_maintenance') }}'" 
+        class="bg-blue-900 rounded-md p-2 pr-3 text-white hover:text-blue-900 hover:bg-white border hover:border-blue-900 cursor-pointer flex items-center text-sm">
+            <!-- SVG for the back arrow icon -->
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-4 mr-1">
+                <path d="M19 12H5"></path>
+                <path d="M12 19l-7-7 7-7"></path>
+            </svg>
+            <!-- Optional text if needed -->
+            <span>Back</span>
+        </button>
 
-                     
+        <!-- Form Container -->
+        <div class="bg-white rounded-md shadow-md p-3 mt-3">
+            <form>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <!-- Agent Code -->
+                    <div>
+                        <label class="block text-gray-700 text-sm">Agent Code:</label>
+                        <input type="text" class="border border-gray-300 rounded p-2 w-full text-sm" />
+                    </div>
+
+                    <!-- Recruiter -->
+                    <div>
+                        <label class="block text-gray-700 text-sm">Recruiter:</label>
+                        <input type="text" class="border border-gray-300 rounded p-2 w-full text-sm" />
+                    </div>
+
+                    <!-- Role -->
+                    <div>
+                        <label class="block text-gray-700 text-sm">Role:</label>
+                        <select class="border border-gray-300 rounded p-2 w-full text-sm">
+                            <option>Select Role</option>
+                            <option>Financial Advisor</option>
+                            <option>Manager</option>
+                        </select>
+                    </div>
+
+                    <!-- Branch -->
+                    <div>
+                        <label class="block text-gray-700 text-sm">Branch:</label>
+                        <select class="border border-gray-300 rounded p-2 w-full text-sm">
+                            <option>Select Branch</option>
+                        </select>
+                    </div>
+
+                    <!-- Unit -->
+                    <div>
+                        <label class="block text-gray-700 text-sm">Unit:</label>
+                        <select class="border border-gray-300 rounded p-2 w-full text-sm">
+                            <option>Select Unit</option>
+                        </select>
+                    </div>
+
+                    <!-- SubUnit -->
+                    <div>
+                        <label class="block text-gray-700 text-sm">SubUnit:</label>
+                        <select class="border border-gray-300 rounded p-2 w-full text-sm">
+                            <option>Select SubUnit</option>
+                        </select>
+                    </div>
+
+                    <!-- First Name -->
+                    <div>
+                        <label class="block text-gray-700 text-sm">First Name:</label>
+                        <input type="text" class="border border-gray-300 rounded p-2 w-full text-sm" />
+                    </div>
+
+                    <!-- Middle Name -->
+                    <div>
+                        <label class="block text-gray-700 text-sm">Middle Name:</label>
+                        <input type="text" class="border border-gray-300 rounded p-2 w-full text-sm" />
+                    </div>
+
+                    <!-- Last Name -->
+                    <div>
+                        <label class="block text-gray-700 text-sm">Last Name:</label>
+                        <input type="text" class="border border-gray-300 rounded p-2 w-full text-sm" />
+                    </div>
+
+                    <!-- Display Name -->
+                    <div>
+                        <label class="block text-gray-700 text-sm">Display Name:</label>
+                        <input type="text" class="border border-gray-300 rounded p-2 w-full text-sm" />
+                    </div>
+
+                    <!-- Email -->
+                    <div>
+                        <label class="block text-gray-700 text-sm">Email:</label>
+                        <input type="email" class="border border-gray-300 rounded p-2 w-full text-sm" />
+                    </div>
+
+                    <!-- Mobile -->
+                    <div>
+                        <label class="block text-gray-700 text-sm">Mobile:</label>
+                        <input type="text" class="border border-gray-300 rounded p-2 w-full text-sm" />
+                    </div>
+
+                    <!-- Coding Date -->
+                    <div>
+                        <label class="block text-gray-700 text-sm">Coding Date:</label>
+                        <input type="date" class="border border-gray-300 rounded p-2 w-full text-sm" />
+                    </div>
+
+                    <!-- Agent Status -->
+                    <div>
+                        <label class="block text-gray-700 text-sm">Agent Status:</label>
+                        <select class="border border-gray-300 rounded p-2 w-full text-sm">
+                            <option>Active</option>
+                            <option>Delisted</option>
+                            <option>Operations</option>
+                        </select>
+                    </div>
                 </div>
+            </form>
             </div>
-
-           
-        </form>
-    </div>
-
-           
+            <!-- Submit Button -->
+            <div class="col-span-2 flex justify-end text-center mt-5">
+                <button type="submit" class="bg-green-500 text-white px-3 py-2 rounded text-sm">
+                    Create Agent
+                </button>
         </div>
-        
- 
-        
     </div>
-    </div>
+</div>
+
+
 
     <script>
         // Function to toggle the sidebar
