@@ -406,15 +406,13 @@
         </ul>
     </div>
 
-        <!-- main conten -->
+        <!-- main content -->
     <div id="main-content" class="content">
         <div class="container mx-auto max-w-7xl bg-white p-6 rounded-lg shadow-md">
             <h2 class="text-4xl font-semibold mb-4">Marketing Poster Maintenance</h2>
                  <div class="container shadow-md mb-3 mb-4 p-2 bg-blue-900 rounded-md flex justify-between items-center">
         <h1 class="pl-2 text-l text-yellow-300 font-semibold "><a href="{{ route('poster_template_create') }}" class="text-base xl:text-yellow-300 hover:text-yellow-100 font-semibold">Create New Poster</a></h1>
 </div>
-
-
 
              <div class="mb-4 p-4 bg-white rounded-md shadow-md">
             <div class="flex items-center justify-between mb-4">
