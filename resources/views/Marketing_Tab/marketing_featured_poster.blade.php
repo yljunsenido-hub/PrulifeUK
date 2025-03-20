@@ -420,10 +420,7 @@
             <a class="text-white"> | </a>
             <a href="{{ route('marketing_admin_poster') }}" class="block mb-1 p-1 text-white font-semibold hover:text-yellow-300">Admin Poster</a>
         </div>
-        
-        <div class="mb-4 p-1 bg-blue-800 rounded-md flex justify-center items-center max-w-9xl mx-auto">
-            <a href="your_link_here" class="block mb-1 p-1 text-white font-semibold hover:text-yellow-300 uppercase">Set your custom display details here</a>
-        </div>
+
 
         <!-- Table Section -->
         <div class="mb-4 p-4 bg-white rounded-md shadow-md">
@@ -500,10 +497,9 @@
                 <table class="bg-white border border-gray-300 text-sm">
                     <thead>
                         <tr class="bg-gray-200 text-gray-600">
-                            <th class="py-2 px-4 text-left border-r border-gray-300">ID</th>
+                            <th class="py-2 px-4 text-left border-r border-gray-300">Agent</th>
                             <th class="w-1/2 py-2 px-4 text-left border-r border-gray-300">Description</th>
                             <th class="w-full py-2 px-4 text-left border-r border-gray-300">Poster</th>
-                            <th class="py-1 px-1 text-left border-r border-gray-300">Download</th>
                         </tr>
                     </thead>
                     <tbody class="text-gray-600">`;
@@ -516,16 +512,7 @@
                         <td class="py-2 px-4 border-r border-gray-300">
                             <img src="images/${item.Unit}.png" alt="Poster" class="h-10 w-10 object-cover rounded-md">
                         </td>
-                        <td class="py-4 px-5 space-x-2 text-center w-auto">
-                            <!-- SVG download button -->
-                            <a href="view-progress-link/${item.Incentives}"
-                               class="px-3 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-700" target="_blank">
-                                <!-- SVG icon for download -->
-                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="h-4 w-4 inline-block">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8l-8 8-8-8"></path>
-                                </svg>
-                            </a>
-                        </td>
+                        
                     </tr>
                 `;
             });

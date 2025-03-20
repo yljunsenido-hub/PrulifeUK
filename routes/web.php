@@ -155,6 +155,14 @@ Route::get('/posterTemplates'  , function () {
     return view('Marketing_Tab/poster_templates');
 })->name('poster_templates');
 
+Route::get('/posterTemplates/featuredPosters'  , function () {
+    return view('Marketing_Tab/marketing_featured_poster');
+})->name('marketing_featured_poster');
+
+Route::get('/posterTemplates/adminPosters'  , function () {
+    return view('Marketing_Tab/marketing_admin_poster');
+})->name('marketing_admin_poster');
+
 
 
 
