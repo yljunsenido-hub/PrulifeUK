@@ -406,9 +406,10 @@
     </div>
     
      <!-- Main Content Area -->
-<div id="main-content" class="content">
-    <div class="container mx-auto max-w-9xl bg-white p-4 rounded-lg shadow-md">
-        <h1 class="text-3xl font-semibold mb-4">Marketing Poster Maintenance</h1>
+    <div id="main-content" class="content">
+        <div class="container mx-auto max-w-9xl bg-white p-4 pb-4 rounded-lg shadow-md">
+            <h1 class="text-3xl font-semibold mb-4">Marketing Poster Maintenance</h1>
+            
         <div class="mb-4">
             <a href="{{ route('poster_template_maintenance') }}" class="bg-blue-500 text-white rounded-lg px-4 py-2 inline-block hover:bg-blue-600">Back to list</a>
         </div>
@@ -420,7 +421,7 @@
                 <!-- Template Selection -->
                 <div class="mb-6 p-4 bg-gray-50 border border-gray-300 rounded-lg shadow-sm flex-grow">
                     <div class="mb-3">
-                        <label for="template" class="block text-lg font-medium">Template</label>
+                        <label for="template" class="block text-xl font-medium mb-3 ">Template</label>
                         <select id="template" class="block w-full mt-1 rounded border border-gray-300 py-1 px-2 focus:outline-none focus:border-blue-500">
                             <option>Select Template</option>
                         </select>
@@ -465,13 +466,13 @@
             <!-- Right Container (File Uploads & Action Buttons) -->
             <div class="w-full md:w-1/2 flex flex-col h-full">
                 <!-- File Uploads Container -->
-                <div class="mb-6 p-4 bg-gray-50 border border-gray-300 rounded-lg shadow-sm flex-grow">
-                    <h2 class="text-lg font-medium mb-2">File Uploads</h2>
+                <div class="p-4 bg-gray-50 border border-gray-300 rounded-lg shadow-sm flex-grow">
+                    <h2 class="text-xl font-medium mb-2 ">File Uploads</h2>
 
                     <div class="grid grid-cols-1 gap-4">
                         <!-- File Upload Item -->
-                        <div class="flex flex-col mb-2">
-                            <label for="preview" class="block text-lg font-medium">Preview (JPG)</label>
+                        <div class="flex flex-col mb-2 border-t border-gray-300">
+                            <label for="preview" class="block text-lg font-medium mt-2">Preview (JPG)</label>
                             <div class="flex items-center mt-1">
                                 <label class="block flex-grow">
                                     <input type="file" id="preview" class="hidden">
@@ -479,7 +480,7 @@
                                     <span class="ml-2 text-gray-500">No file chosen</span>
                                 </label>
                             </div>
-                            <button class="bg-gray-200 hover:bg-gray-300 text-gray-700 py-1 px-2 rounded text-sm mt-4 w-20">Upload</button>
+                            <button class="bg-green-500 hover:bg-green-700 text-white py-1 px-2 rounded text-sm mt-4 w-20 ml-auto">Upload</button>
                         </div>
 
                         <div class="flex flex-col mb-2">
@@ -491,7 +492,7 @@
                                     <span class="ml-2 text-gray-500">No file chosen</span>
                                 </label>
                             </div>
-                            <button class="bg-gray-200 hover:bg-gray-300 text-gray-700 py-1 px-2 rounded text-sm mt-4 w-20">Upload</button>
+                            <button class="bg-green-500 hover:bg-green-700 text-white py-1 px-2 rounded text-sm mt-4 w-20 ml-auto">Upload</button>
                         </div>
 
                         <div class="flex flex-col mb-2">
@@ -503,7 +504,7 @@
                                     <span class="ml-2 text-gray-500">No file chosen</span>
                                 </label>
                             </div>
-                            <button class="bg-gray-200 hover:bg-gray-300 text-gray-700 py-1 px-2 rounded text-sm mt-4 w-20">Upload</button>
+                            <button class="bg-green-500 hover:bg-green-700 text-white py-1 px-2 rounded text-sm mt-4 w-20 ml-auto">Upload</button>
                         </div>
 
                         <div class="flex flex-col mb-2">
@@ -515,7 +516,7 @@
                                     <span class="ml-2 text-gray-500">No file chosen</span>
                                 </label>
                             </div>
-                            <button class="bg-gray-200 hover:bg-gray-300 text-gray-700 py-1 px-2 rounded text-sm mt-4 w-20">Upload</button>
+                            <button class="bg-green-500 hover:bg-green-700 text-white py-1 px-2 rounded text-sm mt-4 w-20 ml-auto">Upload</button>
                         </div>
 
                         <div class="flex flex-col mb-2">
@@ -527,23 +528,22 @@
                                     <span class="ml-2 text-gray-500">No file chosen</span>
                                 </label>
                             </div>
-                            <button class="bg-gray-200 hover:bg-gray-300 text-gray-700 py-1 px-2 rounded text-sm mt-4 w-20">Upload</button>
+                            <button class="bg-green-500 hover:bg-green-700 text-white py-1 px-2 rounded text-sm mt-4 w-20 ml-auto">Upload</button>
                         </div>
                     </div>
                 </div>
-
-                <!-- Action Buttons -->
-                <div class="mt-auto flex justify-end w-full space-x-4">
-                    <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
-                        Render
-                    </button>
-                    <button class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded">
-                        Preview & Create
-                    </button>
-                </div>
             </div>
-
         </div>
+        
+            <!-- Action Buttons -->
+                <div class="flex justify-end w-full space-x-4">
+                <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+                    Render
+                </button>
+                <button class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded">
+                    Preview & Create
+                </button>
+            </div>
     </div>
 </div>
 

@@ -411,24 +411,24 @@
         <div class="container mx-auto max-w-7xl bg-white p-6 rounded-lg shadow-md">
             <h2 class="text-4xl font-semibold mb-4">Unit Maintenance</h2>
  <div class="container shadow-md mb-3 mb-4 p-2 bg-blue-900 rounded-md flex justify-between items-center">
-        <h1 class="pl-2 text-l text-yellow-300 font-semibold "><a href="#" id="createNewAgent" class="text-base xl:text-yellow-600 hover:text-yellow-100 font-semibold">Create New Unit </a></h1>
+        <h1 class="pl-2 text-l text-white font-semibold "><a href="{{ route('unit_maintenance_create') }}" id="createNewAgent" class="text-base xl:text-yellow-300 hover:text-white font-semibold">Create New Unit </a></h1>
 </div>
             
-            <div class="flex items-center justify-between mb-4">
-                
-                <div class="flex items-center">
-                    <label for="entries" class="mr-2 text-sm text-gray-600">Show entries:</label>
-                    <select id="entries" class="border border-gray-300 rounded-md p-1 text-sm">
-                        <option value="10">10</option>
-                        <option value="25">25</option>
-                        <option value="50">50</option>
-                    </select>
-                </div>
+            <div class="p-5 bg-white rounded-md shadow-md">
+                <div class="flex items-center justify-between mb-4">
+                    <div class="flex items-center">
+                        <label for="entries" class="mr-2 text-sm text-gray-600">Show entries:</label>
+                        <select id="entries" class="border border-gray-300 rounded-md p-1 text-sm">
+                            <option value="10">10</option>
+                            <option value="25">25</option>
+                            <option value="50">50</option>
+                        </select>
+                    </div>
 
-                <div class="flex items-center">
-                    <label for="search" class="mr-2 text-sm text-gray-600">Search:</label>
-                    <input type="text" id="search" class="px-3 py-1 border border-gray-300 rounded-md shadow-sm text-sm" placeholder="Search...">
-                </div>
+                    <div class="flex items-center">
+                        <label for="search" class="mr-2 text-sm text-gray-600">Search:</label>
+                        <input type="text" id="search" class="px-3 py-1 border border-gray-300 rounded-md shadow-sm text-sm" placeholder="Search...">
+                    </div>
             </div>
 
             <!-- Table Content -->
@@ -462,14 +462,16 @@
                     </tbody>
                 </table>
             </div>
-            <div class="flex justify-end items-center mt-4 space-x-2">
+            
+        </div>
+
+        <!-- Pagination Section -->
+
+        <div class="flex justify-end items-center mt-4 space-x-2">
             <button class="px-3 py-1 bg-gray-300 text-gray-700 rounded-md hover:bg-gray-400 text-sm" id="previousBtn">Previous</button>
             <div class="flex items-center space-x-2" id="pageNumbers"></div>
             <button class="px-3 py-1 bg-gray-300 text-gray-700 rounded-md hover:bg-gray-400 text-sm" id="nextBtn">Next</button>
         </div>
-        </div>
-
-        <!-- Pagination Section -->
         
     </div>
             
