@@ -225,6 +225,14 @@ Route::get('/unitMaintenance'  , function () {
     return view('BCMS_Maintenance_Tab/unit_maintenance');
 })->name('unit_maintenance');
 
+Route::get('/topPosterMaintenance'  , function () {
+    return view('BCMS_Maintenance_Tab/top_poster_maintenace');
+})->name('top_poster_maintenance');
+
+Route::get('/topPosterMaintenanceCreate'  , function () {
+    return view('BCMS_Maintenance_Tab/top_poster_maintenace_create');
+})->name('top_poster_maintenance_create');
+
 
 // Branch Operations Utility Tab
 

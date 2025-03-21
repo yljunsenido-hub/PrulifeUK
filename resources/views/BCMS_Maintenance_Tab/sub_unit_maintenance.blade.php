@@ -413,7 +413,7 @@
 
         <!-- Create New Sub-Unit Button -->
          <div class="container shadow-md mb-3 mb-4 p-2 bg-blue-900 rounded-md flex justify-between items-center">
-        <h1 class="pl-2 text-l text-yellow-300 font-semibold "><a href="#" id="createNewAgent" class="text-base xl:text-yellow-600 hover:text-yellow-100 font-semibold">Create New Agent </a></h1>
+        <h1 class="pl-2 text-l text-yellow-300 font-semibold "><a href="{{ route('sub_unit_maintenance_create') }}" id="createNewAgent" class="text-base xl:text-yellow-300 hover:text-white font-semibold">Create New Agent </a></h1>
 </div>
 
 
