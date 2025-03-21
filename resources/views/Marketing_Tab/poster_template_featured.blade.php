@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Marketing Featured Poster</title>
- <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <title>Agents Production Reports MTD</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
        nav {
@@ -23,7 +23,7 @@
     background-image: linear-gradient(to bottom, #1e3a8a, #1d4ed8);
     color: white;
     box-shadow: 0 5px rgba(0, 0, 0, 0.1), inset 0 4px 8px rgba(0, 0, 0, 0.3);
-    z-index: 999; /* Sidebar behind navbar */
+    z-index: 998; /* Sidebar behind navbar */
     padding: 20px;
     overflow-y: auto;
     transition: transform 0.4s ease, opacity 0.3s ease, visibility 0.3s ease;
@@ -406,130 +406,131 @@
             </li>
         </ul>
     </div>
-    
-    <!-- Main Content Area -->
-    <div id="main-content" class="content">
 
-	<div class="container mx-auto max-w-9xl bg-white p-6 rounded-lg shadow-md">
-        <h2 class="text-4xl font-semibold mb-4">Marketing Poster</h2>
+<!-- Main Content Area -->
+<div id="main-content" class="content">
 
-        <div class="pl-40 pr-40 mb-4 p-4 bg-blue-900 rounded-md flex justify-between items-center">
+<div class="container mx-auto max-w-9xl bg-white p-6 rounded-lg shadow-md">
+    <h2 class="text-4xl font-semibold mb-4">Marketing Poster</h2>
+
+         <div class="pl-40 pr-40 mb-4 p-4 bg-blue-900 rounded-md flex justify-between items-center">
             <a href="{{ route('poster_templates') }}" class="block mb-1 p-1 text-white font-semibold hover:text-yellow-300">General Poster</a>
             <a class="text-white"> | </a>
-            <a href="{{ route('marketing_featured_poster') }}" class="block mb-1 p-1 pr-3 text-white font-semibold hover:text-yellow-300">Featured Poster</a>
+            <a href="{{ route('poster_template_featured') }}" class="block mb-1 p-1 pr-3 text-white font-semibold hover:text-yellow-300">Featured Poster</a>
             <a class="text-white"> | </a>
-            <a href="{{ route('marketing_admin_poster') }}" class="block mb-1 p-1 text-white font-semibold hover:text-yellow-300">Admin Poster</a>
-        </div>
-
-
-        <!-- Table Section -->
-        <div class="mb-4 p-4 bg-white rounded-md shadow-md">
-            <div class="flex items-center justify-between mb-4">
-                <div class="flex items-center">
-                    <label for="entries" class="mr-2 text-sm text-gray-600">Show entries:</label>
-                    <select id="entries" class="border border-gray-300 rounded-md p-1 text-sm">
-                        <option value="10">10</option>
-                        <option value="25">25</option>
-                        <option value="50">50</option>
-                        <option value="100">100</option>
-                    </select>
-                </div>
-
-                <div class="flex items-center">
-                    <label for="search" class="mr-2 text-sm text-gray-600">Search:</label>
-                    <input type="text" id="search" class="px-3 py-1 border border-gray-300 rounded-md shadow-sm text-sm" placeholder="Search...">
-                </div>
-            </div>
-
-            <!-- Table Content -->
-            <div id="tableContent" class="overflow-x-auto">
-                <!-- Dynamic Table Rows will be inserted here -->
-            </div>
+            <a href="{{ route('poster_template_admin') }}" class="block mb-1 p-1 text-white font-semibold hover:text-yellow-300">Admin Poster</a>
         </div>
         
-        <!-- Pagination Section -->
-        <div class="flex justify-end items-center mt-4 space-x-2">
-            <div class="ml-4 flex space-x-2">
-                <button class="px-3 py-1 bg-gray-300 text-gray-700 rounded-md hover:bg-gray-400 text-sm" id="previousBtn">Previous</button>
-                <div class="mr-1 flex items-center space-x-2">
-                    <div id="pageNumbers" class="flex space-x-1">
-                        <!-- Page numbers will be dynamically inserted here -->
-                    </div>
-                </div>
-                <button class="px-3 py-1 bg-gray-300 text-gray-700 rounded-md hover:bg-gray-400 text-sm" id="nextBtn">Next</button>
+
+
+    <!-- Table Section -->
+    <div class="mb-4 p-4 bg-white rounded-md shadow-md">
+        <div class="flex items-center justify-between mb-4">
+            <div class="flex items-center">
+                <label for="entries" class="mr-2 text-sm text-gray-600">Show entries:</label>
+                <select id="entries" class="border border-gray-300 rounded-md p-1 text-sm">
+                    <option value="10">10</option>
+                    <option value="25">25</option>
+                    <option value="50">50</option>
+                    <option value="100">100</option>
+                </select>
+            </div>
+
+            <div class="flex items-center">
+                <label for="search" class="mr-2 text-sm text-gray-600">Search:</label>
+                <input type="text" id="search" class="px-3 py-1 border border-gray-300 rounded-md shadow-sm text-sm" placeholder="Search...">
             </div>
         </div>
 
+        <!-- Table Content -->
+        <div id="tableContent" class="overflow-x-auto">
+            <!-- Dynamic Table Rows will be inserted here -->
+        </div>
+    </div>
+    
+    <!-- Pagination Section -->
+    <div class="flex justify-end items-center mt-4 space-x-2">
+        <div class="ml-4 flex space-x-2">
+            <button class="px-3 py-1 bg-gray-300 text-gray-700 rounded-md hover:bg-gray-400 text-sm" id="previousBtn">Previous</button>
+            <div class="mr-1 flex items-center space-x-2">
+                <div id="pageNumbers" class="flex space-x-1">
+                    <!-- Page numbers will be dynamically inserted here -->
+                </div>
+            </div>
+            <button class="px-3 py-1 bg-gray-300 text-gray-700 rounded-md hover:bg-gray-400 text-sm" id="nextBtn">Next</button>
+        </div>
     </div>
 
-    <script>
-        let currentPage = 1;
-        let entriesPerPage = 10; // Default value
-        const previousBtn = document.getElementById('previousBtn');
-        const nextBtn = document.getElementById('nextBtn');
-        const pageNumbersContainer = document.getElementById('pageNumbers');
-        const tableContent = document.getElementById('tableContent');
-        const entriesSelect = document.getElementById('entries');
-        const searchInput = document.getElementById('search');
+</div>
 
-        // Sample table data
-        const tableData = [
-            { No: 1, Incentives: 'A001', Unit: 'Finance', Recruiter: 'John Doe', Progress: 80, ForApproval: 'Yes' },
-            { No: 2, Incentives: 'A002', Unit: 'HR', Recruiter: 'Jane Smith', Progress: 70, ForApproval: 'No' },
-            { No: 3, Incentives: 'B001', Unit: 'Sales', Recruiter: 'Alice Brown', Progress: 85, ForApproval: 'Yes' },
-            { No: 4, Incentives: 'B002', Unit: 'Marketing', Recruiter: 'Bob White', Progress: 90, ForApproval: 'No' },
-            { No: 5, Incentives: 'C001', Unit: 'Legal', Recruiter: 'Charlie Green', Progress: 75, ForApproval: 'Yes' },
-        ];
+<script>
+    let currentPage = 1;
+    let entriesPerPage = 10; // Default value
+    const previousBtn = document.getElementById('previousBtn');
+    const nextBtn = document.getElementById('nextBtn');
+    const pageNumbersContainer = document.getElementById('pageNumbers');
+    const tableContent = document.getElementById('tableContent');
+    const entriesSelect = document.getElementById('entries');
+    const searchInput = document.getElementById('search');
 
-        // Filter data (you can add your filtering logic here)
-        function filterTableData() {
-            return tableData;
-        }
+    // Sample table data
+    const tableData = [
+        { No: 1, Incentives: 'A001', Unit: 'Finance', Recruiter: 'John Doe', Progress: 80, ForApproval: 'Yes' },
+        { No: 2, Incentives: 'A002', Unit: 'HR', Recruiter: 'Jane Smith', Progress: 70, ForApproval: 'No' },
+        { No: 3, Incentives: 'B001', Unit: 'Sales', Recruiter: 'Alice Brown', Progress: 85, ForApproval: 'Yes' },
+        { No: 4, Incentives: 'B002', Unit: 'Marketing', Recruiter: 'Bob White', Progress: 90, ForApproval: 'No' },
+        { No: 5, Incentives: 'C001', Unit: 'Legal', Recruiter: 'Charlie Green', Progress: 75, ForApproval: 'Yes' },
+    ];
 
-        // Render the table content
-        function renderTable() {
-            const filteredData = filterTableData(); // Apply any filters
-            const start = (currentPage - 1) * entriesPerPage;
-            const end = currentPage * entriesPerPage;
-            const pageData = filteredData.slice(start, end);
+    // Filter data (you can add your filtering logic here)
+    function filterTableData() {
+        return tableData;
+    }
 
-            let tableHTML = `
-                <table class="bg-white border border-gray-300 text-sm">
-                    <thead>
-                        <tr class="bg-gray-200 text-gray-600">
-                            <th class="py-2 px-4 text-left border-r border-gray-300">Agent</th>
-                            <th class="w-1/2 py-2 px-4 text-left border-r border-gray-300">Description</th>
-                            <th class="w-full py-2 px-4 text-left border-r border-gray-300">Poster</th>
-                        </tr>
-                    </thead>
-                    <tbody class="text-gray-600">`;
+    // Render the table content
+    function renderTable() {
+        const filteredData = filterTableData(); // Apply any filters
+        const start = (currentPage - 1) * entriesPerPage;
+        const end = currentPage * entriesPerPage;
+        const pageData = filteredData.slice(start, end);
 
-            pageData.forEach(item => {
-                tableHTML += `
-                    <tr class="border-b border-gray-300 hover:bg-gray-100">
-                        <td class="py-2 px-4 border-r border-gray-300">${item.No}</td>
-                        <td class="py-2 px-4 border-r border-gray-300">${item.Incentives}</td>
-                        <td class="py-2 px-4 border-r border-gray-300">
-                            <img src="images/${item.Unit}.png" alt="Poster" class="h-10 w-10 object-cover rounded-md">
-                        </td>
-                        
+        let tableHTML = `
+            <table class="bg-white border border-gray-300 text-sm">
+                <thead>
+                    <tr class="bg-gray-200 text-gray-600">
+                        <th class="py-2 px-4 text-left border-r border-gray-300">Agent</th>
+                        <th class="w-1/2 py-2 px-4 text-left border-r border-gray-300">Description</th>
+                        <th class="w-full py-2 px-4 text-left border-r border-gray-300">Poster</th>
                     </tr>
-                `;
-            });
+                </thead>
+                <tbody class="text-gray-600">`;
 
-            tableHTML += `</tbody></table>`;
-            tableContent.innerHTML = tableHTML;
-        }
+        pageData.forEach(item => {
+            tableHTML += `
+                <tr class="border-b border-gray-300 hover:bg-gray-100">
+                    <td class="py-2 px-4 border-r border-gray-300">${item.No}</td>
+                    <td class="py-2 px-4 border-r border-gray-300">${item.Incentives}</td>
+                    <td class="py-2 px-4 border-r border-gray-300">
+                        <img src="images/${item.Unit}.png" alt="Poster" class="h-10 w-10 object-cover rounded-md">
+                    </td>
+                    
+                </tr>
+            `;
+        });
 
-        // Initial table render
-        renderTable();
-    </script>
-		           
-        </div>
-        
+        tableHTML += `</tbody></table>`;
+        tableContent.innerHTML = tableHTML;
+    }
+
+    // Initial table render
+    renderTable();
+</script>
+               
     </div>
-    </div>
+    
+</div>
+</div>
 
-  
+
 </body>
 </html>

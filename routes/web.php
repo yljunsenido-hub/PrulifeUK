@@ -156,12 +156,12 @@ Route::get('/posterTemplates'  , function () {
 })->name('poster_templates');
 
 Route::get('/posterTemplates/featuredPosters'  , function () {
-    return view('Marketing_Tab/marketing_featured_poster');
-})->name('marketing_featured_poster');
+    return view('Marketing_Tab/poster_template_featured');
+})->name('poster_template_featured');
 
 Route::get('/posterTemplates/adminPosters'  , function () {
-    return view('Marketing_Tab/marketing_admin_poster');
-})->name('marketing_admin_poster');
+    return view('Marketing_Tab/poster_template_admin');
+})->name('poster_template_admin');
 
 
 

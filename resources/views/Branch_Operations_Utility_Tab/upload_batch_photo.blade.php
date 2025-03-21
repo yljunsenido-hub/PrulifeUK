@@ -407,7 +407,7 @@
         </ul>
     </div>
 
-    <!-- Main Content Area -->
+   <!-- Main Content Area -->
 <div id="main-content" class="content">
     <div class="container mx-auto max-w-3xl mx-32 bg-white p-4 rounded-lg shadow-md">
 
@@ -422,13 +422,15 @@
         <!-- File upload section -->
         <div class="space-y-6 mt-5">
 
-            <!-- File input and File name display -->
-            <div class="flex justify-between items-center">
+            <!-- File input and Upload Button -->
+            <div class="flex items-center">
                 <!-- File input -->
                 <input type="file" id="file-upload" class="border border-gray-300 p-3 rounded-md w-full md:w-auto focus:outline-none focus:ring-2 focus:ring-blue-500 text-left" accept=".jpeg, .jpg, .png">
                 
-                <!-- File Name Display -->
-                <p id="file-name" class="text-gray-700 text-sm">No file chosen</p>
+                <!-- Upload Button -->
+                <button onclick="confirmUpload()" class="ml-4 bg-blue-600 text-white py-2 px-4 rounded-md hover:bg-blue-700 transition duration-300">
+                    UPLOAD IMAGE
+                </button>
             </div>
 
             <!-- Image Preview Section -->
@@ -436,126 +438,133 @@
                 <img id="image-preview" class="hidden max-w-[300px] h-auto rounded-md shadow-md" alt="Image Preview">
             </div>
 
-            <!-- Upload Button with Confirmation -->
-            <div class="flex justify-center">
-                <button onclick="confirmUpload()" class="w-1/4 bg-blue-600 text-white py-2 rounded-md hover:bg-blue-700 transition duration-300">
-                    UPLOAD IMAGE
-                </button>
-            </div>
+ <!-- File Name Display -->
+ <p id="file-name" class="text-gray-700 text-sm"></p>
 
-            <!-- Success Message -->
-            <div id="upload-success" class="hidden text-green-600 text-center mt-4">
-                <p>Image uploaded successfully!</p>
-            </div>
+
+ <div id="upload-success-modal" class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 hidden">
+    <div class="bg-white rounded-lg p-6 w-11/12 md:w-1/3 text-center relative">
+        <p class="text-green-600 text-lg font-semibold">Image uploaded successfully!</p>
+    </div>
+
+</div>
 
         </div>
 
         <div class="flex justify-center mt-4">
-        <img src="images/imageguide.png" alt="imageguide" class="w-full h-full  rounded-xl border-4 border-gray-300 shadow-md hover:opacity-80">
+            <img src="images/imageguide.png" alt="imageguide" class="w-full h-full rounded-xl border-4 border-gray-300 shadow-md hover:opacity-80">
         </div>
 
     </div>
 </div>
 
-
-     <!-- Confirmation Modal -->
-  <div id="modal" class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 hidden">
-    <div class="bg-white rounded-lg p-6 w-11/12 md:w-1/3">
-      <h3 class="text-lg font-semibold mb-4" id="modal-message">Are you sure you want to upload this image?</h3>
-      <div class="flex justify-end">
-        <button onclick="handleUploadConfirmation(true)" class="bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition duration-300">Yes</button>
-        <button onclick="handleUploadConfirmation(false)" class="ml-2 bg-gray-300 text-gray-700 px-4 py-2 rounded-md hover:bg-gray-400 transition duration-300">No</button>
-      </div>
+<!-- Confirmation Modal -->
+<div id="modal" class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 hidden">
+    <div class="bg-white rounded-lg p-6 w-11/12 md:w-1/3 relative">
+        <button onclick="closeModal()" class="absolute top-2 right-2 text-gray-600 hover:text-gray-800">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+        </button>
+        <h3 class="text-lg font-semibold mb-4" id="modal-message">The image must be 1720x1720 pixels. Please upload a new one.</h3>
+        <div id="modal-error-message" class="text-red-600 mb-4 hidden"></div>
+        <div class="flex justify-end">
+            <button onclick="resetUpload()" class="bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition duration-300">Upload a New One</button>
+        </div>
     </div>
-  </div>
-    <script>
-        // Function to toggle the sidebar
-        function toggleSidebar() {
-            const sidebar = document.getElementById("sidebar");
-            const content = document.getElementById("main-content");
-            sidebar.classList.toggle("show"); // Show or hide the sidebar
-            content.classList.toggle("shift"); // Shift content when sidebar is visible
-        }
+</div>
 
-        let currentOpenDropdown = null;
+<script>
+// Function to handle file input and update the "No file chosen" text
+document.addEventListener('DOMContentLoaded', function() {
+    const fileInput = document.getElementById('file-upload');
+    const fileNameDisplay = document.getElementById('file-name');
+    const imagePreview = document.getElementById('image-preview');
 
-        function toggleDropdown(dropdownId) {
-            const dropdown = document.getElementById(dropdownId);
-
-            // Close the currently open dropdown if it's not the one being clicked
-            if (currentOpenDropdown && currentOpenDropdown !== dropdown) {
-                currentOpenDropdown.classList.remove('show');
-                currentOpenDropdown.style.maxHeight = '0'; // Reset max-height
-                currentOpenDropdown.style.opacity = '0'; // Reset opacity
-            }
-
-            // Toggle the clicked dropdown
-            if (dropdown.classList.contains('show')) {
-                dropdown.classList.remove('show');
-                dropdown.style.maxHeight = '0'; // Reset max-height
-                dropdown.style.opacity = '0'; // Reset opacity
-            } else {
-                dropdown.classList.add('show');
-                dropdown.style.maxHeight = '500px'; // Set max-height to allow transition
-                dropdown.style.opacity = '1'; // Set opacity to allow transition
-            }
-
-            // Update the current open dropdown reference
-            currentOpenDropdown = dropdown.classList.contains('show') ? dropdown : null;
-        }
-
-    </script>
-
-    <script>
-    // Function to handle file input and update the "No file chosen" text
-    document.addEventListener('DOMContentLoaded', function() {
-      const fileInput = document.getElementById('file-upload');
-      const fileNameDisplay = document.getElementById('file-name');
-      const imagePreview = document.getElementById('image-preview');
-
-      fileInput.addEventListener('change', function(event) {
+    fileInput.addEventListener('change', function(event) {
         const file = event.target.files[0];
         if (file) {
-          const fileName = file.name;
-          fileNameDisplay.textContent = fileName;
+            const fileName = file.name;
+            fileNameDisplay.textContent = fileName; // Update the file name display
 
-          // Create a URL for the selected image and set it as the src of the image preview
-          const reader = new FileReader();
-          reader.onload = function(e) {
-            imagePreview.src = e.target.result;
-            imagePreview.classList.remove('hidden'); // Show the image preview
-          };
-          reader.readAsDataURL(file);
+            // Create a URL for the selected image and set it as the src of the image preview
+            const reader = new FileReader();
+            reader.onload = function(e) {
+                imagePreview.src = e.target.result;
+                imagePreview.classList.remove('hidden'); // Show the image preview
+            };
+            reader.readAsDataURL(file);
         } else {
-          fileNameDisplay.textContent = 'No file chosen';
-          imagePreview.classList.add('hidden'); // Hide the image preview if no file is chosen
+            fileNameDisplay.textContent = 'No file chosen';
+            imagePreview.classList.add('hidden'); // Hide the image preview if no file is chosen
         }
-      });
     });
+});
 
-    // Function to confirm before uploading
-    function confirmUpload() {
-      const fileInput = document.getElementById('file-upload');
-      if (fileInput.files.length > 0) {
-        const fileName = fileInput.files[0].name;
-        document.getElementById('modal-message').textContent = `Are you sure you want to upload the image: ${fileName}?`;
-        document.getElementById('modal').classList.remove('hidden');
-      } else {
-        document.getElementById('upload-success').classList.add('hidden'); // Hide success message if no file
-        document.getElementById('modal-message').textContent = "Please choose an image to upload.";
-        document.getElementById('modal').classList.remove('hidden');
-      }
-    }
+// Function to check image dimensions
+function checkImageDimensions(file) {
+    return new Promise((resolve, reject) => {
+        const img = new Image();
+        img.onload = function() {
+            if (img.width === 1720 && img.height === 1720) {
+                resolve(true);
+            } else {
+                resolve(false);
+            }
+        };
+        img.onerror = function() {
+            reject(new Error("Could not load image"));
+        };
+        img.src = URL.createObjectURL(file);
+    });
+}
 
-    // Function to handle the confirmation of the upload
-    function handleUploadConfirmation(isConfirmed) {
-      const modal = document.getElementById('modal');
-      if (isConfirmed) {
-        // Show success message
-        document.getElementById('upload-success').classList.remove('hidden'); // Show success message
-      }
-      modal.classList.add('hidden'); // Close the modal
+// Function to confirm before uploading
+async function confirmUpload() {
+    const fileInput = document.getElementById('file-upload');
+    const modalErrorMessage = document.getElementById('modal-error-message');
+    modalErrorMessage.classList.add('hidden'); // Hide error message initially
+
+    if (fileInput.files.length > 0) {
+        const file = fileInput.files[0];
+        const isValid = await checkImageDimensions(file);
+        
+        if (isValid) {
+            // Show success pop-up
+            const successModal = document.getElementById('upload-success-modal');
+            successModal.classList.remove('hidden');
+
+            // Hide success pop-up after 1.5 seconds
+            setTimeout(() => {
+                successModal.classList.add('hidden');
+            }, 1500);
+        } else {
+            // Show modal for invalid dimensions
+            document.getElementById('modal').classList.remove('hidden');
+            document.getElementById('image-preview').classList.add('hidden'); // Hide the image preview
+            document.getElementById('file-name').textContent = 'No file chosen'; // Reset file name display
+            fileInput.value = ''; // Clear the file input
+        }
+    } else {
+        modalErrorMessage.textContent = "Please choose an image to upload.";
+        modalErrorMessage.classList.remove('hidden');
+        document.getElementById('modal').classList.remove('hidden');
     }
-  </script>
+}
+
+// Function to reset the upload
+function resetUpload() {
+    const fileInput = document.getElementById('file-upload');
+    fileInput.value = ''; // Clear the file input
+    document.getElementById('file-name').textContent = 'No file chosen'; // Reset file name display
+    document.getElementById('image-preview').classList.add('hidden'); // Hide the image preview
+    document.getElementById('modal').classList.add('hidden'); // Close the modal
+}
+
+// Function to close the modal
+function closeModal() {
+    document.getElementById('modal').classList.add ('hidden'); // Close the modal
+}
+</script>
 </body>
 </html>

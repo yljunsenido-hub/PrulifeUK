@@ -3,19 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Marketing Poster Templates</title>
+    <title>Agents Production Reports MTD</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
-        /* Sticky Navbar */
-        nav {
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-        }
+       nav {
+    position: sticky;
+    top: 0;
+    z-index: 1000; /* Keep navbar on top */
+}
 
-        /* Sidebar Style */
-        .sidebar {
+/* Sidebar Style */
+.sidebar {
     position: fixed;
     top: 72px; /* Height of the navbar */
     left: 0;
@@ -24,15 +23,17 @@
     background-image: linear-gradient(to bottom, #1e3a8a, #1d4ed8);
     color: white;
     box-shadow: 0 5px rgba(0, 0, 0, 0.1), inset 0 4px 8px rgba(0, 0, 0, 0.3);
-    z-index: 1000;
+    z-index: 998; /* Sidebar behind navbar */
     padding: 20px;
     overflow-y: auto;
+    transition: transform 0.4s ease, opacity 0.3s ease, visibility 0.3s ease;
+
     
     /* Sidebar is visible by default */
         transform: translateX(0);
          opacity: 1;
          visibility: visible;
-        transition: transform 0.4s ease, opacity 0.3s ease, visibility 0.3s ease;
+            transition: transform 0.4s ease, opacity 0.3s ease, visibility 0.3s ease;
         }
 
         .sidebar.hide {
@@ -114,10 +115,10 @@
         }
         
         .dropdown li:hover a {
-            color: #f8e9a1; /* Change this to your desired hover color */
-            background-color: rgba(255, 255, 255, 0.1); /* Optional: Add a background color on hover */
-            border-radius: 4px; /* Optional: Add rounded corners */
-        }
+    color: #f8e9a1; /* Change this to your desired hover color */
+    background-color: rgba(255, 255, 255, 0.1); /* Optional: Add a background color on hover */
+    border-radius: 4px; /* Optional: Add rounded corners */
+}
 
         /* Main content styles */
         .content {
@@ -415,9 +416,9 @@
         <div class="pl-40 pr-40 mb-4 p-4 bg-blue-900 rounded-md flex justify-between items-center">
             <a href="{{ route('poster_templates') }}" class="block mb-1 p-1 text-white font-semibold hover:text-yellow-300">General Poster</a>
             <a class="text-white"> | </a>
-            <a href="{{ route('marketing_featured_poster') }}" class="block mb-1 p-1 pr-3 text-white font-semibold hover:text-yellow-300">Featured Poster</a>
+            <a href="{{ route('poster_template_featured') }}" class="block mb-1 p-1 pr-3 text-white font-semibold hover:text-yellow-300">Featured Poster</a>
             <a class="text-white"> | </a>
-            <a href="{{ route('marketing_admin_poster') }}" class="block mb-1 p-1 text-white font-semibold hover:text-yellow-300">Admin Poster</a>
+            <a href="{{ route('poster_template_admin') }}" class="block mb-1 p-1 text-white font-semibold hover:text-yellow-300">Admin Poster</a>
         </div>
         
         <div class="mb-4 p-1 bg-blue-800 rounded-md flex justify-center items-center max-w-9xl mx-auto">
