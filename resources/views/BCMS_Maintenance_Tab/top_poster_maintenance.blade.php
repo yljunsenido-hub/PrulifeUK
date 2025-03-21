@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard with Sidebar</title>
+    <title>Top Poster Maintenance</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
@@ -135,14 +135,14 @@
 
 </head>
 <body>
-    <!-- Sticky Navigation Bar -->
-    <nav class="bg-gradient-to-r from-blue-900 to-blue-700 p-4 flex justify-between items-center">
+   <!-- Sticky Navigation Bar -->
+   <nav class="bg-gradient-to-r from-blue-900 to-blue-700 p-4 flex justify-between items-center">
         <div class="flex items-center">
         <button class="mr-3 bg-transparent text-white p-2 rounded-md relative hover:bg-blue-800" onclick="toggleSidebar()">
-        <i class="fas fa-bars text-white hover:text-white"></i>
-    </button>
-           
-    <a href="{{ route('home') }}">
+            <i class="fas fa-bars text-white hover:text-white"></i>
+        </button>
+
+        <a href="{{ route('home') }}">
             <button>
                 <img src="images/bcdqlogo.png" alt="bcdq logo" class="h-10 w-10 mr-4">
             </button>
@@ -153,7 +153,7 @@
                 <span class="text-white text-lg font-semibold">BLUE CHALCEDONY QUARTZ BRANCH</span>
             </button>
         </a>
-
+        
         </div>
 
         <div class="flex items-center space-x-6">
@@ -167,54 +167,10 @@
             <i class="fas fa-bell text-white px-0"></i>
             <i class="fas fa-user text-white px-2.5"></i>
         </div>
-        
-        <style>
-         input::placeholder {
-            color: white;
-            }
-        </style>
 
+        
+      
     </nav>
-
-      <script>
-       function toggleSidebar() {
-            const sidebar = document.getElementById("sidebar");
-            const content = document.getElementById("main-content");
-
-            if (sidebar.classList.contains("hide")) {
-                sidebar.classList.remove("hide");
-                content.classList.remove("shift"); // Shift content when sidebar is visible
-            } else {
-                sidebar.classList.add("hide");
-                content.classList.add("shift"); // Shift content when sidebar is hidden
-            }
-        }
-
-        let currentOpenDropdown = null;
-
-        function toggleDropdown(dropdownId) {
-            const dropdown = document.getElementById(dropdownId);
-
-            if (currentOpenDropdown && currentOpenDropdown !== dropdown) {
-                currentOpenDropdown.classList.remove('show');
-                currentOpenDropdown.style.maxHeight = '0';
-                currentOpenDropdown.style.opacity = '0';
-            }
-
-            if (dropdown.classList.contains('show')) {
-                dropdown.classList.remove('show');
-                dropdown.style.maxHeight = '0';
-                dropdown.style.opacity = '0';
-            } else {
-                dropdown.classList.add('show');
-                dropdown.style.maxHeight = '500px';
-                dropdown.style.opacity = '1';
-            }
-
-            currentOpenDropdown = dropdown.classList.contains('show') ? dropdown : null;
-        }
-        
-    </script>
 
     <!-- Sidebar -->
     <div class="sidebar" id="sidebar">
@@ -229,6 +185,24 @@
                         <path d="M20 4a2 2 0 0 0-2-2h-2V1a1 1 0 0 0-2 0v1h-3V1a1 1 0 0 0-2 0v1H6V1a1 1 0 0 0-2 0v1H2a2 2 0 0 0-2 2v2h20V4ZM0 18a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8H0v10Zm5-8h10a1 1 0 0 1 0 2H5a1 1 0 0 1 0-2Z"/>
                     </svg>
                     <span class="menu-text text-md text-white">Events</span> 
+                    <i class="fas fa-chevron-down px-1 mb-custom-mb-1 mr-1 text-xs"></i>
+                </button>
+                <ul class="dropdown" id="eventsDropdown">
+                    <li><a href="#" class="text-md text-gray-300 block pl-8 py-2">Upcoming Events</a></li>
+                    <li><a href="#" class="text-md text-gray-300 block pl-8 py-2">My Events</a></li>
+                    <li><a href="#" class="text-md text-gray-300 block pl-8 py-2 mb-6">Event Maintenance</a></li>
+                </ul>
+            </li>
+            <li class="menu-item text-white w-full text-left py-1 pb-2">
+                <span class="text-yellow-300 font-bold text-xs">OPERATIONS</span>
+            </li>
+            <li class="menu-item">
+                <button class="text-gray-400 w-full text-left py-1 pb-2" 
+                onclick="toggleDropdown('leadsDropdown')">
+                    <svg class="w-3  h-3 text-white dark:text-white inline-block mr-2 mb-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 20">
+                        <path d="M16 14V2a2 2 0 0 0-2-2H2a2 2 0 0 0-2 2v15a3 3 0 0 0 3 3h12a1 1 0 0 0 0-2h-1v-2a2 2 0 0 0 2-2ZM4 2h2v12H4V2Zm8 16H3a1 1 0 0 1 0-2h9v2Z"/>
+                    </svg>
+                    <span class="menu-text text-md text-white">Leads & Cases</span> 
                     <i class="fas fa-chevron-down px-1 mb-custom-mb-1 mr-1 text-xs"></i>
                 </button>
                 <ul class="dropdown" id="leadsDropdown">
@@ -342,7 +316,7 @@
                 </button>
                 <ul class="dropdown" id="bcmsDropdown">
                     <li><a href="{{ route('poster_template_maintenance') }}" class="text-md text-gray-300 block pl-8 py-3">Poster Template Maintenance</a></li>
-                    <li><a href="{{ route('top_poster_maintenance_create') }}" class="text-md text-gray-300 block pl-8 py-3">Poster Maintenance</a></li>
+                    <li><a href="{{ route('top_poster_maintenance') }}" class="text-md text-gray-300 block pl-8 py-3">Poster Maintenance</a></li>
                     <li><a href="{{ route('agent_maintenance') }}" class="text-md text-gray-300 block pl-8 py-3">Agent Maintenance</a></li>
                     <li><a href="{{ route('unit_maintenance') }}" class="text-md text-gray-300 block pl-8 py-3">Unit Maintenance</a></li>
                     <li><a href="{{ route('sub_unit_maintenance') }}" class="text-md text-gray-300 block pl-8 py-3">Sub-Unit Maintenance</a></li>
@@ -381,7 +355,7 @@
                         <line x1="11" y1="15" x2="12" y2="15" />
                         <line x1="12" y1="15" x2="12" y2="18" />
                     </svg>
-                    <span class="menu-text text-md text-white">Appointments</span>
+                    <span class="menu-text text-md text-white"><a href="{{ route('appointments') }}">Appointments</a></span>
                 </button>
             </li>
             </li>

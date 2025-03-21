@@ -3,19 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard with Sidebar</title>
+    <title>Proposal Search</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
-        /* Sticky Navbar */
-        nav {
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-        }
+       nav {
+    position: sticky;
+    top: 0;
+    z-index: 1000; /* Keep navbar on top */
+}
 
-        /* Sidebar Style */
-        .sidebar {
+/* Sidebar Style */
+.sidebar {
     position: fixed;
     top: 72px; /* Height of the navbar */
     left: 0;
@@ -24,9 +23,11 @@
     background-image: linear-gradient(to bottom, #1e3a8a, #1d4ed8);
     color: white;
     box-shadow: 0 5px rgba(0, 0, 0, 0.1), inset 0 4px 8px rgba(0, 0, 0, 0.3);
-    z-index: 1000;
+    z-index: 999; /* Sidebar behind navbar */
     padding: 20px;
     overflow-y: auto;
+    transition: transform 0.4s ease, opacity 0.3s ease, visibility 0.3s ease;
+
     
     /* Sidebar is visible by default */
         transform: translateX(0);
@@ -131,8 +132,9 @@
         .content.shift {
             margin-left: 20px; /* When sidebar is hidden */
         }
-    </style>
 
+          
+    </style>
 </head>
 <body>
     <!-- Sticky Navigation Bar -->
@@ -141,7 +143,6 @@
         <button class="mr-3 bg-transparent text-white p-2 rounded-md relative hover:bg-blue-800" onclick="toggleSidebar()">
         <i class="fas fa-bars text-white hover:text-white"></i>
     </button>
-           
     <a href="{{ route('home') }}">
             <button>
                 <img src="images/bcdqlogo.png" alt="bcdq logo" class="h-10 w-10 mr-4">
@@ -153,7 +154,6 @@
                 <span class="text-white text-lg font-semibold">BLUE CHALCEDONY QUARTZ BRANCH</span>
             </button>
         </a>
-
         </div>
 
         <div class="flex items-center space-x-6">
@@ -173,10 +173,9 @@
             color: white;
             }
         </style>
-
     </nav>
 
-      <script>
+     <script>
        function toggleSidebar() {
             const sidebar = document.getElementById("sidebar");
             const content = document.getElementById("main-content");
@@ -215,6 +214,7 @@
         }
         
     </script>
+
 
 
     <!-- Sidebar -->
