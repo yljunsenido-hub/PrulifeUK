@@ -23,7 +23,7 @@
     background-image: linear-gradient(to bottom, #1e3a8a, #1d4ed8);
     color: white;
     box-shadow: 0 5px rgba(0, 0, 0, 0.1), inset 0 4px 8px rgba(0, 0, 0, 0.3);
-    z-index: 999; /* Sidebar behind navbar */
+    z-index: 998; /* Sidebar behind navbar */
     padding: 20px;
     overflow-y: auto;
     transition: transform 0.4s ease, opacity 0.3s ease, visibility 0.3s ease;
