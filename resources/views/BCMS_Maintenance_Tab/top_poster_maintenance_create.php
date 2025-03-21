@@ -343,7 +343,7 @@
                 </button>
                 <ul class="dropdown" id="bcmsDropdown">
                     <li><a href="{{ route('poster_template_maintenance') }}" class="text-md text-gray-300 block pl-8 py-3">Poster Template Maintenance</a></li>
-                    <li><a href="{{ route('agentMTD') }}" class="text-md text-gray-300 block pl-8 py-3">Poster Maintenance</a></li>
+                    <li><a href="{{ route('top_poster_maintenance') }}" class="text-md text-gray-300 block pl-8 py-3">Poster Maintenance</a></li>
                     <li><a href="{{ route('agent_maintenance') }}" class="text-md text-gray-300 block pl-8 py-3">Agent Maintenance</a></li>
                     <li><a href="{{ route('unit_maintenance') }}" class="text-md text-gray-300 block pl-8 py-3">Unit Maintenance</a></li>
                     <li><a href="{{ route('sub_unit_maintenance') }}" class="text-md text-gray-300 block pl-8 py-3">Sub-Unit Maintenance</a></li>
@@ -388,134 +388,148 @@
         </ul>
     </div>
 
-    <!-- Main Content Area -->
+   <!-- Main Content Area -->
 <div id="main-content" class="content">
     <div class="container mx-auto max-w-7xl bg-white p-6 rounded-lg shadow-md">
-    <h1 class="text-3xl font-bold mb-4">Poster Maintenance</h1>
-   <div class="mb-4">
-                <button type="submit" class="bg-blue-500 text-white hover:underline px-4 py-2 rounded text-sm ">Back to list</button> 
-                
+        
+        <!-- Title -->
+        <h1 class="text-3xl font-bold mb-4">Poster Maintenance</h1>
+
+        <!-- Back Button -->
+        <button onclick="window.location.href='{{ route('top_poster_maintenance') }}'" 
+            class="bg-blue-900 rounded-md mb-4 p-2 pr-3 text-white hover:text-blue-900 hover:bg-white border hover:border-blue-900 cursor-pointer flex items-center text-sm">
+            <!-- SVG for the back arrow icon -->
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-4 mr-1">
+                <path d="M19 12H5"></path>
+                <path d="M12 19l-7-7 7-7"></path>
+            </svg>
+            <span>Back</span>
+        </button>
+
+        <!-- Form Section -->
+        <div class="border-t border-gray-200 mt-4 pt-4 flex">
+            <!-- Table Section -->
+            <div class="w-2/4">
+                <table class="w-full">
+                    <thead>
+                        <tr>
+                            <th class="text-left font-semibold w-1/3">Item</th>
+                            <th class="text-left font-semibold w-2/3">Value</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Template Row -->
+                        <tr class="border-t border-gray-200">
+                            <td class="py-2">Template</td>
+                            <td class="py-2">
+                                <select class="border border-gray-300 rounded p-2 w-full">
+                                    <option>Select Template</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <!-- Preview (JPG) Row -->
+                        <tr class="border-t border-gray-200">
+                            <td class="py-2">Preview (JPG)</td>
+                            <td class="py-2">
+                                <div class="flex items-center">
+                                    <input class="border border-gray-300 rounded p-2 w-full" type="file"/>
+                                    <button class="bg-gray-200 text-gray-700 rounded px-4 py-2 ml-2">Upload</button>
+                                </div>
+                            </td>
+                        </tr>
+                        <!-- Foreground (PNG) Row -->
+                        <tr class="border-t border-gray-200">
+                            <td class="py-2">Foreground (PNG)</td>
+                            <td class="py-2">
+                                <div class="flex items-center">
+                                    <input class="border border-gray-300 rounded p-2 w-full" type="file"/>
+                                    <button class="bg-gray-200 text-gray-700 rounded px-4 py-2 ml-2">Upload</button>
+                                </div>
+                            </td>
+                        </tr>
+                        <!-- Background (JPG) Row -->
+                        <tr class="border-t border-gray-200">
+                            <td class="py-2">Background (JPG)</td>
+                            <td class="py-2">
+                                <div class="flex items-center">
+                                    <input class="border border-gray-300 rounded p-2 w-full" type="file"/>
+                                    <button class="bg-gray-200 text-gray-700 rounded px-4 py-2 ml-2">Upload</button>
+                                </div>
+                            </td>
+                        </tr>
+                        <!-- Name Font (TTF or OTF) Row -->
+                        <tr class="border-t border-gray-200">
+                            <td class="py-2">Name Font (TTF or OTF)</td>
+                            <td class="py-2">
+                                <div class="flex items-center">
+                                    <input class="border border-gray-300 rounded p-2 w-full" type="file"/>
+                                    <button class="bg-gray-200 text-gray-700 rounded px-4 py-2 ml-2">Upload</button>
+                                </div>
+                            </td>
+                        </tr>
+                        <!-- Date Font (TTF or OTF) Row -->
+                        <tr class="border-t border-gray-200">
+                            <td class="py-2">Date Font (TTF or OTF)</td>
+                            <td class="py-2">
+                                <div class="flex items-center">
+                                    <input class="border border-gray-300 rounded p-2 w-full" type="file"/>
+                                    <button class="bg-gray-200 text-gray-700 rounded px-4 py-2 ml-2">Upload</button>
+                                </div>
+                            </td>
+                        </tr>
+                        <!-- Unit Font (TTF or OTF) Row -->
+                        <tr class="border-t border-gray-200">
+                            <td class="py-2">Unit Font (TTF or OTF)</td>
+                            <td class="py-2">
+                                <div class="flex items-center">
+                                    <input class="border border-gray-300 rounded p-2 w-full" type="file"/>
+                                    <button class="bg-gray-200 text-gray-700 rounded px-4 py-2 ml-2">Upload</button>
+                                </div>
+                            </td>
+                        </tr>
+                        <!-- Custom Text Font (TTF or OTF) Row -->
+                        <tr class="border-t border-gray-200">
+                            <td class="py-2">Custom Text Font (TTF or OTF)</td>
+                            <td class="py-2">
+                                <div class="flex items-center">
+                                    <input class="border border-gray-300 rounded p-2 w-full" type="file"/>
+                                    <button class="bg-gray-200 text-gray-700 rounded px-4 py-2 ml-2">Upload</button>
+                                </div>
+                            </td>
+                        </tr>
+                        <!-- Custom Text Font 2 (TTF or OTF) Row -->
+                        <tr class="border-t border-gray-200">
+                            <td class="py-2">Custom Text Font 2 (TTF or OTF)</td>
+                            <td class="py-2">
+                                <div class="flex items-center">
+                                    <input class="border border-gray-300 rounded p-2 w-full" type="file"/>
+                                    <button class="bg-gray-200 text-gray-700 rounded px-4 py-2 ml-2">Upload</button>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
-    <div class="border-t border-gray-200 mt-4 pt-4 flex">
-        <div class="w-2/4">
-            <table class="w-full">
-                <thead>
-                    <tr>
-                        <th class="text-left font-semibold w-1/3">Item</th>
-                        <th class="text-left font-semibold w-2/3">Value</th>
-                       
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr class="border-t border-gray-200">
-                        <td class="py-2">Template</td>
-                        <td class="py-2">
-                            <select class="border border-gray-300 rounded p-2 w-full">
-                                <option>Select Template</option>
-                            </select>
-                        </td>
-                        <td class="py-2"></td>
-                    </tr>
-                    <tr class="border-t border-gray-200">
-                        <td class="py-2">Preview (JPG)</td>
-                        <td class="py-2">
-                            <div class="flex items-center">
-                                <input class="border border-gray-300 rounded p-2 w-full" type="file"/>
-                                <button class="bg-gray-200 text-gray-700 rounded px-4 py-2 ml-2">Upload</button>
-                            </div>
-                        </td>
-                        <td class="py-2"></td>
-                    </tr>
-                    <tr class="border-t border-gray-200">
-                        <td class="py-2">Foreground (PNG)</td>
-                        <td class="py-2">
-                            <div class="flex items-center">
-                                <input class="border border-gray-300 rounded p-2 w-full" type="file"/>
-                                <button class="bg-gray-200 text-gray-700 rounded px-4 py-2 ml-2">Upload</button>
-                            </div>
-                        </td>
-                        <td class="py-2"></td>
-                    </tr>
-                    <tr class="border-t border-gray-200">
-                        <td class="py-2">Background (JPG)</td>
-                        <td class="py-2">
-                            <div class="flex items-center">
-                                <input class="border border-gray-300 rounded p-2 w-full" type="file"/>
-                                <button class="bg-gray-200 text-gray-700 rounded px-4 py-2 ml-2">Upload</button>
-                            </div>
-                        </td>
-                        <td class="py-2"></td>
-                    </tr>
-                    <tr class="border-t border-gray-200">
-                        <td class="py-2">Name Font (TTF or OTF)</td>
-                        <td class="py-2">
-                            <div class="flex items-center">
-                                <input class="border border-gray-300 rounded p-2 w-full" type="file"/>
-                                <button class="bg-gray-200 text-gray-700 rounded px-4 py-2 ml-2">Upload</button>
-                            </div>
-                        </td>
-                        <td class="py-2"></td>
-                    </tr>
-                    <tr class="border-t border-gray-200">
-                        <td class="py-2">Date Font (TTF or OTF)</td>
-                        <td class="py-2">
-                            <div class="flex items-center">
-                                <input class="border border-gray-300 rounded p-2 w-full" type="file"/>
-                                <button class="bg-gray-200 text-gray-700 rounded px-4 py-2 ml-2">Upload</button>
-                            </div>
-                        </td>
-                        <td class="py-2"></td>
-                    </tr>
-                    <tr class="border-t border-gray-200">
-                        <td class="py-2">Unit Font (TTF or OTF)</td>
-                        <td class="py-2">
-                            <div class="flex items-center">
-                                <input class="border border-gray-300 rounded p-2 w-full" type="file"/>
-                                <button class="bg-gray-200 text-gray-700 rounded px-4 py-2 ml-2">Upload</button>
-                            </div>
-                        </td>
-                        <td class="py-2"></td>
-                    </tr>
-                    <tr class="border-t border-gray-200">
-                        <td class="py-2">Custom Text Font (TTF or OTF)</td>
-                        <td class="py-2">
-                            <div class="flex items-center">
-                                <input class="border border-gray-300 rounded p-2 w-full" type="file"/>
-                                <button class="bg-gray-200 text-gray-700 rounded px-4 py-2 ml-2">Upload</button>
-                            </div>
-                        </td>
-                        <td class="py-2"></td>
-                    </tr>
-                    <tr class="border-t border-gray-200">
-                        <td class="py-2">Custom Text Font 2 (TTF or OTF)</td>
-                        <td class="py-2">
-                            <div class="flex items-center">
-                                <input class="border border-gray-300 rounded p-2 w-full" type="file"/>
-                                <button class="bg-gray-200 text-gray-700 rounded px-4 py-2 ml-2">Upload</button>
-                            </div>
-                        </td>
-                        <td class="py-2"></td>
-                    </tr>
-                </tbody>
-            </table>
+
+            <!-- Preview Section -->
+            <div class="w-1/3 pl-4">
+                <h2 class="text-2xl font-semibold mb-2">Preview</h2>
+                <div class="flex space-x-2">
+                    <img alt="Template preview 1" class="w-32 h-32" src="https://placehold.co/128x128"/>
+                    <img alt="Template preview 2" class="w-32 h-32" src="https://placehold.co/128x128"/>
+                    <img alt="Template preview 3" class="w-32 h-32" src="https://placehold.co/128x128"/>
+                </div>
+            </div>
         </div>
 
-        <!-- Preview Section -->
-        <div class="w-1/3 pl-4">
-            <h2 class="text-2xl font-semibold mb-2">Preview</h2>
-            <div class="flex space-x-2">
-                <img alt="Template preview 1" class="w-32 h-32" src="https://placehold.co/128x128"/>
-                <img alt="Template preview 2" class="w-32 h-32" src="https://placehold.co/128x128"/>
-                <img alt="Template preview 3" class="w-32 h-32" src="https://placehold.co/128x128"/>
-            </div>
+        <!-- Action Buttons -->
+        <div class="mt-4 flex justify-end space-x-4">
+            <button class="bg-blue-500 text-white rounded px-4 py-2">Render</button>
+            <button class="bg-green-500 text-white rounded px-4 py-2">Preview &amp; Create</button>
         </div>
     </div>
+</div>
 
-    <div class="mt-4 flex justify-end space-x-4">
-    <button class="bg-blue-500 text-white rounded px-4 py-2">Render</button>
-    <button class="bg-green-500 text-white rounded px-4 py-2">Preview &amp; Create</button>
-</div>
-</div>
     <script>
         // Function to toggle the sidebar
         function toggleSidebar() {

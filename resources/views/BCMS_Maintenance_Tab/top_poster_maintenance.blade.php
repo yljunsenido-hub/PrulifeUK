@@ -342,7 +342,7 @@
                 </button>
                 <ul class="dropdown" id="bcmsDropdown">
                     <li><a href="{{ route('poster_template_maintenance') }}" class="text-md text-gray-300 block pl-8 py-3">Poster Template Maintenance</a></li>
-                    <li><a href="{{ route('agentMTD') }}" class="text-md text-gray-300 block pl-8 py-3">Poster Maintenance</a></li>
+                    <li><a href="{{ route('top_poster_maintenance') }}" class="text-md text-gray-300 block pl-8 py-3">Poster Maintenance</a></li>
                     <li><a href="{{ route('agent_maintenance') }}" class="text-md text-gray-300 block pl-8 py-3">Agent Maintenance</a></li>
                     <li><a href="{{ route('unit_maintenance') }}" class="text-md text-gray-300 block pl-8 py-3">Unit Maintenance</a></li>
                     <li><a href="{{ route('sub_unit_maintenance') }}" class="text-md text-gray-300 block pl-8 py-3">Sub-Unit Maintenance</a></li>
@@ -388,13 +388,13 @@
         </ul>
     </div>
 
-
+    <!-- Main Content -->
          <div id="main-content" class="content">
-        <div class="container mx-auto max-w-7xl bg-white p-6 rounded-lg shadow-md">
-            <h2 class="text-4xl font-semibold mb-4">Top Poster Maintenance</h2>
-                 <div class="container shadow-md mb-3 mb-4 p-2 bg-blue-900 rounded-md flex justify-between items-center">
-        <h1 class="pl-2 text-l text-yellow-300 font-semibold "><a href="#" id="createNewAgent" class="text-base xl:text-yellow-600 hover:text-yellow-100 font-semibold">Create New Poster </a></h1>
-</div>
+            <div class="container mx-auto max-w-7xl bg-white p-6 pb-4 rounded-lg shadow-md">
+                <h2 class="text-4xl font-semibold mb-4">Top Poster Maintenance</h2>
+                    <div class="container shadow-md mb-3 mb-4 p-2 bg-blue-900 rounded-md flex justify-between items-center">
+            <h1 class="pl-2 text-l text-yellow-300 font-semibold "><a href="{{ route('top_poster_maintenance_create') }}" id="createNewAgent" class="text-base xl:text-yellow-300 hover:text-white font-semibold">Create New Poster </a></h1>
+        </div>
 
              <div class="mb-4 p-4 bg-white rounded-md shadow-md">
             <div class="flex items-center justify-between mb-4">
@@ -416,7 +416,6 @@
             </div>
 
             <!-- Table Content -->
-
             <div id="tableContent" class="overflow-x-auto">
                 <table class="min-w-full bg-white border border-gray-300 text-sm">
                     <thead>
