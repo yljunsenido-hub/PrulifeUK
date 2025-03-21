@@ -7,15 +7,14 @@
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
-        /* Sticky Navbar */
-        nav {
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-        }
+       nav {
+    position: sticky;
+    top: 0;
+    z-index: 1000; /* Keep navbar on top */
+}
 
-        /* Sidebar Style */
-        .sidebar {
+/* Sidebar Style */
+.sidebar {
     position: fixed;
     top: 72px; /* Height of the navbar */
     left: 0;
@@ -24,9 +23,11 @@
     background-image: linear-gradient(to bottom, #1e3a8a, #1d4ed8);
     color: white;
     box-shadow: 0 5px rgba(0, 0, 0, 0.1), inset 0 4px 8px rgba(0, 0, 0, 0.3);
-    z-index: 1000;
+    z-index: 999; /* Sidebar behind navbar */
     padding: 20px;
     overflow-y: auto;
+    transition: transform 0.4s ease, opacity 0.3s ease, visibility 0.3s ease;
+
     
     /* Sidebar is visible by default */
         transform: translateX(0);

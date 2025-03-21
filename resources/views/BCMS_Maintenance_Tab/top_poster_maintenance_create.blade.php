@@ -5,7 +5,7 @@
     <link type="text/css" rel="stylesheet" href="https://cdn.jsdelivr.net/chartist.js/latest/chartist.min.css"/>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Top Poster Maintenance Create</title>
+    <title>Dashboard with Sidebar</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
@@ -220,6 +220,7 @@
 
     <!-- Sidebar -->
     <div class="sidebar" id="sidebar">
+       
         <ul>
             <li class="menu-item text-white w-full text-left py-1 pb-2">
                 <span class="text-yellow-300 font-bold text-xs">ACTIVITIES</span>
@@ -230,6 +231,24 @@
                         <path d="M20 4a2 2 0 0 0-2-2h-2V1a1 1 0 0 0-2 0v1h-3V1a1 1 0 0 0-2 0v1H6V1a1 1 0 0 0-2 0v1H2a2 2 0 0 0-2 2v2h20V4ZM0 18a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8H0v10Zm5-8h10a1 1 0 0 1 0 2H5a1 1 0 0 1 0-2Z"/>
                     </svg>
                     <span class="menu-text text-md text-white">Events</span> 
+                    <i class="fas fa-chevron-down px-1 mb-custom-mb-1 mr-1 text-xs"></i>
+                </button>
+                <ul class="dropdown" id="eventsDropdown">
+                    <li><a href="#" class="text-md text-gray-300 block pl-8 py-2">Upcoming Events</a></li>
+                    <li><a href="#" class="text-md text-gray-300 block pl-8 py-2">My Events</a></li>
+                    <li><a href="#" class="text-md text-gray-300 block pl-8 py-2 mb-6">Event Maintenance</a></li>
+                </ul>
+            </li>
+            <li class="menu-item text-white w-full text-left py-1 pb-2">
+                <span class="text-yellow-300 font-bold text-xs">OPERATIONS</span>
+            </li>
+            <li class="menu-item">
+                <button class="text-gray-400 w-full text-left py-1 pb-2" 
+                onclick="toggleDropdown('leadsDropdown')">
+                    <svg class="w-3  h-3 text-white dark:text-white inline-block mr-2 mb-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 20">
+                        <path d="M16 14V2a2 2 0 0 0-2-2H2a2 2 0 0 0-2 2v15a3 3 0 0 0 3 3h12a1 1 0 0 0 0-2h-1v-2a2 2 0 0 0 2-2ZM4 2h2v12H4V2Zm8 16H3a1 1 0 0 1 0-2h9v2Z"/>
+                    </svg>
+                    <span class="menu-text text-md text-white">Leads & Cases</span> 
                     <i class="fas fa-chevron-down px-1 mb-custom-mb-1 mr-1 text-xs"></i>
                 </button>
                 <ul class="dropdown" id="leadsDropdown">
@@ -370,9 +389,9 @@
                     <li><a href="{{ route('upload_batch_photo') }}" class="text-md text-gray-300 block pl-8 py-3">Upload Batch Photos</a></li>
                     <li><a href="{{ route('update_submission_policy_record') }}" class="text-md text-gray-300 block pl-8 py-3 mb-6">Update Submission/Policy Record</a></li>
                 </ul>
-            </li>
-            <li class="menu-item">
-                <button class="text-gray-400 w-full text-left py-1 pb-3" onclick="toggleDropdown('appointmentsDropdown')">
+                <li class="menu-item">
+                <button class="text-gray-400 w-full text-left py-1 pb-3" 
+                onclick="toggleDropdown('appointmentsDropdown')">
                     <svg class="w-4 h-4 text-white inline-block mr-1 mb-2" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
                         <path stroke="none" d="M0 0h24v24H0z"/>
                         <rect x="4" y="5" width="16" height="16" rx="2" />
@@ -382,8 +401,9 @@
                         <line x1="11" y1="15" x2="12" y2="15" />
                         <line x1="12" y1="15" x2="12" y2="18" />
                     </svg>
-                    <span class="menu-text text-md text-white">Appointments</span>
+                    <span class="menu-text text-md text-white"><a href="{{ route('appointments') }}">Appointments</a></span>
                 </button>
+            </li>
             </li>
         </ul>
     </div>
@@ -392,10 +412,17 @@
 <div id="main-content" class="content">
     <div class="container mx-auto max-w-7xl bg-white p-6 rounded-lg shadow-md">
     <h1 class="text-3xl font-bold mb-4">Poster Maintenance</h1>
-   
-    <div class="mb-4">
-            <a href="{{ route('top_poster_maintenance') }}" class="bg-blue-500 text-white rounded-lg px-4 py-2 inline-block hover:bg-blue-600">Back to list</a>
-        </div>
+  
+    <button onclick="window.location.href='{{ route('top_poster_maintenance') }}'" 
+                class="bg-blue-900 rounded-md mb-4 p-2 pr-3 text-white hover:text-blue-900 hover:bg-white border hover:border-blue-900 cursor-pointer flex items-center text-sm">
+                <!-- SVG for the back arrow icon -->
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-4 mr-1">
+                    <path d="M19 12H5"></path>
+                    <path d="M12 19l-7-7 7-7"></path>
+                </svg>
+                <!-- Optional text if needed -->
+                <span>Back</span>
+            </button>
 
 
     <div class="border-t border-gray-200 mt-4 pt-4 flex">
@@ -518,43 +545,6 @@
     <button class="bg-green-500 text-white rounded px-4 py-2">Preview &amp; Create</button>
 </div>
 </div>
-
-
-    <script>
-        // Function to toggle the sidebar
-        function toggleSidebar() {
-            const sidebar = document.getElementById("sidebar");
-            const content = document.getElementById("main-content");
-            sidebar.classList.toggle("show"); // Show or hide the sidebar
-            content.classList.toggle("shift"); // Shift content when sidebar is visible
-        }
-
-        let currentOpenDropdown = null;
-
-        function toggleDropdown(dropdownId) {
-            const dropdown = document.getElementById(dropdownId);
-
-            // Close the currently open dropdown if it's not the one being clicked
-            if (currentOpenDropdown && currentOpenDropdown !== dropdown) {
-                currentOpenDropdown.classList.remove('show');
-                currentOpenDropdown.style.maxHeight = '0'; // Reset max-height
-                currentOpenDropdown.style.opacity = '0'; // Reset opacity
-            }
-
-            // Toggle the clicked dropdown
-            if (dropdown.classList.contains('show')) {
-                dropdown.classList.remove('show');
-                dropdown.style.maxHeight = '0'; // Reset max-height
-                dropdown.style.opacity = '0'; // Reset opacity
-            } else {
-                dropdown.classList.add('show');
-                dropdown.style.maxHeight = '500px'; // Set max-height to allow transition
-                dropdown.style.opacity = '1'; // Set opacity to allow transition
-            }
-
-            // Update the current open dropdown reference
-            currentOpenDropdown = dropdown.classList.contains('show') ? dropdown : null;
-        }
-    </script>
+   
 </body>
 </html>
