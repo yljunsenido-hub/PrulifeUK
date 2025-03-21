@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard with Sidebar</title>
+    <title>Outreq Cases</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
@@ -131,8 +131,9 @@
         .content.shift {
             margin-left: 20px; /* When sidebar is hidden */
         }
-    </style>
 
+          
+    </style>
 </head>
 <body>
     <!-- Sticky Navigation Bar -->
@@ -141,19 +142,8 @@
         <button class="mr-3 bg-transparent text-white p-2 rounded-md relative hover:bg-blue-800" onclick="toggleSidebar()">
         <i class="fas fa-bars text-white hover:text-white"></i>
     </button>
-           
-    <a href="{{ route('home') }}">
-            <button>
-                <img src="images/bcdqlogo.png" alt="bcdq logo" class="h-10 w-10 mr-4">
-            </button>
-            
-        </a>
-        <a href="{{ route('home') }}">
-            <button>
-                <span class="text-white text-lg font-semibold">BLUE CHALCEDONY QUARTZ BRANCH</span>
-            </button>
-        </a>
-
+            <img src="images/bcdqlogo.png" alt="bcdq log" class="h-10 w-10 mr-4">
+            <span class="text-white text-lg font-semibold">BLUE CHALCEDONY QUARTZ BRANCH</span>
         </div>
 
         <div class="flex items-center space-x-6">
@@ -173,10 +163,9 @@
             color: white;
             }
         </style>
-
     </nav>
 
-      <script>
+     <script>
        function toggleSidebar() {
             const sidebar = document.getElementById("sidebar");
             const content = document.getElementById("main-content");
@@ -215,6 +204,7 @@
         }
         
     </script>
+
 
 
     <!-- Sidebar -->
@@ -361,7 +351,7 @@
                 </button>
                 <ul class="dropdown" id="bcmsDropdown">
                     <li><a href="{{ route('poster_template_maintenance') }}" class="text-md text-gray-300 block pl-8 py-3">Poster Template Maintenance</a></li>
-                    <li><a href="{{ route('agentMTD') }}" class="text-md text-gray-300 block pl-8 py-3">Poster Maintenance</a></li>
+                    <li><a href="{{ route('top_poster_maintenance') }}" class="text-md text-gray-300 block pl-8 py-3">Poster Maintenance</a></li>
                     <li><a href="{{ route('agent_maintenance') }}" class="text-md text-gray-300 block pl-8 py-3">Agent Maintenance</a></li>
                     <li><a href="{{ route('unit_maintenance') }}" class="text-md text-gray-300 block pl-8 py-3">Unit Maintenance</a></li>
                     <li><a href="{{ route('sub_unit_maintenance') }}" class="text-md text-gray-300 block pl-8 py-3">Sub-Unit Maintenance</a></li>

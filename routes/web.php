@@ -234,7 +234,7 @@ Route::get('/unitMaintenance'  , function () {
 })->name('unit_maintenance');
 
 Route::get('/topPosterMaintenance'  , function () {
-    return view('BCMS_Maintenance_Tab/top_poster_maintenace');
+    return view('BCMS_Maintenance_Tab/top_poster_maintenance');
 })->name('top_poster_maintenance');
 
 Route::get('/topPosterMaintenanceCreate'  , function () {
