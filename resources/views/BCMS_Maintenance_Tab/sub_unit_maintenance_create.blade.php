@@ -409,34 +409,41 @@
     <!-- Main Content Area -->
     <div id="main-content" class="content">
         
-        <div class="container mx-auto max-w-7xl bg-white p-6 rounded-lg shadow-md">
-             <h2 class="text-4xl font-semibold mb-6">Sub-Unit Create</h2>
+        <div class="container mx-auto max-w-7xl bg-white p-6 pb-4 rounded-lg shadow-md">
+             <h2 class="text-4xl font-semibold mb-4">Sub-Unit Create</h2>
+
+             <button onclick="window.location.href='{{ route('sub_unit_maintenance') }}'" 
+                class="bg-blue-900 rounded-md p-2 pr-3 text-white hover:text-blue-900 hover:bg-white border hover:border-blue-900 cursor-pointer flex items-center text-sm">
+                    <!-- SVG for the back arrow icon -->
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-4 mr-1">
+                        <path d="M19 12H5"></path>
+                        <path d="M12 19l-7-7 7-7"></path>
+                    </svg>
+                    <!-- Optional text if needed -->
+                    <span>Back</span>
+            </button>
              
-             <form action="/create-subunit" method="POST">
-                <div class="mb-4 ml-4">
-                    
-                    <label class="block text-sm font-medium text-gray-700" for="officer-code">Officer Code</label>
-                    <input type="text" id="officer-code" required class="mt-1 block w-1/3 border-gray-300 rounded-md shadow-sm focus:border-blue-500 focus:ring focus:ring-blue-500 focus:ring-opacity-50" placeholder="Enter Officer Code">
-                </div>
-                <div class="mb-4 ml-4">
-                    <label class="block text-sm font-medium text-gray-700" for="subunit-name">Sub-unit Name</label>
-                    <input type="text" id="subunit-name" required class="mt-1 block w-1/3 border-gray-300 rounded-md shadow-sm focus:border-blue-500 focus:ring focus:ring-blue-500 focus:ring-opacity-50" placeholder="Enter Subunit Name">
-                </div>
-                <div class="mb-4 ml-4">
-                    <label class="block text-sm font-medium text-gray-700" for="promotion-date">Promotion Date</label>
-                    <input type="date" id="promotion-date" required class="mt-1 block w-1/5 border-gray-300 rounded-md shadow-sm focus:border-blue-500 focus:ring focus:ring-blue-500 focus:ring-opacity-50">
-                </div>
-                <div class="flex justify-between mt-6">
+            <div class="p-3 bg-white rounded-md shadow-md mt-3">
+                <form action="/create-unit" method="POST">
+                    <div class="mb-4">
+                        <label class="block text-sm font-medium text-gray-700" for="officer-code">Officer Code</label>
+                        <input type="text" id="officer-code" required class="mt-1 block w-1/3 h-9 border border-gray-400 rounded-md shadow-sm p-2" placeholder="Enter Officer Code">
+                    </div>
+                    <div class="mb-4">
+                        <label class="block text-sm font-medium text-gray-700" for="unit-name">Sub-unit Name</label>
+                        <input type="text" id="unit-name" required class="mt-1 block w-1/3 h-9 border border-gray-400 rounded-md shadow-sm p-2" placeholder="Enter Unit Name">
+                    </div>
+                    <div class="mb-1">
+                        <label class="block text-sm font-medium text-gray-700" for="promotion-date">Promotion Date</label>
+                        <input type="date" id="promotion-date" required class="mt-1 block w-1/3 h-9 border border-gray-400 rounded-md shadow-sm p-2">
+                    </div>
+                </form>
+            </div>  
+
+            <div class="flex justify-end mt-4">
                     <button type="submit" class="px-4 py-2 bg-green-500 text-white rounded-md hover:bg-green-600">Create New Sub-unit</button>
-                    <button type="button" onclick="window.location.href='/subunit-maintenance'" class="px-4 py-2 bg-red-500 text-white rounded-md hover:bg-red-600">Back</button>
                 </div>
-            </form>
 
-           
-
-        
- 
-    
     </div>
 
     <script>

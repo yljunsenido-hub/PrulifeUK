@@ -11,7 +11,7 @@
         nav {
             position: sticky;
             top: 0;
-            z-index: 1000;
+            z-index: 1100; /* Make sure navbar is on top */
         }
 
         /* Sidebar Style */
@@ -24,7 +24,7 @@
             background-image: linear-gradient(to bottom, #1e3a8a, #1d4ed8);
             color: white;
             box-shadow: 0 5px rgba(0, 0, 0, 0.1), inset 0 4px 8px rgba(0, 0, 0, 0.3);
-            z-index: 1000;
+            z-index: 1000; /* Sidebar should be behind navbar */
             padding: 20px;
             overflow-y: auto;
     
@@ -32,7 +32,7 @@
         transform: translateX(0);
          opacity: 1;
          visibility: visible;
-            transition: transform 0.4s ease, opacity 0.3s ease, visibility 0.3s ease;
+        transition: transform 0.4s ease, opacity 0.3s ease, visibility 0.3s ease;
         }
 
         .sidebar.hide {

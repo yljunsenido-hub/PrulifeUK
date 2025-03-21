@@ -407,14 +407,22 @@
     
      <!-- Main Content Area -->
     <div id="main-content" class="content">
-        <div class="container mx-auto max-w-9xl bg-white p-4 pb-4 rounded-lg shadow-md">
+        <div class="container mx-auto max-w-9xl bg-white p-6 pb-4 rounded-lg shadow-md">
             <h1 class="text-3xl font-semibold mb-4">Marketing Poster Maintenance</h1>
             
-        <div class="mb-4">
-            <a href="{{ route('poster_template_maintenance') }}" class="bg-blue-500 text-white rounded-lg px-4 py-2 inline-block hover:bg-blue-600">Back to list</a>
-        </div>
+        <!-- Back to List Link -->
+        <button onclick="window.location.href='{{ route('poster_template_maintenance') }}'" 
+        class="bg-blue-900 rounded-md p-2 pr-3 text-white hover:text-blue-900 hover:bg-white border hover:border-blue-900 cursor-pointer flex items-center text-sm">
+            <!-- SVG for the back arrow icon -->
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-4 mr-1">
+                <path d="M19 12H5"></path>
+                <path d="M12 19l-7-7 7-7"></path>
+            </svg>
+            <!-- Optional text if needed -->
+            <span>Back</span>
+        </button>
 
-        <div class="flex h-full">
+        <div class="flex h-full mt-4">
 
             <!-- Left Container (Template, Description, and Related Fields) -->
             <div class="w-full md:w-1/2 pr-8 flex flex-col h-full">

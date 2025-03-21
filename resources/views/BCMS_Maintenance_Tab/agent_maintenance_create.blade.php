@@ -409,11 +409,11 @@
 
     <!-- Main Content Area -->
 <div id="main-content" class="content">
-    <div class="container mx-auto max-w-9xl bg-white p-6 rounded-lg shadow-md">
+    <div class="container mx-auto max-w-9xl bg-white p-6 pb-4 rounded-lg shadow-md">
         <h2 class="text-4xl font-semibold mb-4">Create Agent</h2>
 
         <!-- Back to List Link -->
-        <button onclick="window.location.href='{{ route('digital_card_maintenance') }}'" 
+        <button onclick="window.location.href='{{ route('agent_maintenance') }}'" 
         class="bg-blue-900 rounded-md p-2 pr-3 text-white hover:text-blue-900 hover:bg-white border hover:border-blue-900 cursor-pointer flex items-center text-sm">
             <!-- SVG for the back arrow icon -->
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-4 mr-1">
