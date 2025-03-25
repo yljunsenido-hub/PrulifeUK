@@ -589,18 +589,26 @@
                         <td class="py-2 px-4 border-r border-gray-300">${item.ForApproval}</td>
 
                         <td class="py-4 px-5 space-x-2 text-center w-auto">
+                            <!-- View Progress Button with Image -->
+                                    <a href="edit-recruit-info/${item.Incentives}" 
+                                        class="pt-2 pb-2 pl-1 pr-1 bg-blue-500 text-white rounded-md hover:bg-blue-700" 
+                                        target="_blank" 
+                                        title="View Progress"> <!-- Add a title attribute -->
+                                        <img src="images/preview.png" 
+                                                alt="View Progress Icon" 
+                                                class="h-5 w-5 ml-1 mb-1 inline-block filter invert brightness-0" />
+                                    </a>
 
-                        <!-- View Progress Button with Image -->
+                            <!-- Edit Recruit Info Button with Image -->
+                                    <a href="edit-recruit-info/${item.Incentives}" 
+                                        class="pt-2 pb-2 pl-2 pr-2 bg-green-500 text-white rounded-md hover:bg-green-700" 
+                                        target="_blank" 
+                                        title="Edit Recruit Info"> <!-- Add a title attribute -->
+                                        <img src="images/editrecruitinfo.png" 
+                                                alt="View Progress Icon" 
+                                                class="h-5 w-5 ml- mb-1 inline-block filter invert brightness-0" />
+                                    </a>
 
-                                <a href="view-progress-link/${item.Incentives}"     class="px-3 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-700" target="_blank">
-                                <img src="path_to_image.png" alt="View Progress Icon" class="h-4 w-4 inline-block" />
-                            </a>
-
-                        <!-- Edit Recruit Info Button with Image -->
-
-                                <a href="edit-recruit-info/${item.Incentives}" class="px-3 py-2 bg-yellow-500 text-white rounded-md hover:bg-yellow-700" target="_blank">
-                                <img src="path_to_image.png" alt="Edit Recruit Info Icon" class="h-4 w-4 inline-block" />
-                            </a>
                         </td>
 
                     </tr>

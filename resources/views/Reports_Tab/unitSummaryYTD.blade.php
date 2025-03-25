@@ -410,7 +410,7 @@
     <!-- Main Content Area -->
     <div id="main-content" class="content">
 
-	<div class="container mx-auto max-w-8xl bg-white p-6 rounded-lg shadow-md">
+	<div class="container mx-auto max-w-8xl bg-white p-6 pb-4 rounded-lg shadow-md">
         <h2 class="text-4xl font-semibold mb-4">Unit Production Reports</h2>
         
     <div class="container mx-auto rounded-md shadow-sm bg-white border pl-3 pr-3 pt-3 pb-3 mb-5 flex flex-col space-y-5">

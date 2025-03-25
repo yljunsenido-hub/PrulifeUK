@@ -411,7 +411,7 @@
     <!-- Main Content Area -->
     <div id="main-content" class="content">
 
-	<div class="container mx-auto max-w-8xl bg-white p-6 rounded-lg shadow-md">
+	<div class="container mx-auto max-w-8xl bg-white p-6 pb-4 rounded-lg shadow-md">
         <h2 class="text-4xl font-semibold mb-4">MDRT Tracker</h2>
         
         <h1 class="container mx-auto max-w-8xl bg-blue-900 p-2 rounded-l rounded-r shadow-md mb-3">

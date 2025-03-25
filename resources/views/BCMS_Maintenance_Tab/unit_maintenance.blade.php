@@ -435,7 +435,7 @@
             <div id="tableContent" class="overflow-x-auto">
                 <table class="min-w-full bg-white border border-gray-300 text-sm">
                     <thead>
-                        <tr class="bg-blue-200 text-gray-600">
+                        <tr class="bg-gray-200 text-gray-600">
                             <th class="py-2 px-4 text-left border-r border-gray-300 w-1/12">ID</th>
                             <th class="py-2 px-4 text-left border-r border-gray-300 w-1/4">Branch</th>
                             <th class="py-2 px-4 text-left border-r border-gray-300 w-1/4">Unit</th>
@@ -447,7 +447,7 @@
                     </thead>
                     <tbody class="text-gray-600">
                         <!-- Sample Row (You can duplicate this for more rows) -->
-                        <tr class="border-b border-gray-300 hover:bg-blue-50">
+                        <tr class="border-b border-gray-300 hover:bg-gray-100">
                             <td class="py-2 px-4 border-r border-gray-300">1</td>
                             <td class="py-2 px-4 border-r border-gray-300">BLUE CHALCEDONY QUARTZ BRANCH</td>
                             <td class="py-2 px-4 border-r border-gray-300">BLUE CHALCEDONY DIRECT</td>

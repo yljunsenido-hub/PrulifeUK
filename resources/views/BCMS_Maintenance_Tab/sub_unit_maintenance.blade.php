@@ -439,25 +439,25 @@
                 <table class="min-w-full bg-white border border-gray-300 text-sm">
                     <thead>
                         <tr class="bg-gray-200 text-gray-600">
-                            <th class="py-2 px-4 text-left border-r border-gray-300">ID</th>
-                            <th class="py-2 px-4 text-left border-r border-gray-300">Unit</th>
-                            <th class="py-2 px-4 text-left border-r border-gray-300">Sub-Unit</th>
-                            <th class="py-2 px-4 text-left border-r border-gray-300">Officer</th>
-                            <th class="py-2 px-4 text-left border-r border-gray-300">Status</th>
-                            <th class="py-2 px-4 text-left border-r border-gray-300">Date Promoted</th>
-                            <th class="py-2 px-4 text-left border-r border-gray-300">Action</th>
+                            <th class="py-3 px-4 text-left border-r border-gray-300">ID</th>
+                            <th class="py-3 px-4 text-left border-r border-gray-300">Unit</th>
+                            <th class="py-3 px-4 text-left border-r border-gray-300">Sub-Unit</th>
+                            <th class="py-3 px-4 text-left border-r border-gray-300">Officer</th>
+                            <th class="py-3 px-4 text-left border-r border-gray-300">Status</th>
+                            <th class="py-3 px-4 text-left border-r border-gray-300">Date Promoted</th>
+                            <th class="py-3 px-4 text-left border-r border-gray-300">Action</th>
                         </tr>
                     </thead>
                     <tbody class="text-gray-600">
                         <!-- Example Row -->
                         <tr class="border-b border-gray-300 hover:bg-gray-100">
-                            <td class="py-2 px-4 border-r border-gray-300">1</td>
-                            <td class="py-2 px-4 border-r border-gray-300">BLUE CHALCEDONY DIRECT</td>
-                            <td class="py-2 px-4 border-r border-gray-300">TEAM JOCELYN FABIAN (DIRECT)</td>
-                            <td class="py-2 px-4 border-r border-gray-300">70020068 - MERCIDIITA HILIARIO</td>
-                            <td class="py-2 px-4 border-r border-gray-300">Active</td>
-                            <td class="py-2 px-4 border-r border-gray-300">0000-00-00 00:00:00</td>
-                            <td class="py-2 px-4 border-r border-gray-300 text-center">
+                            <td class="py-4 px-4 border-r border-gray-300">1</td>
+                            <td class="py-4 px-4 border-r border-gray-300">BLUE CHALCEDONY DIRECT</td>
+                            <td class="py-4 px-4 border-r border-gray-300">TEAM JOCELYN FABIAN (DIRECT)</td>
+                            <td class="py-4 px-4 border-r border-gray-300">70020068 - MERCIDIITA HILIARIO</td>
+                            <td class="py-4 px-4 border-r border-gray-300">Active</td>
+                            <td class="py-4 px-4 border-r border-gray-300">0000-00-00 00:00:00</td>
+                            <td class="py-4 px-4 border-r border-gray-300 text-center">
                                 <a href="#" class="px-3 py-1 bg-blue-500 text-white rounded-md hover:bg-blue-700">Edit</a>
                             </td>
                         </tr>

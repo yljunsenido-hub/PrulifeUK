@@ -139,29 +139,30 @@
 <body>
     <!-- Sticky Navigation Bar -->
     <nav class="bg-gradient-to-r from-blue-900 to-blue-700 p-4 flex justify-between items-center">
-        <div class="flex items-center">
+    <div class="flex items-center">
         <button class="mr-3 bg-transparent text-white p-2 rounded-md relative hover:bg-blue-800" onclick="toggleSidebar()">
-        <i class="fas fa-bars text-white hover:text-white"></i>
-    </button>
-    <a href="{{ route('home') }}">
+            <i class="fas fa-bars text-white hover:text-white"></i>
+        </button>
+        <a href="{{ route('home') }}">
             <button>
-                <img src="images/bcdqlogo.png" alt="bcdq logo" class="h-10 w-10 mr-4">
+                <!-- Check image path and ensure it’s accessible -->
+                <img src="{{ asset('images/bcdqlogo.png') }}" alt="bcdq logo" class="h-10 w-10 mr-4">
             </button>
-            
         </a>
         <a href="{{ route('home') }}">
             <button>
                 <span class="text-white text-lg font-semibold">BLUE CHALCEDONY QUARTZ BRANCH</span>
             </button>
         </a>
-        </div>
+    </div>
+
 
         <div class="flex items-center space-x-6">
-    <div class="relative">
-        <input type="text" placeholder="Search..." class="p-1 rounded-md bg-blue-900 text-white pl-2">
-        <button class="absolute right-0 top-0 mt-1 mr-2">
-            <i class="fas fa-search text-white"></i>
-        </button>
+        <div class="relative">
+            <input type="text" placeholder="Search..." class="p-1 rounded-md bg-blue-900 text-white pl-2">
+            <button class="absolute right-0 top-0 mt-1 mr-2">
+                <i class="fas fa-search text-white"></i>
+            </button>
 
             </div>
             <i class="fas fa-bell text-white px-0"></i>
@@ -212,9 +213,7 @@
 
             currentOpenDropdown = dropdown.classList.contains('show') ? dropdown : null;
         }
-        
     </script>
-
 
 
     <!-- Sidebar -->

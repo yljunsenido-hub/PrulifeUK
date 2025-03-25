@@ -409,7 +409,7 @@
 
     <!-- Main Content Area -->
     <div id="main-content" class="content">
-        <div class="container mx-auto max-w-9xl bg-white p-6 rounded-lg shadow-md">
+        <div class="container mx-auto max-w-9xl bg-white p-6 pb-4 rounded-lg shadow-md">
             <h2 class="text-4xl font-semibold mb-4">Declined/Postponed Cases</h2>
            
             <div class="p-4 bg-white rounded-md shadow-md">
@@ -435,12 +435,12 @@
             <div id="tableContent" class="overflow-x-auto w-full">
                 <table class="min-w-full bg-white border border-gray-300">
                     <thead>
-                        <tr class="bg-gray-200 text-black">
+                        <tr class="bg-gray-200 text-gray-600">
                             <th class="py-2 px-4 text-left border-r border-gray-300 w-1/12">ID</th>
                             <th class="py-2 px-4 text-left border-r border-gray-300 w-1/4">First Name</th>
                             <th class="py-2 px-4 text-left border-r border-gray-300 w-1/4">Last Name</th>
                             <th class="py-2 px-4 text-left border-r border-gray-300 w-1/4">Application No.</th>
-                            <th class="py-2 px-4 text-left border-r border-gray-300 w-1/12">Policy No.</th>
+                            <th class="py-2 px-4 text-left border-r border-gray-300 w-1/5">Policy No.</th>
                             <th class="py-2 px-4 text-left border-r border-gray-300 w-1/12">APE</th>
                             <th class="py-2 px-4 text-left border-r border-gray-300 w-1/12 text-center">Status</th>
                         </tr>
@@ -453,9 +453,9 @@
                             <td class="py-2 px-4 border-r border-gray-300">Blue</td>
                             <td class="py-2 px-4 border-r border-gray-300">123</td>
                             <td class="py-2 px-4 border-r border-gray-300">12</td>
-                            <td class="py-2 px-4 border-r border-gray-300">0</td>
+                            <td class="py-2 px-4 border-r border-gray-300 text-center">0</td>
                             <td class="py-2 px-8 border-r border-gray-300 text-center">
-                                status</a>
+                                Status</a>
                             </td>
                         </tr>
                         <!-- Add more rows as needed -->

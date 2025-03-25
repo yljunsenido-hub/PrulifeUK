@@ -411,7 +411,7 @@
     <!-- Main Content Area -->
     <div id="main-content" class="content">
 
-	<div class="container mx-auto max-w-9xl bg-white p-6 rounded-lg shadow-md">
+	<div class="container mx-auto max-w-9xl bg-white p-6 pb-4 rounded-lg shadow-md">
         <h2 class="text-4xl font-semibold mb-4">Sub-Unit Production Report</h2>
 
         <div class="container mx-auto rounded-md shadow-sm bg-white border pl-3 pr-3 pt-3 pb-3 mb-2 flex flex-col space-y-5">
@@ -474,43 +474,43 @@
                 <table class="min-w-full bg-white border border-gray-300">
                     <thead>
                         <tr class="bg-gray-200 text-gray-600 uppercase text-sm leading-normal ">
-                            <th class="py-3 px-6 text-left">Branch</th>
-                            <th class="py-3 px-6 text-left">Unit</th>
-                            <th class="py-3 px-6 text-left">Sub-unit</th>
-                            <th class="py-3 px-6 text-left">Issued</th>
-                            <th class="py-3 px-6 text-left">Pending</th>
-                            <th class="py-3 px-6 text-left">Total</th>
-                            <th class="py-3 px-6 text-left">CC</th>
-                            <th class="py-3 px-6 text-left">CC Prev. Year</th>
+                            <th class="py-3 px-6 text-left border-r border-gray-300">Branch</th>
+                            <th class="py-3 px-6 text-left border-r border-gray-300">Unit</th>
+                            <th class="py-3 px-6 text-left border-r border-gray-300">Sub-unit</th>
+                            <th class="py-3 px-6 text-left border-r border-gray-300">Issued</th>
+                            <th class="py-3 px-6 text-left border-r border-gray-300">Pending</th>
+                            <th class="py-3 px-6 text-left border-r border-gray-300">Total</th>
+                            <th class="py-3 px-6 text-left border-r border-gray-300">CC</th>
+                            <th class="py-3 px-6 text-left border-r border-gray-300">CC Prev. Year</th>
                         </tr>
                     </thead>
                     <tbody class="text-gray-600 text-sm font-light">
                         <tr class="border-b border-gray-300 hover:bg-gray-100">
-                            <td class="py-3 px-6">BCDQ</td>
-                            <td class="py-3 px-6">A001</td>
-                            <td class="py-3 px-6">Finance</td>
-                            <td class="py-3 px-6">Accounting</td>
-                            <td class="py-3 px-6">Payroll</td>
-                            <td class="py-3 px-6">John Doe</td>
-                            <td class="py-3 px-6">100</td>
-                            <td class="py-3 px-6">20</td>
+                            <td class="py-3 px-6 border-r border-gray-300">BCDQ</td>
+                            <td class="py-3 px-6 border-r border-gray-300">A001</td>
+                            <td class="py-3 px-6 border-r border-gray-300">Finance</td>
+                            <td class="py-3 px-6 border-r border-gray-300">Accounting</td>
+                            <td class="py-3 px-6 border-r border-gray-300">Payroll</td>
+                            <td class="py-3 px-6 border-r border-gray-300">John Doe</td>
+                            <td class="py-3 px-6 border-r border-gray-300">100</td>
+                            <td class="py-3 px-6 border-r border-gray-300">20</td>
                         </tr>
                         <tr class="border-b border-gray-300 hover:bg-gray-100 ">
-                            <td class="py-3 px-6">BCDQ</td>
-                            <td class="py-3 px-6">A002</td>
-                            <td class="py-3 px-6">HR</td>
-                            <td class="py-3 px-6">Recruitment</td>
-                            <td class="py-3 px-6">Talent Acquisition</td>
-                            <td class="py-3 px-6">Jane Smith</td>
-                            <td class="py-3 px-6">80</td>
-                            <td class="py-3 px-6">10</td>
+                            <td class="py-3 px-6 border-r border-gray-300">BCDQ</td>
+                            <td class="py-3 px-6 border-r border-gray-300">A002</td>
+                            <td class="py-3 px-6 border-r border-gray-300">HR</td>
+                            <td class="py-3 px-6 border-r border-gray-300">Recruitment</td>
+                            <td class="py-3 px-6 border-r border-gray-300">Talent Acquisition</td>
+                            <td class="py-3 px-6 border-r border-gray-300">Jane Smith</td>
+                            <td class="py-3 px-6 border-r border-gray-300">80</td>
+                            <td class="py-3 px-6 border-r border-gray-300">10</td>
                         </tr>
                         <!-- Add more rows as needed -->
 
                         <tr class="bg-gray-200 font-bold">
-                            <td colspan="6" class="py-3 px-6 text-left">Overall Total</td>
-                            <td class="py-3 px-6">180</td>  <!-- Sum of "Issued" -->
-                            <td class="py-3 px-6">30</td>   <!-- Sum of "Pending" -->
+                            <td colspan="6" class="py-3 px-6 text-left  border-r border-gray-300">Overall Total</td>
+                            <td class="py-3 px-6 border-r border-gray-300">180</td>  <!-- Sum of "Issued" -->
+                            <td class="py-3 px-6 border-r border-gray-300">30</td>   <!-- Sum of "Pending" -->
                         </tr>
                     </tbody>
                 </table>

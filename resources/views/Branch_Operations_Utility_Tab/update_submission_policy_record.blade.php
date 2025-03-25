@@ -438,44 +438,80 @@
         <table class="min-w-full border border-gray-300">
             <thead>
                 <tr class="bg-gray-200 text-left">
-                    <th class="border border-r border-gray-300 px-4 py-2">ID</th>
+                    <th class="border border-r border-gray-300 px-4 py-2 text-center">ID</th>
                     <th class="border border-r border-gray-300 px-4 py-2">First Name</th>
                     <th class="border border-r border-gray-300 px-4 py-2">Last Name</th>
                     <th class="border border-r border-gray-300 px-4 py-2">Date Submitted</th>
                     <th class="border border-r border-gray-300 px-4 py-2">Application No.</th>
                     <th class="border border-r border-gray-300 px-4 py-2">Policy No.</th>
                     <th class="border border-r border-gray-300 px-4 py-2">Agent</th>
-                    <th class="border border-r border-gray-300 px-4 py-2">Status</th>
-                    <th class="border border-r border-gray-300 px-4 py-2">Action</th>
+                    <th class="border border-r border-gray-300 px-4 py-2 text-center">Status</th>
+                    <th class="border border-r border-gray-300 px-4 py-2 text-center">Action</th>
                 </tr>
             </thead>
             <tbody>
                 <tr class="hover:bg-gray-100">
-                    <td class="border px-4 py-2">1</td>
+                    <td class="border px-4 py-2 text-center">1</td>
                     <td class="border px-4 py-2">firstname</td>
                     <td class="border px-4 py-2">lastname</td>
                     <td class="border px-4 py-2">0000-00-00</td>
                     <td class="border px-4 py-2">0</td>
                     <td class="border px-4 py-2">0</td>
                     <td class="border px-4 py-2">name - no</td>
-                    <td class="border px-4 py-2">Issued</td>
+                    <td class="border px-4 py-2 text-center">Issued</td>
                     <td class="border px-4 py-2 text-center">
-                        <a href="#" class="text-blue-500">UPDATE</a> | 
-                        <a href="#" class="text-blue-500">REMOVE</a>
+                    <button class="p-1 bg-green-500 text-white rounded-md hover:bg-green-700 inline-flex items-center" title="Update">
+                                    <!-- SVG Icon (Example: Edit Icon) -->
+                                    <svg class="h-5 w-5 text-slate-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path 
+                                            stroke-linecap="round" 
+                                            stroke-linejoin="round" 
+                                            stroke-width="2" 
+                                            d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" 
+                                        />
+                                    </svg>
+                                </button>
+                                
+                        <button class="p-1 bg-red-500 text-white rounded-md hover:bg-red-700 inline-flex items-center" title="Delete">
+                                <!-- SVG Icon -->
+                                <svg class="h-5 w-5 text-slate-500"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  
+                                    stroke-width="2"  
+                                    stroke-linecap="round"  
+                                    stroke-linejoin="round">  
+                                    <polyline points="3 6 5 6 21 6" />  <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2" />  <line x1="10" y1="11" x2="10" y2="17" />  <line x1="14" y1="11" x2="14" y2="17" /></svg>
+                                </button>
                     </td>
                 </tr>
                 <tr class="hover:bg-gray-100">
-                    <td class="border px-4 py-2">2</td>
+                    <td class="border px-4 py-2 text-center">2</td>
                     <td class="border px-4 py-2">firstname</td>
                     <td class="border px-4 py-2">lastname</td>
                     <td class="border px-4 py-2">0000-00-00</td>
                     <td class="border px-4 py-2">0</td>
                     <td class="border px-4 py-2">0</td>
                     <td class="border px-4 py-2">name - no</td>
-                    <td class="border px-4 py-2">Issued</td>
+                    <td class="border px-4 py-2 text-center">Issued</td>
                     <td class="border px-4 py-2 text-center">
-                        <a href="#" class="text-blue-500">UPDATE</a> | 
-                        <a href="#" class="text-blue-500">REMOVE</a>
+                    <button class="p-1 bg-green-500 text-white rounded-md hover:bg-green-700 inline-flex items-center" title="Update">
+                                    <!-- SVG Icon (Example: Edit Icon) -->
+                                    <svg class="h-5 w-5 text-slate-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path 
+                                            stroke-linecap="round" 
+                                            stroke-linejoin="round" 
+                                            stroke-width="2" 
+                                            d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" 
+                                        />
+                                    </svg>
+                                </button>
+
+                        <button class="p-1 bg-red-500 text-white rounded-md hover:bg-red-700 inline-flex items-center" title="Delete">
+                                <!-- SVG Icon -->
+                                <svg class="h-5 w-5 text-slate-500"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  
+                                    stroke-width="2"  
+                                    stroke-linecap="round"  
+                                    stroke-linejoin="round">  
+                                    <polyline points="3 6 5 6 21 6" />  <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2" />  <line x1="10" y1="11" x2="10" y2="17" />  <line x1="14" y1="11" x2="14" y2="17" /></svg>
+                                </button>
                     </td>
                 </tr>
                 <!-- Add more rows as needed -->

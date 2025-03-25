@@ -411,7 +411,7 @@
     <div id="main-content" class="content">
         
     <!-- Main Container -->
-    <div class="container mx-auto max-w-8xl bg-white p-6 rounded-lg shadow-md mb-3">
+    <div class="container mx-auto max-w-8xl bg-white p-6 pb-4 rounded-lg shadow-md mb-3">
 
         <!-- Header Section -->
         <p class="text-4xl font-semibold mb-4">EASY REPORTS</p>
@@ -449,7 +449,7 @@
                         <tr class="bg-gray-200 text-gray-600 uppercase text-sm leading-normal">
                             <th class="py-3 px-6 text-left border-r border-gray-300">#</th>
                             <th class="py-3 px-6 text-left border-r border-gray-300">Title</th>
-                            <th class="py-3 px-6 text-left border-r border-gray-300">Action</th>
+                            <th class="py-3 px-6 border-r border-gray-300 w-1/3">Action</th>
                         </tr>
                     </thead>
                     <tbody class="text-gray-600 text-sm font-light">
@@ -457,21 +457,23 @@
                         <tr class="border-b border-gray-300 hover:bg-gray-100">
                             <td class="py-3 px-6 border-r border-gray-300">1</td>
                             <td class="py-3 px-6 border-r border-gray-300">TOP 50 AGENTS (IN TERMS OF RECRUIT)</td>
-                            <td class="py-3 px-6 border-r border-gray-300">
-                                <a href="#" class="text-blue-500 hover:underline ">VIEW</a> |
-                                <a href="#" class="text-blue-500 hover:underline">PLAIN VIEW</a> |
-                                <a href="#" class="text-blue-500 hover:underline">DOWNLOAD</a>
+                            <td class="py-3 px-6 border-r border-gray-300 flex justify-center">
+                                <button class="text-white bg-blue-500 hover:bg-blue-600 rounded-md shadow-md py-2 px-2 mr-2">VIEW</button>
+                                <button class="text-white bg-blue-500 hover:bg-blue-600 rounded-md shadow-md py-2 px-2 mr-2">PLAIN VIEW</button>
+                                <button class="text-white bg-blue-500 hover:bg-blue-600 rounded-md shadow-md py-2 px-2">DOWNLOAD</button>
                             </td>
                         </tr>
+
+
 
                         <!-- Row 2 -->
                         <tr class="border-b border-gray-300 hover:bg-gray-100">
                             <td class="py-3 px-6 border-r border-gray-300">2</td>
                             <td class="py-3 px-6 border-r border-gray-300">BRANCH TOP 50 LIFE SAVERS (CASE COUNT)</td>
-                            <td class="py-3 px-6 border-r border-gray-300">
-                                <a href="#" class="text-blue-500 hover:underline">VIEW</a> |
-                                <a href="#" class="text-blue-500 hover:underline">PLAIN VIEW</a> |
-                                <a href="#" class="text-blue-500 hover:underline">DOWNLOAD</a>
+                            <td class="py-3 px-6 border-r border-gray-300 flex justify-center">
+                                <button class="text-white bg-blue-500 hover:bg-blue-600 rounded-md shadow-md py-2 px-2 mr-2">VIEW</button>
+                                <button class="text-white bg-blue-500 hover:bg-blue-600 rounded-md shadow-md py-2 px-2 mr-2">PLAIN VIEW</button>
+                                <button class="text-white bg-blue-500 hover:bg-blue-600 rounded-md shadow-md py-2 px-2">DOWNLOAD</button>
                             </td>
                         </tr>
                         <!-- Add more rows as needed -->

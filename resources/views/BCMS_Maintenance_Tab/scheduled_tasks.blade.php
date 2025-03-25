@@ -454,27 +454,27 @@
             <table class="min-w-full bg-white border border-gray-00">
                 <thead>
                     <tr class="bg-gray-200 text-black uppercase text-sm leading-normal">
-                        <th class="py-3 px-6 text-left">Name</th>
-                        <th class="py-3 px-6 text-left">Description</th>
-                        <th class="py-3 px-6 text-left">Repitition</th>
-                        <th class="py-3 px-6 text-left">Action</th>
+                        <th class="py-3 px-5 border-r border-gray-300 text-left">Name</th>
+                        <th class="py-3 px-5 border-r border-gray-300 text-left">Description</th>
+                        <th class="py-3 px-5 border-r border-gray-300 text-left">Repitition</th>
+                        <th class="py-3 px-5 flex justify-center border-r border-gray-300 text-left">Action</th>
                     </tr>
                 </thead>
                 <tbody class="text-gray-600 text-sm font-light">
                     <tr class="border-b border-gray-300 hover:bg-gray-100 ">
-                        <td class="py-3 px-6 border-r">Hall of Fame</td>
-                        <td class="py-3 px-6 border-r">Generates the hall of fame</td>
-                        <td class="py-3 px-6 border-r">Every 2 of the month	
+                        <td class="py-3 px-5 border-r">Hall of Fame</td>
+                        <td class="py-3 px-5 border-r">Generates the hall of fame</td>
+                        <td class="py-3 px-5 border-r">Every 2 of the month	
 </td>
-                        <td class="py-3 px-6 border-r"> <button class="bg-blue-500 text-white rounded px-4 py-1 ml-2 hover:bg-blue-700">Run</button></td>
+                        <td class="py-3 px-5 border-r flex justify-center"> <button class="bg-blue-500 text-white rounded px-4 py-1 ml-2 hover:bg-blue-700">Run</button></td>
                     
                     </tr>
                     <tr class="border-b border-gray-300 hover:bg-gray-100">
-                        <td class="py-3 px-6 border-r">Top Banner	</td>
-                        <td class="py-3 px-6 border-r">Generates the top banner on the dashboard	</td>
-                        <td class="py-3 px-6 border-r">Every 2 of the month	
+                        <td class="py-3 px-5 border-r">Top Banner	</td>
+                        <td class="py-3 px-5 border-r">Generates the top banner on the dashboard	</td>
+                        <td class="py-3 px-5 border-r">Every 2 of the month	
 </td>
-                        <td class="py-3 px-6 border-r"> <button class="bg-blue-500 text-white rounded px-4 py-1 ml-2 hover:bg-blue-700">Run</button></td>
+                        <td class="py-3 px-5 border-r flex justify-center"> <button class="bg-blue-500 text-white rounded px-4 py-1 ml-2 hover:bg-blue-700">Run</button></td>
                         
                     </tr>
                 </tbody>

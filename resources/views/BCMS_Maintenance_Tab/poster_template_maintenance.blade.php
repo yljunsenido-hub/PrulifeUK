@@ -439,10 +439,10 @@
                 <table class="min-w-full bg-white border border-gray-300 text-sm">
                     <thead>
                         <tr class="bg-gray-200 text-gray-600">
-                            <th class="py-2 px-4 text-left border-r border-gray-300 w-1/12">ID</th>
-                            <th class="py-2 px-4 text-left border-r border-gray-300 w-1/4">Description</th>
-                            <th class="py-2 px-4 text-left border-r border-gray-300 w-1/3">Poster</th>
-                            <th class="py-2 px-4 text-left border-r border-gray-300 w-1/6">Action</th>
+                            <th class="py-2 px-4 text-left border-r border-gray-300 w-5">ID</th>
+                            <th class="py-2 px-4 text-left border-r border-gray-300 w-1/5">Description</th>
+                            <th class="py-2 px-4 text-left border-r border-gray-300 w-3/5">Poster</th>
+                            <th class="py-2 px-4 text-left border-r border-gray-300 w-10 text-center">Action</th>
                         </tr>
                     </thead>
                     <tbody class="text-gray-600">
@@ -453,9 +453,43 @@
                             <td class="py-2 px-4 border-r border-gray-300 flex justify-center items-center">
                                 <img src="path_to_your_image.jpg" alt="Poster" class="h-10 w-10 object-cover rounded-md">
                             </td>
+                            
                             <td class="py-2 px-4 border-r border-gray-300 text-center">
-                                <a href="download_link_here" class="px-3 py-1 bg-blue-500 text-white rounded-md hover:bg-blue-700">Download</a>
-                                <a href="update_link_here" class="px-3 py-1 bg-yellow-500 text-white rounded-md hover:bg-yellow-700">Update</a>
+
+                            <button class="p-1 bg-blue-500 text-white rounded-md hover:bg-blue-700 inline-flex items-center" title="Download">
+                                <!-- SVG Icon -->
+                                <svg class="h-5 w-5 text-slate-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path 
+                                        stroke-linecap="round" 
+                                        stroke-linejoin="round" 
+                                        stroke-width="2" 
+                                        d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/>
+                                </svg>
+                            </button>
+
+                                <button class="p-1 bg-green-500 text-white rounded-md hover:bg-green-700 inline-flex items-center" title="Update">
+                                    <!-- SVG Icon (Example: Edit Icon) -->
+                                    <svg class="h-5 w-5 text-slate-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path 
+                                            stroke-linecap="round" 
+                                            stroke-linejoin="round" 
+                                            stroke-width="2" 
+                                            d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" 
+                                        />
+                                    </svg>
+                                </button>
+
+                                <button class="p-1 bg-red-500 text-white rounded-md hover:bg-red-700 inline-flex items-center" title="Delete">
+                                <!-- SVG Icon -->
+                                <svg class="h-5 w-5 text-slate-500"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  
+                                    stroke-width="2"  
+                                    stroke-linecap="round"  
+                                    stroke-linejoin="round">  
+                                    <polyline points="3 6 5 6 21 6" />  <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2" />  <line x1="10" y1="11" x2="10" y2="17" />  <line x1="14" y1="11" x2="14" y2="17" /></svg>
+                                </button>
+
+                            </a>
+
                             </td>
                         </tr>
                         <!-- Add more rows as needed -->

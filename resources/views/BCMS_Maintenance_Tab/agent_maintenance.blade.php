@@ -464,7 +464,7 @@
                                 <td class="py-2 px-4 border-r border-gray-300">2025-02-28</td>
                                 <td class="py-2 px-4 border-r border-gray-300">Active</td>
                                 <td class="py-2 px-4 border-r border-gray-300 text-center">
-                                    <a href="#" class="px-3 py-1 bg-blue-500 text-white rounded-md hover:bg-blue-700">UPDATE</a>
+                                    <a href="#" class="px-3 py-1 bg-green-500 text-white rounded-md hover:bg-green-700">UPDATE</a>
                                 </td>
                             </tr>
                             <!-- Add more rows as needed -->

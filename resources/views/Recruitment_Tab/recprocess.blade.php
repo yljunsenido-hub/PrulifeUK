@@ -559,9 +559,9 @@
                             <th class="py-2 px-4 text-left border-r border-gray-300">Incentives</th>
                             <th class="py-2 px-4 text-left border-r border-gray-300">Unit</th>
                             <th class="py-2 px-4 text-left border-r border-gray-300">Recruiter</th>
-                            <th class="py-2 px-4 text-left border-r border-gray-300">Completion Rate (%)</th>
-                            <th class="py-2 px-4 text-left border-r border-gray-300">Status</th>
-                            <th class="py-2 px-4 text-center border-r border-gray-300 w-auto">Actions</th>
+                            <th class="py-2 px-4 text-left border-r border-gray-300 text-center">Completion Rate (%)</th>
+                            <th class="py-2 px-4 text-left border-r border-gray-300 flex justify-center">Status</th>
+                            <th class="py-2 px-4 text-center border-r border-gray-300 w-40">Actions</th>
                         </tr>
                     </thead>
                     <tbody class="text-gray-600">`;
@@ -573,21 +573,60 @@
                         <td class="py-2 px-4 border-r border-gray-300">${item.Incentives}</td>
                         <td class="py-2 px-4 border-r border-gray-300">${item.Unit}</td>
                         <td class="py-2 px-4 border-r border-gray-300">${item.Recruiter}</td>
-                        <td class="py-2 px-4 border-r border-gray-300">${item.Progress}%</td>
-                        <td class="py-2 px-4 border-r border-gray-300">
+                        <td class="py-2 px-4 w-44 border-r border-gray-300 text-center">${item.Progress}%</td>
+                        <td class="py-2 px-4 border-r border-gray-300 text-center">
                             <span class="${item.ForApproval === 'Yes' ? 'text-green-600' : 'text-red-600'}">
                                 ${item.ForApproval === 'Yes' ? 'Active' : 'Not Active'}
                             </span>
                         </td>
+
                         <td class="py-4 px-5 space-x-2 text-center w-auto">
-                            <a href="view-progress-link/${item.Incentives}" class="px-3 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-700" target="_blank">
-                                <img src="path_to_image.png" alt="View Details Icon" class="h-4 w-4 inline-block" />
+                            <!-- View Progress Button with SVG -->
+                            <a href="view-progress-link/${item.Incentives}" 
+                            class="px-3 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-700 inline-flex items-center" 
+                            target="_blank"
+                             title="View Progress">
+                                <!-- Inline SVG for View Details -->
+                                <svg class="h-5 w-5 text-white" 
+                                    viewBox="0 0 24 24" 
+                                    fill="none" 
+                                    stroke="currentColor" 
+                                    stroke-width="2" 
+                                    stroke-linecap="round" 
+                                    stroke-linejoin="round">
+                                    <line x1="8" y1="6" x2="21" y2="6" />
+                                    <line x1="8" y1="12" x2="21" y2="12" />
+                                    <line x1="8" y1="18" x2="21" y2="18" />
+                                    <line x1="3" y1="6" x2="3.01" y2="6" />
+                                    <line x1="3" y1="12" x2="3.01" y2="12" />
+                                    <line x1="3" y1="18" x2="3.01" y2="18" />
+                                </svg>
                             </a>
-                            <a href="edit-recruit-info/${item.Incentives}" class="px-3 py-2 bg-yellow-500 text-white rounded-md hover:bg-yellow-700" target="_blank">
-                                <img src="path_to_image.png" alt="Edit Recruit Info Icon" class="h-4 w-4 inline-block" />
+
+                            <!-- Edit Recruit Info Button with SVG -->
+                            <a href="edit-recruit-info/${item.Incentives}" 
+                            class="px-3 py-2 bg-yellow-500 text-white rounded-md hover:bg-yellow-700 inline-flex items-center" 
+                            target="_blank"
+                            title="View Recruits">
+                                <!-- Inline SVG for Edit Recruit Info -->
+                                <svg class="h-5 w-5 text-white" 
+                                    width="24" 
+                                    height="24" 
+                                    viewBox="0 0 24 24" 
+                                    stroke-width="2" 
+                                    stroke="currentColor" 
+                                    fill="none" 
+                                    stroke-linecap="round" 
+                                    stroke-linejoin="round">
+                                    <path stroke="none" d="M0 0h24v24H0z"/>
+                                    <circle cx="7" cy="5" r="2"/>
+                                    <path d="M5 22v-5l-1-1v-4a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v4l-1 1v5"/>
+                                    <circle cx="17" cy="5" r="2"/>
+                                    <path d="M15 22v-4h-2l2 -6a1 1 0 0 1 1 -1h2a1 1 0 0 1 1 1l2 6h-2v4"/>
+                                </svg>
                             </a>
                         </td>
-                    </tr>
+
                 `;
             });
 

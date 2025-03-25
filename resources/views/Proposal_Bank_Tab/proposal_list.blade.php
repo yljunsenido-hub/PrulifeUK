@@ -415,7 +415,7 @@
 
             <h2 class="text-lg font-semibold text-yellow-300">Proposals</h2>
             
-            <button type="button" class="text-gray-700 bg-white hover:bg-yellow-300 hover:text-white focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm p-2.5 text-center inline-flex items-center me-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+            <button type="button" class="text-gray-700 bg-white hover:bg-gray-200 hover:text-blue-900  font-medium rounded-lg text-sm p-2.5 text-center inline-flex items-center me-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
                 <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
                     <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" />
                 </svg>
@@ -446,24 +446,31 @@
             <table class="min-w-full bg-white border border-gray-300">
                 <thead>
                         <tr class="bg-gray-200 text-gray-600 uppercase text-sm leading-normal">
-                            <th class="py-3 px-6 text-left border-r border-gray-300">ID</th>
-                            <th class="py-3 px-6 text-left border-r border-gray-300">Age</th>
-                            <th class="py-3 px-6 text-left border-r border-gray-300">Plan</th>
-                            <th class="py-3 px-6 text-left border-r border-gray-300">Term</th>
-                            <th class="py-3 px-6 text-left border-r border-gray-300">Premium</th>
-                            <th class="py-3 px-6 text-left border-r border-gray-300">Action</th>
+                            <th class="py-2 px-4 text-left border-r border-gray-300">ID</th>
+                            <th class="py-2 px-4 text-left border-r border-gray-300">Age</th>
+                            <th class="py-2 px-4 text-left border-r border-gray-300">Plan</th>
+                            <th class="py-2 px-4 text-left border-r border-gray-300">Term</th>
+                            <th class="py-2 px-4 text-left border-r border-gray-300">Premium</th>
+                            <th class="py-2 px-4 text-left border-r border-gray-300">Action</th>
                         </tr>
                     </thead>
 
                     <tbody class="text-gray-600 text-sm font-semibold">
                         <tr class="border-b border-gray-300 hover:bg-gray-100">
-                            <td class="py-3 px-6 border-r border-gray-300">1</td>
-                            <td class="py-3 px-6 border-r border-gray-300">30</td>
-                            <td class="py-3 px-6 border-r border-gray-300">Basic Plan</td>
-                            <td class="py-3 px-6 border-r border-gray-300">10 Years</td>
-                            <td class="py-3 px-6 border-r border-gray-300">$100</td>
-                            <td class="py-3 px-6 border-r border-gray-300">
-                                <button class="text-blue-600 hover:underline">View</button>
+                            <td class="py-2 px-4 border-r border-gray-300">1</td>
+                            <td class="py-2 px-4 border-r border-gray-300">30</td>
+                            <td class="py-2 px-4 border-r border-gray-300">Basic Plan</td>
+                            <td class="py-2 px-4 border-r border-gray-300">10 Years</td>
+                            <td class="py-2 px-4 border-r border-gray-300">$100</td>
+                            <td class="py-2 px-4 pl-6 border-r w-10 border-gray-300">
+                            <button class="text-black flex items-center justify-center space-x-2" title="View">
+                                <span class="bg-blue-100 p-2 rounded-md hover:bg-blue-300 transition duration-900">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M1 12s3-7 11-7 11 7 11 7-3 7-11 7-11-7-11-7z"></path>
+                                        <circle cx="12" cy="12" r="3"></circle>
+                                    </svg>
+                                </span>
+                            </button>
                             </td>
                         </tr>
                     </tbody>

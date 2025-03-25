@@ -409,7 +409,7 @@
     
     <!-- Main Content Area -->
     <div id="main-content" class="content">
-        <div class="container mx-auto max-w-9xl bg-white p-6 rounded-lg shadow-md">
+        <div class="container mx-auto max-w-9xl bg-white p-6 pb-4 rounded-lg shadow-md">
             <h2 class="text-4xl font-semibold mb-6">Agents Submission for Approval</h2>
            
             <div class="p-6 bg-white rounded-md shadow-md">
@@ -433,22 +433,22 @@
             <div id="tableContent" class="overflow-x-auto">
                 <table class="min-w-full bg-white border border-gray-300 text-sm">
                     <thead>
-                        <tr class="bg-blue-200 text-gray-600">
+                        <tr class="bg-gray-200 text-gray-600">
                             <th class="py-2 px-4 text-left border-r border-gray-300 w-1/12">ID</th>
-                            <th class="py-2 px-4 text-left border-r border-gray-300 w-1/4">Client Name</th>
-                            <th class="py-2 px-4 text-left border-r border-gray-300 w-1/4">Agent</th>
-                            <th class="py-2 px-4 text-left border-r border-gray-300 w-1/4">Application No.</th>
-                            <th class="py-2 px-4 text-left border-r border-gray-300 w-1/4">Policy No.</th>
-                            <th class="py-2 px-4 text-left border-r border-gray-300 w-1/4">Plan</th>
-                            <th class="py-2 px-4 text-left border-r border-gray-300 w-1/4">Premium</th>
-                             <th class="py-2 px-4 text-left border-r border-gray-300 w-1/4">Sum Assured</th>
-                              <th class="py-2 px-4 text-left border-r border-gray-300 w-1/4">Submission Date</th>
-                               <th class="py-2 px-4 text-left border-r border-gray-300 w-1/4">Action</th>
+                            <th class="py-2 px-4 text-left border-r border-gray-300 w-1/2">Client Name</th>
+                            <th class="py-2 px-4 text-left border-r border-gray-300 w-1/2">Agent</th>
+                            <th class="py-2 px-4 text-left border-r border-gray-300 w-1/2">Application No.</th>
+                            <th class="py-2 px-4 text-left border-r border-gray-300 w-1/2">Policy No.</th>
+                            <th class="py-2 px-4 text-left border-r border-gray-300 w-1/2">Plan</th>
+                            <th class="py-2 px-4 text-left border-r border-gray-300 w-1/2">Premium</th>
+                             <th class="py-2 px-4 text-left border-r border-gray-300 w-1/2">Sum Assured</th>
+                              <th class="py-2 px-4 text-left border-r border-gray-300 w-1/2">Submission Date</th>
+                               <th class="py-2 px-4 text-left border-r border-gray-300 w-1/2">Action</th>
                         </tr>
                     </thead>
                     <tbody class="text-gray-600">
                         <!-- Sample Row (You can duplicate this for more rows) -->
-                        <tr class="border-b border-gray-300 hover:bg-blue-50">
+                        <tr class="border-b border-gray-300 hover:bg-gray-50">
                             <td class="py-2 px-4 border-r border-gray-300">1</td>
                             <td class="py-2 px-4 border-r border-gray-300">name</td>
                             <td class="py-2 px-4 border-r border-gray-300">Blue</td>

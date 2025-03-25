@@ -427,11 +427,12 @@
                 <!-- File input -->
                 <input type="file" id="file-upload" class="border border-gray-300 p-3 rounded-md w-full md:w-auto focus:outline-none focus:ring-2 focus:ring-blue-500 text-left" accept=".jpeg, .jpg, .png">
                 
-                <!-- Upload Button -->
-                <button onclick="confirmUpload()" class="ml-4 bg-blue-600 text-white py-2 px-4 rounded-md hover:bg-blue-700 transition duration-300">
+                <!-- Upload Button moved to the end -->
+                <button onclick="confirmUpload()" class="ml-auto bg-blue-600 text-white py-2 px-4 rounded-md hover:bg-blue-700 transition duration-300">
                     UPLOAD IMAGE
                 </button>
             </div>
+
 
             <!-- Image Preview Section -->
             <div class="flex justify-center mt-4">
@@ -452,7 +453,7 @@
         </div>
 
         <div class="flex justify-center mt-4">
-            <img src="images/imageguide.png" alt="imageguide" class="w-full h-full rounded-xl border-4 border-gray-300 shadow-md hover:opacity-80">
+            <img src="images/imageguide.png" alt="imageguide" class="w-full h-full rounded-xl border-4 border-gray-300 shadow-md">
         </div>
 
     </div>

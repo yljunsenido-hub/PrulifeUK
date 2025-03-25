@@ -394,10 +394,10 @@
                 <table class="min-w-full bg-white border border-gray-300 text-sm">
                     <thead>
                         <tr class="bg-gray-200 text-gray-600">
-                            <th class="py-2 px-4 text-left border-r border-gray-300 w-1/12">ID</th>
-                            <th class="py-2 px-4 text-left border-r border-gray-300 w-1/4">Description</th>
-                            <th class="py-2 px-4 text-left border-r border-gray-300 w-1/3">Poster</th>
-                            <th class="py-2 px-4 text-left border-r border-gray-300 w-1/6">Action</th>
+                            <th class="py-2 px-4 text-left border-r border-gray-300 w-6">ID</th>
+                            <th class="py-2 px-4 text-left border-r border-gray-300 w-2/5">Description</th>
+                            <th class="py-2 px-4 text-left border-r border-gray-300 w-3/4">Poster</th>
+                            <th class="py-2 px-4 text-left border-r border-gray-300 w-6 text-center">Action</th>
                         </tr>
                     </thead>
                     <tbody class="text-gray-600">
@@ -410,7 +410,11 @@
                             </td>
                             <td class="py-2 px-4 border-r border-gray-300 text-center">
                                 
-                                <a href="update_link_here" class="px-3 py-1 bg-yellow-500 text-white rounded-md hover:bg-yellow-700">Update</a>
+                            <button class="p-2 bg-green-500 text-white rounded-md hover:bg-green-700 inline-flex items-center" title="Update">
+                                <span class=""></span> <!-- Emoji as icon -->
+                                Update
+                            </button>
+
                             </td>
                         </tr>
 
@@ -421,8 +425,10 @@
                                 <img src="path_to_your_image.jpg" alt="Poster" class="h-10 w-10 object-cover rounded-md">
                             </td>
                             <td class="py-2 px-4 border-r border-gray-300 text-center">
-                                
-                                <a href="update_link_here" class="px-3 py-1 bg-yellow-500 text-white rounded-md hover:bg-yellow-700">Update</a>
+                            <button class="p-2 bg-green-500 text-white rounded-md hover:bg-green-700 inline-flex items-center" title="Update">
+                                <span class=""></span> <!-- Emoji as icon -->
+                                Update
+                            </button>
                             </td>
                         </tr>
                         <!-- Add more rows as needed -->

@@ -503,7 +503,7 @@
                             <th class="py-2 px-4 text-left border-r border-gray-300">ID</th>
                             <th class="w-1/2 py-2 px-4 text-left border-r border-gray-300">Description</th>
                             <th class="w-full py-2 px-4 text-left border-r border-gray-300">Poster</th>
-                            <th class="py-1 px-1 text-left border-r border-gray-300">Download</th>
+                            <th class="py-2 px-4 text-left border-r border-gray-300 flex justify-center">Download</th>
                         </tr>
                     </thead>
                     <tbody class="text-gray-600">`;

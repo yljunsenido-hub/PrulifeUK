@@ -472,7 +472,7 @@
 
       <!-- Submit Button -->
       <div class="flex items-center space-x-4">
-        <button type="submit" class="w-full px-4 py-2 bg-blue-900 text-white font-semibold rounded-md hover:text-blue-900 hover:bg-yellow-300 focus:outline-none focus:ring-2 focus:ring-indigo-500">
+        <button type="submit" class="w-full px-4 py-2 bg-blue-900 text-white font-semibold rounded-md hover:text-blue-900 hover:bg-blue-100 border border-gray-500 focus:outline-none focus:ring-2 focus:ring-indigo-500">
           Create Recruit
         </button>
       </div>

@@ -413,7 +413,7 @@
 
                 <div class="flex items-center justify-between mb-3 bg-blue-900 rounded-md shadow-md p-3">
                     <p class="text-left text-white ml-1">Agent Personal Details</p>
-                    <a href="{{ route('digital_card_maintenance_create') }}" class="bg-blue-600 text-white rounded-lg px-4 py-1 mr-1 hover:bg-yellow-300 text-center">Add Agent</a>
+                    <a href="{{ route('digital_card_maintenance_create') }}" class="bg-blue-600 text-white rounded-lg px-4 py-1 mr-1 hover:bg-gray-100 hover:text-blue-900 text-center">Add Agent</a>
                 </div>
 
                 <div class="bg-white rounded-md shadow-md p-3">
@@ -451,8 +451,8 @@
                                 <td class="border px-4 py-2">201 - CORDOVA, ALFREN</td>
                                 <td class="border px-4 py-2 text-center">Active</td>
                                 <td class="border px-4 py-2 text-center">
-                                    <button class="px-3 py-1 bg-blue-500 text-white rounded-md hover:bg-blue-700">Update</button>
-                                    <button class="px-3 py-1 bg-yellow-400 text-white rounded-md hover:bg-yellow-600">Unlink</button>
+                                <button class="px-3 py-1 bg-green-500 text-white rounded-md hover:bg-green-700">Update</button>
+                                <button class="px-3 py-1 bg-red-500 text-white rounded-md hover:bg-red-600">Unlink</button>
                                 </td>
                             </tr>
                             <tr class="border-b border-gray-300 hover:bg-gray-100">
@@ -460,8 +460,8 @@
                                 <td class="border px-4 py-2">202 - TORRES, AJ</td>
                                 <td class="border px-4 py-2 text-center">Active</td>
                                 <td class="border px-4 py-2 text-center">
-                                    <button class="px-3 py-1 bg-blue-500 text-white rounded-md hover:bg-blue-700">Update</button>
-                                    <button class="px-3 py-1 bg-yellow-400 text-white rounded-md hover:bg-yellow-600">Unlink</button>
+                                    <button class="px-3 py-1 bg-green-500 text-white rounded-md hover:bg-green-700">Update</button>
+                                    <button class="px-3 py-1 bg-red-500 text-white rounded-md hover:bg-red-600">Unlink</button>
                                 </td>
                             </tr>
                             <tr class="border-b border-gray-300 hover:bg-gray-100">
@@ -469,8 +469,8 @@
                                 <td class="border px-4 py-2">70010293 - Fabian, Ocel</td>
                                 <td class="border px-4 py-2 text-center">Active</td>
                                 <td class="border px-4 py-2 text-center">
-                                    <button class="px-3 py-1 bg-blue-500 text-white rounded-md hover:bg-blue-700">Update</button>
-                                    <button class="px-3 py-1 bg-yellow-400 text-white rounded-md hover:bg-yellow-600">Unlink</button>
+                                <button class="px-3 py-1 bg-green-500 text-white rounded-md hover:bg-green-700">Update</button>
+                                <button class="px-3 py-1 bg-red-500 text-white rounded-md hover:bg-red-600">Unlink</button>
                                 </td>
                             </tr>
                             <tr class="border-b border-gray-300 hover:bg-gray-100">
@@ -478,17 +478,16 @@
                                 <td class="border px-4 py-2">70024953 - DEL MUNDO, ISRAEL</td>
                                 <td class="border px-4 py-2 text-center">Active</td>
                                 <td class="border px-4 py-2 text-center">
-                                    <button class="px-3 py-1 bg-blue-500 text-white rounded-md hover:bg-blue-700">Update</button>
-                                    <button class="px-3 py-1 bg-yellow-400 text-white rounded-md hover:bg-yellow-600">Unlink</button>
-                                </td>
+                                <button class="px-3 py-1 bg-green-500 text-white rounded-md hover:bg-green-700">Update</button>
+                                <button class="px-3 py-1 bg-red-500 text-white rounded-md hover:bg-red-600">Unlink</button>
                             </tr>
                             <tr class="border-b border-gray-300 hover:bg-gray-100">
                                 <td class="border px-4 py-2 text-center">6</td>
                                 <td class="border px-4 py-2">70025613 - PUNONGBAYAN, MARIA LOURDES</td>
                                 <td class="border px-4 py-2 text-center">Active</td>
                                 <td class="border px-4 py-2 text-center">
-                                    <button class="px-3 py-1 bg-blue-500 text-white rounded-md hover:bg-blue-700">Update</button>
-                                    <button class="px-3 py-1 bg-yellow-400 text-white rounded-md hover:bg-yellow-600">Unlink</button>
+                                <button class="px-3 py-1 bg-green-500 text-white rounded-md hover:bg-green-700">Update</button>
+                                <button class="px-3 py-1 bg-red-500 text-white rounded-md hover:bg-red-600">Unlink</button>
                                 </td>
                             </tr>
                             <tr class="border-b border-gray-300 hover:bg-gray-100">
@@ -496,8 +495,8 @@
                                 <td class="border px-4 py-2">70033873 - CLUTARIO, EULALVI SAM</td>
                                 <td class="border px-4 py-2 text-center">Active</td>
                                 <td class="border px-4 py-2 text-center">
-                                    <button class="px-3 py-1 bg-blue-500 text-white rounded-md hover:bg-blue-700">Update</button>
-                                    <button class="px-3 py-1 bg-yellow-400 text-white rounded-md hover:bg-yellow-600">Unlink</button>
+                                <button class="px-3 py-1 bg-green-500 text-white rounded-md hover:bg-green-700">Update</button>
+                                <button class="px-3 py-1 bg-red-500 text-white rounded-md hover:bg-red-600">Unlink</button>
                                 </td>
                             </tr>
                             <tr class="border-b border-gray-300 hover:bg-gray-100">
@@ -505,8 +504,8 @@
                                 <td class="border px-4 py-2">70038966 - CERIOLA, JEANEROSE</td>
                                 <td class="border px-4 py-2 text-center">Active</td>
                                 <td class="border px-4 py-2 text-center">
-                                    <button class="px-3 py-1 bg-blue-500 text-white rounded-md hover:bg-blue-700">Update</button>
-                                    <button class="px-3 py-1 bg-yellow-400 text-white rounded-md hover:bg-yellow-600">Unlink</button>
+                                <button class="px-3 py-1 bg-green-500 text-white rounded-md hover:bg-green-700">Update</button>
+                                <button class="px-3 py-1 bg-red-500 text-white rounded-md hover:bg-red-600">Unlink</button>
                                 </td>
                             </tr>
                             <tr class="border-b border-gray-300 hover:bg-gray-100">
@@ -514,8 +513,8 @@
                                 <td class="border px-4 py-2">70039569 - FABIAN, JOSEFINA</td>
                                 <td class="border px-4 py-2 text-center">Active</td>
                                 <td class="border px-4 py-2 text-center">
-                                    <button class="px-3 py-1 bg-blue-500 text-white rounded-md hover:bg-blue-700">Update</button>
-                                    <button class="px-3 py-1 bg-yellow-400 text-white rounded-md hover:bg-yellow-600">Unlink</button>
+                                <button class="px-3 py-1 bg-green-500 text-white rounded-md hover:bg-green-700">Update</button>
+                                <button class="px-3 py-1 bg-red-500 text-white rounded-md hover:bg-red-600">Unlink</button>
                                 </td>
                             </tr>
                             <tr class="border-b border-gray-300 hover:bg-gray-100">
@@ -523,8 +522,8 @@
                                 <td class="border px-4 py-2">70046799 - VILLAUZ, TEDDY</td>
                                 <td class="border px-4 py-2 text-center">Active</td>
                                 <td class="border px-4 py-2 text-center">
-                                    <button class="px-3 py-1 bg-blue-500 text-white rounded-md hover:bg-blue-700">Update</button>
-                                    <button class="px-3 py-1 bg-yellow-400 text-white rounded-md hover:bg-yellow-600">Unlink</button>
+                                <button class="px-3 py-1 bg-green-500 text-white rounded-md hover:bg-green-700">Update</button>
+                                <button class="px-3 py-1 bg-red-500 text-white rounded-md hover:bg-red-600">Unlink</button>
                                 </td>
                             </tr>
                             <tr class="border-b border-gray-300 hover:bg-gray-100">
@@ -532,8 +531,8 @@
                                 <td class="border px-4 py-2">70048843 - FRAYCO JR., NESTOR</td>
                                 <td class="border px-4 py-2 text-center">Active</td>
                                 <td class="border px-4 py-2 text-center">
-                                    <button class="px-3 py-1 bg-blue-500 text-white rounded-md hover:bg-blue-700">Update</button>
-                                    <button class="px-3 py-1 bg-yellow-400 text-white rounded-md hover:bg-yellow-600">Unlink</button>
+                                <button class="px-3 py-1 bg-green-500 text-white rounded-md hover:bg-green-700">Update</button>
+                                <button class="px-3 py-1 bg-red-500 text-white rounded-md hover:bg-red-600">Unlink</button>
                                 </td>
                             </tr>
                         </tbody>
